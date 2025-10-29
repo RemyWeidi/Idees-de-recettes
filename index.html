@@ -344,11 +344,11 @@
                 <div class="filter-group">
                     <h2>TYPE DE PLAT</h2>
                     <div class="type-buttons">
-                        <button class="pixel-button active" data-type="Cocotte">Cocotte</button>
-                        <button class="pixel-button locked" data-type="Sauté" disabled>Sauté</button>
-                        <button class="pixel-button locked" data-type="Grill" disabled>Grill</button>
-                        <button class="pixel-button locked" data-type="Soupe" disabled>Soupe</button>
-                    </div>
+					<button class="pixel-button active" data-type="Cocotte">Cocotte</button>
+					<button class="pixel-button" data-type="Sauté">Sauté</button>
+					<button class="pixel-button" data-type="Grill">Grill</button>
+					<button class="pixel-button" data-type="Soupe">Soupe</button>
+				</div>
                 </div>
 
                 <!-- Filtres Géographiques -->
@@ -1933,7 +1933,1989 @@
                  prepTime: 240, // Nettoyage et cuisson longue des tripes
                  ingredients: ["Tripes de bœuf (nettoyées)", "carottes", "céleri-rave", "persil-racine", "oignons", "marjolaine", "gingembre", "noix de muscade"],
             },
+{
+                id: 207, name: "Poulet Kung Pao", originalName: "宫保鸡丁", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Dés de poulet sautés avec cacahuètes, piments séchés et poivre du Sichuan dans une sauce savoureuse sucrée-salée et légèrement piquante.",
+                prepTime: 30,
+                ingredients: ["Poulet (cuisse)", "cacahuètes", "piments séchés", "poivre du Sichuan", "sauce soja", "vinaigre noir", "sucre", "oignons verts"],
+            },
+            {
+                id: 208, name: "Bœuf aux Oignons", originalName: "葱爆牛肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Fines tranches de bœuf marinées et sautées vivement avec une grande quantité d'oignons verts ou d'oignons.",
+                prepTime: 25,
+                ingredients: ["Bœuf (flanchet, rumsteck)", "oignons verts (ciboule)", "sauce soja", "vin de Shaoxing", "ail", "gingembre"],
+            },
+            {
+                id: 209, name: "Porc Mu Shu", originalName: "木须肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Porc effiloché sauté avec des œufs brouillés, des champignons noirs (oreilles de Judas) et des pousses de lys.",
+                prepTime: 35,
+                ingredients: ["Porc (longe)", "œufs", "champignons noirs (Mu Er)", "pousses de lys séchées", "concombre", "sauce soja", "huile de sésame"],
+            },
+            {
+                id: 210, name: "Crevettes aux Noix de Cajou", originalName: "腰果虾仁", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Crevettes tendres sautées avec des noix de cajou croquantes et des légumes (céleri, carottes) dans une sauce légère.",
+                prepTime: 25,
+                ingredients: ["Crevettes", "noix de cajou", "céleri", "carottes", "sauce soja", "vin de Shaoxing", "huile de sésame"],
+            },
+            {
+                id: 211, name: "Poulet du Général Tso", originalName: "左宗棠鸡", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté", // Populaire en Amérique du Nord
+                description: "Morceaux de poulet frits puis sautés dans une sauce épaisse, sucrée, salée et légèrement piquante.",
+                prepTime: 40,
+                ingredients: ["Poulet (cuisse)", "sauce soja", "vinaigre de riz", "sucre", "ail", "gingembre", "piments séchés", "fécule de maïs"],
+            },
+            {
+                id: 212, name: "Légumes variés sautés", originalName: "炒什锦蔬菜", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Mélange coloré de légumes de saison (brocoli, carottes, champignons, poivrons) sautés vivement au wok avec une sauce légère.",
+                prepTime: 20,
+                ingredients: ["Brocoli", "carottes", "champignons (shiitake, paille)", "poivrons", "maïs miniature", "sauce soja", "ail", "huile de sésame"],
+            },
+            {
+                id: 213, name: "Bœuf au Brocoli", originalName: "西兰花炒牛肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté", // Populaire en Amérique du Nord
+                description: "Fines tranches de bœuf marinées sautées avec des fleurettes de brocoli dans une sauce brune savoureuse.",
+                prepTime: 30,
+                ingredients: ["Bœuf (flanchet)", "brocoli", "sauce soja", "sauce d'huître", "ail", "gingembre", "huile de sésame"],
+            },
+             {
+                id: 214, name: "Porc Aigre-Doux", originalName: "咕噜肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Morceaux de porc frits puis sautés avec ananas, poivrons et oignons dans une sauce aigre-douce classique.",
+                prepTime: 40,
+                ingredients: ["Porc (longe)", "ananas", "poivrons (verts, rouges)", "oignons", "vinaigre de riz", "sucre", "ketchup", "fécule de maïs"],
+            },
+             {
+                id: 215, name: "Haricots verts sautés à sec", originalName: "干煸四季豆", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Haricots verts frits jusqu'à être 'ridés' puis sautés avec du porc haché, de l'ail, du piment et des légumes en conserve (Ya Cai).",
+                prepTime: 35,
+                ingredients: ["Haricots verts", "porc haché", "ail", "piments séchés", "Ya Cai (légume moutarde conservé)", "sauce soja"],
+            },
+            {
+                id: 216, name: "Aubergines sautées à l'ail", originalName: "蒜蓉茄子", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Morceaux d'aubergine tendres sautés avec une quantité généreuse d'ail haché et une sauce savoureuse.",
+                prepTime: 30,
+                ingredients: ["Aubergines (longues chinoises)", "ail (abondant)", "sauce soja", "vinaigre noir (optionnel)", "sucre", "oignons verts"],
+            },
+             // Thaïlande (Beaucoup de sautés)
+            {
+                id: 217, name: "Pad Kra Pao Moo", originalName: "ผัดกระเพราหมู", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Sauté de porc haché très populaire avec du basilic sacré thaï (kra pao), de l'ail et des piments.",
+                prepTime: 20,
+                ingredients: ["Porc haché", "basilic sacré thaï (kra pao)", "ail", "piments (oiseau)", "sauce poisson", "sauce soja", "sucre"],
+            },
+            {
+                id: 218, name: "Pad See Ew", originalName: "ผัดซีอิ๊ว", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Nouilles de riz larges sautées avec du poulet (ou autre viande), du brocoli chinois (gai lan) et des œufs dans une sauce soja foncée.",
+                prepTime: 25,
+                ingredients: ["Nouilles de riz larges (sen yai)", "poulet", "brocoli chinois (gai lan)", "œufs", "sauce soja foncée", "sauce soja claire", "ail", "sucre"],
+            },
+            {
+                id: 219, name: "Pad Thai", originalName: "ผัดไทย", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Plat national thaïlandais. Nouilles de riz fines sautées avec crevettes (ou tofu), œufs, germes de soja, ciboule et cacahuètes dans une sauce tamarin.",
+                prepTime: 35,
+                ingredients: ["Nouilles de riz (sen lek)", "crevettes (ou tofu)", "œufs", "germes de soja", "ciboule (ou ciboule thaïe)", "cacahuètes", "sauce tamarin", "sauce poisson", "sucre de palme"],
+            },
+            {
+                id: 220, name: "Poulet aux Noix de Cajou", originalName: "ไก่ผัดเม็ดมะม่วงหิมพานต์", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Morceaux de poulet sautés avec des noix de cajou, des oignons, des poivrons et des piments séchés dans une sauce savoureuse.",
+                prepTime: 30,
+                ingredients: ["Poulet", "noix de cajou", "oignons", "poivrons", "piments séchés", "sauce d'huître", "sauce soja", "sucre"],
+            },
+            {
+                id: 221, name: "Bœuf sauté au basilic", originalName: "ผัดกระเพราเนื้อ", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Variante du Pad Kra Pao avec du bœuf (haché ou en fines tranches) sauté avec basilic sacré, ail et piments.",
+                prepTime: 20,
+                ingredients: ["Bœuf (haché ou tranches)", "basilic sacré thaï (kra pao)", "ail", "piments (oiseau)", "sauce poisson", "sauce soja"],
+            },
+            {
+                id: 222, name: "Légumes sautés sauce huître", originalName: "ผัดผักรวมมิตร", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Assortiment de légumes croquants (brocoli, carottes, chou...) sautés rapidement dans une sauce d'huître simple et savoureuse.",
+                prepTime: 15,
+                ingredients: ["Brocoli", "carottes", "champignons", "chou nappa", "maïs miniature", "sauce d'huître", "sauce soja", "ail"],
+            },
+             {
+                id: 223, name: "Pad Prik King", originalName: "ผัดพริกขิง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Sauté 'sec' de haricots longs (ou autre ingrédient) avec de la pâte de curry rouge (sans lait de coco), souvent avec du porc croustillant.",
+                prepTime: 25,
+                ingredients: ["Haricots longs", "pâte de curry rouge (Prik King)", "porc croustillant (ou poulet)", "feuilles de combava", "sauce poisson", "sucre de palme"],
+            },
+            // Vietnam
+             {
+                id: 224, name: "Bò Lúc Lắc", originalName: "Bò Lúc Lắc", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "'Bœuf secoué'. Dés de bœuf marinés et sautés vivement, servis sur un lit de cresson avec oignons et tomates.",
+                prepTime: 30,
+                ingredients: ["Bœuf (filet, rumsteck)", "sauce soja", "sauce d'huître", "ail", "oignons", "cresson", "tomates"],
+            },
+            {
+                id: 225, name: "Gà Xào Sả Ớt", originalName: "Gà Xào Sả Ớt", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Poulet sauté parfumé à la citronnelle et au piment.",
+                prepTime: 25,
+                ingredients: ["Poulet (cuisse)", "citronnelle", "piments", "ail", "sauce poisson", "sucre"],
+            },
+            {
+                id: 226, name: "Mì Xào Giòn", originalName: "Mì Xào Giòn", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Nid de nouilles frites croustillantes garni d'un sauté de fruits de mer (ou viande) et légumes dans une sauce épaisse.",
+                prepTime: 40,
+                ingredients: ["Nouilles aux œufs (fines)", "crevettes", "calamars", "bœuf", "brocoli", "carottes", "sauce d'huître", "fécule de maïs"],
+            },
+             {
+                id: 227, name: "Rau Muống Xào Tỏi", originalName: "Rau Muống Xào Tỏi", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Liseron d'eau sauté vivement avec beaucoup d'ail et assaisonné de sauce poisson.",
+                prepTime: 15,
+                ingredients: ["Liseron d'eau (Rau Muong)", "ail (abondant)", "sauce poisson", "sucre", "piment (optionnel)"],
+            },
+            // Japon
+            {
+                id: 228, name: "Yakisoba", originalName: "焼きそば", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Nouilles de blé sautées avec du porc, du chou et d'autres légumes, assaisonnées d'une sauce sucrée-salée type Worcestershire.",
+                prepTime: 25,
+                ingredients: ["Nouilles Yakisoba (chukamen)", "porc (fines tranches)", "chou", "carottes", "pousses de soja", "sauce Yakisoba (ou Worcestershire, huître, ketchup)"],
+            },
+             {
+                id: 229, name: "Yasai Itame", originalName: "野菜炒め", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Sauté de légumes japonais simple et rapide, souvent avec un peu de porc, assaisonné de sel, poivre et sauce soja.",
+                prepTime: 15,
+                ingredients: ["Chou", "pousses de soja (moyashi)", "carottes", "poivrons verts", "porc (fines tranches)", "sauce soja", "sel", "poivre"],
+            },
+             {
+                id: 230, name: "Gyoza (La cuisson finale)", originalName: "餃子", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Raviolis japonais (souvent au porc) poêlés jusqu'à être croustillants en dessous, puis cuits à la vapeur/sautés.",
+                prepTime: 45, // Inclut le façonnage
+                ingredients: ["Pâte à Gyoza", "porc haché", "chou", "ciboule", "ail", "gingembre", "sauce soja", "huile de sésame"],
+            },
+             {
+                id: 231, name: "Shogayaki", originalName: "生姜焼き", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Fines tranches de porc sautées dans une sauce savoureuse au gingembre râpé, mirin et sauce soja.",
+                prepTime: 20,
+                ingredients: ["Porc (longe, fines tranches)", "gingembre (râpé)", "sauce soja", "mirin", "saké"],
+            },
+            // Corée
+            {
+                id: 232, name: "Japchae", originalName: "잡채", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Nouilles de patate douce sautées avec divers légumes colorés (épinards, carottes, champignons) et du bœuf, assaisonnées à la sauce soja et huile de sésame.",
+                prepTime: 45,
+                ingredients: ["Nouilles de patate douce (dangmyeon)", "bœuf", "épinards", "carottes", "oignons", "champignons (shiitake)", "sauce soja", "huile de sésame", "sucre"],
+            },
+            {
+                id: 233, name: "Bulgogi", originalName: "불고기", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté", // Souvent grillé, mais la version sautée existe
+                description: "'Viande au feu'. Fines tranches de bœuf marinées dans une sauce sucrée-salée (poire, sauce soja) puis sautées (ou grillées).",
+                prepTime: 30, // + Marinade
+                ingredients: ["Bœuf (entrecôte, faux-filet)", "sauce soja", "poire coréenne (ou pomme)", "ail", "oignon", "sucre", "huile de sésame"],
+            },
+            {
+                id: 234, name: "Kimchi Bokkeumbap", originalName: "김치볶음밥", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Riz sauté au kimchi. Riz cuit sauté avec du kimchi haché, souvent avec du porc ou du thon, garni d'un œuf au plat.",
+                prepTime: 20,
+                ingredients: ["Riz cuit (froid)", "Kimchi (fermenté)", "porc (ou thon, spam)", "gochujang (optionnel)", "huile de sésame", "œuf"],
+            },
+            {
+                id: 235, name: "Nakji Bokkeum", originalName: "낙지볶음", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Sauté de poulpe (petits poulpes) très épicé avec des légumes dans une sauce gochujang.",
+                prepTime: 30,
+                ingredients: ["Poulpe (nakji)", "oignons", "chou", "carottes", "gochujang", "gochugaru", "ail", "sauce soja"],
+            },
+            // Indonésie / Malaisie
+            {
+                id: 236, name: "Nasi Goreng", originalName: "Nasi Goreng", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Sauté",
+                description: "Plat national indonésien. Riz sauté parfumé au kecap manis (sauce soja sucrée), piment et pâte de crevette (terasi), souvent garni d'un œuf.",
+                prepTime: 25,
+                ingredients: ["Riz cuit (froid)", "kecap manis", "échalotes", "ail", "piment", "terasi (pâte de crevette)", "poulet (ou crevettes)", "œuf"],
+            },
+            {
+                id: 237, name: "Mie Goreng", originalName: "Mie Goreng", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Sauté",
+                description: "Nouilles jaunes sautées à l'indonésienne, similaires au Nasi Goreng mais avec des nouilles, kecap manis et légumes.",
+                prepTime: 25,
+                ingredients: ["Nouilles aux œufs (fraîches ou sèches)", "kecap manis", "échalotes", "ail", "chou", "poulet (ou crevettes)", "œuf"],
+            },
+            {
+                id: 238, name: "Char Kway Teow", originalName: "Char Kway Teow", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Sauté", // Aussi Singapour
+                description: "Nouilles de riz plates sautées à feu très vif avec crevettes, coques, saucisse chinoise, œufs et germes de soja dans une sauce soja foncée.",
+                prepTime: 30,
+                ingredients: ["Nouilles de riz plates (kway teow)", "crevettes", "coques", "saucisse chinoise (lap cheong)", "œufs", "germes de soja", "ciboule chinoise", "sauce soja foncée", "pâte de chili"],
+            },
+            {
+                id: 239, name: "Sambal Sotong", originalName: "Sambal Sotong", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Sauté",
+                description: "Calamars sautés dans un sambal (pâte de piment) épicé et parfumé.",
+                prepTime: 35,
+                ingredients: ["Calamars (sotong)", "sambal oelek (ou pâte de piment maison)", "oignons", "tomates", "tamarin (jus)"],
+            },
+            // Philippines
+            {
+                id: 240, name: "Pancit Bihon Guisado", originalName: "Pancit Bihon Guisado", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                description: "Vermicelles de riz sautés ('guisado') avec du porc, des crevettes et divers légumes (chou, carottes, haricots verts).",
+                prepTime: 35,
+                ingredients: ["Vermicelles de riz (bihon)", "porc", "crevettes", "chou", "carottes", "haricots verts", "sauce soja", "bouillon de poulet", "ail", "oignon"],
+            },
+            {
+                id: 241, name: "Pancit Canton", originalName: "Pancit Canton", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                description: "Nouilles aux œufs épaisses (similaires aux lo mein) sautées avec viande, fruits de mer et légumes.",
+                prepTime: 30,
+                ingredients: ["Nouilles Canton (type lo mein)", "poulet", "crevettes", "saucisse chinoise", "chou", "carottes", "sauce soja", "sauce d'huître"],
+            },
+            {
+                id: 242, name: "Sisig", originalName: "Sisig", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté", // Souvent fini sur plaque chauffante
+                description: "Plat Kapampangan de tête de porc hachée et foie de poulet, sauté avec oignons, piment et calamansi, souvent servi grésillant avec un œuf.",
+                prepTime: 90, // Inclut cuisson initiale de la tête
+                ingredients: ["Tête de porc (joue, oreille)", "foie de poulet", "oignons", "piments (siling labuyo)", "jus de calamansi", "mayonnaise (parfois)", "œuf"],
+            },
+            // Singapour
+            {
+                id: 243, name: "Hokkien Mee (Version sautée)", originalName: "福建炒麵", country: "Singapour", flag: "🇸🇬", continent: "Asie", type: "Sauté",
+                description: "Mélange de nouilles jaunes et de vermicelles de riz sautés dans un riche bouillon de crevettes avec crevettes, calamars et porc.",
+                prepTime: 40,
+                ingredients: ["Nouilles jaunes aux œufs", "vermicelles de riz (bee hoon)", "crevettes", "calamars", "poitrine de porc", "bouillon de crevettes", "œufs", "germes de soja"],
+            },
+             {
+                id: 244, name: "Singapore Noodles", originalName: "星洲炒米", country: "Singapour", flag: "🇸🇬", continent: "Asie", type: "Sauté", // Plus commun à Hong Kong/Cantonais
+                description: "Vermicelles de riz sautés avec crevettes, porc char siu, œufs et légumes, assaisonnés de poudre de curry.",
+                prepTime: 30,
+                ingredients: ["Vermicelles de riz", "crevettes", "porc char siu", "œufs", "poivrons", "oignons", "poudre de curry", "sauce soja"],
+            },
+            // Inde
+            {
+                id: 245, name: "Aloo Gobi", originalName: "आलू गोभी", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Plat végétarien populaire. Pommes de terre (aloo) et chou-fleur (gobi) sautés avec oignons, tomates et épices (curcuma, cumin).",
+                prepTime: 35,
+                ingredients: ["Pommes de terre", "chou-fleur", "oignons", "tomates", "curcuma", "cumin", "gingembre", "ail", "coriandre"],
+            },
+            {
+                id: 246, name: "Bhindi Masala", originalName: "भिंडी मसाला", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Okra (gombo/bhindi) sauté avec oignons, tomates et un mélange d'épices.",
+                prepTime: 30,
+                ingredients: ["Okra (Bhindi)", "oignons", "tomates", "gingembre", "ail", "curcuma", "coriandre (poudre)", "amchur"],
+            },
+            {
+                id: 247, name: "Chicken Jalfrezi", originalName: "Chicken Jalfrezi", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté", // Influence Anglo-Indienne
+                description: "Curry sauté rapide. Morceaux de poulet sautés avec poivrons, oignons et tomates dans une sauce épicée.",
+                prepTime: 35,
+                ingredients: ["Poulet", "poivrons (verts, rouges)", "oignons", "tomates", "piments verts", "gingembre", "ail", "garam masala"],
+            },
+             // Pakistan
+            {
+                id: 248, name: "Karahi Gosht", originalName: "کڑاہی گوشت", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Sauté",
+                description: "Viande (agneau/chèvre) sautée vivement dans un 'karahi' (wok) avec tomates, gingembre, ail et piments verts.",
+                prepTime: 60,
+                ingredients: ["Agneau (ou chèvre)", "tomates", "gingembre", "ail", "piments verts", "yaourt", "coriandre fraîche"],
+            },
+            // Europe (moins typique mais existe)
+             {
+                id: 249, name: "Piccata de Veau", originalName: "Piccata di Vitello", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Sauté",
+                description: "Escalopes de veau fines sautées rapidement puis nappées d'une sauce citronnée aux câpres.",
+                prepTime: 20,
+                ingredients: ["Veau (escalopes fines)", "farine", "beurre", "jus de citron", "câpres", "vin blanc", "persil"],
+            },
+             {
+                id: 250, name: "Saltimbocca", originalName: "Saltimbocca alla Romana", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Sauté",
+                description: "'Saute en bouche'. Escalopes de veau fines garnies de prosciutto et de sauge, sautées et déglacées au vin blanc.",
+                prepTime: 20,
+                ingredients: ["Veau (escalopes fines)", "prosciutto di Parma", "feuilles de sauge", "beurre", "vin blanc (Marsala)"],
+            },
+            {
+                id: 251, name: "Geschnetzeltes (Zürcher)", originalName: "Zürcher Geschnetzeltes", country: "Suisse", flag: "🇨🇭", continent: "Europe", type: "Sauté",
+                description: "Émincé de veau zurichois. Fines lanières de veau sautées avec des champignons dans une sauce crémeuse au vin blanc.",
+                prepTime: 30,
+                ingredients: ["Veau (émincé)", "champignons de Paris", "oignons (ou échalotes)", "crème fraîche", "vin blanc", "bouillon de veau"],
+            },
+            {
+                id: 252, name: "Lomo Saltado", originalName: "Lomo Saltado", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Sauté", // Influence Chinoise (Chifa)
+                description: "Sauté péruvien unique. Lanières de bœuf sautées vivement avec oignons rouges, tomates, piments aji amarillo, sauce soja, servi avec frites et riz.",
+                prepTime: 30,
+                ingredients: ["Bœuf (filet, rumsteck)", "oignons rouges", "tomates", "piment aji amarillo", "sauce soja", "vinaigre", "frites", "riz", "coriandre"],
+            },
+             // Plus de variétés asiatiques
+            {
+                id: 253, name: "Poulet Sauté au Gingembre et Oignons Verts", originalName: "姜葱鸡", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Morceaux de poulet sautés simplement mais savoureusement avec beaucoup de gingembre et d'oignons verts.",
+                prepTime: 25,
+                ingredients: ["Poulet", "gingembre (abondant)", "oignons verts (abondants)", "sauce soja", "vin de Shaoxing", "huile de sésame"],
+            },
+             {
+                id: 254, name: "Tofu Frit Sauté au Sel et Poivre", originalName: "椒盐豆腐", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Cubes de tofu frits jusqu'à être croustillants, puis sautés avec un mélange sel-poivre, ail et piments.",
+                prepTime: 30,
+                ingredients: ["Tofu ferme", "fécule de maïs", "sel", "poivre blanc (ou du Sichuan)", "ail", "piments", "oignons verts"],
+            },
+            {
+                id: 255, name: "Calamars Sautés au Sel et Poivre", originalName: "椒盐鱿鱼", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Calamars légèrement panés et frits, puis sautés avec le mélange sel-poivre, ail et piments.",
+                prepTime: 25,
+                ingredients: ["Calamars", "fécule de maïs", "sel", "poivre blanc (ou du Sichuan)", "ail", "piments", "oignons verts"],
+            },
+             {
+                id: 256, name: "Pad Woon Sen", originalName: "ผัดวุ้นเส้น", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Vermicelles de soja (nouilles de verre) sautés avec poulet (ou crevettes), œufs et légumes dans une sauce légère.",
+                prepTime: 25,
+                ingredients: ["Vermicelles de soja (woon sen)", "poulet", "œufs", "chou", "carottes", "oignons", "sauce soja", "sauce poisson"],
+            },
+             {
+                id: 257, name: "Khao Pad Sapparot", originalName: "ข้าวผัดสับปะรด", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Riz sauté à l'ananas, souvent servi dans un ananas évidé, avec crevettes, poulet, noix de cajou et raisins secs, parfumé au curry.",
+                prepTime: 35,
+                ingredients: ["Riz cuit (froid)", "ananas", "crevettes", "poulet", "noix de cajou", "raisins secs", "poudre de curry", "sauce poisson"],
+            },
+             {
+                id: 258, name: "Canh Chua (Version Sautée/Réduite)", originalName: "Canh Chua", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Une version 'sautée' de la soupe aigre, où les ingrédients (poisson, ananas, tomates, germes de soja) sont sautés avec la base de tamarin.",
+                prepTime: 30,
+                ingredients: ["Poisson (poisson-chat)", "ananas", "tomates", "germes de soja", "tamarin", "ail", "herbes (ngo om, rau ram)"],
+            },
+             {
+                id: 259, name: "Cơm Chiên", originalName: "Cơm Chiên", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Riz sauté vietnamien, souvent plus simple que le Nasi Goreng, avec œufs, saucisse (lap xuong), petits pois et carottes.",
+                prepTime: 20,
+                ingredients: ["Riz cuit (froid)", "œufs", "saucisse chinoise (lap xuong)", "petits pois", "carottes", "sauce poisson", "ail"],
+            },
+            {
+                id: 260, name: "Butadon", originalName: "豚丼", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté", // Peut aussi être mijoté
+                description: "Bol de riz garni de fines tranches de porc sautées dans une sauce soja sucrée.",
+                prepTime: 20,
+                ingredients: ["Porc (longe, fines tranches)", "riz", "sauce soja", "mirin", "saké", "sucre", "oignon"],
+            },
+            {
+                id: 261, name: "Jeyuk Bokkeum", originalName: "제육볶음", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Porc sauté épicé. Fines tranches de porc marinées dans une sauce gochujang puis sautées vivement avec des oignons et d'autres légumes.",
+                prepTime: 25, // + Marinade
+                ingredients: ["Porc (fines tranches)", "gochujang", "gochugaru", "sauce soja", "ail", "gingembre", "oignons", "chou"],
+            },
+            {
+                id: 262, name: "Osam Bulgogi", originalName: "오삼불고기", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Sauté épicé combinant calamars (Ojingeo) et poitrine de porc (Samgyeopsal) dans une sauce gochujang.",
+                prepTime: 30,
+                ingredients: ["Calamars", "poitrine de porc", "gochujang", "gochugaru", "oignons", "chou", "carottes"],
+            },
+             {
+                id: 263, name: "Cap Cay", originalName: "Cap Cay", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Sauté", // Influence Chinoise
+                description: "Sauté de légumes variés d'origine chinoise-indonésienne, souvent avec du poulet, des crevettes ou des boulettes, dans une sauce épaisse.",
+                prepTime: 30,
+                ingredients: ["Poulet", "crevettes", "chou-fleur", "carottes", "brocoli", "bak choy", "sauce d'huître", "fécule de maïs"],
+            },
+            {
+                id: 264, name: "Kangkung Belacan", originalName: "Kangkung Belacan", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Sauté",
+                description: "Liseron d'eau (kangkung) sauté avec du belacan (pâte de crevette fermentée) et du piment.",
+                prepTime: 15,
+                ingredients: ["Liseron d'eau (kangkung)", "belacan (pâte de crevette)", "piments", "ail", "échalotes"],
+            },
+             {
+                id: 265, name: "Adobong Sitaw", originalName: "Adobong Sitaw", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                description: "Haricots longs (sitaw) sautés à la manière Adobo (sauce soja, vinaigre, ail), souvent avec du porc.",
+                prepTime: 25,
+                ingredients: ["Haricots longs (sitaw)", "porc (lard)", "sauce soja", "vinaigre", "ail", "poivre noir"],
+            },
+             {
+                id: 266, name: "Ginisang Ampalaya", originalName: "Ginisang Ampalaya", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                description: "Margose (courge amère) sautée ('ginisa') avec des œufs brouillés, des tomates et parfois des crevettes ou du porc.",
+                prepTime: 25,
+                ingredients: ["Margose (ampalaya)", "œufs", "tomates", "oignons", "ail", "crevettes (optionnel)"],
+            },
+             {
+                id: 267, name: "Chili Crab (Sauce sautée)", originalName: "Chili Crab", country: "Singapour", flag: "🇸🇬", continent: "Asie", type: "Sauté",
+                description: "Crabe (souvent de mangrove) cuit à la vapeur ou frit, puis sauté dans une sauce tomate-piment épaisse, sucrée et savoureuse.",
+                prepTime: 45,
+                ingredients: ["Crabe", "pâte de chili", "ketchup", "ail", "gingembre", "œuf", "sauce soja"],
+            },
+             {
+                id: 268, name: "Chicken 65 (Version sautée)", originalName: "Chicken 65", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Morceaux de poulet marinés, frits, puis souvent sautés avec des feuilles de curry, piments et yaourt (selon la version).",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poulet", "yaourt", "pâte de gingembre-ail", "piments rouges", "feuilles de curry", "farine de riz"],
+            },
+            {
+                id: 269, name: "Gobi Manchurian (Dry)", originalName: "Gobi Manchurian", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté", // Cuisine Indo-Chinoise
+                description: "Fleurettes de chou-fleur panées et frites, puis sautées dans une sauce aigre-douce et piquante d'inspiration chinoise.",
+                prepTime: 40,
+                ingredients: ["Chou-fleur", "farine", "fécule de maïs", "sauce soja", "ketchup", "vinaigre", "ail", "gingembre", "oignons verts"],
+            },
+             {
+                id: 270, name: "Chicken Tikka Masala (Version rapide sautée)", originalName: "Chicken Tikka Masala", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Sauté", // Style restaurant rapide
+                description: "Une version rapide où le poulet tikka (mariné et grillé) est simplement sauté dans une sauce tomate crémeuse et épicée.",
+                prepTime: 35,
+                ingredients: ["Poulet tikka (cuit)", "sauce tomate", "crème", "oignons", "gingembre", "ail", "garam masala", "yaourt"],
+            },
+             {
+                id: 271, name: "Escalope Milanaise", originalName: "Cotoletta alla Milanese", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Sauté", // Pané et sauté
+                description: "Côtelette de veau (avec os) panée et sautée (frite peu profonde) dans du beurre clarifié.",
+                prepTime: 25,
+                ingredients: ["Côtelette de veau", "œufs", "chapelure", "beurre clarifié", "citron"],
+            },
+            {
+                id: 272, name: "Wiener Schnitzel", originalName: "Wiener Schnitzel", country: "Autriche", flag: "🇦🇹", continent: "Europe", type: "Sauté", // Pané et sauté
+                description: "Escalope de veau très fine, panée et sautée dans du saindoux ou du beurre jusqu'à ce qu'elle soit dorée et soufflée.",
+                prepTime: 25,
+                ingredients: ["Veau (escalope très fine)", "œufs", "farine", "chapelure", "saindoux (ou beurre clarifié)", "citron"],
+            },
+             {
+                id: 273, name: "Steak Diane", originalName: "Steak Diane", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Sauté", // Origine contestée (UK/US)
+                description: "Steak fin (souvent filet mignon) sauté rapidement et servi avec une sauce flambée (cognac) à la crème, moutarde et champignons.",
+                prepTime: 20,
+                ingredients: ["Steak (filet mignon)", "échalotes", "champignons", "cognac", "crème", "moutarde de Dijon", "sauce Worcestershire"],
+            },
+            {
+                id: 274, name: "Pad Kee Mao (Drunken Noodles)", originalName: "ผัดขี้เมา", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Nouilles de riz larges sautées avec viande (ou fruits de mer), basilic sacré, piments et légumes dans une sauce soja foncée épicée.",
+                prepTime: 25,
+                ingredients: ["Nouilles de riz larges", "poulet (ou crevettes)", "basilic sacré thaï", "piments", "ail", "maïs miniature", "poivre vert en grappe", "sauce soja foncée", "sauce poisson"],
+            },
+             {
+                id: 275, name: "Kung Pao Tofu", originalName: "宫保豆腐", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Version végétarienne du Kung Pao, avec des cubes de tofu frits à la place du poulet.",
+                prepTime: 35,
+                ingredients: ["Tofu ferme", "cacahuètes", "piments séchés", "poivre du Sichuan", "sauce soja", "vinaigre noir", "sucre", "oignons verts"],
+            },
+             {
+                id: 276, name: "Double Cooked Pork", originalName: "回锅肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Poitrine de porc d'abord bouillie puis tranchée et sautée vivement avec poireaux (ou poivrons) et pâte de fèves pimentée (doubanjiang).",
+                prepTime: 60, // Inclut pré-cuisson
+                ingredients: ["Poitrine de porc", "poireaux (partie blanche)", "doubanjiang", "pâte de soja sucrée (tianmianjiang)", "gingembre", "ail"],
+            },
+            {
+                id: 277, name: "Gai Pad Khing", originalName: "ไก่ผัดขิง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Poulet sauté avec une grande quantité de gingembre frais émincé, champignons (oreilles de Judas) et oignons.",
+                prepTime: 25,
+                ingredients: ["Poulet", "gingembre (abondant)", "champignons noirs (oreilles de Judas)", "oignons", "sauce soja", "sauce d'huître"],
+            },
+             {
+                id: 278, name: "Cà Ri Gà (Version sautée rapide)", originalName: "Cà Ri Gà", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté",
+                description: "Une version rapide du curry de poulet vietnamien où le poulet est sauté avec la poudre de curry, lait de coco, patates douces et carottes.",
+                prepTime: 40,
+                ingredients: ["Poulet", "patates douces", "carottes", "lait de coco", "poudre de curry de Madras", "citronnelle", "sauce poisson"],
+            },
+             {
+                id: 279, name: "Kinpira Gobo", originalName: "きんぴらごぼう", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Racine de bardane (gobo) et carottes coupées en julienne fine, sautées et mijotées dans une sauce soja sucrée.",
+                prepTime: 30,
+                ingredients: ["Racine de bardane (gobo)", "carottes", "sauce soja", "mirin", "saké", "sucre", "huile de sésame", "graines de sésame"],
+            },
+             {
+                id: 280, name: "Dubu Kimchi", originalName: "두부김치", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Kimchi sauté avec du porc, servi aux côtés de tranches de tofu blanchi ou poêlé.",
+                prepTime: 25,
+                ingredients: ["Kimchi (fermenté)", "porc (poitrine)", "tofu ferme", "oignons", "gochugaru", "huile de sésame"],
+            },
+            {
+                id: 281, name: "Mee Siam (Version sèche/sautée)", originalName: "Mee Siam", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Sauté", // Aussi Singapour
+                description: "Vermicelles de riz sautés dans une sauce épicée, aigre et légèrement sucrée à base de pâte de piment et de tamarin.",
+                prepTime: 30,
+                ingredients: ["Vermicelles de riz (bee hoon)", "pâte de chili (rempah)", "tamarin (jus)", "crevettes séchées", "taucheo (pâte de soja fermentée)", "crevettes", "tofu frit", "germes de soja"],
+            },
+            {
+                id: 282, name: "Bicol Express", originalName: "Bicol Express", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté", // Souvent mijoté mais peut être sauté
+                description: "Plat très épicé de la région de Bicol. Porc sauté (ou mijoté) dans du lait de coco avec beaucoup de piments (siling haba) et de la pâte de crevette (bagoong).",
+                prepTime: 40,
+                ingredients: ["Porc (poitrine)", "lait de coco", "piments longs verts (siling haba)", "ail", "oignon", "bagoong alamang (pâte de crevette)"],
+            },
+            {
+                id: 283, name: "Chai Tow Kway (Noir)", originalName: "菜頭粿", country: "Singapour", flag: "🇸🇬", continent: "Asie", type: "Sauté",
+                description: "Gâteau de radis blanc cuit à la vapeur puis coupé en dés et sauté avec des œufs, des navets conservés (chai poh) et de la sauce soja foncée sucrée.",
+                prepTime: 30, // Si gâteau prêt
+                ingredients: ["Gâteau de radis (cuit)", "œufs", "navet conservé (chai poh)", "ail", "sauce soja foncée sucrée"],
+            },
+            {
+                id: 284, name: "Paneer Bhurji", originalName: "पनीर भुर्जी", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Plat végétarien rapide. Fromage paneer émietté sauté avec oignons, tomates, épices (comme des œufs brouillés).",
+                prepTime: 20,
+                ingredients: ["Paneer (émietté)", "oignons", "tomates", "gingembre", "ail", "curcuma", "piments verts", "coriandre"],
+            },
+             {
+                id: 285, name: "Keema Matar (Version sèche/sautée)", originalName: "कीमा मटर", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Viande hachée (agneau/poulet) sautée avec des petits pois (matar), oignons, tomates et épices.",
+                prepTime: 35,
+                ingredients: ["Viande hachée (agneau)", "petits pois", "oignons", "tomates", "gingembre", "ail", "garam masala", "curcuma"],
+            },
+             {
+                id: 286, name: "Tawa Pulao", originalName: "तवा पुलाव", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté",
+                description: "Plat de rue de Mumbai. Riz basmati cuit et légumes sautés vivement sur une plaque chauffante (tawa) avec du Pav Bhaji Masala.",
+                prepTime: 30,
+                ingredients: ["Riz basmati (cuit)", "oignons", "tomates", "poivrons", "petits pois", "Pav Bhaji Masala", "beurre", "coriandre"],
+            },
+            {
+                id: 287, name: "Beef Pepper Fry", originalName: "Beef Pepper Fry", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Sauté", // Kerala
+                description: "Morceaux de bœuf (souvent précuits) sautés à sec avec beaucoup de poivre noir, oignons, feuilles de curry et copeaux de coco.",
+                prepTime: 45, // Si bœuf précuit
+                ingredients: ["Bœuf (cuit)", "oignons (ou échalotes)", "poivre noir (abondant)", "feuilles de curry", "copeaux de noix de coco", "gingembre", "ail"],
+            },
+            {
+                id: 288, name: "Chapli Kebab (Poêlé)", originalName: "چپلی کباب", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Sauté", // Sauté peu profond
+                description: "Galettes de viande hachée (bœuf/agneau) épicées de Peshawar, souvent avec tomate et œuf, sautées à la poêle.",
+                prepTime: 40,
+                ingredients: ["Viande hachée", "oignons", "tomates", "piments verts", "graines de coriandre", "graines de grenade séchées (anardana)", "œuf"],
+            },
+            {
+                id: 289, name: "Gambas al Ajillo", originalName: "Gambas al Ajillo", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Sauté",
+                description: "Tapa classique. Crevettes sautées vivement dans une huile d'olive chaude infusée à l'ail et au piment.",
+                prepTime: 15,
+                ingredients: ["Crevettes (gambas)", "huile d'olive (abondante)", "ail (tranché)", "piment séché (guindilla)", "persil"],
+            },
+            {
+                id: 290, name: "Salade Tiède de Foies de Volaille", originalName: "Salade Tiède de Foies de Volaille", country: "France", flag: "🇫🇷", continent: "Europe", type: "Sauté",
+                description: "Foies de volaille sautés rapidement, souvent déglacés au vinaigre, servis chauds sur une salade verte.",
+                prepTime: 20,
+                ingredients: ["Foies de volaille", "échalotes", "vinaigre balsamique (ou de Xérès)", "salade verte (frisée)", "lardons (optionnel)"],
+            },
+             {
+                id: 291, name: "Souvlaki (Sauté à la poêle)", originalName: "Σουβλάκι", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Sauté",
+                description: "Bien que souvent grillées, les brochettes de viande (porc/poulet) marinées peuvent être sautées à la poêle.",
+                prepTime: 25, // + Marinade
+                ingredients: ["Porc (ou poulet)", "huile d'olive", "jus de citron", "origan", "ail"],
+            },
+            {
+                id: 292, name: "Fajitas (Garniture sautée)", originalName: "Fajitas", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Sauté", // Tex-Mex
+                description: "Lanières de viande (bœuf/poulet) marinées et sautées vivement avec des oignons et des poivrons.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Bœuf (jupe)", "poulet (poitrine)", "oignons", "poivrons (verts, rouges)", "jus de citron vert", "cumin", "poudre de chili"],
+            },
+             {
+                id: 293, name: "Pad Kra Pao Tofu", originalName: "ผัดกระเพราเต้าหู้", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Version végétarienne du classique thaï, avec du tofu ferme ou frit sauté avec basilic sacré, ail et piments.",
+                prepTime: 20,
+                ingredients: ["Tofu ferme (ou frit)", "basilic sacré thaï", "ail", "piments", "sauce soja", "sauce champignon végétarienne", "sucre"],
+            },
+             {
+                id: 294, name: "Tofu Teriyaki", originalName: "豆腐の照り焼き", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Tranches de tofu poêlées puis nappées d'une sauce teriyaki épaisse et brillante.",
+                prepTime: 20,
+                ingredients: ["Tofu ferme", "sauce soja", "mirin", "saké", "sucre", "fécule de maïs (pour épaissir)"],
+            },
+            {
+                id: 295, name: "Kimchi Jaeyook Bokkeum", originalName: "김치제육볶음", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                description: "Combinaison du porc sauté épicé (Jeyuk Bokkeum) et du kimchi sauté.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (fines tranches)", "Kimchi", "gochujang", "gochugaru", "oignons", "ail", "huile de sésame"],
+            },
+            {
+                id: 296, name: "Gai Lan Sauté à l'Ail", originalName: "蒜蓉炒芥兰", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Brocoli chinois (Gai Lan) blanchi puis sauté rapidement avec de l'ail et parfois un peu de vin de riz.",
+                prepTime: 15,
+                ingredients: ["Brocoli chinois (Gai Lan)", "ail", "vin de Shaoxing (optionnel)", "sel", "huile"],
+            },
+            {
+                id: 297, name: "Crevettes Sautées Sauce Aigre-douce", originalName: "糖醋虾球", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                description: "Crevettes (souvent panées et frites) sautées dans une sauce aigre-douce.",
+                prepTime: 30,
+                ingredients: ["Crevettes", "vinaigre de riz", "sucre", "ketchup", "fécule de maïs", "ananas (optionnel)"],
+            },
+             {
+                id: 298, name: "Moo Pad Prik Khing", originalName: "หมูผัดพริกขิง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                description: "Variante du Pad Prik King avec du porc (souvent croustillant) et des haricots longs sautés dans la pâte de curry rouge.",
+                prepTime: 25,
+                ingredients: ["Porc (poitrine croustillante)", "haricots longs", "pâte de curry rouge (Prik King)", "feuilles de combava", "sauce poisson", "sucre de palme"],
+            },
+             {
+                id: 299, name: "Cha Gio (Roulés frits/sautés)", originalName: "Chả Giò", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Sauté", // Friture peu profonde = sauté
+                description: "Nems vietnamiens. Galettes de riz frites et croustillantes farcies de porc haché, crevettes, vermicelles et légumes.",
+                prepTime: 50, // Inclut le roulage
+                ingredients: ["Galettes de riz", "porc haché", "crevettes", "vermicelles de soja", "champignons noirs", "carottes", "taro", "œufs"],
+            },
+             {
+                id: 300, name: "Beef Negimaki", originalName: "牛肉の葱巻き", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Sauté",
+                description: "Fines tranches de bœuf enroulées autour d'oignons verts (negi), sautées et nappées de sauce teriyaki.",
+                prepTime: 25,
+                ingredients: ["Bœuf (fines tranches, ex: sukiyaki)", "oignons verts (negi)", "sauce soja", "mirin", "saké", "sucre"],
+            },
+            {
+                 id: 301, name: "Dwaeji Bulgogi", originalName: "돼지불고기", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Sauté",
+                 description: "Version du Bulgogi avec du porc (fines tranches), souvent mariné dans une sauce gochujang épicée.",
+                 prepTime: 30, // + Marinade
+                 ingredients: ["Porc (fines tranches)", "gochujang", "sauce soja", "ail", "gingembre", "poire coréenne", "oignons"],
+            },
+             {
+                 id: 302, name: "Bihun Goreng", originalName: "Bihun Goreng", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Sauté",
+                 description: "Vermicelles de riz (bihun) sautés à l'indonésienne, similaires au Mie Goreng mais avec des nouilles plus fines.",
+                 prepTime: 25,
+                 ingredients: ["Vermicelles de riz (bihun)", "kecap manis", "échalotes", "ail", "chou", "poulet (ou crevettes)", "œuf"],
+            },
+            {
+                 id: 303, name: "Sinigang na Hipon (Version sautée/réduite)", originalName: "Sinigang na Hipon", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                 description: "Une version 'sautée' de la soupe aigre aux crevettes, où crevettes et légumes sont sautés avec la base de tamarin avant d'ajouter peu de bouillon.",
+                 prepTime: 30,
+                 ingredients: ["Crevettes", "tamarin (poudre ou pâte)", "liseron d'eau (kangkong)", "radis (labanos)", "haricots longs (sitaw)", "tomates", "oignons"],
+            },
+            {
+                 id: 304, name: "Calamansi Chicken", originalName: "Calamansi Chicken", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Sauté",
+                 description: "Morceaux de poulet marinés au jus de calamansi et sauce soja, puis sautés jusqu'à caramélisation.",
+                 prepTime: 30, // + Marinade
+                 ingredients: ["Poulet", "jus de calamansi", "sauce soja", "ail", "poivre noir"],
+            },
+             {
+                 id: 305, name: "Salt and Pepper Shrimp", originalName: "椒鹽蝦", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Sauté",
+                 description: "Crevettes (souvent avec carapace) frites puis sautées vivement avec le mélange sel-poivre, ail et piments.",
+                 prepTime: 25,
+                 ingredients: ["Crevettes (avec carapace)", "fécule de maïs", "sel", "poivre blanc (ou du Sichuan)", "ail", "piments", "oignons verts"],
+            },
+             {
+                 id: 306, name: "Pad Phet Pla Duk Foo", originalName: "ผัดเผ็ดปลาดุกฟู", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Sauté",
+                 description: "Poisson-chat frit croustillant ('foo') sauté dans une pâte de curry rouge épicée avec des haricots longs et du basilic.",
+                 prepTime: 40,
+                 ingredients: ["Poisson-chat", "pâte de curry rouge", "haricots longs", "basilic thaï (ou sacré)", "feuilles de combava", "sauce poisson", "sucre"],
+            },
+			// --- NOUVELLES RECETTES (SOUPES 307-406) ---
+            
+            // France (Pays à soupes classiques)
+            {
+                id: 307, name: "Soupe à l'Oignon", originalName: "Soupe à l'oignon", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe riche à base d'oignons longuement caramélisés dans un bouillon de bœuf, gratinée au four avec du pain et du fromage.",
+                prepTime: 90,
+                ingredients: ["Oignons", "bouillon de bœuf", "pain (baguette)", "fromage (Gruyère, Comté)", "beurre", "vin blanc", "thym"],
+            },
+            {
+                id: 308, name: "Vichyssoise", originalName: "Vichyssoise", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe froide et veloutée à base de poireaux, pommes de terre et crème. Souvent attribuée à un chef français à New York.",
+                prepTime: 60, // + Refroidissement
+                ingredients: ["Poireaux (blanc)", "pommes de terre", "bouillon de volaille", "crème fraîche", "ciboulette", "beurre"],
+            },
+            {
+                id: 309, name: "Bisque de Homard", originalName: "Bisque de Homard", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe crémeuse et veloutée à base de carapaces de homard, mijotée avec vin blanc, cognac et crème.",
+                prepTime: 75,
+                ingredients: ["Homard (carapaces et chair)", "crème épaisse", "cognac", "vin blanc", "tomates (concentré)", "carottes", "oignons", "céleri", "riz"],
+            },
+            {
+                id: 310, name: "Potage Parmentier", originalName: "Potage Parmentier", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe simple et classique à base de pommes de terre et de poireaux, souvent mixée et enrichie de crème.",
+                prepTime: 45,
+                ingredients: ["Pommes de terre", "poireaux", "bouillon (volaille ou légume)", "crème fraîche", "beurre", "cerfeuil"],
+            },
+            {
+                id: 311, name: "Soupe au Pistou", originalName: "Soupe au Pistou", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe d'été provençale épaisse avec des légumes frais (haricots, courgettes), des pâtes, et garnie de pistou (basilic, ail, huile d'olive).",
+                prepTime: 60,
+                ingredients: ["Haricots (cocos, verts)", "courgettes", "pommes de terre", "tomates", "petites pâtes", "pistou (basilic, ail, huile d'olive)", "parmesan"],
+            },
+            {
+                id: 312, name: "Crème Dubarry", originalName: "Crème Dubarry", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Velouté classique de chou-fleur, lié à la crème et au jaune d'œuf, souvent servi avec des croûtons.",
+                prepTime: 40,
+                ingredients: ["Chou-fleur", "bouillon de volaille", "crème fraîche", "beurre", "jaune d'œuf", "cerfeuil"],
+            },
+            {
+                id: 313, name: "Potage Saint-Germain", originalName: "Potage Saint-Germain", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Velouté onctueux de pois cassés frais (ou secs), souvent garni de petits lardons ou de croûtons.",
+                prepTime: 75,
+                ingredients: ["Pois cassés", "bouillon", "oignons", "carottes", "beurre", "crème", "lardons (garniture)"],
+            },
+            {
+                id: 314, name: "Consommé", originalName: "Consommé", country: "France", flag: "🇫🇷", continent: "Europe", type: "Soupe",
+                description: "Bouillon de viande (bœuf ou volaille) parfaitement clarifié à l'aide de blancs d'œufs, résultant en une soupe limpide et intense.",
+                prepTime: 180,
+                ingredients: ["Bouillon de bœuf", "bœuf haché maigre", "blancs d'œufs", "carottes", "céleri", "oignons", "bouquet garni"],
+            },
 
+            // Italie (Grande tradition de soupes)
+            {
+                id: 315, name: "Minestrone", originalName: "Minestrone", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "Soupe de légumes épaisse et consistante, variant selon la saison, contenant souvent des haricots, des pâtes ou du riz.",
+                prepTime: 90,
+                ingredients: ["Haricots (borlotti, cannellini)", "carottes", "céleri", "oignons", "courgettes", "pommes de terre", "tomates", "petites pâtes", "pancetta"],
+            },
+            {
+                id: 316, name: "Zuppa Toscana", originalName: "Zuppa Toscana", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "Soupe toscane rustique à base de chou noir (cavolo nero), haricots, pommes de terre et pain rassis. (Différente de la version 'Olive Garden').",
+                prepTime: 75,
+                ingredients: ["Cavolo nero (chou noir)", "haricots cannellini", "pommes de terre", "oignons", "carottes", "céleri", "pain rassis", "huile d'olive"],
+            },
+            {
+                id: 317, name: "Ribollita", originalName: "Ribollita", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "'Rebouillie'. Une Zuppa Toscana de la veille, réchauffée et épaissie avec du pain, devenant presque un ragoût.",
+                prepTime: 120,
+                ingredients: ["Restes de Zuppa Toscana", "pain toscan rassis", "huile d'olive", "oignon rouge"],
+            },
+            {
+                id: 318, name: "Pappa al Pomodoro", originalName: "Pappa al Pomodoro", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "Soupe toscane épaisse et réconfortante à base de tomates mûres, de pain rassis, d'ail et de basilic.",
+                prepTime: 45,
+                ingredients: ["Tomates (mûres ou pelées)", "pain rassis (toscan)", "ail", "basilic", "bouillon de légumes", "huile d'olive"],
+            },
+            {
+                id: 319, name: "Pasta e Fagioli", originalName: "Pasta e Fagioli", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "'Pâtes et haricots'. Soupe paysanne épaisse où une partie des haricots est mixée pour créer une base crémeuse.",
+                prepTime: 60,
+                ingredients: ["Haricots (borlotti ou cannellini)", "petites pâtes (ditalini)", "pancetta", "oignons", "céleri", "carottes", "tomates", "romarin"],
+            },
+            {
+                id: 320, name: "Stracciatella (Soupe)", originalName: "Stracciatella", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "'Petits chiffons'. Soupe romaine simple où un mélange d'œufs battus et de parmesan est versé dans un bouillon de viande chaud.",
+                prepTime: 15,
+                ingredients: ["Bouillon de viande (bœuf ou poulet)", "œufs", "Parmigiano-Reggiano", "noix de muscade", "persil"],
+            },
+            {
+                id: 321, name: "Acquacotta", originalName: "Acquacotta", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Soupe",
+                description: "'Eau cuite'. Soupe paysanne toscane à base de légumes (céleri, carottes, oignons), tomates, pain rassis et un œuf poché.",
+                prepTime: 50,
+                ingredients: ["Oignons (souvent rouges)", "céleri", "carottes", "tomates pelées", "pain rassis", "œufs", "Pecorino", "huile d'olive"],
+            },
+
+            // Espagne & Portugal (Soupes froides et rustiques)
+            {
+                id: 322, name: "Gazpacho", originalName: "Gazpacho Andaluz", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Soupe",
+                description: "Soupe froide andalouse emblématique à base de légumes crus mixés : tomates, poivrons, concombre, ail et huile d'olive.",
+                prepTime: 20, // + Refroidissement
+                ingredients: ["Tomates (mûres)", "poivron vert", "concombre", "ail", "mie de pain", "huile d'olive", "vinaigre de Xérès"],
+            },
+            {
+                id: 323, name: "Ajoblanco", originalName: "Ajoblanco", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Soupe",
+                description: "Soupe froide de Malaga, 'gazpacho blanc' à base d'amandes, d'ail, de mie de pain et d'huile d'olive, souvent servie avec du raisin.",
+                prepTime: 20, // + Refroidissement
+                ingredients: ["Amandes (mondées)", "ail", "mie de pain", "huile d'olive", "vinaigre", "raisin blanc (garniture)"],
+            },
+            {
+                id: 324, name: "Sopa de Ajo", originalName: "Sopa de Ajo (Castellana)", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Soupe",
+                description: "Soupe à l'ail castillane, rustique et réconfortante, à base d'ail, de paprika, de jambon serrano et de pain rassis.",
+                prepTime: 35,
+                ingredients: ["Ail (abondant)", "pain rassis", "paprika (pimentón)", "jambon serrano", "bouillon", "œufs (pochés)"],
+            },
+            {
+                id: 325, name: "Caldo Verde", originalName: "Caldo Verde", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Soupe",
+                description: "Soupe nationale portugaise. Velouté de pommes de terre garni de chou vert (couve galega) coupé en julienne et de tranches de chouriço.",
+                prepTime: 40,
+                ingredients: ["Pommes de terre", "chou vert (couve galega)", "chouriço", "oignons", "ail", "huile d'olive"],
+            },
+            {
+                id: 326, name: "Salmorejo", originalName: "Salmorejo", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Soupe",
+                description: "Soupe froide de Cordoue, similaire au gazpacho mais beaucoup plus épaisse (plus de pain) et garnie de jambon et d'œuf dur.",
+                prepTime: 20, // + Refroidissement
+                ingredients: ["Tomates", "mie de pain (type Telera)", "ail", "huile d'olive", "jambon serrano (garniture)", "œuf dur (garniture)"],
+            },
+            {
+                id: 327, name: "Canja de Galinha", originalName: "Canja de Galinha", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Soupe",
+                description: "Soupe de poulet portugaise réconfortante avec de petites pâtes (pevide) ou du riz.",
+                prepTime: 60,
+                ingredients: ["Poulet (entier ou morceaux)", "riz (ou petites pâtes)", "oignons", "carottes", "menthe (parfois)"],
+            },
+
+            // Europe de l'Est (Soupes copieuses et acidulées)
+            {
+                id: 328, name: "Borscht (Ukrainien)", originalName: "Борщ", country: "Ukraine", flag: "🇺🇦", continent: "Europe", type: "Soupe",
+                description: "Soupe nationale ukrainienne, riche et complexe, à base de betterave, chou, pommes de terre et viande, servie avec de la Smetana (crème aigre).",
+                prepTime: 150,
+                ingredients: ["Betteraves", "bœuf (jarret)", "chou", "pommes de terre", "carottes", "oignons", "Smetana (crème aigre)", "aneth"],
+            },
+            {
+                id: 329, name: "Solyanka", originalName: "Солянка", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe épaisse, salée et acide, mélangeant viandes fumées (ou poisson, ou champignons), cornichons, olives et citron.",
+                prepTime: 90,
+                ingredients: ["Viandes fumées (saucisses, jambon)", "cornichons (malossol)", "olives", "câpres", "citron", "oignons", "pâte de tomate", "crème aigre"],
+            },
+            {
+                id: 330, name: "Shchi", originalName: "Щи", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe traditionnelle russe à base de chou (frais ou choucroute), de viande (bœuf) et de légumes-racines.",
+                prepTime: 120,
+                ingredients: ["Chou (ou choucroute)", "bœuf", "carottes", "oignons", "pommes de terre", "aneth", "crème aigre"],
+            },
+            {
+                id: 331, name: "Żurek", originalName: "Żurek", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Soupe",
+                description: "Soupe aigre polonaise à base de 'żur' (levain de farine de seigle), servie avec saucisse blanche (biała kiełbasa) et œuf dur.",
+                prepTime: 90,
+                ingredients: ["Żur (levain de seigle)", "saucisse blanche (biała)", "pommes de terre", "bacon fumé", "œufs durs", "marjolaine", "crème aigre"],
+            },
+            {
+                id: 332, name: "Ukha", originalName: "Уха", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe de poisson russe simple et claire, traditionnellement faite avec plusieurs types de poissons d'eau douce.",
+                prepTime: 60,
+                ingredients: ["Poisson (perche, sandre)", "pommes de terre", "oignons", "carottes", "laurier", "aneth", "vodka (parfois)"],
+            },
+            {
+                id: 333, name: "Rassolnik", originalName: "Рассольник", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe russe aigre-salée à base de cornichons à la russe (et leur saumure), d'orge perlé et souvent de rognons de bœuf.",
+                prepTime: 120,
+                ingredients: ["Cornichons (type russe)", "orge perlé", "rognons de bœuf (ou bœuf)", "pommes de terre", "carottes", "oignons", "crème aigre"],
+            },
+            {
+                id: 334, name: "Okroshka", originalName: "Окрошка", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe froide russe, mélange de légumes hachés, œufs durs et viande, servie dans du kvas (boisson fermentée) ou du kéfir.",
+                prepTime: 30, // + Refroidissement
+                ingredients: ["Kvas (ou kéfir)", "concombre", "radis", "œufs durs", "saucisse (Doktorskaya)", "pommes de terre (cuites)", "aneth", "oignons verts"],
+            },
+            {
+                id: 335, name: "Ciorbă de Burtă", originalName: "Ciorbă de Burtă", country: "Roumanie", flag: "🇷🇴", continent: "Europe", type: "Soupe",
+                description: "Soupe de tripes roumaine, veloutée (crème et œufs), acidulée au vinaigre et servie avec de l'ail (mujdei).",
+                prepTime: 180,
+                ingredients: ["Tripes de bœuf", "crème aigre (smântână)", "jaunes d'œufs", "carottes", "oignons", "vinaigre", "ail (mujdei)"],
+            },
+            {
+                id: 336, name: "Chłodnik", originalName: "Chłodnik Litewski", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Soupe",
+                description: "Soupe froide de betteraves (ou de jeunes feuilles) d'un rose vif, à base de lait fermenté (kéfir, babeurre) et garnie d'œuf dur.",
+                prepTime: 30, // + Refroidissement
+                ingredients: ["Jeunes betteraves (avec feuilles)", "kéfir (ou babeurre)", "crème aigre", "concombre", "radis", "œuf dur", "aneth"],
+            },
+
+            // Grèce & Turquie (Soupes à base de yaourt et lentilles)
+            {
+                id: 337, name: "Avgolemono", originalName: "Αυγολέμονο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe de poulet grecque classique, liée et acidulée avec une émulsion d'œuf et de citron (avgolemono), souvent avec du riz ou de l'orzo.",
+                prepTime: 45,
+                ingredients: ["Bouillon de poulet", "poulet (effiloché)", "riz (ou orzo)", "œufs", "citrons (jus)", "aneth"],
+            },
+            {
+                id: 338, name: "Mercimek Çorbası", originalName: "Mercimek Çorbası", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe de lentilles corail turque, veloutée et mixée, souvent servie avec un filet de beurre au paprika et un quartier de citron.",
+                prepTime: 40,
+                ingredients: ["Lentilles corail", "oignons", "carottes (optionnel)", "pâte de tomate (ou poivron)", "beurre", "paprika", "menthe séchée", "citron"],
+            },
+            {
+                id: 339, name: "Tarhana Çorbası", originalName: "Tarhana Çorbası", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe turque unique à base de tarhana (poudre de yaourt et blé fermentés et séchés), réhydratée dans un bouillon.",
+                prepTime: 25,
+                ingredients: ["Tarhana (poudre)", "pâte de tomate", "beurre", "eau (ou bouillon)", "menthe séchée"],
+            },
+            {
+                id: 340, name: "Yayla Çorbası", originalName: "Yayla Çorbası", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe 'des hauts plateaux', velouté à base de yaourt, de riz (ou de blé) et de menthe séchée.",
+                prepTime: 35,
+                ingredients: ["Yaourt", "riz", "farine", "jaune d'œuf", "beurre", "menthe séchée", "paprika"],
+            },
+            {
+                id: 341, name: "Kakavia", originalName: "Κακαβιά", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Soupe",
+                description: "Soupe de pêcheur grecque antique, ancêtre de la bouillabaisse. Bouillon de poissons de roche, légumes et huile d'olive.",
+                prepTime: 75,
+                ingredients: ["Poissons de roche", "poisson (plus gros morceaux)", "oignons", "pommes de terre", "céleri", "citron", "huile d'olive"],
+            },
+
+            // Asie - Vietnam (Focus sur les bouillons clairs et complexes)
+            {
+                id: 342, name: "Phở Bò", originalName: "Phở Bò", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe nationale vietnamienne. Bouillon de bœuf richement épicé (anis étoilé, cannelle), servi avec nouilles de riz, bœuf cru et herbes.",
+                prepTime: 360, // Bouillon long
+                ingredients: ["Os de bœuf", "jarret de bœuf", "bavette (cru)", "nouilles de riz (bánh phở)", "anis étoilé", "cannelle", "gingembre", "oignon", "herbes fraîches (basilic thaï, coriandre, menthe)"],
+            },
+            {
+                id: 343, name: "Phở Gà", originalName: "Phở Gà", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Soupe",
+                description: "Version du Phở avec un bouillon de poulet clair mais parfumé, servi avec du poulet poché effiloché et des feuilles de combava.",
+                prepTime: 120,
+                ingredients: ["Poulet entier", "nouilles de riz (bánh phở)", "gingembre", "oignon", "graines de coriandre", "feuilles de combava", "herbes fraîches"],
+            },
+            {
+                id: 344, name: "Bún Bò Huế", originalName: "Bún Bò Huế", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe de nouilles épicée de Huế. Bouillon de bœuf et de porc parfumé à la citronnelle et au piment, servi avec des vermicelles épais.",
+                prepTime: 240,
+                ingredients: ["Jarret de porc", "jarret de bœuf", "vermicelles de riz (bún)", "citronnelle", "pâte de crevette (mắm ruốc)", "piment", "sang de porc (optionnel)"],
+            },
+            {
+                id: 345, name: "Canh Chua", originalName: "Canh Chua", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe aigre-douce du delta du Mékong, à base de poisson (ou crevettes), tamarin, ananas, tomates et germes de soja.",
+                prepTime: 40,
+                ingredients: ["Poisson-chat (ou crevettes)", "tamarin (pulpe)", "ananas", "tomates", "germes de soja", "okra", "herbes (ngo om)"],
+            },
+            {
+                id: 346, name: "Bánh Canh", originalName: "Bánh Canh", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe vietnamienne avec des nouilles 'bánh canh' épaisses (tapioca ou riz). Le bouillon est souvent un peu plus épais, au porc ou crabe.",
+                prepTime: 90,
+                ingredients: ["Nouilles Bánh Canh", "os de porc", "crevettes", "porc (haché ou jarret)", "oignons verts", "roucou (huile)"],
+            },
+
+            // Asie - Thaïlande (Soupes épicées et lait de coco)
+            {
+                id: 347, name: "Tom Yum Goong", originalName: "ต้มยำกุ้ง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Soupe",
+                description: "Soupe de crevettes thaïlandaise emblématique, épicée et aigre, parfumée à la citronnelle, galanga, feuilles de combava et piment.",
+                prepTime: 30,
+                ingredients: ["Crevettes (Goong)", "citronnelle", "galanga", "feuilles de combava", "piments (oiseau)", "jus de citron vert", "sauce poisson", "champignons"],
+            },
+            {
+                id: 348, name: "Gaeng Jued", originalName: "แกงจืด", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Soupe",
+                description: "Soupe claire 'insipide' (par opposition à épicée). Bouillon de porc léger avec vermicelles de soja, tofu et légumes.",
+                prepTime: 30,
+                ingredients: ["Porc haché", "tofu soyeux", "vermicelles de soja", "chou nappa", "carottes", "bouillon de poulet", "coriandre"],
+            },
+            {
+                id: 349, name: "Kuay Teow", originalName: "ก๋วยเตี๋ยว", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Soupe",
+                description: "Terme générique pour les soupes de nouilles de rue. Souvent un bouillon de porc ou de bœuf, servi avec boulettes et viande.",
+                prepTime: 45, // Si bouillon prêt
+                ingredients: ["Nouilles de riz", "bouillon (porc ou bœuf)", "boulettes de viande", "viande (tranches)", "germes de soja", "coriandre", "ail frit"],
+            },
+            {
+                id: 350, name: "Tom Saep", originalName: "ต้มแซ่บ", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Soupe",
+                description: "Soupe épicée et aigre du Nord-Est (Isaan), souvent à base de côtes de porc ou d'abats, avec beaucoup d'herbes et du riz grillé.",
+                prepTime: 60,
+                ingredients: ["Côtes de porc", "citronnelle", "galanga", "feuilles de combava", "piments (secs et frais)", "riz gluant grillé (poudre)", "échalotes", "jus de citron vert"],
+            },
+
+            // Asie - Japon (Bouillons Dashi et Miso)
+            {
+                id: 351, name: "Soupe Miso", originalName: "味噌汁", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe japonaise fondamentale à base de bouillon dashi dans lequel de la pâte de miso est dissoute. Souvent avec tofu et algues wakame.",
+                prepTime: 15,
+                ingredients: ["Pâte de Miso (blanc ou rouge)", "bouillon dashi", "tofu soyeux", "algues wakame (séchées)", "oignons verts"],
+            },
+            {
+                id: 352, name: "Tonjiru", originalName: "豚汁", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe Miso copieuse avec de fines tranches de porc et des légumes-racines (daikon, carotte, gobo).",
+                prepTime: 40,
+                ingredients: ["Porc (fines tranches)", "pâte de Miso", "bouillon dashi", "radis daikon", "carottes", "racine de bardane (gobo)", "konjac", "oignons verts"],
+            },
+            {
+                id: 353, name: "Ramen (Shoyu)", originalName: "醤油ラーメン", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe de nouilles Ramen classique. Bouillon (souvent de poulet) assaisonné d'une base de sauce soja (tare).",
+                prepTime: 180, // Bouillon
+                ingredients: ["Nouilles Ramen", "bouillon de poulet", "tare (sauce soja)", "porc chashu", "œuf (ajitsuke tamago)", "menma (bambou)", "oignons verts"],
+            },
+            {
+                id: 354, name: "Ramen (Tonkotsu)", originalName: "豚骨ラーメン", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe Ramen originaire de Kyushu. Bouillon opaque et riche, obtenu par une longue ébullition d'os de porc.",
+                prepTime: 720, // 12h+ de bouillon
+                ingredients: ["Nouilles Ramen", "os de porc", "porc chashu", "œuf", "champignons (kikurage)", "gingembre mariné (beni shoga)", "huile d'ail (mayu)"],
+            },
+            {
+                id: 355, name: "Udon (Kake)", originalName: "かけうどん", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe de nouilles udon simple. Nouilles épaisses servies dans un bouillon dashi clair (kakejiru) à base de sauce soja et mirin.",
+                prepTime: 20,
+                ingredients: ["Nouilles Udon", "bouillon dashi", "sauce soja (claire)", "mirin", "oignons verts", "tempura (optionnel)"],
+            },
+            {
+                id: 356, name: "Zōni", originalName: "雑煮", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Soupe",
+                description: "Soupe traditionnelle du Nouvel An. Bouillon (clair ou miso) contenant des gâteaux de riz mochi et divers légumes.",
+                prepTime: 40,
+                ingredients: ["Mochi (gâteaux de riz)", "bouillon dashi", "poulet", "carottes", "radis daikon", "yuzu (zeste)"],
+            },
+
+            // Asie - Chine (Bouillons médicamenteux et nouilles)
+            {
+                id: 357, name: "Soupe Wonton", originalName: "云吞汤", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Soupe",
+                description: "Raviolis (wonton) farcis (crevettes, porc) servis dans un bouillon de poulet ou de porc léger, souvent avec des ciboules.",
+                prepTime: 45,
+                ingredients: ["Pâte à wonton", "crevettes", "porc haché", "bouillon de poulet", "ciboule chinoise", "gingembre", "sauce soja"],
+            },
+            {
+                id: 358, name: "Soupe Aigre et Piquante", originalName: "酸辣汤", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe épaisse et savoureuse du Sichuan, équilibrant le piquant (poivre blanc) et l'acidité (vinaigre noir), avec tofu et champignons.",
+                prepTime: 30,
+                ingredients: ["Tofu (ferme)", "champignons (shiitake, noirs)", "pousses de bambou", "vinaigre noir", "poivre blanc", "œuf", "fécule de maïs"],
+            },
+            {
+                id: 359, name: "Soupe aux Œufs", originalName: "蛋花汤", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe simple et rapide. Bouillon de poulet épaissi dans lequel des œufs battus sont versés pour former des rubans.",
+                prepTime: 15,
+                ingredients: ["Bouillon de poulet", "œufs", "fécule de maïs", "oignons verts", "huile de sésame", "poivre blanc"],
+            },
+            {
+                id: 360, name: "Soupe de Maïs et Poulet", originalName: "鸡茸玉米汤", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe crémeuse (style cantonais) à base de maïs en crème, de poulet haché et de blancs d'œufs.",
+                prepTime: 25,
+                ingredients: ["Maïs (en crème et en grains)", "poulet (haché)", "bouillon de poulet", "blancs d'œufs", "fécule de maïs", "huile de sésame"],
+            },
+            {
+                id: 361, name: "Soupe de Canard aux Prunes Salées", originalName: "咸水梅炖鸭汤", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe cantonaise claire, mijotée longuement avec du canard et des prunes salées pour un goût acidulé.",
+                prepTime: 150,
+                ingredients: ["Canard", "prunes salées (conservées)", "gingembre", "eau"],
+            },
+
+            // Asie - Corée (Bouillons d'os et soupes santé)
+            {
+                id: 362, name: "Samgyetang", originalName: "삼계탕", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe de poulet au ginseng. Un jeune poulet entier farci de riz gluant, de ginseng et de jujubes, mijoté longuement.",
+                prepTime: 120,
+                ingredients: ["Jeune poulet (poussin)", "ginseng (frais)", "riz gluant", "jujubes (dattes coréennes)", "ail", "marrons"],
+            },
+            {
+                id: 363, name: "Seolleongtang", originalName: "설렁탕", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe d'un blanc laiteux obtenue par l'ébullition d'os de bœuf pendant des heures. Assaisonnée à table avec sel et oignons verts.",
+                prepTime: 480, // 8h+
+                ingredients: ["Os de bœuf (jarret, genou)", "poitrine de bœuf", "nouilles (somen)", "oignons verts", "sel", "poivre noir"],
+            },
+            {
+                id: 364, name: "Galbitang", originalName: "갈비탕", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe claire mais riche de côtes de bœuf courtes, mijotées jusqu'à tendreté, souvent avec du radis daikon.",
+                prepTime: 180,
+                ingredients: ["Côtes de bœuf (courtes)", "radis daikon", "oignons", "ail", "sauce soja", "vermicelles de soja (dangmyeon)"],
+            },
+            {
+                id: 365, name: "Miyeok-guk", originalName: "미역국", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe d'algues coréenne, traditionnellement servie aux anniversaires. Algues (miyeok) dans un bouillon de bœuf ou de fruits de mer.",
+                prepTime: 40,
+                ingredients: ["Algues (Miyeok, séchées)", "bœuf (haché)", "bouillon (ou eau)", "sauce soja", "huile de sésame", "ail"],
+            },
+            {
+                id: 366, name: "Kongguksu", originalName: "콩국수", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe froide de nouilles au lait de soja. Nouilles servies dans un bouillon de soja mixé, riche et crémeux.",
+                prepTime: 45, // + Refroidissement
+                ingredients: ["Soja (graines blanches)", "nouilles (somen)", "eau", "graines de sésame", "concombre (garniture)", "tomate (garniture)"],
+            },
+            {
+                id: 367, name: "Haejangguk", originalName: "해장국", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Soupe",
+                description: "Soupe 'anti-gueule de bois'. Souvent un bouillon de bœuf épicé avec chou nappa, germes de soja et sang de bœuf coagulé.",
+                prepTime: 90,
+                ingredients: ["Os de bœuf", "chou nappa", "germes de soja", "sang de bœuf (seonji)", "gochugaru", "pâte de soja (doenjang)"],
+            },
+
+            // Amérique du Nord (Chowders et classiques)
+            {
+                id: 368, name: "New England Clam Chowder", originalName: "New England Clam Chowder", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe de palourdes épaisse et crémeuse (à base de lait ou de crème), avec pommes de terre et lard salé.",
+                prepTime: 60,
+                ingredients: ["Palourdes (quahogs)", "crème (ou lait)", "pommes de terre", "lard salé", "oignons", "céleri", "farine"],
+            },
+            {
+                id: 369, name: "Manhattan Clam Chowder", originalName: "Manhattan Clam Chowder", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Variante de la soupe de palourdes avec un bouillon rouge à base de tomates, sans crème.",
+                prepTime: 60,
+                ingredients: ["Palourdes", "tomates (concassées)", "pommes de terre", "lard salé", "oignons", "céleri", "carottes", "thym"],
+            },
+            {
+                id: 370, name: "Soupe Poulet et Nouilles", originalName: "Chicken Noodle Soup", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Le remède classique. Bouillon de poulet mijoté avec morceaux de poulet, légumes (carottes, céleri) et nouilles aux œufs.",
+                prepTime: 75,
+                ingredients: ["Poulet", "nouilles aux œufs", "carottes", "céleri", "oignons", "bouillon de poulet", "persil", "aneth"],
+            },
+            {
+                id: 371, name: "Soupe à la Tomate", originalName: "Tomato Soup", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe de tomates classique, souvent légèrement sucrée et crémeuse, servie avec un 'grilled cheese sandwich'.",
+                prepTime: 40,
+                ingredients: ["Tomates (en conserve ou fraîches)", "bouillon", "crème (optionnel)", "oignons", "ail", "basilic"],
+            },
+            {
+                id: 372, name: "Soupe aux Pois Cassés", originalName: "Split Pea Soup", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe épaisse de pois cassés verts mijotés avec un os de jambon fumé, des carottes et du céleri.",
+                prepTime: 120,
+                ingredients: ["Pois cassés (verts)", "jarret de jambon (fumé)", "carottes", "céleri", "oignons", "thym", "laurier"],
+            },
+            {
+                id: 373, name: "Chowder de Maïs", originalName: "Corn Chowder", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe crémeuse similaire au Clam Chowder, mais utilisant du maïs doux à la place des palourdes.",
+                prepTime: 45,
+                ingredients: ["Maïs (frais ou surgelé)", "pommes de terre", "lard (ou bacon)", "crème", "lait", "oignons", "céleri"],
+            },
+            {
+                id: 374, name: "Soupe aux Pois (Québécoise)", originalName: "Soupe aux Pois", country: "Canada", flag: "🇨🇦", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe traditionnelle québécoise de pois jaunes entiers, mijotée longuement avec du lard salé et des herbes.",
+                prepTime: 180,
+                ingredients: ["Pois jaunes (entiers, secs)", "lard salé", "oignons", "carottes", "sarriette"],
+            },
+
+            // Mexique & Caraïbes (Soupes épicées et maïs)
+            {
+                id: 375, name: "Sopa de Lima", originalName: "Sopa de Lima", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe au poulet acidulée du Yucatán, dont la saveur unique provient de la 'lima agria' (lime locale) et garnie de tortillas frites.",
+                prepTime: 60,
+                ingredients: ["Poulet", "bouillon de poulet", "limes (Yucatán ou Key Lime)", "tomates", "oignons", "piment habanero (optionnel)", "tortillas (frites)"],
+            },
+            {
+                id: 376, name: "Sopa de Tortilla", originalName: "Sopa de Tortilla", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe à base de bouillon de poulet et de tomates, épicée au piment (ancho), servie avec des lanières de tortilla frites, avocat et fromage.",
+                prepTime: 45,
+                ingredients: ["Bouillon de poulet", "tomates", "piments (ancho, pasilla)", "ail", "oignons", "tortillas de maïs (frites)", "avocat", "fromage (cotija)"],
+            },
+            {
+                id: 377, name: "Menudo", originalName: "Menudo", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe traditionnelle de tripes de bœuf dans un bouillon rouge de piments (guajillo), souvent avec du maïs hominy.",
+                prepTime: 240,
+                ingredients: ["Tripes de bœuf", "maïs hominy (cuit)", "piments guajillo", "ail", "oignons", "origan"],
+            },
+            {
+                id: 378, name: "Sopa de Fideo", originalName: "Sopa de Fideo", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe réconfortante pour enfants. Vermicelles (fideo) dorés puis cuits dans un bouillon de poulet et de tomates.",
+                prepTime: 25,
+                ingredients: ["Vermicelles (fideo)", "bouillon de poulet", "tomates (sauce ou purée)", "oignons", "ail"],
+            },
+            {
+                id: 379, name: "Callaloo", originalName: "Callaloo", country: "Trinité-et-Tobago", flag: "🇹🇹", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe crémeuse des Caraïbes à base de feuilles de taro (callaloo) ou d'épinards, de lait de coco et d'okra.",
+                prepTime: 45,
+                ingredients: ["Feuilles de Callaloo (ou épinards)", "lait de coco", "okra", "crabe (optionnel)", "oignons", "piment (Scotch Bonnet)"],
+            },
+
+            // Amérique du Sud (Chupes et bouillons)
+            {
+                id: 380, name: "Ajiaco", originalName: "Ajiaco", country: "Colombie", flag: "🇨🇴", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe de poulet emblématique de Bogotá, à base de trois types de pommes de terre (dont 'papa criolla' qui épaissit la soupe).",
+                prepTime: 90,
+                ingredients: ["Poulet", "pommes de terre (Criolla, Sabanera, Pastusa)", "maïs en épi", "câpres", "crème (servie à part)", "guascas (herbe)"],
+            },
+            {
+                id: 381, name: "Chupe de Camarones", originalName: "Chupe de Camarones", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Soupe",
+                description: "Chowder de crevettes péruvien copieux, à base de lait, fromage, pommes de terre, maïs et piment aji amarillo.",
+                prepTime: 75,
+                ingredients: ["Crevettes", "lait évaporé", "fromage (fresco)", "pommes de terre", "maïs (choclo)", "piment aji amarillo", "riz", "œufs"],
+            },
+            {
+                id: 382, name: "Parihuela", originalName: "Parihuela", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe de fruits de mer péruvienne épicée et concentrée, 'le lève-mort', à base de piments et de bouillon de poisson.",
+                prepTime: 90,
+                ingredients: ["Assortiment de fruits de mer (crabe, moules, poisson)", "piment (aji panca, aji amarillo)", "bouillon de poisson", "tomates", "oignons", "vin blanc"],
+            },
+            {
+                id: 383, name: "Caldillo de Congrio", originalName: "Caldillo de Congrio", country: "Chili", flag: "🇨🇱", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe de congre chilienne, immortalisée par Pablo Neruda. Bouillon de poisson simple avec morceaux de congre et légumes.",
+                prepTime: 60,
+                ingredients: ["Congre (poisson)", "bouillon de poisson", "pommes de terre", "carottes", "oignons", "tomates", "crème (parfois)"],
+            },
+            {
+                id: 384, name: "Sopa de Quinoa", originalName: "Sopa de Quinoa", country: "Bolivie", flag: "🇧🇴", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe andine nourrissante à base de quinoa, pommes de terre, légumes et parfois un peu de viande.",
+                prepTime: 45,
+                ingredients: ["Quinoa", "pommes de terre", "carottes", "oignons", "bouillon", "fromage (optionnel)"],
+            },
+
+            // Afrique (Nord et Ouest)
+            {
+                id: 385, name: "Harira", originalName: "حريرة", country: "Maroc", flag: "🇲🇦", continent: "Afrique", type: "Soupe",
+                description: "Soupe traditionnelle marocaine de rupture du jeûne. À base de tomates, lentilles, pois chiches et viande, épaissie à la farine (tadouira).",
+                prepTime: 120,
+                ingredients: ["Tomates", "lentilles", "pois chiches", "agneau (ou bœuf)", "céleri", "coriandre", "persil", "vermicelles", "farine (tadouira)"],
+            },
+            {
+                id: 386, name: "Chorba Frik", originalName: "شربة فريك", country: "Algérie", flag: "🇩🇿", continent: "Afrique", type: "Soupe",
+                description: "Soupe du Ramadan à base de blé vert concassé (frik) et d'agneau, dans un bouillon tomate parfumé à la coriandre et à la menthe.",
+                prepTime: 90,
+                ingredients: ["Agneau", "Frik (blé vert concassé)", "tomates (concentré)", "pois chiches", "coriandre", "menthe", "céleri"],
+            },
+            {
+                id: 387, name: "Soupe d'Arachide", originalName: "Maafe (Soupe)", country: "Sénégal", flag: "🇸🇳", continent: "Afrique", type: "Soupe",
+                description: "Bien que souvent un ragoût (Mafé), la base de pâte d'arachide et de tomate peut être servie comme une soupe épaisse.",
+                prepTime: 90,
+                ingredients: ["Pâte d'arachide", "tomates (concentré)", "poulet (ou bœuf)", "oignons", "carottes", "piment"],
+            },
+            {
+                id: 388, name: "Bissara", originalName: "بصارة", country: "Égypte", flag: "🇪🇬", continent: "Afrique", type: "Soupe",
+                description: "Velouté de fèves séchées, simple et rustique, parfumé au cumin, à l'ail et à l'huile d'olive.",
+                prepTime: 60,
+                ingredients: ["Fèves (séchées)", "ail", "cumin", "huile d'olive", "coriandre", "oignons frits (garniture)"],
+            },
+            {
+                id: 389, name: "Pepper Soup", originalName: "Pepper Soup", country: "Nigeria", flag: "🇳🇬", continent: "Afrique", type: "Soupe",
+                description: "Soupe ouest-africaine très aromatique et piquante, à base d'un mélange d'épices spécial, souvent avec du poisson-chat ou de la chèvre.",
+                prepTime: 60,
+                ingredients: ["Poisson-chat (ou chèvre)", "mélange d'épices (grains de paradis, écorce d'uziza)", "piment (Scotch Bonnet)", "utazi (feuilles amères)"],
+            },
+
+            // Reste du Monde (Allemagne, Malaisie, Inde...)
+            {
+                id: 390, name: "Linsensuppe", originalName: "Linsensuppe", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Soupe",
+                description: "Soupe de lentilles allemande copieuse, souvent avec des saucisses (Wiener) ou du lard, et acidulée au vinaigre.",
+                prepTime: 60,
+                ingredients: ["Lentilles (brunes ou vertes)", "pommes de terre", "carottes", "poireaux", "lard", "saucisses (Wiener)", "vinaigre"],
+            },
+            {
+                id: 391, name: "Leberknödelsuppe", originalName: "Leberknödelsuppe", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Soupe",
+                description: "Soupe bavaroise. Bouillon de bœuf clair servi avec une grosse quenelle de foie (Leberknödel).",
+                prepTime: 45,
+                ingredients: ["Bouillon de bœuf", "foie de veau (ou bœuf)", "pain", "œufs", "oignons", "marjolaine", "persil"],
+            },
+            {
+                id: 392, name: "Mulligatawny", originalName: "Mulligatawny", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Soupe",
+                description: "Soupe anglo-indienne, signifiant 'eau de poivre'. Curry de lentilles ou de poulet sous forme de soupe, souvent crémeux.",
+                prepTime: 50,
+                ingredients: ["Lentilles corail", "poulet (optionnel)", "lait de coco", "poudre de curry de Madras", "carottes", "céleri", "pomme"],
+            },
+            {
+                id: 393, name: "Laksa (Curry Laksa)", originalName: "Curry Laksa", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Soupe",
+                description: "Soupe de nouilles au curry épicée et crémeuse (lait de coco), servie avec crevettes, poulet, tofu frit et germes de soja.",
+                prepTime: 60,
+                ingredients: ["Pâte de Laksa (rempah)", "lait de coco", "nouilles (jaunes ou vermicelles)", "crevettes", "poulet", "tofu frit (puffs)", "germes de soja"],
+            },
+            {
+                id: 394, name: "Bak Kut Teh", originalName: "肉骨茶", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Soupe",
+                description: "'Thé d'os de porc'. Bouillon de côtes de porc complexe et herbacé (style Klang) ou poivré (style Teochew).",
+                prepTime: 150,
+                ingredients: ["Côtes de porc", "ail (têtes entières)", "mélange d'herbes (anis étoilé, cannelle, angélique)", "sauce soja foncée", "champignons"],
+            },
+            {
+                id: 395, name: "Sinigang", originalName: "Sinigang", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Soupe",
+                description: "Soupe aigre emblématique des Philippines, traditionnellement acidulée au tamarin (sampalok), avec porc (baboy) ou crevettes (hipon).",
+                prepTime: 75,
+                ingredients: ["Porc (poitrine ou côtes)", "tamarin (pâte ou frais)", "liseron d'eau (kangkong)", "radis (labanos)", "haricots longs (sitaw)", "taro (gabi)"],
+            },
+            {
+                id: 396, name: "Scotch Broth", originalName: "Scotch Broth", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Soupe",
+                description: "Bouillon écossais copieux à base d'agneau, d'orge perlé et de légumes-racines (navet, carottes).",
+                prepTime: 120,
+                ingredients: ["Agneau (collier)", "orge perlé", "carottes", "navets (rutabaga)", "poireaux", "céleri"],
+            },
+            {
+                id: 397, name: "Fiskesuppe", originalName: "Fiskesuppe", country: "Norvège", flag: "🇳🇴", continent: "Europe", type: "Soupe",
+                description: "Soupe de poisson norvégienne crémeuse, souvent avec saumon, cabillaud et crevettes, dans un velouté de légumes.",
+                prepTime: 40,
+                ingredients: ["Saumon", "cabillaud", "crevettes", "crème fraîche", "bouillon de poisson", "carottes", "poireaux", "aneth"],
+            },
+            {
+                id: 398, name: "Ärtsoppa", originalName: "Ärtsoppa", country: "Suède", flag: "🇸🇪", continent: "Europe", type: "Soupe",
+                description: "Soupe de pois jaunes suédoise, traditionnellement servie le jeudi avec du porc salé et de la moutarde.",
+                prepTime: 120, // + Trempage
+                ingredients: ["Pois jaunes (secs)", "jarret de porc salé", "oignons", "thym", "marjolaine", "moutarde (pour servir)"],
+            },
+            {
+                id: 399, name: "Moqueca (Version Soupe)", originalName: "Moqueca", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Soupe",
+                description: "Bien qu'un ragoût, la version Baiana peut être servie comme une soupe riche de poisson/fruits de mer au lait de coco et huile de palme (dendê).",
+                prepTime: 60,
+                ingredients: ["Poisson blanc (ferme)", "crevettes", "lait de coco", "huile de palme (Azeite de Dendê)", "poivrons", "oignons", "tomates", "coriandre"],
+            },
+            {
+                id: 400, name: "Sopa Azteca", originalName: "Sopa Azteca", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Synonyme de Sopa de Tortilla. Bouillon de poulet, tomate et piment, servi sur des tortillas frites et garni d'avocat.",
+                prepTime: 45,
+                ingredients: ["Bouillon de poulet", "tomates", "piments (ancho, pasilla)", "tortillas", "avocat", "crème aigre", "fromage (queso fresco)"],
+            },
+            {
+                id: 401, name: "Khao Tom", originalName: "ข้าวต้ม", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Soupe",
+                description: "Soupe de riz thaïlandaise, souvent servie au petit-déjeuner. Riz cuit dans un bouillon de porc ou de poulet, garni d'ail frit.",
+                prepTime: 30,
+                ingredients: ["Riz (cuit)", "bouillon de poulet (ou porc)", "porc haché", "ail frit", "gingembre", "oignons verts", "coriandre"],
+            },
+            {
+                id: 402, name: "Asam Laksa", originalName: "Asam Laksa", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Soupe",
+                description: "Soupe de nouilles de Penang, aigre (tamarin) et épicée, à base d'un bouillon de maquereau émietté.",
+                prepTime: 75,
+                ingredients: ["Maquereau", "nouilles de riz (épaisses)", "tamarin (asam)", "citronnelle", "pâte de crevette (petai)", "menthe", "ananas", "gingembre torche"],
+            },
+            {
+                id: 403, name: "Caldo de Pollo", originalName: "Caldo de Pollo", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe de poulet mexicaine simple avec de gros morceaux de légumes (carottes, pommes de terre, maïs) et servie avec du riz.",
+                prepTime: 90,
+                ingredients: ["Poulet (morceaux, avec os)", "carottes", "pommes de terre", "maïs en épi", "courgettes", "riz (servi à part)", "coriandre"],
+            },
+            {
+                id: 404, name: "Sopa de Maní", originalName: "Sopa de Maní", country: "Bolivie", flag: "🇧🇴", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe d'arachide bolivienne, riche et crémeuse, à base d'arachides mixées, de légumes et souvent de bœuf ou de poulet.",
+                prepTime: 90,
+                ingredients: ["Arachides (crues)", "bœuf (ou poulet)", "pommes de terre", "carottes", "petits pois", "oignons", "pâtes (macaroni)", "frites (garniture)"],
+            },
+            {
+                id: 405, name: "Sopa Seca (Soupe sèche)", originalName: "Sopa Seca", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Soupe",
+                description: "Un plat 'sec' (nouilles cuites jusqu'à absorption) qui commence comme une soupe de poulet épicée (Aji Panca, Aji Amarillo).",
+                prepTime: 75,
+                ingredients: ["Poulet", "spaghetti (ou fideo)", "piment (Aji Panca)", "tomates", "oignons", "ail", "basilic", "coriandre"],
+            },
+            {
+                id: 406, name: "Soupe aux Lentilles (Moyen-Orient)", originalName: "Shorbat Adas", country: "Liban", flag: "🇱🇧", continent: "Asie", type: "Soupe",
+                description: "Velouté de lentilles corail simple, parfumé au cumin et au citron, souvent servi pendant le Ramadan.",
+                prepTime: 40,
+                ingredients: ["Lentilles corail", "bouillon (légume ou poulet)", "oignons", "cumin", "citron (jus)", "huile d'olive", "pain pita (frit)"],
+            },
+			// --- NOUVELLES RECETTES (GRILL 407-506) ---
+            
+            // États-Unis (BBQ & Grillades)
+            {
+                id: 407, name: "Ribs St. Louis", originalName: "St. Louis-Style Ribs", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Travers de porc grillés lentement, style St. Louis (parés), nappés de sauce BBQ et caramélisés.",
+                prepTime: 240, // Inclut cuisson lente
+                ingredients: ["Travers de porc (St. Louis cut)", "mélange d'épices (Rub)", "sauce BBQ", "vinaigre de cidre"],
+            },
+            {
+                id: 408, name: "Brisket Texan", originalName: "Texas-Style Brisket", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Poitrine de bœuf cuite très lentement (fumée/grillée indirecte) avec un simple 'rub' de sel et poivre noir.",
+                prepTime: 600, // Cuisson très longue
+                ingredients: ["Poitrine de bœuf", "poivre noir (gros grains)", "sel", "fumée de bois (chêne)"],
+            },
+            {
+                id: 409, name: "Pulled Pork (Grillé)", originalName: "Grilled Pulled Pork", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Épaule de porc cuite lentement sur le grill (cuisson indirecte) jusqu'à ce qu'elle s'effiloche, style Caroline.",
+                prepTime: 480,
+                ingredients: ["Épaule de porc", "Rub (épices sèches)", "sauce BBQ (style Caroline)", "vinaigre de cidre"],
+            },
+            {
+                id: 410, name: "Classic Cheeseburger", originalName: "Classic Cheeseburger", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Bœuf haché grillé sur flamme, servi dans un pain avec fromage, laitue, tomate et oignon.",
+                prepTime: 30,
+                ingredients: ["Bœuf haché (80/20)", "pain (bun)", "fromage (Cheddar)", "laitue", "tomate", "oignon"],
+            },
+            {
+                id: 411, name: "New York Strip Steak", originalName: "New York Strip Steak", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Contre-filet de bœuf (Aloyau) grillé à feu vif, connu pour sa mâche et sa saveur de bœuf.",
+                prepTime: 25, // Inclut repos
+                ingredients: ["Bœuf (New York Strip)", "sel", "poivre noir", "huile (ou beurre)"],
+            },
+            {
+                id: 412, name: "Ribeye Steak", originalName: "Ribeye Steak", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Entrecôte grillée, très persillée, ce qui la rend incroyablement juteuse et savoureuse.",
+                prepTime: 25, // Inclut repos
+                ingredients: ["Bœuf (Ribeye / Entrecôte)", "sel", "poivre noir", "beurre", "ail", "thym"],
+            },
+            {
+                id: 413, name: "T-Bone Steak", originalName: "T-Bone Steak", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Pièce de bœuf (filet et contre-filet) coupée avec l'os en T, grillée à la perfection.",
+                prepTime: 30, // Inclut repos
+                ingredients: ["Bœuf (T-Bone)", "sel", "poivre noir", "huile d'olive"],
+            },
+            {
+                id: 414, name: "Ailes de Poulet Buffalo (Grillées)", originalName: "Grilled Buffalo Wings", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Ailes de poulet grillées jusqu'à être croustillantes, puis enrobées de sauce piquante Buffalo (beurre et sauce pimentée).",
+                prepTime: 45,
+                ingredients: ["Ailes de poulet", "sauce pimentée (Frank's RedHot)", "beurre", "vinaigre", "ail (poudre)"],
+            },
+            {
+                id: 415, name: "Beer Can Chicken", originalName: "Beer Can Chicken", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Poulet entier cuit 'debout' sur le grill sur une canette de bière à moitié pleine, pour une cuisson vapeur interne.",
+                prepTime: 120,
+                ingredients: ["Poulet entier", "bière (canette)", "Rub (épices sèches)", "huile d'olive"],
+            },
+            {
+                id: 416, name: "BBQ Chicken (Grillé)", originalName: "Grilled BBQ Chicken", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Grill",
+                description: "Morceaux de poulet (cuisses, poitrines) grillés et badigeonnés généreusement de sauce BBQ jusqu'à caramélisation.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poulet (morceaux)", "sauce BBQ (style Kansas City)", "huile", "paprika", "ail (poudre)"],
+            },
+
+            // Amérique du Sud (Asado & Churrasco)
+            {
+                id: 417, name: "Picanha", originalName: "Picanha", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Pièce de bœuf (pointe de rumsteck) emblématique du Churrasco, grillée sur broche avec sa couche de gras.",
+                prepTime: 60,
+                ingredients: ["Bœuf (Picanha)", "gros sel (sal grosso)", "broches"],
+            },
+            {
+                id: 418, name: "Tira de Asado", originalName: "Tira de Asado", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Plat de côtes de bœuf coupé fin (à la perpendiculaire) pour l'Asado, grillé lentement à la braise.",
+                prepTime: 90,
+                ingredients: ["Bœuf (Plat de côtes)", "gros sel", "chimichurri (pour servir)"],
+            },
+            {
+                id: 419, name: "Vacio", originalName: "Vacío", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Bavette de flanchet d'Asado, grillée lentement (gras vers le bas d'abord) jusqu'à être croustillante à l'extérieur et tendre à l'intérieur.",
+                prepTime: 120,
+                ingredients: ["Bœuf (Vacio / Bavette)", "gros sel", "citron (optionnel)"],
+            },
+            {
+                id: 420, name: "Entraña (Skirt Steak)", originalName: "Entraña", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Hampe de bœuf, une coupe très savoureuse grillée rapidement à feu vif.",
+                prepTime: 20,
+                ingredients: ["Bœuf (Entraña / Hampe)", "gros sel", "chimichurri"],
+            },
+            {
+                id: 421, name: "Choripán", originalName: "Choripán", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Sandwich de rue. Saucisse chorizo grillée, ouverte en deux dans un pain baguette, garnie de chimichurri.",
+                prepTime: 25,
+                ingredients: ["Saucisse (Chorizo criollo)", "pain (baguette)", "chimichurri"],
+            },
+            {
+                id: 422, name: "Cœurs de Poulet (Churrasco)", originalName: "Coração de Frango", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Cœurs de poulet marinés et grillés sur broche, un classique des churrascarias.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Cœurs de poulet", "ail", "vin blanc", "sel", "persil"],
+            },
+            {
+                id: 423, name: "Fraldinha (Flank Steak)", originalName: "Fraldinha", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Bavette (similaire au Vacio) très populaire au Brésil, souvent marinée à la bière ou à l'ail avant d'être grillée.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Bœuf (Fraldinha / Bavette)", "gros sel", "ail", "beurre"],
+            },
+            {
+                id: 424, name: "Provoleta", originalName: "Provoleta", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Rondelle épaisse de fromage provolone grillée directement sur la braise (dans un plat en fonte) jusqu'à être fondante.",
+                prepTime: 20,
+                ingredients: ["Fromage Provolone (type Provoleta)", "origan", "piment (flocons)", "huile d'olive"],
+            },
+            {
+                id: 425, name: "Anticuchos", originalName: "Anticuchos", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Grill",
+                description: "Brochettes de cœur de bœuf marinées dans une sauce pimentée (aji panca) et vinaigre, grillées sur braise.",
+                prepTime: 45, // + Marinade (longue)
+                ingredients: ["Cœur de bœuf", "piment aji panca", "vinaigre", "ail", "cumin", "origan"],
+            },
+            {
+                id: 426, name: "Queijo Coalho (Grillé)", originalName: "Queijo Coalho", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Fromage brésilien ferme (similaire au halloumi) grillé sur brochette, souvent vendu sur les plages.",
+                prepTime: 15,
+                ingredients: ["Fromage (Queijo Coalho)", "origan (optionnel)", "miel (optionnel)"],
+            },
+
+            // Corée (Gogi-gui)
+            {
+                id: 427, name: "Galbi (Grillé)", originalName: "갈비", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Côtes de bœuf courtes (coupe LA) marinées dans une sauce soja sucrée (poire, ail) et grillées.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Côtes de bœuf (LA Galbi cut)", "sauce soja", "poire coréenne", "ail", "gingembre", "sucre", "huile de sésame"],
+            },
+            {
+                id: 428, name: "Samgyeopsal", originalName: "삼겹살", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Poitrine de porc (non marinée) grillée sur un grill de table, servie avec ssamjang et enveloppée dans de la laitue.",
+                prepTime: 30,
+                ingredients: ["Poitrine de porc (tranches épaisses)", "laitue", "feuilles de périlla (kkaennip)", "ail", "ssamjang (pâte)"],
+            },
+            {
+                id: 429, name: "Bulgogi (Grillé)", originalName: "불고기", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Fines tranches de bœuf marinées à la sauce soja sucrée, traditionnellement grillées sur un grill bombé.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Bœuf (faux-filet)", "sauce soja", "poire coréenne", "ail", "oignon", "huile de sésame"],
+            },
+            {
+                id: 430, name: "Dak Galbi (Grillé)", originalName: "닭갈비", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Poulet mariné au gochujang épicé, souvent grillé sur plaque avec chou et gâteaux de riz (tteok).",
+                prepTime: 45, // + Marinade
+                ingredients: ["Poulet (cuisse)", "gochujang", "gochugaru", "sauce soja", "chou", "patate douce", "tteok (gâteaux de riz)"],
+            },
+            {
+                id: 431, name: "Dwaeji Bulgogi (Grillé)", originalName: "돼지불고기", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Version du Bulgogi avec du porc, mariné dans une sauce épicée au gochujang.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (fines tranches)", "gochujang", "gochugaru", "sauce soja", "ail", "gingembre"],
+            },
+            {
+                id: 432, name: "Chadolbaegi", originalName: "차돌박이", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Grill",
+                description: "Poitrine de bœuf très fine, non marinée, grillée très rapidement et trempée dans une sauce sésame-sel.",
+                prepTime: 15,
+                ingredients: ["Poitrine de bœuf (fines tranches)", "huile de sésame", "sel", "poivre noir"],
+            },
+            
+            // Japon (Yakitori & Yakiniku)
+            {
+                id: 433, name: "Yakitori Momo (Cuisse)", originalName: "焼き鳥 もも", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Brochettes de cuisse de poulet grillées au charbon de bois (Binchotan), servies salées (shio) ou sucrées-salées (tare).",
+                prepTime: 30,
+                ingredients: ["Poulet (cuisse)", "sel (shio)", "sauce tare (soja, mirin, saké)"],
+            },
+            {
+                id: 434, name: "Yakitori Negima", originalName: "焼き鳥 ねぎま", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Brochettes alternant poulet (cuisse ou poitrine) et morceaux de poireau (negi), grillées.",
+                prepTime: 30,
+                ingredients: ["Poulet", "poireau (negi)", "sauce tare (ou sel)"],
+            },
+            {
+                id: 435, name: "Tsukune (Yakitori)", originalName: "つくね", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Brochettes de boulettes de poulet haché, souvent mélangées avec du cartilage, grillées et nappées de sauce tare.",
+                prepTime: 40,
+                ingredients: ["Poulet haché", "oignon vert", "gingembre", "fécule", "œuf (jaune, pour servir)", "sauce tare"],
+            },
+            {
+                id: 436, name: "Yakiniku (Kalbi)", originalName: "焼肉 (カルビ)", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Terme pour la viande grillée. 'Kalbi' (d'origine coréenne) désigne les côtes de bœuf marinées ou non, grillées sur une grille.",
+                prepTime: 25,
+                ingredients: ["Bœuf (Kalbi/côtes)", "sauce Yakiniku (soja, mirin, ail)", "graines de sésame"],
+            },
+            {
+                id: 437, name: "Ikayaki", originalName: "イカ焼き", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Calmar entier grillé, souvent badigeonné d'une sauce soja sucrée.",
+                prepTime: 20,
+                ingredients: ["Calmar (entier)", "sauce soja", "mirin", "saké", "gingembre"],
+            },
+            {
+                id: 438, name: "Hamachi Kama", originalName: "ハマチカマ", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Collier de sériole (yellowtail) grillé, très prisé pour sa chair grasse et tendre. Servi simplement avec du sel.",
+                prepTime: 25,
+                ingredients: ["Collier de sériole (Hamachi Kama)", "sel", "radis daikon (râpé)", "citron"],
+            },
+            {
+                id: 439, name: "Unagi no Kabayaki", originalName: "鰻の蒲焼", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Grill",
+                description: "Anguille d'eau douce grillée sur charbon, trempée plusieurs fois dans une sauce tare sucrée (unagi sauce) jusqu'à caramélisation.",
+                prepTime: 40,
+                ingredients: ["Anguille (Unagi)", "sauce Unagi (soja, mirin, saké, sucre)", "poivre sansho"],
+            },
+            
+            // Grèce & Chypre
+            {
+                id: 440, name: "Souvlaki (Porc)", originalName: "Σουβλάκι Χοιρινό", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Grill",
+                description: "Brochettes de porc marinées au citron, origan et huile d'olive, grillées au charbon.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (longe, épaule)", "huile d'olive", "jus de citron", "origan", "ail"],
+            },
+            {
+                id: 441, name: "Souvlaki (Poulet)", originalName: "Σουβλάκι Κοτόπουλο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Grill",
+                description: "Brochettes de poulet marinées au citron, origan et moutarde (parfois), grillées.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Poulet (poitrine)", "huile d'olive", "jus de citron", "origan", "moutarde"],
+            },
+            {
+                id: 442, name: "Païdakia", originalName: "Παϊδάκια", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Grill",
+                description: "Côtelettes d'agneau fines marinées au citron et à l'origan, grillées vivement.",
+                prepTime: 25, // + Marinade
+                ingredients: ["Côtelettes d'agneau", "huile d'olive", "jus de citron", "origan", "ail", "romarin"],
+            },
+            {
+                id: 443, name: "Poisson Grillé (Psari Psito)", originalName: "Ψάρι Ψητό", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Grill",
+                description: "Poisson entier (loup de mer, daurade) grillé simplement avec huile d'olive, origan et citron.",
+                prepTime: 35,
+                ingredients: ["Poisson entier (loup de mer, daurade)", "huile d'olive", "origan", "citron", "sel"],
+            },
+            {
+                id: 444, name: "Halloumi Grillé", originalName: "Χαλλούμι", country: "Chypre", flag: "🇨🇾", continent: "Europe", type: "Grill",
+                description: "Tranches de fromage Halloumi grillées jusqu'à obtenir une croûte dorée et un intérieur fondant.",
+                prepTime: 15,
+                ingredients: ["Fromage Halloumi", "huile d'olive", "menthe", "citron"],
+            },
+            {
+                id: 445, name: "Poulpe Grillé", originalName: "Χταπόδι στη Σχάρα", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Grill",
+                description: "Poulpe (cuit puis grillé) assaisonné d'huile d'olive, de vinaigre de vin rouge et d'origan.",
+                prepTime: 90, // Inclut pré-cuisson
+                ingredients: ["Poulpe", "huile d'olive", "vinaigre de vin rouge", "origan"],
+            },
+
+            // Turquie & Moyen-Orient
+            {
+                id: 446, name: "Shish Kebab (Agneau)", originalName: "Kuzu Şiş", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Brochettes de cubes d'agneau marinés dans l'huile d'olive, le lait et le paprika, grillées au charbon.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Agneau (gigot)", "huile d'olive", "lait (ou yaourt)", "pâte de tomate", "paprika", "origan"],
+            },
+            {
+                id: 447, name: "Adana Kebab", originalName: "Adana Kebap", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Viande hachée d'agneau (grasse) très épicée (piment Pul Biber), moulée à la main sur de larges broches plates et grillée.",
+                prepTime: 40,
+                ingredients: ["Agneau haché (gras)", "piment Pul Biber", "paprika", "sel", "poivron rouge (haché)"],
+            },
+            {
+                id: 448, name: "Urfa Kebab", originalName: "Urfa Kebap", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Similaire à l'Adana Kebab mais non piquant, assaisonné seulement de paprika doux et d'oignon.",
+                prepTime: 40,
+                ingredients: ["Agneau haché (gras)", "paprika doux", "oignon", "sel"],
+            },
+            {
+                id: 449, name: "Tavuk Şiş", originalName: "Tavuk Şiş", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Brochettes de poulet marinées dans un mélange de yaourt, pâte de tomate et épices.",
+                prepTime: 35, // + Marinade
+                ingredients: ["Poulet (poitrine)", "yaourt", "pâte de tomate", "pâte de poivron", "huile d'olive", "origan"],
+            },
+            {
+                id: 450, name: "Köfte (Grillé)", originalName: "Izgara Köfte", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Boulettes de viande hachée (bœuf/agneau) assaisonnées de cumin et d'oignon, grillées.",
+                prepTime: 30,
+                ingredients: ["Bœuf haché", "agneau haché", "oignon", "cumin", "persil", "chapelure"],
+            },
+            {
+                id: 451, name: "Shish Taouk", originalName: "Shish Taouk", country: "Liban", flag: "🇱🇧", continent: "Asie", type: "Grill",
+                description: "Brochettes de poulet libanaises, marinées dans du yaourt, du jus de citron, de l'ail et de la pâte de tomate.",
+                prepTime: 35, // + Marinade
+                ingredients: ["Poulet", "yaourt", "jus de citron", "ail", "pâte de tomate", "sept épices libanaises"],
+            },
+            {
+                id: 452, name: "Kafta Grillé", originalName: "Kafta Meshwi", country: "Liban", flag: "🇱🇧", continent: "Asie", type: "Grill",
+                description: "Viande hachée (bœuf/agneau) mélangée à du persil, de l'oignon et des épices, moulée sur des broches et grillée.",
+                prepTime: 30,
+                ingredients: ["Bœuf haché", "agneau haché", "persil", "oignon", "sept épices", "sumac"],
+            },
+            {
+                id: 453, name: "Kebab Koobideh", originalName: "کباب کوبیده", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Grill",
+                description: "Kebab de viande hachée (agneau/bœuf) iranien, mélangé avec oignon râpé et safran, grillé sur broches plates.",
+                prepTime: 40,
+                ingredients: ["Agneau haché", "bœuf haché", "oignon", "safran", "sel", "poivre"],
+            },
+            {
+                id: 454, name: "Jujeh Kebab", originalName: "جوجه کباب", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Grill",
+                description: "Brochettes de poulet iraniennes, marinées dans du safran, du yaourt et du jus de citron.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poulet", "safran", "yaourt", "jus de citron", "oignon"],
+            },
+            {
+                id: 455, name: "Tomates Grillées (Kebab)", originalName: "Tomates Grillées", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Grill",
+                description: "Tomates entières ou en moitiés, et piments verts longs (Sivri), grillés au charbon en accompagnement des kebabs.",
+                prepTime: 20,
+                ingredients: ["Tomates", "piments verts (Sivri)", "sel", "huile d'olive"],
+            },
+
+            // Afrique du Sud (Braai)
+            {
+                id: 456, name: "Boerewors", originalName: "Boerewors", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Grill",
+                description: "Saucisse traditionnelle sud-africaine (bœuf, porc) fortement épicée (coriandre, noix de muscade), grillée en spirale.",
+                prepTime: 30,
+                ingredients: ["Saucisse (Boerewors)", "coriandre (graines)", "poivre noir", "noix de muscade", "vinaigre"],
+            },
+            {
+                id: 457, name: "Sosaties", originalName: "Sosaties", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Grill",
+                description: "Brochettes d'agneau (ou poulet) marinées dans une sauce curry douce et fruitée (abricots secs), grillées.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Agneau", "abricots secs", "oignons", "curry (poudre)", "vinaigre", "sucre"],
+            },
+            {
+                id: 458, name: "Poulet Peri-Peri (Grillé)", originalName: "Peri-Peri Chicken", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Grill", // Aussi Mozambique
+                description: "Poulet mariné dans la sauce pimentée Peri-Peri (piment œil d'oiseau, citron, ail), grillé à la flamme.",
+                prepTime: 45, // + Marinade
+                ingredients: ["Poulet (en crapaudine)", "piments (œil d'oiseau)", "ail", "jus de citron", "paprika", "huile d'olive"],
+            },
+            {
+                id: 459, name: "Braaibroodjies", originalName: "Braaibroodjies", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Grill",
+                description: "Sandwich grillé au Braai, typiquement avec fromage, tomate, oignon et chutney.",
+                prepTime: 20,
+                ingredients: ["Pain de mie", "fromage (Cheddar)", "tomate", "oignon", "chutney (Mrs. Ball's)"],
+            },
+            {
+                id: 460, name: "Côtes d'Agneau (Braai)", originalName: "Lamb Chops", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Grill",
+                description: "Côtelettes d'agneau (Karoo) grillées simplement avec sel, poivre et épices BBQ.",
+                prepTime: 25,
+                ingredients: ["Côtelettes d'agneau", "sel", "poivre", "épices Braai"],
+            },
+            
+            // Jamaïque (Jerk)
+            {
+                id: 461, name: "Jerk Chicken", originalName: "Jerk Chicken", country: "Jamaïque", flag: "🇯🇲", continent: "Amérique du Nord", type: "Grill",
+                description: "Poulet mariné dans un mélange très épicé (piment Scotch Bonnet, quatre-épices), grillé lentement sur bois de piment.",
+                prepTime: 180, // + Marinade
+                ingredients: ["Poulet", "piment (Scotch Bonnet)", "quatre-épices", "thym", "oignons verts", "gingembre", "sauce soja"],
+            },
+            {
+                id: 462, name: "Jerk Pork", originalName: "Jerk Pork", country: "Jamaïque", flag: "🇯🇲", continent: "Amérique du Nord", type: "Grill",
+                description: "Porc (épaule) mariné à la sauce Jerk et grillé lentement jusqu'à être croustillant.",
+                prepTime: 240, // + Marinade
+                ingredients: ["Porc (épaule)", "piment (Scotch Bonnet)", "quatre-épices", "thym", "oignons verts", "cannelle", "noix de muscade"],
+            },
+
+            // Mexique
+            {
+                id: 463, name: "Carne Asada", originalName: "Carne Asada", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Grill",
+                description: "Steak de bœuf (hampe ou flanchet) mariné (citron vert, ail, coriandre) et grillé, servi en tranches (pour tacos).",
+                prepTime: 30, // + Marinade
+                ingredients: ["Bœuf (hampe, flanchet)", "jus de citron vert", "ail", "coriandre", "sauce soja (ou jus d'orange)", "oignon"],
+            },
+            {
+                id: 464, name: "Pollo Asado", originalName: "Pollo Asado", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Grill",
+                description: "Poulet mariné dans une pâte de roucou (achiote), jus d'agrumes et épices, puis grillé.",
+                prepTime: 60, // + Marinade
+                ingredients: ["Poulet (morceaux)", "pâte de roucou (achiote)", "jus d'orange amère", "ail", "origan", "cumin"],
+            },
+            {
+                id: 465, name: "Elote", originalName: "Elote", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Grill",
+                description: "Épi de maïs grillé, badigeonné de mayonnaise, de fromage cotija, de piment en poudre et de citron vert.",
+                prepTime: 25,
+                ingredients: ["Maïs en épi", "mayonnaise", "fromage cotija", "piment (poudre, ex: Tajin)", "citron vert"],
+            },
+            {
+                id: 466, name: "Tacos al Pastor", originalName: "Tacos al Pastor", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Grill",
+                description: "Porc mariné au roucou et piments, cuit sur une broche verticale (Trompo) similaire au Shawarma, servi avec ananas.",
+                prepTime: 90, // + Marinade
+                ingredients: ["Porc (épaule)", "piments (guajillo, ancho)", "roucou (achiote)", "vinaigre", "ananas", "oignon", "coriandre"],
+            },
+            {
+                id: 467, name: "Pescado Zarandeado", originalName: "Pescado Zarandeado", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Grill",
+                description: "Poisson entier (vivaneau) ouvert, mariné dans une sauce chili-soja, et grillé 'secoué' dans une grille double.",
+                prepTime: 45, // + Marinade
+                ingredients: ["Poisson entier (vivaneau)", "piment (guajillo)", "sauce soja", "moutarde", "mayonnaise", "ail"],
+            },
+
+            // Asie du Sud-Est
+            {
+                id: 468, name: "Satay Ayam (Indonésie)", originalName: "Sate Ayam", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Grill",
+                description: "Brochettes de poulet marinées, grillées au charbon et servies avec une sauce cacahuète épaisse et sucrée (Kecap Manis).",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poulet", "kecap manis", "cacahuètes", "échalotes", "ail", "tamarin"],
+            },
+            {
+                id: 469, name: "Satay Kambing (Indonésie)", originalName: "Sate Kambing", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Grill",
+                description: "Brochettes de chèvre (ou agneau) grillées, souvent servies avec kecap manis, piment et échalotes crues.",
+                prepTime: 30,
+                ingredients: ["Chèvre (ou agneau)", "kecap manis", "échalotes", "piment (cabe rawit)", "citron vert"],
+            },
+            {
+                id: 470, name: "Satay (Malaisie)", originalName: "Satay", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Grill",
+                description: "Brochettes (poulet, bœuf) marinées au curcuma et citronnelle, grillées et servies avec sauce cacahuète et concombre.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poulet (ou bœuf)", "curcuma", "citronnelle", "galanga", "cacahuètes", "lait de coco"],
+            },
+            {
+                id: 471, name: "Ikan Bakar", originalName: "Ikan Bakar", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Grill", // Aussi Malaisie
+                description: "Poisson grillé indonésien/malais, mariné dans un sambal ou une pâte de curcuma, souvent grillé dans une feuille de bananier.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Poisson (maquereau, vivaneau)", "sambal", "kecap manis", "curcuma", "citronnelle", "feuille de bananier"],
+            },
+            {
+                id: 472, name: "Mu Ping", originalName: "หมูปิ้ง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Grill",
+                description: "Brochettes de porc thaïlandaises de rue, marinées dans une sauce sucrée (lait de coco, sauce poisson, sucre de palme).",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (épaule)", "lait de coco", "sauce poisson", "sucre de palme", "ail", "coriandre (racine)"],
+            },
+            {
+                id: 473, name: "Gai Yang", originalName: "ไก่ย่าง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Grill",
+                description: "Poulet grillé (style Isaan), mariné à la citronnelle, ail, sauce poisson et curcuma, servi avec une sauce Jaew.",
+                prepTime: 90, // + Marinade
+                ingredients: ["Poulet (entier, en crapaudine)", "citronnelle", "ail", "sauce poisson", "curcuma", "coriandre (racine)"],
+            },
+            {
+                id: 474, name: "Bún Chả (Viande grillée)", originalName: "Bún Chả", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Grill",
+                description: "Plat de Hanoi. Porc haché (en boulettes) et poitrine de porc grillés au charbon, servis dans un bouillon (sauce poisson) avec vermicelles.",
+                prepTime: 45, // + Marinade
+                ingredients: ["Porc haché", "poitrine de porc", "sauce poisson", "sucre", "échalotes", "ail", "poivre noir"],
+            },
+            {
+                id: 475, name: "Nem Nướng", originalName: "Nem Nướng", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Grill",
+                description: "Saucisses de porc vietnamiennes grillées (souvent sur brochettes de citronnelle), servies en rouleaux de printemps.",
+                prepTime: 50, // + Marinade
+                ingredients: ["Porc haché", "gras de porc", "sauce poisson", "sucre", "ail", "poudre de riz grillé", "citronnelle (tiges)"],
+            },
+
+            // Australie
+            {
+                id: 476, name: "Côtes d'Agneau (Barbie)", originalName: "Lamb Loin Chops", country: "Australie", flag: "🇦🇺", continent: "Océanie", type: "Grill",
+                description: "Côtelettes d'agneau australiennes classiques, souvent marinées au romarin et à l'ail, grillées au 'Barbie'.",
+                prepTime: 25, // + Marinade
+                ingredients: ["Côtelettes d'agneau", "huile d'olive", "ail", "romarin", "citron"],
+            },
+            {
+                id: 477, name: "Snags (Saucisses)", originalName: "Sausages on the Barbie", country: "Australie", flag: "🇦🇺", continent: "Océanie", type: "Grill",
+                description: "Saucisses de bœuf (ou porc) australiennes ('Snags') grillées, servies sur du pain de mie avec des oignons grillés.",
+                prepTime: 20,
+                ingredients: ["Saucisses (Snags)", "pain de mie", "oignons", "ketchup (Tomato Sauce)"],
+            },
+            {
+                id: 478, name: "Barramundi Grillé", originalName: "Grilled Barramundi", country: "Australie", flag: "🇦🇺", continent: "Océanie", type: "Grill",
+                description: "Poisson australien emblématique, grillé (souvent côté peau) avec du citron et de l'aneth.",
+                prepTime: 20,
+                ingredients: ["Barramundi (filet)", "huile d'olive", "citron", "aneth", "sel"],
+            },
+            {
+                id: 479, name: "Crevettes au 'Barbie'", originalName: "Prawns on the Barbie", country: "Australie", flag: "🇦🇺", continent: "Océanie", type: "Grill",
+                description: "Crevettes (Yabbies ou King Prawns) grillées rapidement, souvent avec ail et beurre.",
+                prepTime: 15,
+                ingredients: ["Crevettes (grosses)", "beurre", "ail", "persil", "citron"],
+            },
+
+            // Balkans
+            {
+                id: 480, name: "Ćevapi", originalName: "Ćevapi", country: "Bosnie-Herzégovine", flag: "🇧🇦", continent: "Europe", type: "Grill", // Aussi Serbie, Croatie
+                description: "Petites saucisses de viande hachée (bœuf/agneau) sans peau, grillées au charbon, servies dans un pain (somun) avec oignons.",
+                prepTime: 30, // + Repos
+                ingredients: ["Bœuf haché", "agneau haché", "ail", "sel", "bicarbonate de soude", "paprika"],
+            },
+            {
+                id: 481, name: "Pljeskavica", originalName: "Пљескавица", country: "Serbie", flag: "🇷🇸", continent: "Europe", type: "Grill",
+                description: "Large 'hamburger' de viande hachée (similaire au Ćevapi) grillé, souvent piquant ou farci de fromage (urnebes).",
+                prepTime: 30, // + Repos
+                ingredients: ["Bœuf haché", "porc haché", "oignon", "paprika", "piment (optionnel)"],
+            },
+            {
+                id: 482, name: "Ražnjići", originalName: "Ražnjići", country: "Croatie", flag: "🇭🇷", continent: "Europe", type: "Grill", // Aussi Serbie
+                description: "Brochettes de porc (ou veau) simples, grillées avec des oignons et des poivrons.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (longe)", "oignons", "poivrons", "huile", "sel", "poivre"],
+            },
+
+            // Portugal
+            {
+                id: 483, name: "Frango Piri-Piri", originalName: "Frango Piri-Piri", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Grill",
+                description: "Poulet grillé à la flamme (en crapaudine), badigeonné de sauce pimentée Piri-Piri (d'origine africaine).",
+                prepTime: 60, // + Marinade
+                ingredients: ["Poulet (en crapaudine)", "piments Piri-Piri", "ail", "huile d'olive", "vinaigre", "whisky (ou vin blanc)"],
+            },
+            {
+                id: 484, name: "Espetada (Madère)", originalName: "Espetada", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Grill",
+                description: "Grandes brochettes de bœuf (cubes) frottées à l'ail et au sel, grillées sur des branches de laurier.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Bœuf (filet, rumsteck)", "ail", "gros sel", "feuilles de laurier (fraîches)"],
+            },
+            {
+                id: 485, name: "Sardines Grillées", originalName: "Sardinhas Assadas", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Grill",
+                description: "Sardines fraîches entières, simplement couvertes de gros sel et grillées au charbon, servies sur du pain.",
+                prepTime: 20,
+                ingredients: ["Sardines (fraîches)", "gros sel", "pain de maïs (Broa)"],
+            },
+            
+            // Reste du Monde (Grill)
+            {
+                id: 486, name: "Bratwurst", originalName: "Bratwurst", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Grill",
+                description: "Saucisse de porc allemande (type Nürnberger ou Thüringer) grillée au charbon, servie dans un petit pain (Brötchen).",
+                prepTime: 20,
+                ingredients: ["Saucisse (Bratwurst)", "petit pain (Brötchen)", "moutarde"],
+            },
+            {
+                id: 487, name: "Schwenkbraten", originalName: "Schwenkbraten", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Grill",
+                description: "Steak de porc (collet) mariné (oignons, paprika, bière) et grillé sur un 'Schwenker' (grill suspendu).",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (collet, steak)", "oignons", "paprika", "moutarde", "bière"],
+            },
+            {
+                id: 488, name: "Poulet Tandoori", originalName: "Tandoori Chicken", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Grill", // Cuit au Tandoor (four/grill)
+                description: "Poulet mariné au yaourt et aux épices (Tandoori Masala), cuit à très haute température dans un Tandoor (ou sur un grill chaud).",
+                prepTime: 60, // + Marinade (longue)
+                ingredients: ["Poulet (cuisses)", "yaourt", "Tandoori Masala", "pâte de gingembre-ail", "jus de citron"],
+            },
+            {
+                id: 489, name: "Paneer Tikka", originalName: "Paneer Tikka", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Grill",
+                description: "Brochettes de fromage paneer mariné au yaourt et épices, grillées avec poivrons et oignons.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Paneer", "yaourt", "pâte de gingembre-ail", "garam masala", "curcuma", "poivrons", "oignons"],
+            },
+            {
+                id: 490, name: "Seekh Kebab", originalName: "Seekh Kebab", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Grill", // Aussi Pakistan
+                description: "Viande hachée (agneau) épicée, moulée sur des brochettes (seekh) et grillée au Tandoor ou sur barbecue.",
+                prepTime: 35, // + Marinade
+                ingredients: ["Agneau haché", "gingembre", "ail", "piments verts", "coriandre", "garam masala"],
+            },
+            {
+                id: 491, name: "Poisson Tikka", originalName: "Fish Tikka", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Grill",
+                description: "Morceaux de poisson blanc ferme marinés au yaourt et épices (similaire au Tandoori) et grillés.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Poisson blanc (ferme)", "yaourt", "Tandoori Masala", "pâte de gingembre-ail", "farine de pois chiche (Besan)"],
+            },
+            {
+                id: 492, name: "Mixed Grill (Anglais)", originalName: "Mixed Grill", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Grill",
+                description: "Assortiment copieux de viandes grillées (saucisse, bacon, côtelette d'agneau, steak), servi avec œuf au plat et frites.",
+                prepTime: 40,
+                ingredients: ["Côtelette d'agneau", "steak (gammon ou rumsteck)", "saucisse", "bacon", "tomate grillée", "champignons", "œuf"],
+            },
+            {
+                id: 493, name: "Pinchos Morunos", originalName: "Pinchos Morunos", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Grill",
+                description: "Brochettes de porc (ou agneau) marinées dans un mélange d'épices 'mauresques' (paprika, cumin, coriandre).",
+                prepTime: 30, // + Marinade
+                ingredients: ["Porc (longe)", "paprika (pimentón)", "cumin", "coriandre (poudre)", "ail", "huile d'olive"],
+            },
+            {
+                id: 494, name: "Chuletillas", originalName: "Chuletillas al Sarmiento", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Grill",
+                description: "Petites côtelettes d'agneau de lait grillées très rapidement sur des sarments de vigne.",
+                prepTime: 15,
+                ingredients: ["Côtelettes d'agneau (de lait)", "sel", "sarments de vigne (pour griller)"],
+            },
+            {
+                id: 495, name: "Brochettes de Bœuf (France)", originalName: "Brochettes de Bœuf", country: "France", flag: "🇫🇷", continent: "Europe", type: "Grill",
+                description: "Cubes de bœuf (rumsteck) marinés au vin rouge et herbes, ou simplement huilés, grillés avec poivrons et oignons.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Bœuf (rumsteck)", "poivrons", "oignons", "huile d'olive", "herbes de Provence"],
+            },
+            {
+                id: 496, name: "Merguez Grillées", originalName: "Merguez Grillées", country: "France", flag: "🇫🇷", continent: "Europe", type: "Grill", // Origine Maghreb
+                description: "Saucisses épicées (agneau/bœuf) très populaires en France pour les barbecues.",
+                prepTime: 15,
+                ingredients: ["Saucisses Merguez"],
+            },
+            {
+                id: 497, name: "Côte de Bœuf", originalName: "Côte de Bœuf", country: "France", flag: "🇫🇷", continent: "Europe", type: "Grill",
+                description: "Pièce de bœuf épaisse (similaire au Ribeye avec os) grillée au barbecue, servie saignante avec fleur de sel.",
+                prepTime: 40, // Inclut repos
+                ingredients: ["Bœuf (Côte de bœuf)", "huile d'olive", "fleur de sel", "poivre", "thym", "ail"],
+            },
+            {
+                id: 498, name: "Salsiccia Grillée", originalName: "Salsiccia Grigliata", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Grill",
+                description: "Saucisse italienne fraîche (souvent au fenouil) grillée lentement au charbon.",
+                prepTime: 25,
+                ingredients: ["Saucisse italienne (fraîche)", "fenouil (graines)", "vin blanc (pour marinade)"],
+            },
+            {
+                id: 499, name: "Bistecca alla Fiorentina", originalName: "Bistecca alla Fiorentina", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Grill",
+                description: "Steak T-Bone (ou Porterhouse) très épais de bœuf Chianina, grillé rapidement à feu vif, servi bleu/saignant.",
+                prepTime: 35, // Inclut repos
+                ingredients: ["Bœuf (T-Bone, très épais)", "sel", "poivre", "huile d'olive (pour finir)"],
+            },
+            {
+                id: 500, name: "Saumon sur Planche de Cèdre", originalName: "Cedar Plank Salmon", country: "Canada", flag: "🇨🇦", continent: "Amérique du Nord", type: "Grill",
+                description: "Filet de saumon cuit sur une planche de cèdre (trempée) sur le grill, ce qui lui donne un goût fumé.",
+                prepTime: 60, // Inclut trempage planche
+                ingredients: ["Saumon (filet)", "planche de cèdre", "sirop d'érable", "moutarde de Dijon", "aneth"],
+            },
+            {
+                id: 501, name: "Arayes", originalName: "عرايس", country: "Liban", flag: "🇱🇧", continent: "Asie", type: "Grill",
+                description: "Pain pita farci de viande hachée épicée (Kafta), huilé et grillé au barbecue jusqu'à ce qu'il soit croustillant.",
+                prepTime: 30,
+                ingredients: ["Pain pita", "viande hachée (Kafta)", "oignon", "persil", "pâte de grenade", "huile d'olive"],
+            },
+            {
+                id: 502, name: "Mtsvadi (Shashlik)", originalName: "მწვადი", country: "Géorgie", flag: "🇬🇪", continent: "Asie", type: "Grill",
+                description: "Brochettes géorgiennes (Shashlik), souvent de porc ou d'agneau, marinées simplement (oignon) et grillées sur braise.",
+                prepTime: 40, // + Marinade
+                ingredients: ["Porc (collet, épaule)", "oignon", "sel", "poivre"],
+            },
+            {
+                id: 503, name: "Shashlik (Russe)", originalName: "Шашлык", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Grill",
+                description: "Brochettes de porc (ou agneau) marinées (kéfir, oignon, ou vinaigre) et grillées au feu de bois.",
+                prepTime: 45, // + Marinade (longue)
+                ingredients: ["Porc (échine)", "oignons", "kéfir (ou vinaigre)", "aneth", "poivre"],
+            },
+            {
+                id: 504, name: "Asado de Cordeiro", originalName: "Asado de Cordeiro", country: "Uruguay", flag: "🇺🇾", continent: "Amérique du Sud", type: "Grill",
+                description: "Agneau (souvent entier ou en grosses pièces) cuit très lentement à la verticale ('a la cruz') près de la braise.",
+                prepTime: 360,
+                ingredients: ["Agneau (entier ou quartier)", "gros sel", "eau (saumure)"],
+            },
+            {
+                id: 505, name: "Lomo (Grillé)", originalName: "Lomo", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Grill",
+                description: "Filet de bœuf grillé, souvent servi en steak épais (Bife de Lomo).",
+                prepTime: 30,
+                ingredients: ["Bœuf (Filet)", "sel", "poivre", "huile d'olive"],
+            },
+            {
+                id: 506, name: "Poivrons Grillés (Escalivada)", originalName: "Escalivada", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Grill",
+                description: "Légumes (poivrons, aubergines, oignons) grillés entiers directement dans la braise jusqu'à ce que la peau noircisse, puis pelés.",
+                prepTime: 60,
+                ingredients: ["Poivrons rouges", "aubergines", "oignons", "huile d'olive", "ail"],
+            },
+
+            // --- AJOUTS "PAYS OUBLIÉS" (SOUPES & SAUTÉS) ---
+            
+            {
+                id: 507, name: "Soupe Joumou", originalName: "Soupe Joumou", country: "Haïti", flag: "🇭🇹", continent: "Amérique du Nord", type: "Soupe",
+                description: "Soupe de l'indépendance. Velouté de courge (giraumon), bœuf, pâtes et légumes (chou, carottes).",
+                prepTime: 150,
+                ingredients: ["Courge (Giraumon)", "bœuf (jarret)", "pâtes (rigatoni)", "chou", "carottes", "céleri", "piment (Scotch Bonnet)"],
+            },
+            {
+                id: 508, name: "Soupe d'Arachide (Ghana)", originalName: "Nkatenkene", country: "Ghana", flag: "🇬🇭", continent: "Afrique", type: "Soupe",
+                description: "Soupe d'arachide ghanéenne, souvent avec du poulet ou de la chèvre, plus légère que le Mafé sénégalais.",
+                prepTime: 90,
+                ingredients: ["Pâte d'arachide", "poulet", "tomates", "oignons", "gingembre", "piment"],
+            },
+            {
+                id: 509, name: "Pisca Andina", originalName: "Pisca Andina", country: "Venezuela", flag: "🇻🇪", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe andine vénézuélienne réconfortante (petit-déjeuner) à base de bouillon de poulet, lait, pommes de terre, fromage et coriandre.",
+                prepTime: 40,
+                ingredients: ["Bouillon de poulet", "lait", "pommes de terre", "fromage blanc (frais)", "coriandre", "oignon vert", "œufs (pochés)"],
+            },
+            {
+                id: 510, name: "Locro de Papa", originalName: "Locro de Papa", country: "Équateur", flag: "🇪🇨", continent: "Amérique du Sud", type: "Soupe",
+                description: "Soupe de pommes de terre équatorienne crémeuse, servie avec du fromage, de l'avocat et du maïs.",
+                prepTime: 60,
+                ingredients: ["Pommes de terre", "lait", "fromage (queso fresco)", "avocat", "maïs (choclo)", "roucou (achiote)", "oignons"],
+            },
+            {
+                id: 511, name: "Tarator", originalName: "Таратор", country: "Bulgarie", flag: "🇧🇬", continent: "Europe", type: "Soupe",
+                description: "Soupe froide bulgare à base de yaourt, concombre, ail, aneth et noix.",
+                prepTime: 15, // + Refroidissement
+                ingredients: ["Yaourt (bulgare)", "concombre", "ail", "aneth", "noix", "huile d'olive"],
+            },
+            {
+                id: 512, name: "Frikadeller", originalName: "Frikadeller", country: "Danemark", flag: "🇩🇰", continent: "Europe", type: "Sauté",
+                description: "Boulettes de viande danoises (porc/veau) aplaties et poêlées (sautées) au beurre.",
+                prepTime: 35,
+                ingredients: ["Porc haché", "veau haché", "oignon", "œuf", "lait", "farine", "beurre"],
+            },
+            {
+                id: 513, name: "Griot de Porc", originalName: "Griot", country: "Haïti", flag: "🇭🇹", continent: "Amérique du Nord", type: "Sauté", // Sauté/Frit
+                description: "Morceaux d'épaule de porc marinés (agrumes amers, épices), bouillis puis frits (sautés) jusqu'à être croustillants.",
+                prepTime: 120, // Inclut marinade et cuisson
+                ingredients: ["Épaule de porc", "oranges amères (ou citron vert/orange)", "piment (Scotch Bonnet)", "oignon vert", "thym", "clou de girofle"],
+            },
+            {
+                id: 514, name: "Badenjan Borani", originalName: "Borani Banjan", country: "Afghanistan", flag: "🇦🇫", continent: "Asie", type: "Sauté",
+                description: "Aubergines sautées (frites) puis mijotées dans une sauce tomate, servies avec une sauce au yaourt à l'ail.",
+                prepTime: 60,
+                ingredients: ["Aubergines", "tomates", "oignons", "ail", "yaourt", "menthe séchée"],
+            },
+            {
+                id: 515, name: "Kokoda", originalName: "Kokoda", country: "Fidji", flag: "🇫🇯", continent: "Océanie", type: "Soupe", // Type "soupe froide" / Ceviche
+                description: "Ceviche fidjien. Poisson cru 'cuit' au jus de citron vert, puis mélangé à du lait de coco, oignons, tomates et piment.",
+                prepTime: 30, // + Marinade
+                ingredients: ["Poisson blanc (ferme, ex: Mahimahi)", "jus de citron vert", "lait de coco", "oignon rouge", "tomates", "piment", "coriandre"],
+            },
+            {
+                id: 516, name: "Kelewele", originalName: "Kelewele", country: "Ghana", flag: "🇬🇭", continent: "Afrique", type: "Sauté",
+                description: "Dés de banane plantain mûre, épicés (gingembre, piment) et sautés (frits) jusqu'à caramélisation.",
+                prepTime: 25,
+                ingredients: ["Bananes plantain (mûres)", "gingembre", "piment (poudre)", "ail", "anis (graines)", "huile (pour friture)"],
+            },
+            {
+                id: 517, name: "Soupe de Poisson Hongroise", originalName: "Halászlé", country: "Hongrie", flag: "🇭🇺", continent: "Europe", type: "Soupe",
+                description: "Soupe de poisson d'eau douce (carpe) d'un rouge vif, très riche en paprika, cuite traditionnellement au chaudron.",
+                prepTime: 90,
+                ingredients: ["Carpe (et autres poissons)", "paprika doux (abondant)", "oignons", "tomates", "poivrons", "piment (fort)"],
+            },
+            {
+                id: 518, name: "Soupe de Saumon Finlandaise", originalName: "Lohikeitto", country: "Finlande", flag: "🇫🇮", continent: "Europe", type: "Soupe",
+                description: "Soupe crémeuse de saumon, pommes de terre et poireaux, généreusement garnie d'aneth frais.",
+                prepTime: 40,
+                ingredients: ["Saumon (filet)", "pommes de terre", "poireaux", "crème fraîche", "bouillon de poisson", "aneth", "beurre"],
+            },
+            {
+                id: 519, name: "Bobó de Camarão", originalName: "Bobó de Camarão", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Soupe", // Ou Ragoût
+                description: "Velouté/ragoût brésilien (Bahia) de crevettes, purée de manioc (aipim), lait de coco et huile de palme (dendê).",
+                prepTime: 75,
+                ingredients: ["Crevettes", "manioc (aipim)", "lait de coco", "huile de palme (dendê)", "oignons", "tomates", "coriandre", "gingembre"],
+            },
+            {
+                id: 520, name: "Borscht Vert", originalName: "Зелений борщ", country: "Ukraine", flag: "🇺🇦", continent: "Europe", type: "Soupe",
+                description: "Soupe ukrainienne de printemps à base d'oseille (qui donne la couleur et l'acidité), pommes de terre et servie avec un œuf dur.",
+                prepTime: 60,
+                ingredients: ["Oseille", "bouillon de poulet (ou bœuf)", "pommes de terre", "carottes", "oignons", "œufs durs", "crème aigre (Smetana)", "aneth"],
+            },
+            {
+                id: 521, name: "Saltah", originalName: "Saltah", country: "Yémen", flag: "🇾🇪", continent: "Asie", type: "Soupe",
+                description: "Ragoût/soupe nationale du Yémen, base de viande (maraq) avec légumes, surmontée d'une mousse de fenugrec (hulbah).",
+                prepTime: 120,
+                ingredients: ["Agneau (ou bœuf)", "bouillon (maraq)", "pommes de terre", "riz", "tomates", "fenugrec (hulbah)", "piment (sahawiq)"],
+            },
+            {
+                id: 522, name: "Főzelék (Lentilles)", originalName: "Lencsefőzelék", country: "Hongrie", flag: "🇭🇺", continent: "Europe", type: "Sauté", // Type ragoût/sauté
+                description: "Plat hongrois unique, ni une soupe ni un ragoût. Lentilles épaissies par un 'roux' (rántás), souvent servi avec saucisse.",
+                prepTime: 60,
+                ingredients: ["Lentilles", "oignons", "farine", "paprika", "vinaigre", "crème aigre", "saucisse (pour servir)"],
+            },
+            {
+                id: 523, name: "Bistec Encebollado", originalName: "Bistec Encebollado", country: "Panama", flag: "🇵🇦", continent: "Amérique du Nord", type: "Sauté", // Aussi Colombie
+                description: "Steak (fines tranches) sauté et étouffé avec une grande quantité d'oignons caramélisés et de tomates.",
+                prepTime: 35,
+                ingredients: ["Bœuf (fines tranches)", "oignons (abondants)", "tomates", "ail", "sauce Worcestershire", "vinaigre"],
+            },
+            {
+                id: 524, name: "Feuerfleisch", originalName: "Feuerfleisch", country: "Autriche", flag: "🇦🇹", continent: "Europe", type: "Sauté",
+                description: "'Viande de feu'. Émincé de porc sauté vivement avec des oignons, des poivrons et beaucoup de paprika piquant.",
+                prepTime: 30,
+                ingredients: ["Porc (longe, émincé)", "oignons", "poivrons (rouges, jaunes)", "paprika (fort)", "crème aigre", "bouillon"],
+            },
+			
 
         ];
 
@@ -1960,6 +3942,7 @@
         
         let populatedContinents = [];
         let populatedCountries = [];
+		let selectedRecipeTypes = ["Cocotte"];
 
         // --- FONCTIONS AUXILIAIRES ---
 
@@ -2136,6 +4119,14 @@
             
             // Applique les filtres
             const filteredRecipes = allRecipes.filter(recipe => {
+			// Si aucun type n'est sélectionné, on n'affiche rien
+            if (selectedRecipeTypes.length === 0) {
+                return false;
+            }
+            // Si le type de la recette n'est pas dans notre tableau de types
+			if (!selectedRecipeTypes.includes(recipe.type)) {
+            return false;
+        }
                 // Filtre Continent
                 if (filters.continent !== 'Tous' && recipe.continent !== filters.continent) {
                     return false;
@@ -2192,6 +4183,18 @@
             timeValue.textContent = 'Jusqu\'à 12h 00m';
             tagFilters.forEach(input => input.checked = false);
             
+			// Réinitialise le tableau à son état initial
+            selectedRecipeTypes = ["Cocotte"];
+    
+            // Met à jour les classes des boutons
+            document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
+                 if (selectedRecipeTypes.includes(btn.dataset.type)) {
+                     btn.classList.add('active');
+                 } else {
+                     btn.classList.remove('active');
+                 }
+             });
+			
             renderRecipes();
         }
 
@@ -2199,6 +4202,31 @@
         document.addEventListener('DOMContentLoaded', () => {
             populateFilters(); // Peuple les filtres AVANT de rendre les recettes
             renderRecipes();   // Affiche les recettes initiales (toutes)
+			
+		// --- GESTION DES BOUTONS DE TYPE ---
+const typeButtonsContainer = document.querySelector('.type-buttons');
+typeButtonsContainer.addEventListener('click', (event) => {
+    const clickedButton = event.target;
+    if (clickedButton.tagName === 'BUTTON' && !clickedButton.disabled) {
+        
+        const type = clickedButton.dataset.type;
+        const index = selectedRecipeTypes.indexOf(type);
+
+        if (index > -1) {
+            // S'il est déjà dans le tableau, on le retire
+            selectedRecipeTypes.splice(index, 1);
+            clickedButton.classList.remove('active');
+        } else {
+            // Sinon, on l'ajoute
+            selectedRecipeTypes.push(type);
+            clickedButton.classList.add('active');
+        }
+
+        // Rafraîchit la liste des recettes
+        renderRecipes();
+    }
+});
+
 
             // Ajoute les écouteurs d'événements
             continentFilter.addEventListener('change', () => {
@@ -2217,10 +4245,10 @@
             });
             
             resetButton.addEventListener('click', resetFilters);
+						
         });
 
     </script>
 </body>
 </html>
-
 
