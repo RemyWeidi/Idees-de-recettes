@@ -138,10 +138,12 @@
             text-transform: uppercase;
         }
         
-        .pixel-button:hover {
-            background-color: #f7b731;
-            color: #1a1a2e;
-        }
+        @media (hover: hover) {
+    .pixel-button:not(.active):hover {
+        background-color: #f7b731;
+        color: #1a1a2e;
+    }
+}
 
         /* Boutons de type de plat */
         .type-buttons {
