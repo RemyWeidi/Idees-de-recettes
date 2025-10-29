@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Recipe Quest</title>
+    <!-- Import des polices Pixel Art -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Réinitialisation de base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Thème Pixel Art */
+        body {
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            background-color: #1a1a2e; /* Fond bleu nuit */
+            color: #e0e0e0;
+            padding: 20px;
+            image-rendering: pixelated; /* Garde les images pixelisées */
+        }
+
+        h1, h2 {
+            font-family: 'Press Start 2P', cursive;
+            color: #f7b731; /* Or pixel */
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #f7b731;
+        }
+        
+        h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            color: #f0f0f0;
+            margin-bottom: 8px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Ajout pour hauteur pleine */
+            height: calc(100vh - 40px); /* Hauteur pleine moins padding body */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fenêtre de jeu */
+        .window-box {
+            background-color: #2a2a4e; /* Bleu plus clair */
+            border: 4px solid #f7b731;
+            box-shadow: 4px 4px 0px #000;
+            margin-bottom: 25px;
+            padding: 20px;
+        }
+        
+        /* Grille de mise en page */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 25px;
+            /* Ajout pour hauteur flexible */
+            flex-grow: 1;
+            min-height: 0; /* Important pour que les enfants flex/grid s'adaptent */
+        }
+        
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                /* Gérer la hauteur sur mobile */
+                height: auto; 
+                overflow-y: auto;
+            }
+            .container {
+                height: auto;
+            }
+        }
+        
+        /* Ajout pour la hauteur flexible */
+        aside.window-box {
+             margin-bottom: 0; /* Annule la marge pour alignement parfait */
+        }
+        
+        main.window-box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0; /* Annule la marge pour alignement parfait */
+        }
+
+        /* --- FILTRES (Panneau de Contrôle) --- */
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #f0f0f0;
+        }
+
+        select, .pixel-button {
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            background-color: #1e1e3f;
+            color: #e0e0e0;
+            border: 2px solid #a2a2d2;
+            padding: 8px;
+            width: 100%;
+        }
+        
+        select:focus, input:focus {
+            outline: 2px solid #f7b731;
+        }
+
+        /* Boutons Pixel */
+        .pixel-button {
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .pixel-button:hover {
+            background-color: #f7b731;
+            color: #1a1a2e;
+        }
+
+        /* Boutons de type de plat */
+        .type-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .pixel-button.active {
+            background-color: #e94560; /* Rouge pixel */
+            color: #fff;
+            border-color: #fff;
+        }
+        
+        .pixel-button.locked {
+            background-color: #4a4a6a;
+            color: #888;
+            cursor: not-allowed;
+            border-color: #4a4a6a;
+        }
+
+        /* Slider de temps */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #1e1e3f;
+            border: 2px solid #a2a2d2;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #e94560;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+        
+        #time-value {
+            color: #f7b731;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        /* Checkboxes Pixel */
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .checkbox-label input {
+            display: none; /* Cache la checkbox par défaut */
+        }
+        
+        .checkbox-label .custom-checkbox {
+            width: 18px;
+            height: 18px;
+            background-color: #1e1e3f;
+            border: 2px solid #a2a2d2;
+            margin-right: 10px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        /* Le "X" (check) */
+        .checkbox-label input:checked + .custom-checkbox::after {
+            content: 'X';
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            color: #f7b731;
+            position: absolute;
+            top: -2px;
+            left: 2px;
+        }
+
+        /* --- LISTE DE RECETTES (Écran d'Inventaire) --- */
+        #recipe-list {
+            /* height: 70vh; <-- MODIFIÉ */
+            flex-grow: 1; /* Prend l'espace restant */
+            min-height: 0; /* Important pour overflow dans flex */
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #1e1e3f; /* Fond d'écran */
+            border: 4px solid #a2a2d2;
+        }
+        
+        /* Scrollbar Pixel */
+        #recipe-list::-webkit-scrollbar {
+            width: 16px;
+        }
+        #recipe-list::-webkit-scrollbar-track {
+            background: #1e1e3f;
+            border-left: 2px solid #a2a2d2;
+        }
+        #recipe-list::-webkit-scrollbar-thumb {
+            background-color: #f7b731;
+            border: 2px solid #1e1e3f;
+        }
+
+        .recipe-card {
+            background-color: #2a2a4e;
+            border: 2px solid #a2a2d2;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 0px #000;
+        }
+        
+        .recipe-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* MODIFIÉ pour mieux aligner */
+            margin-bottom: 10px;
+        }
+        
+        .recipe-original-name {
+            font-size: 22px;
+            color: #e94560;
+            font-weight: bold;
+        }
+        
+        .recipe-origin {
+            font-size: 18px;
+            color: #a2a2d2;
+            text-align: right;
+            flex-shrink: 0; /* Empêche le nom du pays de passer à la ligne */
+            padding-left: 10px; /* Espace pour le nom */
+        }
+
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-top: 2px dashed #a2a2d2;
+            border-bottom: 2px dashed #a2a2d2;
+            padding: 8px 0;
+        }
+        
+        .recipe-time {
+            font-size: 18px;
+            color: #f7b731;
+            font-weight: bold;
+        }
+        
+        .recipe-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap; /* Permet aux tags de passer à la ligne */
+        }
+        
+        .tag {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            padding: 5px;
+            color: #1a1a2e;
+            background-color: #a2a2d2;
+            border: 1px solid #000;
+        }
+        
+        .tag.tag-viande { background-color: #e94560; color: #fff; }
+        .tag.tag-poisson_fruit_de_mer { background-color: #31a2f7; color: #fff; }
+        .tag.tag-legumes { background-color: #31f7a2; color: #1a1a2e; }
+        .tag.tag-epices { background-color: #f7b731; color: #1a1a2e; }
+        .tag.tag-herbes { background-color: #31f770; color: #1a1a2e; }
+        .tag.tag-vegetarien { background-color: #90f731; color: #1a1a2e; }
+
+
+        .recipe-description {
+            margin-bottom: 10px;
+        }
+        
+        .recipe-ingredients {
+            font-size: 16px;
+            color: #c0c0c0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>[ World Recipe Quest ]</h1>
+
+        <div class="main-layout">
+            
+            <!-- PANNEAU DE CONTRÔLE (FILTRES) -->
+            <aside class="window-box" id="filters-ui">
+                
+                <!-- Filtre Type de Plat -->
+                <div class="filter-group">
+                    <h2>TYPE DE PLAT</h2>
+                    <div class="type-buttons">
+                        <button class="pixel-button active" data-type="Cocotte">Cocotte</button>
+                        <button class="pixel-button locked" data-type="Sauté" disabled>Sauté</button>
+                        <button class="pixel-button locked" data-type="Grill" disabled>Grill</button>
+                        <button class="pixel-button locked" data-type="Soupe" disabled>Soupe</button>
+                    </div>
+                </div>
+
+                <!-- Filtres Géographiques -->
+                <div class="filter-group">
+                    <h2>DESTINATION</h2>
+                    <label for="continent-filter">Continent:</label>
+                    <select id="continent-filter">
+                        <option value="Tous">-- TOUS --</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="country-filter">Pays:</label>
+                    <select id="country-filter">
+                        <option value="Tous">-- TOUS --</option>
+                    </select>
+                </div>
+
+                <!-- Filtre Temps -->
+                <div class="filter-group">
+                    <h2>TEMPS PREPA (MAX)</h2>
+                    <input type="range" id="time-filter" min="30" max="720" value="720" step="15">
+                    <div id="time-value">Jusqu'à 12h 00m</div>
+                </div>
+
+                <!-- Filtres Ingrédients -->
+                <div class="filter-group">
+                    <h2>INGRÉDIENTS</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="viande">
+                            <span class="custom-checkbox"></span>
+                            Viande
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="poisson_fruit_de_mer">
+                            <span class="custom-checkbox"></span>
+                            Poisson
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="legumes">
+                            <span class="custom-checkbox"></span>
+                            Légumes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="epices">
+                            <span class="custom-checkbox"></span>
+                            Épices
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="herbes">
+                            <span class="custom-checkbox"></span>
+                            Herbes
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="vegetarien">
+                            <span class="custom-checkbox"></span>
+                            Végétarien
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Bouton Reset -->
+                 <div class="filter-group">
+                    <button class="pixel-button" id="reset-button">RESET FILTRES</button>
+                 </div>
+
+            </aside>
+
+            <!-- ÉCRAN D'INVENTAIRE (RECETTES) -->
+            <main class="window-box">
+                <h2 id="recipe-count">Chargement des recettes...</h2>
+                <div id="recipe-list">
+                    <!-- Les cartes de recettes seront insérées ici par JavaScript -->
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script>
+        // --- BASE DE DONNÉES DES 190 RECETTES --- // MISE A JOUR
+        const allRecipes = [
+            // PARTIE 1 (1-15)
+            {
+                id: 1, name: "Bœuf Bourguignon", originalName: "Bœuf Bourguignon", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf mijoté lentement dans du vin rouge de Bourgogne, avec lardons, oignons, champignons et carottes.",
+                prepTime: 210,
+                ingredients: ["Bœuf (paleron, joue)", "vin rouge (Bourgogne)", "lardons", "carottes", "oignons grelots", "champignons", "bouquet garni"],
+            },
+            {
+                id: 2, name: "Coq au Vin", originalName: "Coq au Vin", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Morceaux de coq (ou poulet) dorés puis mijotés longuement dans du vin rouge, avec lardons et champignons.",
+                prepTime: 180,
+                ingredients: ["Coq (ou poulet fermier)", "vin rouge", "lardons", "champignons de Paris", "oignons grelots", "carottes", "bouquet garni", "cognac"],
+            },
+            {
+                id: 3, name: "Cassoulet", originalName: "Cassoulet", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût riche du Sud-Ouest à base de haricots blancs longuement mijotés avec confit de canard, saucisse de Toulouse et porc.",
+                prepTime: 300,
+                ingredients: ["Haricots blancs (lingots)", "confit de canard", "saucisse de Toulouse", "poitrine de porc", "couenne de porc", "carottes", "oignons"],
+            },
+            {
+                id: 4, name: "Blanquette de veau", originalName: "Blanquette de veau", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de veau cuit dans un bouillon blanc puis lié avec une sauce crémeuse à base de jaune d'œuf et de crème.",
+                prepTime: 150,
+                ingredients: ["Veau", "carottes", "poireaux", "oignons", "crème fraîche", "jaune d'œuf", "farine", "beurre", "champignons"],
+            },
+            {
+                id: 5, name: "Carbonnade Flamande", originalName: "Carbonnade Flamande", country: "Belgique", flag: "🇧🇪", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf mijoté à la bière (brune ou ambrée), sucré à la cassonade et lié avec du pain d'épices moutardé.",
+                prepTime: 180,
+                ingredients: ["Bœuf (paleron, joue)", "oignons", "bière brune", "pain d'épices", "moutarde", "cassonade", "thym", "laurier"],
+            },
+            {
+                id: 6, name: "Irish Stew", originalName: "Irish Stew", country: "Irlande", flag: "🇮🇪", continent: "Europe", type: "Cocotte",
+                description: "Ragoût traditionnel à base de mouton (ou agneau), de pommes de terre et d'oignons. Simple et nourrissant.",
+                prepTime: 120,
+                ingredients: ["Agneau (collier)", "pommes de terre", "oignons", "carottes", "bouillon d'agneau", "persil", "thym"],
+            },
+            {
+                id: 7, name: "Goulash", originalName: "Gulyás", country: "Hongrie", flag: "🇭🇺", continent: "Europe", type: "Cocotte",
+                description: "Soupe ou ragoût de bœuf très riche, fortement aromatisé au paprika. Mijoté avec oignons, poivrons et parfois des pommes de terre.",
+                prepTime: 180,
+                ingredients: ["Bœuf (jarret, paleron)", "oignons", "paprika doux", "poivrons (rouges ou verts)", "bouillon de bœuf", "cumin", "tomates"],
+            },
+            {
+                id: 8, name: "Tajine d'agneau aux pruneaux", originalName: "Tajine d'agneau aux pruneaux", country: "Maroc", flag: "🇲🇦", continent: "Afrique", type: "Cocotte",
+                description: "Plat mijoté sucré-salé cuit lentement. L'agneau devient fondant avec des fruits secs et des épices.",
+                prepTime: 150,
+                ingredients: ["Agneau (épaule, collier)", "oignons", "pruneaux", "amandes", "miel", "gingembre", "cannelle", "safran", "coriandre"],
+            },
+            {
+                id: 9, name: "Osso Buco", originalName: "Osso Buco", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "Jarret de veau coupé en tranches (avec l'os à moelle), braisé lentement avec vin blanc, tomates et légumes.",
+                prepTime: 150,
+                ingredients: ["Jarret de veau (en rouelles)", "vin blanc", "tomates pelées", "oignon", "carotte", "céleri", "bouillon de veau", "gremolata (persil, ail, zeste de citron)"],
+            },
+            {
+                id: 10, name: "Ragù alla Bolognese", originalName: "Ragù alla Bolognese", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "Sauce à la viande riche (bœuf et porc) mijotée très lentement avec un soffritto (céleri, carotte, oignon), du vin et des tomates.",
+                prepTime: 210,
+                ingredients: ["Bœuf haché", "porc haché (ou pancetta)", "oignon", "carotte", "céleri", "vin rouge (ou blanc)", "lait", "tomates (purée ou pelées)"],
+            },
+            {
+                id: 11, name: "Chili con Carne", originalName: "Chili con Carne", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût épicé de bœuf et de piments. Les versions populaires incluent haricots rouges et tomates.",
+                prepTime: 180,
+                ingredients: ["Bœuf (haché ou en cubes)", "haricots rouges", "tomates concassées", "oignons", "ail", "poudre de chili", "cumin", "piment de Cayenne"],
+            },
+            {
+                id: 12, name: "Feijoada", originalName: "Feijoada", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût très riche de haricots noirs mijotés avec un assortiment de viandes de porc salées, fumées et fraîches.",
+                prepTime: 240,
+                ingredients: ["Haricots noirs", "saucisses fumées (ex: paio)", "poitrine de porc", "côtes de porc salées", "bœuf séché (carne seca)", "oignons", "ail"],
+            },
+            {
+                id: 13, name: "Nikujaga", originalName: "肉じゃが", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de 'viande et pommes de terre'. Fines tranches de bœuf mijotées avec pommes de terre dans un bouillon sucré-salé.",
+                prepTime: 40,
+                ingredients: ["Bœuf (fines tranches)", "pommes de terre", "oignons", "carottes", "sauce soja", "mirin", "saké", "dashi (bouillon)"],
+            },
+            {
+                id: 14, name: "Galbi-jjim", originalName: "갈비찜", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de côtes de bœuf braisées dans une sauce soja sucrée. La viande devient très tendre. Souvent servi lors des fêtes.",
+                prepTime: 180,
+                ingredients: ["Côtes de bœuf (courtes)", "sauce soja", "sucre (ou poire coréenne)", "ail", "gingembre", "oignons verts", "carottes", "radis daikon"],
+            },
+            {
+                id: 15, name: "Rogan Josh", originalName: "Rogan Josh", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Curry d'agneau (ou de chèvre) braisé dans une sauce rouge intense à base d'épices (piment du Cachemire) et de yaourt.",
+                prepTime: 120,
+                ingredients: ["Agneau (épaule, gigot)", "yaourt", "piment du Cachemire (poudre)", "gingembre", "ail", "cardamome", "cannelle", "clou de girofle"],
+            },
+            // PARTIE 2 (16-50)
+            {
+                id: 16, name: "Pot-au-Feu", originalName: "Pot-au-Feu", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Viande de bœuf (divers morceaux) et légumes (carottes, poireaux) cuits longuement dans un bouillon, servi avec l'os à moelle.",
+                prepTime: 210,
+                ingredients: ["Bœuf (gîte, paleron)", "os à moelle", "carottes", "poireaux", "navets", "oignon piqué de clous de girofle", "bouquet garni"],
+            },
+            {
+                id: 17, name: "Daube Provençale", originalName: "Daube Provençale", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf mariné puis mijoté longuement dans du vin rouge avec des herbes de Provence, des olives et des zestes d'orange.",
+                prepTime: 240,
+                ingredients: ["Bœuf (joue, paleron)", "vin rouge", "carottes", "oignons", "ail", "zeste d'orange", "olives noires", "herbes de Provence"],
+            },
+            {
+                id: 18, name: "Navarin d'agneau", originalName: "Navarin d'agneau", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût d'agneau printanier, mijoté avec de jeunes légumes (navets nouveaux, carottes, petits pois, pommes de terre).",
+                prepTime: 120,
+                ingredients: ["Agneau (épaule, collier)", "navets nouveaux", "carottes", "petits pois", "oignons grelots", "pommes de terre nouvelles", "bouillon"],
+            },
+            {
+                id: 19, name: "Waterzooi", originalName: "Waterzooi", country: "Belgique", flag: "🇧🇪", continent: "Europe", type: "Cocotte",
+                description: "Ragoût crémeux de Gand, au poulet (ou poisson), lié à la crème et aux jaunes d'œufs.",
+                prepTime: 90,
+                ingredients: ["Poulet (ou poisson)", "carottes", "poireaux", "céleri", "pommes de terre", "crème fraîche", "jaunes d'œufs", "bouillon de volaille"],
+            },
+            {
+                id: 20, name: "Stifado", originalName: "Στιφάδο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf (ou lapin) mijoté dans une sauce tomate riche avec une grande quantité de petits oignons grelots et des épices douces.",
+                prepTime: 180,
+                ingredients: ["Bœuf", "petits oignons grelots", "tomates concassées", "vin rouge", "cannelle", "clou de girofle", "vinaigre de vin"],
+            },
+            {
+                id: 21, name: "Sauerbraten", originalName: "Sauerbraten", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Cocotte",
+                description: "Rôti de bœuf 'acide' mariné plusieurs jours (vinaigre, vin), puis braisé. Sauce souvent liée au pain d'épices.",
+                prepTime: 240,
+                ingredients: ["Bœuf (rôti)", "vinaigre", "vin rouge", "oignons", "carottes", "pain d'épices (Lebkuchen)", "feuilles de laurier", "baies de genièvre"],
+            },
+            {
+                id: 22, name: "Rouladen", originalName: "Rouladen", country: "Allemagne", flag: "🇩🇪", continent: "Europe", type: "Cocotte",
+                description: "Fines tranches de bœuf roulées (moutarde, bacon, oignons, cornichons), puis braisées dans un bouillon riche.",
+                prepTime: 120,
+                ingredients: ["Bœuf (fines escalopes)", "bacon", "cornichons", "moutarde", "oignons", "bouillon de bœuf", "vin rouge"],
+            },
+            {
+                id: 23, name: "Bigos", originalName: "Bigos", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                description: "Ragoût très riche (choucroute, chou frais, viandes diverses, saucisses fumées, champignons) mijoté longuement.",
+                prepTime: 240,
+                ingredients: ["Choucroute", "chou frais", "porc (rôti, épaule)", "saucisse (Kielbasa)", "champignons séchés", "lard", "pruneaux", "vin rouge"],
+            },
+            {
+                id: 24, name: "Bœuf Stroganoff", originalName: "Bœuf Stroganoff", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Cocotte",
+                description: "Fines lanières de bœuf saisies puis mijotées dans une sauce veloutée à base de crème aigre (Smetana), d'oignons et de champignons.",
+                prepTime: 45,
+                ingredients: ["Bœuf (filet, rumsteck)", "oignons", "champignons", "crème aigre (ou Smetana)", "moutarde", "bouillon de bœuf", "paprika"],
+            },
+            {
+                id: 25, name: "Lancashire Hotpot", originalName: "Lancashire Hotpot", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Cocotte",
+                description: "Ragoût d'agneau et d'oignons, lentement cuit au four et recouvert d'une couche de pommes de terre en tranches qui dorent.",
+                prepTime: 150,
+                ingredients: ["Agneau (collier, épaule)", "oignons", "pommes de terre", "bouillon d'agneau", "sauce Worcestershire"],
+            },
+            {
+                id: 26, name: "Pollo alla Cacciatora", originalName: "Pollo alla Cacciatora", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "'Poulet du chasseur'. Morceaux de poulet mijotés dans une sauce rustique à base de tomates, oignons, vin blanc et herbes.",
+                prepTime: 75,
+                ingredients: ["Poulet (en morceaux)", "tomates pelées", "oignons", "céleri", "carottes", "vin blanc", "romarin", "olives (optionnel)"],
+            },
+            {
+                id: 27, name: "Peposo", originalName: "Peposo", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf toscan simple mais puissant, mijoté dans du vin rouge (Chianti) avec une très grande quantité de poivre noir.",
+                prepTime: 210,
+                ingredients: ["Bœuf (jarret, joue)", "vin rouge (Chianti)", "ail", "poivre noir en grains (abondant)", "tomates (optionnel)"],
+            },
+            {
+                id: 28, name: "Fabada Asturiana", originalName: "Fabada Asturiana", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de haricots (Fabas) très riche des Asturies, mijoté avec chorizo, boudin noir (morcilla) et lard (panceta).",
+                prepTime: 210,
+                ingredients: ["Haricots (Fabas)", "chorizo asturien", "morcilla (boudin)", "pancetta (ou lard)", "safran"],
+            },
+            {
+                id: 29, name: "Rabo de Toro", originalName: "Rabo de Toro", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de queue de bœuf braisé longuement dans du vin rouge avec des légumes, jusqu'à ce que la viande soit fondante.",
+                prepTime: 240,
+                ingredients: ["Queue de bœuf", "vin rouge (ex: Rioja)", "oignons", "carottes", "ail", "tomates", "laurier"],
+            },
+            {
+                id: 30, name: "Cozido à Portuguesa", originalName: "Cozido à Portuguesa", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Cocotte",
+                description: "Pot-au-feu portugais très généreux, mélangeant diverses viandes (bœuf, porc, saucisses), légumes (chou, carottes) et parfois des haricots.",
+                prepTime: 180,
+                ingredients: ["Bœuf", "porc (palette, travers)", "chouriço", "farinheira (saucisse)", "chou", "carottes", "pommes de terre", "navets"],
+            },
+            {
+                id: 31, name: "Ropa Vieja", originalName: "Ropa Vieja", country: "Cuba", flag: "🇨🇺", continent: "Amérique du Nord", type: "Cocotte",
+                description: "'Vieux vêtements'. Viande de bœuf (flanchet) cuite longuement, effilochée puis mijotée dans une sauce tomate avec oignons et poivrons.",
+                prepTime: 180,
+                ingredients: ["Bœuf (flanchet, bavette)", "tomates", "poivrons (verts et rouges)", "oignons", "ail", "cumin", "olives vertes"],
+            },
+            {
+                id: 32, name: "Gumbo (Poulet & Saucisse)", originalName: "Gumbo", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût emblématique de la Louisiane. Base de 'roux' foncé, de 'sainte trinité' (céleri, oignon, poivron), de poulet et de saucisse fumée.",
+                prepTime: 210,
+                ingredients: ["Poulet", "saucisse fumée (Andouille)", "farine", "huile", "oignon", "céleri", "poivron vert", "okra (gombo)", "bouillon de volaille", "épices cajun"],
+            },
+            {
+                id: 33, name: "Brunswick Stew", originalName: "Brunswick Stew", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût épais et fumé à base de tomates, maïs, haricots de Lima et de viande (poulet ou porc effiloché).",
+                prepTime: 150,
+                ingredients: ["Porc effiloché (ou poulet)", "tomates concassées", "maïs", "haricots de Lima", "pommes de terre", "sauce BBQ", "sauce Worcestershire"],
+            },
+            {
+                id: 34, name: "Sancocho", originalName: "Sancocho", country: "Colombie", flag: "🇨🇴", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Soupe-ragoût consistante. Différentes viandes (bœuf, poulet, porc) mijotées avec des racines (manioc, plantain, pomme de terre, maïs).",
+                prepTime: 150,
+                ingredients: ["Bœuf (jarret)", "poulet", "manioc (yuca)", "banane plantain", "maïs en épi", "pomme de terre", "coriandre", "igname (ñame)"],
+            },
+            {
+                id: 35, name: "Seco de Res", originalName: "Seco de Res", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût de bœuf (ou de chèvre) dont la saveur unique provient d'une sauce épaisse à base de coriandre fraîche mixée et de bière.",
+                prepTime: 150,
+                ingredients: ["Bœuf (ou chèvre)", "coriandre (un gros bouquet)", "oignon rouge", "ail", "piment (aji amarillo)", "bière (blonde)", "petits pois", "carottes"],
+            },
+            {
+                id: 36, name: "Tagine de Poulet au Citron", originalName: "Tagine de Poulet au Citron", country: "Maroc", flag: "🇲🇦", continent: "Afrique", type: "Cocotte",
+                description: "Morceaux de poulet mijotés lentement avec des citrons confits, des olives vertes et des épices (safran, gingembre, curcuma).",
+                prepTime: 90,
+                ingredients: ["Poulet", "citrons confits", "olives vertes", "oignons", "safran", "gingembre", "coriandre", "persil"],
+            },
+            {
+                id: 37, name: "Mafé", originalName: "Tiga Dega Na", country: "Sénégal", flag: "🇸🇳", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût de viande (agneau ou bœuf) mijoté dans une sauce onctueuse et riche à base de pâte d'arachide et de tomates.",
+                prepTime: 150,
+                ingredients: ["Bœuf (ou agneau)", "pâte d'arachide (non sucrée)", "tomates concassées", "oignons", "carottes", "patate douce", "chou"],
+            },
+            {
+                id: 38, name: "Yassa (Poulet)", originalName: "Yassa", country: "Sénégal", flag: "🇸🇳", continent: "Afrique", type: "Cocotte",
+                description: "Poulet mariné longuement dans du jus de citron vert et de la moutarde, puis mijoté avec une grande quantité d'oignons caramélisés.",
+                prepTime: 120,
+                ingredients: ["Poulet", "oignons (abondants)", "jus de citron vert", "moutarde de Dijon", "olives (optionnel)", "bouillon de volaille"],
+            },
+            {
+                id: 39, name: "Doro Wat", originalName: "ዶሮ ወጥ", country: "Éthiopie", flag: "🇪🇹", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût de poulet très épicé (oignons, épice Berbéré) et des œufs durs.",
+                prepTime: 180,
+                ingredients: ["Poulet", "oignons (très grande quantité)", "Berbéré (mélange d'épices)", "Niter Kibbeh (beurre clarifié épicé)", "œufs durs", "ail", "gingembre"],
+            },
+            {
+                id: 40, name: "Potjiekos", originalName: "Potjiekos", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Cocotte",
+                description: "'Nourriture en petite marmite'. Ragoût cuit très lentement (sans mélanger) en couches dans une cocotte en fonte (potjie) sur un feu de bois.",
+                prepTime: 240,
+                ingredients: ["Agneau (ou bœuf)", "oignons", "pommes de terre", "carottes", "chou-fleur", "vin (ou bière)", "épices (curry, laurier)"],
+            },
+            {
+                id: 41, name: "Khoresht-e Fesenjān", originalName: "خورشت فسنجان", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût sucré-acidulé de poulet (ou canard) mijoté dans une sauce épaisse à base de noix moulues et de mélasse de grenade.",
+                prepTime: 150,
+                ingredients: ["Poulet (cuisses)", "noix (moulues)", "mélasse de grenade", "oignons", "safran", "curcuma"],
+            },
+            {
+                id: 42, name: "Khoresht-e Gheymeh", originalName: "خورشت قیمه", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf (ou agneau) avec des pois cassés jaunes, mijoté dans une sauce tomate-safran, garni de frites allumettes.",
+                prepTime: 120,
+                ingredients: ["Bœuf (ou agneau)", "pois cassés jaunes", "oignons", "tomates (concentré)", "citrons noirs (limoo amani)", "safran", "frites allumettes"],
+            },
+            {
+                id: 43, name: "Chicken Korma", originalName: "Chicken Korma", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Curry doux et crémeux. Poulet braisé dans une sauce veloutée à base de yaourt, de crème (ou lait de coco) et d'amandes.",
+                prepTime: 75,
+                ingredients: ["Poulet", "yaourt", "crème", "pâte d'amandes (ou cajou)", "oignons", "gingembre", "ail", "garam masala", "cardamome"],
+            },
+            {
+                id: 44, name: "Rendang de bœuf", originalName: "Rendang", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Cocotte",
+                description: "Curry sec. Bœuf mijoté des heures dans du lait de coco et épices jusqu'à ce que le liquide s'évapore et que la viande caramélise.",
+                prepTime: 240,
+                ingredients: ["Bœuf (macreuse, paleron)", "lait de coco", "citronnelle", "galanga", "curcuma (feuilles et racine)", "piments", "oignons (échalotes)", "combava (feuilles)"],
+            },
+            {
+                id: 45, name: "Curry Massaman", originalName: "แกงมัสมั่น", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                description: "Curry d'influence perse. Moins piquant, riche en épices 'sèches', mijoté dans du lait de coco avec bœuf, pommes de terre et cacahuètes.",
+                prepTime: 150,
+                ingredients: ["Bœuf (à ragoût)", "pâte de curry Massaman", "lait de coco", "pommes de terre", "oignons", "cacahuètes", "sauce poisson", "tamarin"],
+            },
+            {
+                id: 46, name: "Bò Kho", originalName: "Bò Kho", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf vietnamien. Bœuf et carottes mijotés dans un bouillon parfumé à la citronnelle, à l'anis étoilé et à la cannelle.",
+                prepTime: 180,
+                ingredients: ["Bœuf (jarret, paleron)", "carottes", "citronnelle", "anis étoilé", "cannelle", "ail", "tomates (concentré)", "sauce poisson"],
+            },
+            {
+                id: 47, name: "Adobo (Poulet ou Porc)", originalName: "Adobo", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Cocotte",
+                description: "Plat national. Morceaux de viande braisés dans un mélange de vinaigre de canne, sauce soja, ail et feuilles de laurier.",
+                prepTime: 90,
+                ingredients: ["Poulet (ou porc)", "vinaigre (de canne ou de riz)", "sauce soja", "ail (abondant)", "grains de poivre noir", "feuilles de laurier"],
+            },
+            {
+                id: 48, name: "Kare-Kare", originalName: "Kare-Kare", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de queue de bœuf et de tripes, mijoté dans une sauce épaisse de cacahuètes et de riz grillé.",
+                prepTime: 240,
+                ingredients: ["Queue de bœuf", "tripes (optionnel)", "pâte d'arachide", "riz (grillé et moulu)", "aubergines", "haricots longs (sitao)", "pâte de crevette (bagoong)"],
+            },
+            {
+                id: 49, name: "Kimchi-jjigae", originalName: "김치찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût réconfortant à base de kimchi bien fermenté, mijoté avec du porc (poitrine) et du tofu dans un bouillon épicé.",
+                prepTime: 45,
+                ingredients: ["Kimchi (fermenté)", "poitrine de porc", "tofu soyeux", "gochugaru (poudre de piment)", "oignons verts", "ail"],
+            },
+            {
+                id: 50, name: "Plov", originalName: "Плов", country: "Ouzbékistan", flag: "🇺🇿", continent: "Asie", type: "Cocotte",
+                description: "Plat national cuit dans un kazan. Riz cuit lentement par absorption dans un bouillon d'agneau, de carottes jaunes et d'oignons.",
+                prepTime: 150,
+                ingredients: ["Agneau (ou bœuf)", "riz (long grain)", "carottes (jaunes si possible)", "oignons", "cumin", "ail (tête entière)", "pois chiches"],
+            },
+            // PARTIE 3 (51-100)
+            {
+                id: 51, name: "Baeckeoffe", originalName: "Baeckeoffe", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "'Four du boulanger'. Ragoût de 3 viandes (agneau, bœuf, porc) et pommes de terre, mariné au vin blanc d'Alsace et cuit très lentement.",
+                prepTime: 240,
+                ingredients: ["Agneau (épaule)", "bœuf (paleron)", "porc (palette)", "pommes de terre", "oignons", "poireaux", "vin blanc (Riesling)", "baies de genièvre"],
+            },
+            {
+                id: 52, name: "Poule au Pot", originalName: "Poule au Pot", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Poule entière pochée et mijotée longuement dans un bouillon de légumes (carottes, navets, poireaux).",
+                prepTime: 180,
+                ingredients: ["Poule fermière", "carottes", "navets", "poireaux", "céleri", "oignon piqué de clous de girofle", "farce (chair à saucisse, pain)"],
+            },
+            {
+                id: 53, name: "Civet de Lapin", originalName: "Civet de Lapin", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de lapin mijoté dans du vin rouge et lié en fin de cuisson avec le sang de l'animal.",
+                prepTime: 120,
+                ingredients: ["Lapin (en morceaux)", "vin rouge", "oignons", "lardons", "champignons", "sang (ou foie)", "thym", "laurier"],
+            },
+            {
+                id: 54, name: "Garbure", originalName: "Garbure", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Soupe-ragoût paysanne très épaisse à base de chou, haricots blancs, pommes de terre et viandes confites (confit de canard, jarret de porc).",
+                prepTime: 180,
+                ingredients: ["Chou vert", "haricots (Tarbais)", "pommes de terre", "carottes", "confit de canard", "jarret de porc demi-sel", "oignons"],
+            },
+            {
+                id: 55, name: "Potee Lorraine", originalName: "Potee Lorraine", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Plat mijoté rustique de viandes de porc salées et fumées (palette, saucisse) cuites avec des légumes (chou, pommes de terre, carottes).",
+                prepTime: 150,
+                ingredients: ["Palette de porc fumée", "saucisse de Morteau", "chou vert", "pommes de terre", "carottes", "navets", "poireaux"],
+            },
+            {
+                id: 56, name: "Svíčková", originalName: "Svíčková", country: "Tchéquie", flag: "🇨🇿", continent: "Europe", type: "Cocotte",
+                description: "Rôti de bœuf (palette) braisé, servi dans une sauce crémeuse à base de légumes-racines (carotte, céleri-rave) et de crème.",
+                prepTime: 180,
+                ingredients: ["Bœuf (palette)", "carottes", "céleri-rave", "persil-racine", "oignons", "crème épaisse", "vinaigre", "laurier", "poivre en grains"],
+            },
+            {
+                id: 57, name: "Tochitură Moldovenească", originalName: "Tochitură Moldovenească", country: "Roumanie", flag: "🇷🇴", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de porc (viande, saucisses) mijoté dans une sauce tomate et vin, servi avec mămăligă (polenta) et un œuf.",
+                prepTime: 120,
+                ingredients: ["Porc (épaule, longe)", "saucisses fumées", "oignons", "ail", "sauce tomate", "vin blanc", "thym"],
+            },
+            {
+                id: 58, name: "Sarma", originalName: "Сарма", country: "Serbie", flag: "🇷🇸", continent: "Europe", type: "Cocotte",
+                description: "Feuilles de chou (saumurées) farcies de viande hachée (bœuf, porc) et de riz, mijotées avec de la choucroute et du lard fumé.",
+                prepTime: 180,
+                ingredients: ["Feuilles de chou (en saumure)", "bœuf haché", "porc haché", "riz", "oignons", "lard fumé", "paprika", "choucroute"],
+            },
+            {
+                id: 59, name: "Coda alla Vaccinara", originalName: "Coda alla Vaccinara", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de queue de bœuf 'style bouvier', mijoté dans une sauce tomate avec céleri, raisins secs, pignons et parfois cacao.",
+                prepTime: 240,
+                ingredients: ["Queue de bœuf", "céleri (abondant)", "oignons", "carottes", "tomates pelées", "vin blanc", "raisins secs", "pignons de pin"],
+            },
+            {
+                id: 60, name: "Cacciucco", originalName: "Cacciucco", country: "Italie", flag: "🇮🇹", continent: "Europe", type: "Cocotte",
+                description: "Ragoût ou soupe de poisson toscane (Livourne), mélangeant poissons et fruits de mer dans une base tomate, ail et sauge.",
+                prepTime: 90,
+                ingredients: ["Poissons de roche", "seiche", "moules", "crevettes", "tomates pelées", "ail", "piment", "vin rouge", "pain grillé", "sauge"],
+            },
+            {
+                id: 61, name: "Zarzuela de Mariscos", originalName: "Zarzuela de Mariscos", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                description: "'Opérette' de fruits de mer. Ragoût de poissons et crustacés (lotte, gambas, moules) mijoté dans une riche sauce sofrito et safran.",
+                prepTime: 75,
+                ingredients: ["Lotte", "gambas", "calamars", "moules", "palourdes", "oignons", "tomates", "ail", "safran", "amandes", "vin blanc"],
+            },
+            {
+                id: 62, name: "Marmitako", originalName: "Marmitako", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de pêcheurs basques à base de thon frais (bonite) et de pommes de terre, mijoté dans une sauce tomate avec poivrons chocos.",
+                prepTime: 90,
+                ingredients: ["Thon blanc (Bonite del Norte)", "pommes de terre", "oignons", "poivrons verts", "pulpe de poivron chocero", "tomates"],
+            },
+            {
+                id: 63, name: "Caldeirada de Peixe", originalName: "Caldeirada de Peixe", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de poisson portugais en couches (poissons, pommes de terre, oignons, poivrons) mijotés ensemble avec vin blanc et coriandre.",
+                prepTime: 60,
+                ingredients: ["Assortiment de poissons (congre, lotte, raie)", "pommes de terre", "oignons", "poivrons (rouges, verts)", "tomates", "vin blanc", "coriandre"],
+            },
+            {
+                id: 64, name: "Beef and Ale Pie (Garniture)", originalName: "Beef and Ale Pie", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Cocotte",
+                description: "La garniture de la tourte. Morceaux de bœuf mijotés longuement dans une bière brune (Ale) épaisse avec des oignons.",
+                prepTime: 180,
+                ingredients: ["Bœuf (paleron, joue)", "oignons", "bière (Ale ou Stout)", "bouillon de bœuf", "farine", "thym", "sauce Worcestershire"],
+            },
+            {
+                id: 65, name: "Cawl", originalName: "Cawl", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Cocotte",
+                description: "Ragoût national gallois. Traditionnellement de l'agneau (ou bœuf) mijoté avec des légumes-racines locaux (poireaux, rutabaga, carottes).",
+                prepTime: 150,
+                ingredients: ["Agneau (collier)", "poireaux", "pommes de terre", "rutabaga (swede)", "carottes", "oignons", "bouillon"],
+            },
+            {
+                id: 66, name: "Fårikål", originalName: "Fårikål", country: "Norvège", flag: "🇳🇴", continent: "Europe", type: "Cocotte",
+                description: "'Mouton au chou'. Plat national norvégien : couches d'agneau (avec os) et de chou mijotées avec des grains de poivre noir.",
+                prepTime: 150,
+                ingredients: ["Agneau (épaule, avec os)", "chou blanc", "poivre noir en grains", "farine (optionnel)"],
+            },
+            {
+                id: 67, name: "Kalops", originalName: "Kalops", country: "Suède", flag: "🇸🇪", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de bœuf suédois similaire au Bourguignon, mais parfumé au quatre-épices et servi avec des betteraves marinées.",
+                prepTime: 150,
+                ingredients: ["Bœuf (à ragoût)", "oignons", "carottes", "bouillon de bœuf", "quatre-épices", "feuilles de laurier"],
+            },
+            {
+                id: 68, name: "Cioppino", originalName: "Cioppino", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût de poisson italo-américain. Abondance de fruits de mer (crabe, palourdes, crevettes) dans un bouillon tomate-vin blanc épicé.",
+                prepTime: 90,
+                ingredients: ["Crabe", "palourdes", "moules", "crevettes", "poisson blanc (ex: cabillaud)", "tomates", "vin blanc", "oignons", "ail", "origan"],
+            },
+            {
+                id: 69, name: "American Pot Roast", originalName: "American Pot Roast", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Pièce de bœuf (palette) braisée lentement en cocotte avec des légumes-racines (pommes de terre, carottes) jusqu'à ce qu'elle s'effiloche.",
+                prepTime: 240,
+                ingredients: ["Bœuf (palette, chuck roast)", "oignons", "carottes", "pommes de terre", "bouillon de bœuf", "vin rouge", "thym"],
+            },
+            {
+                id: 70, name: "Ragoût de Boulettes", originalName: "Ragoût de Boulettes", country: "Canada", flag: "🇨🇦", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Boulettes de viande (porc et bœuf) mijotées dans une sauce brune 'veloutée' (roux brun) et parfumées d'épices (cannelle, clou de girofle).",
+                prepTime: 150,
+                ingredients: ["Porc haché", "bœuf haché", "oignons", "farine", "bouillon de bœuf", "cannelle", "clou de girofle"],
+            },
+            {
+                id: 71, name: "Birria", originalName: "Birria", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût de chèvre (ou bœuf) mariné dans une sauce adobo (piments séchés, épices), cuit lentement jusqu'à tendreté.",
+                prepTime: 300,
+                ingredients: ["Chèvre (ou bœuf)", "piments (ancho, guajillo)", "ail", "vinaigre", "cumin", "origan", "clou de girofle"],
+            },
+            {
+                id: 72, name: "Cochinita Pibil", originalName: "Cochinita Pibil", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Porc (épaule) mariné au roucou (achiote), jus d'agrumes, cuit lentement dans des feuilles de bananier (en cocotte au four).",
+                prepTime: 240,
+                ingredients: ["Épaule de porc", "pâte de roucou (achiote)", "jus d'orange amère", "vinaigre", "ail", "feuilles de bananier"],
+            },
+            {
+                id: 73, name: "Pozole (Rojo)", originalName: "Pozole", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Soupe-ragoût riche à base de maïs hominy (cacahuazintle) et de porc, mijoté dans un bouillon rouge de piments séchés.",
+                prepTime: 240,
+                ingredients: ["Porc (échine, tête)", "maïs hominy (cuit)", "piments guajillo", "ail", "oignons", "origan"],
+            },
+            {
+                id: 74, name: "Aji de Gallina", originalName: "Aji de Gallina", country: "Pérou", flag: "🇵🇪", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût de poulet effiloché dans une sauce crémeuse et jaune à base de piment aji amarillo, de pain de mie, de lait et de noix.",
+                prepTime: 90,
+                ingredients: ["Poulet (poitrine)", "piment aji amarillo (pâte)", "pain de mie", "lait évaporé", "noix", "parmesan", "oignon rouge"],
+            },
+            {
+                id: 75, name: "Locro", originalName: "Locro", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût andin consistant, à base de maïs blanc (mote), de courge, de haricots et de diverses viandes (bœuf, porc, chorizo).",
+                prepTime: 240,
+                ingredients: ["Maïs blanc (mote)", "courge (zapallo)", "haricots blancs", "bœuf (jarret)", "pancetta", "chorizo", "paprika"],
+            },
+            {
+                id: 76, name: "Shakshuka", originalName: "شكشوكة", country: "Tunisie", flag: "🇹🇳", continent: "Afrique", type: "Cocotte",
+                description: "Oeufs pochés directement dans une sauce mijotée de tomates, poivrons, oignons et épices (cumin, paprika, piment).",
+                prepTime: 40,
+                ingredients: ["Oeufs", "tomates pelées", "poivrons (rouges, verts)", "oignons", "ail", "paprika", "cumin", "piment (harissa)"],
+            },
+            {
+                id: 77, name: "Hünkar Beğendi", originalName: "Hünkar Beğendi", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                description: "'Le Sultan a aimé'. Ragoût d'agneau (ou bœuf) mijoté dans une sauce tomate, servi sur une purée d'aubergines fumées.",
+                prepTime: 150,
+                ingredients: ["Agneau (en cubes)", "aubergines", "lait", "farine", "fromage (kashkaval ou parmesan)", "tomates", "oignons"],
+            },
+            {
+                id: 78, name: "Kuzu Güveç", originalName: "Kuzu Güveç", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût d'agneau et de légumes (aubergines, poivrons, tomates) cuit lentement dans une marmite en terre cuite (güveç).",
+                prepTime: 180,
+                ingredients: ["Agneau (épaule)", "aubergines", "poivrons verts", "tomates", "oignons", "ail", "pâte de tomate"],
+            },
+            {
+                id: 79, name: "Mrouzia", originalName: "Mrouzia", country: "Maroc", flag: "🇲🇦", continent: "Afrique", type: "Cocotte",
+                description: "Tajine d'agneau sucré-salé, mijoté avec du miel, des raisins secs, des amandes et le mélange d'épices Ras el Hanout.",
+                prepTime: 180,
+                ingredients: ["Agneau (collier, épaule)", "oignons", "miel", "raisins secs", "amandes", "Ras el Hanout", "safran", "cannelle"],
+            },
+            {
+                id: 80, name: "Loubia", originalName: "لوبيا", country: "Algérie", flag: "🇩🇿", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût réconfortant de haricots blancs (cocos) mijotés dans une sauce tomate épicée (cumin, paprika, harissa).",
+                prepTime: 120,
+                ingredients: ["Haricots blancs", "tomates (concentré, pulpe)", "oignons", "ail", "cumin", "paprika", "harissa", "coriandre"],
+            },
+            {
+                id: 81, name: "Nigerian Beef Stew", originalName: "Nigerian Beef Stew", country: "Nigeria", flag: "🇳🇬", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût de bœuf d'un rouge profond, dont la base (Obe Ata) est faite de poivrons rouges, tomates et piments (Scotch Bonnet).",
+                prepTime: 150,
+                ingredients: ["Bœuf", "poivrons rouges (tatashe)", "tomates", "piments (Scotch Bonnet)", "oignons", "huile végétale", "curry", "thym"],
+            },
+            {
+                id: 82, name: "Bobotie", originalName: "Bobotie", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Cocotte",
+                description: "Hachis parmentier épicé. Viande hachée (bœuf/agneau) au curry et fruits secs, nappée d'une crème aux œufs dorée.",
+                prepTime: 105,
+                ingredients: ["Bœuf haché", "oignons", "lait", "pain de mie", "curry (poudre)", "abricots secs", "raisins secs", "amandes", "œufs"],
+            },
+            {
+                id: 83, name: "Bunny Chow (Garniture)", originalName: "Bunny Chow", country: "Afrique du Sud", flag: "🇿🇦", continent: "Afrique", type: "Cocotte",
+                description: "Curry de viande (agneau, poulet) ou de haricots, très épicé et d'origine indienne, mijoté et servi dans un pain de mie évidé.",
+                prepTime: 150,
+                ingredients: ["Agneau (ou poulet, haricots)", "pommes de terre", "oignons", "tomates", "ail", "gingembre", "garam masala", "piment"],
+            },
+            {
+                id: 84, name: "Vindaloo", originalName: "Vindaloo", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Curry de porc (ou poulet) très pimenté (Goa), d'origine portugaise. Mariné dans du vinaigre, de l'ail et des piments rouges.",
+                prepTime: 120,
+                ingredients: ["Porc (épaule)", "piments rouges (Kashmiri)", "vinaigre (de vin ou de coco)", "ail", "gingembre", "curcuma", "moutarde", "girofle"],
+            },
+            {
+                id: 85, name: "Dal Makhani", originalName: "Dal Makhani", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de lentilles noires (urad) et de haricots rouges (rajma) cuit très lentement, fini avec du beurre (makhan) et de la crème.",
+                prepTime: 240,
+                ingredients: ["Lentilles noires (Urad)", "haricots rouges (Rajma)", "tomates (purée)", "gingembre", "ail", "beurre (ghee)", "crème", "garam masala"],
+            },
+            {
+                id: 86, name: "Saag Gosht", originalName: "Saag Gosht", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Cocotte",
+                description: "Ragoût où la viande (agneau ou chèvre, 'Gosht') est mijotée dans une purée d'épinards ('Saag') et d'autres feuilles vertes.",
+                prepTime: 150,
+                ingredients: ["Agneau (ou chèvre)", "épinards", "feuilles de moutarde (optionnel)", "oignons", "tomates", "gingembre", "ail", "yaourt"],
+            },
+            {
+                id: 87, name: "Goan Fish Curry", originalName: "Goan Fish Curry", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de poisson épicé et acidulé. Poisson mijoté dans une sauce onctueuse à base de lait de coco, de piments rouges et de tamarin.",
+                prepTime: 45,
+                ingredients: ["Poisson blanc (ex: vivaneau)", "lait de coco", "tamarin (pulpe)", "piments rouges (Kashmiri)", "coriandre (graines)", "curcuma"],
+            },
+            {
+                id: 88, name: "Hong Shao Rou", originalName: "红烧肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                description: "Poitrine de porc 'braisée rouge'. Morceaux mijotés dans une sauce soja foncée, vin de Shaoxing, sucre candi et épices (anis étoilé).",
+                prepTime: 120,
+                ingredients: ["Poitrine de porc", "sauce soja (claire et foncée)", "vin de Shaoxing", "sucre candi", "gingembre", "anis étoilé", "cannelle"],
+            },
+            {
+                id: 89, name: "Dongpo Pork", originalName: "东坡肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                description: "Carrés de poitrine de porc gras/maigre braisés très lentement dans du vin de Shaoxing et de la sauce soja, jusqu'à être fondants.",
+                prepTime: 180,
+                ingredients: ["Poitrine de porc (carrés)", "vin de Shaoxing", "sauce soja (claire et foncée)", "sucre candi", "oignons verts", "gingembre"],
+            },
+            {
+                id: 90, name: "Lu Rou Fan (Sauce)", originalName: "滷肉飯", country: "Taïwan", flag: "🇹🇼", continent: "Asie", type: "Cocotte",
+                description: "Poitrine de porc hachée ou coupée fin, mijotée longuement dans une sauce soja avec des échalotes frites et du cinq-épices.",
+                prepTime: 150,
+                ingredients: ["Poitrine de porc (hachée)", "échalotes frites", "sauce soja", "sucre candi", "cinq-épices", "œufs durs (cuits dans la sauce)"],
+            },
+            {
+                id: 91, name: "Budae Jjigae", originalName: "부대찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                description: "'Ragoût de la base militaire'. Mélange de kimchi, gochujang et ingrédients américains (spam, saucisses, fromage).",
+                prepTime: 45,
+                ingredients: ["Kimchi", "Spam", "saucisses (type hot-dog)", "tofu", "nouilles instantanées", "gochujang", "bouillon", "fromage (tranche)"],
+            },
+            {
+                id: 92, name: "Kakuni", originalName: "角煮", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                description: "Poitrine de porc braisée à la japonaise. Mijotée longuement dans du saké, du mirin et de la sauce soja jusqu'à tendreté.",
+                prepTime: 210,
+                ingredients: ["Poitrine de porc", "saké", "mirin", "sauce soja", "sucre", "gingembre", "oignons verts"],
+            },
+            {
+                id: 93, name: "Oden", originalName: "おでん", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                description: "Pot-au-feu d'hiver. Divers ingrédients (radis daikon, œufs durs, konjac, gâteaux de poisson) mijotés très doucement dans un bouillon dashi.",
+                prepTime: 180,
+                ingredients: ["Radis Daikon", "œufs durs", "Konjac", "Chikuwa (gâteau de poisson)", "Ganmodoki (tofu frit)", "bouillon dashi", "sauce soja"],
+            },
+            {
+                id: 94, name: "Gaeng Keow Wan (Curry Vert)", originalName: "แกงเขียวหวาน", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                description: "Curry de poulet (ou bœuf) mijoté dans du lait de coco avec pâte de curry vert, aubergines thaï et basilic thaï.",
+                prepTime: 45,
+                ingredients: ["Poulet", "lait de coco", "pâte de curry vert", "aubergines thaï", "feuilles de combava", "basilic thaï", "sauce poisson"],
+            },
+            {
+                id: 95, name: "Gaeng Daeng (Curry Rouge)", originalName: "แกงแดง", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de viande (canard rôti ou poulet) mijoté dans du lait de coco et pâte de curry rouge, souvent avec des fruits (ananas, litchi).",
+                prepTime: 50,
+                ingredients: ["Canard rôti (ou poulet)", "lait de coco", "pâte de curry rouge", "ananas", "tomates cerises", "basilic thaï", "sauce poisson"],
+            },
+            {
+                id: 96, name: "Ca Kho To", originalName: "Cá Kho Tộ", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Cocotte",
+                description: "Poisson-chat (ou autre poisson) braisé lentement dans une cocotte en terre cuite avec une sauce caramel épaisse (sucre, sauce poisson).",
+                prepTime: 60,
+                ingredients: ["Poisson-chat (Ca Tre)", "sucre", "sauce poisson (nuoc mam)", "huile de couleur (roucou)", "oignons verts", "piment"],
+            },
+            {
+                id: 97, name: "Thit Kho Tieu", originalName: "Thịt Kho Tiêu", country: "Vietnam", flag: "🇻🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de poitrine de porc en dés, braisée lentement dans une sauce caramel (similaire au Ca Kho To) avec beaucoup de poivre noir.",
+                prepTime: 90,
+                ingredients: ["Poitrine de porc", "sucre", "sauce poisson", "poivre noir (abondant)", "ail", "échalotes"],
+            },
+            {
+                id: 98, name: "Kari Ayam", originalName: "Kari Ayam", country: "Malaisie", flag: "🇲🇾", continent: "Asie", type: "Cocotte",
+                description: "Curry de poulet malaisien/indonésien riche, mijoté au lait de coco avec un rempah (pâte d'épices : curcuma, galanga, citronnelle).",
+                prepTime: 90,
+                ingredients: ["Poulet", "lait de coco", "pommes de terre", "pâte de curry (rempah: échalotes, ail, galanga, citronnelle, curcuma, piments)"],
+            },
+            {
+                id: 99, name: "Gulai Kambing", originalName: "Gulai Kambing", country: "Indonésie", flag: "🇮🇩", continent: "Asie", type: "Cocotte",
+                description: "Curry riche et onctueux d'agneau (ou de chèvre) mijoté dans du lait de coco avec un mélange d'épices jaunes (curcuma, galanga).",
+                prepTime: 150,
+                ingredients: ["Agneau (ou chèvre)", "lait de coco", "citronnelle", "feuilles de combava", "galanga", "curcuma", "coriandre", "cumin"],
+            },
+            {
+                id: 100, name: "Braised Lamb Shanks", originalName: "Braised Lamb Shanks", country: "Nouvelle-Zélande", flag: "🇳🇿", continent: "Océanie", type: "Cocotte",
+                description: "Jarrets d'agneau braisés longuement (vin rouge, romarin) jusqu'à ce que la viande se détache de l'os.",
+                prepTime: 210,
+                ingredients: ["Jarrets d'agneau", "vin rouge", "bouillon de bœuf", "oignons", "carottes", "céleri", "romarin", "pâte de tomate"],
+            },
+            // PARTIE 4 (101-150)
+            {
+                id: 101, name: "Bouillabaisse", originalName: "Bouillabaisse", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de poisson méditerranéen (Marseille), à base de poissons de roche, dans un bouillon riche au safran, servi avec rouille et croûtons.",
+                prepTime: 120,
+                ingredients: ["Poissons de roche (rascasse)", "lotte", "Saint-Pierre", "safran", "fenouil", "tomates", "huile d'olive", "pommes de terre"],
+            },
+            {
+                id: 102, name: "Ratatouille", originalName: "Ratatouille", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de légumes d'été (aubergines, courgettes, poivrons, tomates) mijotés lentement à l'huile d'olive et herbes de Provence.",
+                prepTime: 90,
+                ingredients: ["Aubergines", "courgettes", "poivrons (rouges, verts)", "tomates", "oignons", "ail", "herbes de Provence"],
+            },
+            {
+                id: 103, name: "Petit Salé aux Lentilles", originalName: "Petit Salé aux Lentilles", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Plat rustique de porc demi-sel (palette, jarret) mijoté longuement avec des lentilles vertes du Puy, carottes et oignons.",
+                prepTime: 150,
+                ingredients: ["Porc demi-sel (palette)", "lentilles vertes", "carottes", "oignons", "bouquet garni", "saucisse de Morteau"],
+            },
+            {
+                id: 104, name: "Hochepot", originalName: "Hochepot", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Pot-au-feu flamand mélangeant plusieurs viandes (queue de bœuf, épaule d'agneau, lard) et légumes (panais, carottes, chou vert).",
+                prepTime: 210,
+                ingredients: ["Queue de bœuf", "épaule d'agneau", "lard salé", "chou vert", "carottes", "panais", "poireaux", "pommes de terre"],
+            },
+            {
+                id: 105, name: "Borscht (au Bœuf)", originalName: "Борщ", country: "Ukraine", flag: "🇺🇦", continent: "Europe", type: "Cocotte",
+                description: "Soupe-ragoût épaisse à la couleur rouge vif (betterave), mijotée avec du bœuf, du chou et des légumes-racines.",
+                prepTime: 180,
+                ingredients: ["Betteraves", "bœuf (jarret)", "chou blanc", "pommes de terre", "carottes", "oignons", "aneth", "crème aigre (Smetana)"],
+            },
+            {
+                id: 106, name: "Solyanka (Viande)", originalName: "Солянка", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Cocotte",
+                description: "Ragoût épais, salé et acide, combinant viandes ou saucisses, cornichons à la russe, olives et citron.",
+                prepTime: 120,
+                ingredients: ["Bœuf", "saucisses fumées", "jambon", "cornichons (malossol)", "oignons", "pâte de tomate", "olives", "câpres", "citron"],
+            },
+            {
+                id: 107, name: "Shchi", originalName: "Щи", country: "Russie", flag: "🇷🇺", continent: "Europe", type: "Cocotte",
+                description: "Soupe-ragoût traditionnelle à base de chou (frais ou choucroute), de viande (bœuf) et de légumes-racines.",
+                prepTime: 180,
+                ingredients: ["Chou (ou choucroute)", "bœuf", "carottes", "oignons", "pommes de terre", "aneth", "crème aigre"],
+            },
+            {
+                id: 108, name: "Chanakhi", originalName: "ჩანახი", country: "Géorgie", flag: "🇬🇪", continent: "Asie", type: "Cocotte",
+                description: "Ragoût d'agneau et d'aubergines cuit lentement en poterie (ou cocotte) avec tomates, pommes de terre et épices (coriandre).",
+                prepTime: 150,
+                ingredients: ["Agneau", "aubergines", "pommes de terre", "tomates", "oignons", "ail", "coriandre fraîche"],
+            },
+            {
+                id: 109, name: "Kharcho", originalName: "ხარჩო", country: "Géorgie", flag: "🇬🇪", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf épicé et acidulé, mijoté avec du riz, des noix concassées et une sauce aux prunes (Tkemali).",
+                prepTime: 150,
+                ingredients: ["Bœuf", "riz", "noix", "sauce Tkemali (ou prunes sures)", "oignons", "coriandre fraîche", "mélange d'épices (khmeli suneli)"],
+            },
+            {
+                id: 110, name: "Bosanski Lonac", originalName: "Bosanski Lonac", country: "Bosnie-Herzégovine", flag: "🇧🇦", continent: "Europe", type: "Cocotte",
+                description: "'Pot bosnien'. Ragoût en couches de bœuf et d'agneau, avec de gros morceaux de légumes (chou, pommes de terre) cuit très lentement.",
+                prepTime: 240,
+                ingredients: ["Bœuf (à ragoût)", "agneau (épaule)", "chou", "pommes de terre", "carottes", "oignons", "ail", "paprika"],
+            },
+            {
+                id: 111, name: "Fasolada", originalName: "Φασολάδα", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                description: "Soupe de haricots blancs si épaisse qu'elle en devient un ragoût. Végétarien, mijoté avec tomates, céleri, carottes et huile d'olive.",
+                prepTime: 150,
+                ingredients: ["Haricots blancs (cannellini)", "tomates", "carottes", "céleri (branches et feuilles)", "oignons", "huile d'olive", "persil"],
+            },
+            {
+                id: 112, name: "Karelian Hot Pot", originalName: "Karjalanpaisti", country: "Finlande", flag: "🇫🇮", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de Carélie. Mélange de viandes (bœuf, porc, agneau) en couches avec oignons, mijoté très lentement au four.",
+                prepTime: 360,
+                ingredients: ["Bœuf (paleron)", "porc (épaule)", "agneau", "oignons", "carottes", "laurier", "quatre-épices", "bouillon"],
+            },
+            {
+                id: 113, name: "Lapskaus", originalName: "Lapskaus", country: "Norvège", flag: "🇳🇴", continent: "Europe", type: "Cocotte",
+                description: "Ragoût épais de marin (bœuf salé ou corned-beef) et pommes de terre, écrasés ensemble pour former une 'purée' consistante.",
+                prepTime: 120,
+                ingredients: ["Bœuf salé (ou corned-beef)", "pommes de terre", "rutabaga", "carottes", "oignons", "poivre noir"],
+            },
+            {
+                id: 114, name: "Moqueca Baiana", originalName: "Moqueca Baiana", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût de poisson et/ou de crevettes emblématique de Bahia, mijoté dans du lait de coco, des poivrons et de l'huile de palme (dendê).",
+                prepTime: 60,
+                ingredients: ["Poisson blanc (ferme)", "crevettes", "lait de coco", "huile de palme (Azeite de Dendê)", "poivrons", "oignons", "tomates", "coriandre"],
+            },
+            {
+                id: 115, name: "Vatapá", originalName: "Vatapá", country: "Brésil", flag: "🇧🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût crémeux (ou purée) de crevettes, poisson, noix de cajou et cacahuètes, lié avec du pain et du lait de coco.",
+                prepTime: 90,
+                ingredients: ["Crevettes (fraîches et séchées)", "lait de coco", "pain de mie", "cacahuètes", "noix de cajou", "huile de palme (dendê)", "gingembre"],
+            },
+            {
+                id: 116, name: "Carbonada Criolla", originalName: "Carbonada Criolla", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût de bœuf sucré-salé avec des morceaux de courge, de maïs, de pommes de terre et de fruits séchés (pêches, abricots).",
+                prepTime: 120,
+                ingredients: ["Bœuf", "courge", "maïs en épi", "pommes de terre", "oignons", "pêches séchées", "abricots secs"],
+            },
+            {
+                id: 117, name: "Guiso de Lentejas", originalName: "Guiso de Lentejas", country: "Argentine", flag: "🇦🇷", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût de lentilles très riche, mijoté avec du chorizo colorado, de la pancetta et des morceaux de bœuf.",
+                prepTime: 150,
+                ingredients: ["Lentilles", "bœuf", "chorizo colorado", "pancetta", "carottes", "pommes de terre", "oignons", "paprika"],
+            },
+            {
+                id: 118, name: "Sancocho de Gallina", originalName: "Sancocho de Gallina", country: "Colombie", flag: "🇨🇴", continent: "Amérique du Sud", type: "Cocotte",
+                description: "Ragoût/soupe consistant de poule (ou poulet) mijoté avec des racines (manioc, plantain vert, igname) et du maïs.",
+                prepTime: 180,
+                ingredients: ["Poule (ou poulet)", "manioc (yuca)", "banane plantain (vert)", "pommes de terre", "maïs en épi", "coriandre"],
+            },
+            {
+                id: 119, name: "Pollo Guisado", originalName: "Pollo Guisado", country: "Porto Rico", flag: "🇵🇷", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Poulet braisé (cuit à l'étouffée) dans une sauce sofrito à base de tomates, avec pommes de terre, carottes et olives vertes.",
+                prepTime: 90,
+                ingredients: ["Poulet (morceaux)", "sofrito (base oignon, ail, poivron)", "sauce tomate", "pommes de terre", "olives vertes", "câpres", "laurier"],
+            },
+            {
+                id: 120, name: "Brown Stew Chicken", originalName: "Brown Stew Chicken", country: "Jamaïque", flag: "🇯🇲", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Poulet doré puis mijoté dans une sauce brune riche, colorée avec de la 'browning sauce' (caramel de mélasse).",
+                prepTime: 105,
+                ingredients: ["Poulet", "browning sauce", "oignons", "poivrons", "carottes", "piment (Scotch Bonnet)", "thym"],
+            },
+            {
+                id: 121, name: "Oxtail Stew (Jamaïcain)", originalName: "Oxtail Stew", country: "Jamaïque", flag: "🇯🇲", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Queue de bœuf braisée longuement dans une sauce brune riche avec des haricots beurre (butter beans) et du piment.",
+                prepTime: 240,
+                ingredients: ["Queue de bœuf", "haricots beurre (butter beans)", "oignons", "carottes", "piment (Scotch Bonnet)", "thym", "quatre-épices"],
+            },
+            {
+                id: 122, name: "Kuku Paka", originalName: "Kuku Paka", country: "Kenya", flag: "🇰🇪", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût de poulet swahili. Poulet grillé puis mijoté dans un curry de lait de coco épicé, souvent avec des œufs durs.",
+                prepTime: 90,
+                ingredients: ["Poulet", "lait de coco", "tomates", "oignons", "piment", "gingembre", "ail", "curcuma", "coriandre", "œufs durs"],
+            },
+            {
+                id: 123, name: "Mchuzi wa Nyama", originalName: "Mchuzi wa Nyama", country: "Tanzanie", flag: "🇹🇿", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût de bœuf est-africain. Bœuf mijoté dans une sauce tomate avec oignons, curry en poudre et légumes.",
+                prepTime: 150,
+                ingredients: ["Bœuf", "tomates", "oignons", "pommes de terre", "carottes", "curry en poudre", "ail", "gingembre"],
+            },
+            {
+                id: 124, name: "Kedjenou", originalName: "Kedjenou", country: "Côte d'Ivoire", flag: "🇨🇮", continent: "Afrique", type: "Cocotte",
+                description: "Poulet 'secoué' (cuit à l'étouffée) dans une cocotte scellée avec ses propres sucs, légumes et épices.",
+                prepTime: 120,
+                ingredients: ["Poulet", "aubergines africaines", "tomates", "oignons", "ail", "gingembre", "piment", "thym"],
+            },
+            {
+                id: 125, name: "Egusi Soup (Ragoût)", originalName: "Egusi Soup", country: "Nigeria", flag: "🇳🇬", continent: "Afrique", type: "Cocotte",
+                description: "Soupe si épaisse qu'elle est un ragoût. À base de graines de melon (Egusi) moulues, huile de palme, légumes-feuilles et viande.",
+                prepTime: 105,
+                ingredients: ["Graines d'Egusi (moulues)", "huile de palme", "épinards (ou feuilles amères)", "bœuf", "poisson fumé", "écrevisses séchées", "piment"],
+            },
+            {
+                id: 126, name: "Tagine Zitoune", originalName: "طاجين الزيتون", country: "Algérie", flag: "🇩🇿", continent: "Afrique", type: "Cocotte",
+                description: "Tajine de poulet en sauce blanche (ou jaune) onctueuse, mijoté avec des olives vertes (zitoune) et des carottes.",
+                prepTime: 90,
+                ingredients: ["Poulet", "olives vertes dénoyautées", "oignons", "carottes", "curcuma", "gingembre", "citron (jus ou confit)", "persil"],
+            },
+            {
+                id: 127, name: "Fasoulia", originalName: "فاصوليا", country: "Liban", flag: "🇱🇧", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de haricots blancs (similaire à la Loubia) mijoté dans une sauce tomate, presque toujours avec des morceaux d'agneau.",
+                prepTime: 150,
+                ingredients: ["Haricots blancs", "agneau (ou bœuf)", "tomates (concentré)", "oignons", "ail", "coriandre (sèche ou fraîche)"],
+            },
+            {
+                id: 128, name: "Bamia", originalName: "بامية", country: "Égypte", flag: "🇪🇬", continent: "Afrique", type: "Cocotte",
+                description: "Ragoût d'Okra (gombo) mijoté dans une sauce tomate et ail, souvent avec des cubes d'agneau.",
+                prepTime: 105,
+                ingredients: ["Okra (gombo)", "agneau (en cubes)", "tomates (pulpe)", "ail", "oignons", "coriandre fraîche"],
+            },
+            {
+                id: 129, name: "Khoresht-e Bademjan", originalName: "خورشت بادمجان", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût d'aubergines. Agneau ou bœuf mijoté dans une sauce tomate safranée, servi avec des aubergines frites.",
+                prepTime: 150,
+                ingredients: ["Agneau (ou bœuf)", "aubergines", "tomates (concentré)", "oignons", "safran", "jus de citron vert (ou ghooreh)"],
+            },
+            {
+                id: 130, name: "Tepsi Baytinijan", originalName: "Tepsi Baytinijan", country: "Iraq", flag: "🇮🇶", continent: "Asie", type: "Cocotte",
+                description: "Casserole mijotée en couches : aubergines frites, boulettes de viande (kefta), pommes de terre, braisés dans une sauce tomate.",
+                prepTime: 120,
+                ingredients: ["Aubergines", "bœuf haché", "pommes de terre", "poivrons", "oignons", "tomates (sauce)", "pâte de grenade"],
+            },
+            {
+                id: 131, name: "Chana Masala", originalName: "Chana Masala", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût végétarien de pois chiches mijotés dans une sauce épicée (tomates, oignons, gingembre, ail, Amchur, Garam Masala).",
+                prepTime: 60,
+                ingredients: ["Pois chiches", "tomates", "oignons", "gingembre", "ail", "garam masala", "amchur (poudre de mangue)", "piment"],
+            },
+            {
+                id: 132, name: "Rajma Masala", originalName: "Rajma Masala", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût végétarien réconfortant du Pendjab. Haricots rouges mijotés dans une sauce tomate onctueuse et épicée.",
+                prepTime: 120,
+                ingredients: ["Haricots rouges (Rajma)", "tomates", "oignons", "gingembre", "ail", "garam masala", "crème (optionnel)"],
+            },
+            {
+                id: 133, name: "Machher Jhol", originalName: "মাছের ঝোল", country: "Inde", flag: "🇮🇳", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de poisson bengali. Poisson frit puis mijoté dans un bouillon léger mais épicé (curcuma, cumin) avec des pommes de terre.",
+                prepTime: 60,
+                ingredients: ["Poisson (Rohu, Hilsa)", "pommes de terre", "tomates", "huile de moutarde", "curcuma", "cumin (graines)", "gingembre"],
+            },
+            {
+                id: 134, name: "Sri Lankan Chicken Curry", originalName: "Sri Lankan Chicken Curry", country: "Sri Lanka", flag: "🇱🇰", continent: "Asie", type: "Cocotte",
+                description: "Curry de poulet au lait de coco, distinctif par son mélange de curry rôti (foncé), ses feuilles de pandan et sa citronnelle.",
+                prepTime: 90,
+                ingredients: ["Poulet", "lait de coco", "curry en poudre (rôti)", "oignons", "feuilles de pandan", "citronnelle", "feuilles de curry", "cannelle"],
+            },
+            {
+                id: 135, name: "Chicken Afritada", originalName: "Chicken Afritada", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de poulet d'influence espagnole. Poulet mijoté dans une sauce tomate avec pommes de terre, carottes et poivrons.",
+                prepTime: 75,
+                ingredients: ["Poulet", "sauce tomate", "pommes de terre", "carottes", "poivrons (rouges, verts)", "oignons", "ail"],
+            },
+            {
+                id: 136, name: "Kalderetang Baka", originalName: "Kalderetang Baka", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf (à l'origine de chèvre) épicé. Braisé dans une sauce tomate enrichie de purée de foie, avec des légumes.",
+                prepTime: 180,
+                ingredients: ["Bœuf (à ragoût)", "pâte de tomate", "purée de foie", "pommes de terre", "carottes", "piment", "olives", "fromage (optionnel)"],
+            },
+            {
+                id: 137, name: "Pochero", originalName: "Pochero", country: "Philippines", flag: "🇵🇭", continent: "Asie", type: "Cocotte",
+                description: "Pot-au-feu d'influence espagnole. Viandes (bœuf, porc) mijotées avec chorizo, bananes plantain (saba), chou et haricots.",
+                prepTime: 150,
+                ingredients: ["Bœuf (poitrine)", "chorizo", "bananes plantain (saba)", "chou", "haricots verts (baguio)", "maïs", "sauce tomate"],
+            },
+            {
+                id: 138, name: "Samlor Machu Kreung", originalName: "សម្លម្ជូរគ្រឿង", country: "Cambodge", flag: "🇰🇭", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf aigre-doux, parfumé à la pâte de Kroeung (citronnelle, galanga, curcuma) et acidulé au tamarin.",
+                prepTime: 120,
+                ingredients: ["Bœuf", "Kroeung (pâte d'épices)", "tamarin", "aubergines (petites)", "haricots longs", "basilic thaï"],
+            },
+            {
+                id: 139, name: "Beshbarmak", originalName: "Бешбармақ", country: "Kazakhstan", flag: "🇰🇿", continent: "Asie", type: "Cocotte",
+                description: "'Cinq doigts'. Plat national d'agneau (ou cheval) bouilli longuement, servi sur de larges pâtes avec un bouillon d'oignon.",
+                prepTime: 180,
+                ingredients: ["Agneau (ou cheval)", "oignons", "pâtes (larges feuilles)", "poivre noir", "aneth"],
+            },
+            {
+                id: 140, name: "Laghman (Ragoût)", originalName: "Лагман", country: "Kazakhstan", flag: "🇰🇿", continent: "Asie", type: "Cocotte",
+                description: "La sauce qui nappe les nouilles étirées. Un ragoût épais d'agneau, poivrons, tomates, ail et épices (cumin, paprika).",
+                prepTime: 90,
+                ingredients: ["Agneau", "poivrons", "tomates", "oignons", "ail", "céleri", "pâte de tomate", "cumin"],
+            },
+            {
+                id: 141, name: "Pörkölt", originalName: "Pörkölt", country: "Hongrie", flag: "🇭🇺", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de viande (bœuf, porc) plus épais que le Goulash, avec oignons et beaucoup de paprika, servi sur des nokedli (spaetzle).",
+                prepTime: 150,
+                ingredients: ["Bœuf (ou porc)", "oignons (grande quantité)", "paprika doux", "tomates", "poivrons"],
+            },
+            {
+                id: 142, name: "Stifado de Lapin", originalName: "Στιφάδο Κουνέλι", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                description: "Ragoût de lapin mijoté dans du vin rouge et de la tomate, avec une grande quantité d'oignons grelots et des épices douces (cannelle).",
+                prepTime: 150,
+                ingredients: ["Lapin", "oignons grelots", "vin rouge", "tomates", "cannelle", "laurier", "romarin"],
+            },
+            {
+                id: 143, name: "Mince and Tatties", originalName: "Mince and Tatties", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Cocotte",
+                description: "Plat réconfortant de bœuf haché mijoté dans une sauce brune (gravy) épaisse avec des oignons, servi sur une purée (tatties).",
+                prepTime: 60,
+                ingredients: ["Bœuf haché", "oignons", "bouillon de bœuf", "carottes (optionnel)", "sauce Worcestershire", "purée de pommes de terre"],
+            },
+            {
+                id: 144, name: "Gheymeh Nesar", originalName: "قیمه نثار", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                description: "'Ragoût de mariage'. Agneau mijoté au safran, servi sur du riz mais garni d'amandes, pistaches et écorces d'orange caramélisées.",
+                prepTime: 180,
+                ingredients: ["Agneau", "riz", "oignons", "safran", "curcuma", "zeste d'orange (confit)", "amandes effilées", "pistaches", "zereshk (épine-vinette)"],
+            },
+            {
+                id: 145, name: "Duck-Leg Confit (Mijoté)", originalName: "Confit de Canard", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Le confit est souvent mijoté (réchauffé lentement) en cocotte avec des haricots blancs ou des pommes de terre sarladaises.",
+                prepTime: 120,
+                ingredients: ["Cuisses de canard confites", "haricots blancs (Tarbais)", "ail", "graisse de canard", "persil"],
+            },
+            {
+                id: 146, name: "Khoresht-e Karafs", originalName: "خورشت کرفس", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de céleri persan. Agneau ou bœuf mijoté avec des branches de céleri et des herbes (menthe, persil), acidulé au jus de citron vert.",
+                prepTime: 150,
+                ingredients: ["Agneau (ou bœuf)", "céleri (branches et feuilles)", "menthe", "persil", "oignons", "jus de citron vert"],
+            },
+            {
+                id: 147, name: "Fricassée de Poulet", originalName: "Fricassée de Poulet", country: "France", flag: "🇫🇷", continent: "Europe", type: "Cocotte",
+                description: "Poulet en morceaux rissolé puis mijoté dans une sauce blanche (velouté) liée à la crème et aux jaunes d'œufs.",
+                prepTime: 90,
+                ingredients: ["Poulet", "oignons", "champignons", "vin blanc", "bouillon de volaille", "crème fraîche", "jaune d'œuf"],
+            },
+            {
+                id: 148, name: "Cullen Skink", originalName: "Cullen Skink", country: "Royaume-Uni", flag: "🇬🇧", continent: "Europe", type: "Cocotte",
+                description: "Soupe écossaise épaisse (proche d'un ragoût) de haddock fumé (Finnan Haddie), pommes de terre et oignons, liée au lait ou à la crème.",
+                prepTime: 45,
+                ingredients: ["Haddock fumé (Finnan Haddie)", "pommes de terre", "oignons", "lait (entier)", "crème (optionnel)"],
+            },
+            {
+                id: 149, name: "Hayashi Rice", originalName: "ハヤシライス", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                description: "Ragoût de bœuf d'influence occidentale (Yōshoku). Fines tranches de bœuf et oignons mijotés dans une sauce demi-glace au vin rouge et tomate.",
+                prepTime: 60,
+                ingredients: ["Bœuf (fines tranches)", "oignons", "champignons", "vin rouge", "sauce demi-glace (ou roux en cube)", "pâte de tomate"],
+            },
+            {
+                id: 150, name: "Jambalaya", originalName: "Jambalaya", country: "États-Unis", flag: "🇺🇸", continent: "Amérique du Nord", type: "Cocotte",
+                description: "Ragoût de riz créole (cuit en une seule potée) avec poulet, saucisse fumée (andouille), crevettes et la 'sainte trinité'.",
+                prepTime: 90,
+                ingredients: ["Poulet", "saucisse fumée (Andouille)", "crevettes", "riz (long grain)", "oignon", "céleri", "poivron vert", "tomates", "épices cajun"],
+            },
+            // --- NOUVELLES RECETTES (151+) ---
+            // Turquie (Objectif: 6+)
+            {
+                 id: 151, name: "Tas Kebabı", originalName: "Tas Kebabı", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût d'agneau (ou bœuf) cuit lentement 'dans un bol' (tas) avec oignons, tomates et poivrons, souvent scellé.",
+                 prepTime: 150,
+                 ingredients: ["Agneau (en cubes)", "oignons", "tomates", "poivrons verts", "pâte de tomate", "thym", "paprika"],
+            },
+            {
+                 id: 152, name: "Orman Kebabı", originalName: "Orman Kebabı", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "'Kebab de la forêt'. Ragoût d'agneau mijoté avec des petits pois, des carottes, des pommes de terre et de l'aneth.",
+                 prepTime: 120,
+                 ingredients: ["Agneau", "petits pois", "carottes", "pommes de terre", "oignons", "aneth", "pâte de tomate"],
+            },
+             {
+                 id: 153, name: "Kuru Fasulye", originalName: "Kuru Fasulye", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Plat national turc. Ragoût de haricots blancs mijoté dans une sauce tomate, souvent avec de l'agneau ou du bœuf séché (pastırma).",
+                 prepTime: 150, // Inclut trempage
+                 ingredients: ["Haricots blancs (secs)", "agneau (optionnel)", "oignons", "pâte de tomate", "pâte de poivron (biber salçası)", "paprika"],
+            },
+             {
+                 id: 154, name: "İncik Haşlama", originalName: "İncik Haşlama", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Jarret d'agneau poché lentement avec des légumes-racines (carottes, pommes de terre) dans un bouillon simple.",
+                 prepTime: 180,
+                 ingredients: ["Jarrets d'agneau", "carottes", "pommes de terre", "oignons", "céleri", "laurier", "poivre en grains"],
+            },
+            // Chine (Objectif: 6+)
+            {
+                 id: 155, name: "Poulet Braisé aux Champignons", originalName: "香菇炖鸡", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Morceaux de poulet mijotés lentement avec des champignons shiitake séchés, du gingembre et de la sauce soja.",
+                 prepTime: 90,
+                 ingredients: ["Poulet (cuisses)", "champignons shiitake (séchés)", "gingembre", "sauce soja", "vin de Shaoxing", "anis étoilé"],
+            },
+             {
+                 id: 156, name: "Jarret de Porc Braisé", originalName: "红烧蹄膀", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Jarret de porc entier braisé longuement dans une sauce soja sucrée jusqu'à ce qu'il soit fondant et laqué.",
+                 prepTime: 240,
+                 ingredients: ["Jarret de porc (avec peau)", "sauce soja (claire et foncée)", "sucre candi", "vin de Shaoxing", "gingembre", "anis étoilé", "cannelle"],
+            },
+             {
+                 id: 157, name: "Bœuf Braisé aux Radis", originalName: "萝卜炖牛腩", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Poitrine de bœuf mijotée avec de gros morceaux de radis blanc (daikon) dans un bouillon parfumé aux épices.",
+                 prepTime: 150,
+                 ingredients: ["Poitrine de bœuf", "radis blanc (daikon)", "gingembre", "sauce soja", "anis étoilé", "poivre du Sichuan"],
+            },
+             {
+                 id: 158, name: "Mapo Tofu (Version Mijotée)", originalName: "麻婆豆腐", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Bien que souvent sauté, le Mapo Tofu peut être mijoté. Tofu soyeux et porc haché dans une sauce rouge épicée (doubanjiang) et engourdissante (poivre du Sichuan).",
+                 prepTime: 45,
+                 ingredients: ["Tofu soyeux", "porc haché", "doubanjiang (pâte de fèves pimentée)", "poivre du Sichuan", "ail", "gingembre", "bouillon"],
+            },
+			
+            // Grèce (Objectif: 6+)
+            {
+                 id: 159, name: "Giouvetsi / Youvetsi", originalName: "Γιουβέτσι", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Viande (souvent bœuf ou agneau) mijotée dans une sauce tomate, puis cuite au four avec des pâtes orzo (kritharaki).",
+                 prepTime: 150,
+                 ingredients: ["Bœuf (jarret)", "pâtes orzo (kritharaki)", "tomates concassées", "oignons", "vin rouge", "cannelle", "laurier"],
+            },
+            {
+                 id: 160, name: "Kleftiko d'Agneau", originalName: "Αρνί Κλέφτικο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Agneau 'voleur'. Morceaux d'agneau marinés (citron, ail, origan) et cuits lentement en papillote (ou cocotte fermée) avec légumes et fromage.",
+                 prepTime: 240, // Inclut marinade
+                 ingredients: ["Agneau (épaule)", "pommes de terre", "poivrons", "feta", "citron", "ail", "origan"],
+            },
+            {
+                 id: 161, name: "Sofrito de Corfou", originalName: "Σοφρίτο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Spécialité de Corfou. Fines tranches de veau mijotées dans une sauce blanche riche en ail, persil et vinaigre.",
+                 prepTime: 90,
+                 ingredients: ["Veau (fines escalopes)", "ail (abondant)", "persil", "vin blanc", "vinaigre", "farine"],
+            },
+            // Corée (Objectif: 6+)
+             {
+                 id: 162, name: "Sundubu Jjigae", originalName: "순두부찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût épicé de tofu extra-soyeux (sundubu), souvent avec fruits de mer ou porc, et un œuf cru ajouté à la fin.",
+                 prepTime: 40,
+                 ingredients: ["Tofu extra-soyeux (Sundubu)", "Kimchi", "porc (ou fruits de mer)", "gochugaru", "ail", "sauce soja", "œuf"],
+            },
+             {
+                 id: 163, name: "Dakbokkeumtang", originalName: "닭볶음탕", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût de poulet épicé et légèrement sucré, mijoté avec pommes de terre et carottes dans une sauce gochujang.",
+                 prepTime: 75,
+                 ingredients: ["Poulet (morceaux)", "pommes de terre", "carottes", "oignons", "gochujang", "gochugaru", "sauce soja", "ail"],
+            },
+             {
+                 id: 164, name: "Doenjang Jjigae", originalName: "된장찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût coréen fondamental à base de pâte de soja fermentée (doenjang), tofu, légumes et parfois fruits de mer ou bœuf.",
+                 prepTime: 35,
+                 ingredients: ["Doenjang (pâte de soja)", "tofu", "courgette", "oignons", "champignons", "bouillon d'anchois", "bœuf (optionnel)"],
+            },
+            // Thaïlande (Objectif: 6+)
+            {
+                 id: 165, name: "Gaeng Kari Gai (Curry Jaune)", originalName: "แกงกะหรี่ไก่", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry jaune doux et riche de poulet mijoté dans du lait de coco avec pommes de terre et oignons.",
+                 prepTime: 60,
+                 ingredients: ["Poulet", "lait de coco", "pâte de curry jaune", "pommes de terre", "oignons", "sauce poisson"],
+            },
+            {
+                 id: 166, name: "Gaeng Panang Neua (Curry Panang)", originalName: "แกงพะแนงเนื้อ", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry Panang de bœuf. Plus épais et plus doux que le curry rouge, avec des notes d'arachide et de combava.",
+                 prepTime: 75,
+                 ingredients: ["Bœuf (fines tranches)", "lait de coco", "pâte de curry Panang", "feuilles de combava", "sauce poisson", "cacahuètes (parfois)"],
+            },
+            {
+                 id: 167, name: "Tom Kha Gai (Version Ragoût)", originalName: "ต้มข่าไก่", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Bien qu'une soupe, elle peut être assez consistante. Poulet mijoté dans du lait de coco parfumé au galanga (kha), citronnelle et feuilles de combava.",
+                 prepTime: 40,
+                 ingredients: ["Poulet", "lait de coco", "galanga", "citronnelle", "feuilles de combava", "champignons", "jus de citron vert", "sauce poisson"],
+            },
+            // Pologne (Objectif: 3+)
+            {
+                 id: 168, name: "Zrazy Zawijane", originalName: "Zrazy Zawijane", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Paupiettes de bœuf polonaises, farcies (lard, cornichons, oignons), roulées et braisées dans une sauce riche.",
+                 prepTime: 120,
+                 ingredients: ["Bœuf (fines escalopes)", "lard fumé", "cornichons à la polonaise", "oignons", "moutarde", "bouillon", "farine"],
+            },
+            {
+                 id: 169, name: "Gulasz Polski", originalName: "Gulasz Polski", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Goulash polonais, souvent à base de porc, plus épais que le hongrois, mijoté avec champignons et parfois de la crème.",
+                 prepTime: 150,
+                 ingredients: ["Porc (épaule)", "oignons", "champignons", "paprika", "pâte de tomate", "crème aigre (optionnel)", "marjolaine"],
+            },
+            // Autres pays (Objectif: 2-3)
+            {
+                 id: 170, name: "Dublin Coddle", originalName: "Dublin Coddle", country: "Irlande", flag: "🇮🇪", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût simple de Dublin. Saucisses de porc et bacon mijotés lentement avec des pommes de terre et des oignons.",
+                 prepTime: 120,
+                 ingredients: ["Saucisses de porc", "bacon (rashers)", "pommes de terre", "oignons", "bouillon", "persil"],
+            },
+            {
+                 id: 171, name: "Kapustnyak (avec viande)", originalName: "Капусняк", country: "Ukraine", flag: "🇺🇦", continent: "Europe", type: "Cocotte",
+                 description: "Soupe-ragoût de choucroute épaisse, traditionnellement avec du porc (côtes) et du millet.",
+                 prepTime: 150,
+                 ingredients: ["Choucroute", "côtes de porc", "millet", "pommes de terre", "carottes", "oignons", "lard (salo)"],
+            },
+            {
+                 id: 172, name: "Ghiveci cu Carne", originalName: "Ghiveci cu Carne", country: "Roumanie", flag: "🇷🇴", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût roumain de légumes d'été (type ratatouille) avec des morceaux de viande (porc ou poulet).",
+                 prepTime: 120,
+                 ingredients: ["Porc (ou poulet)", "aubergines", "courgettes", "poivrons", "tomates", "oignons", "haricots verts", "aneth"],
+            },
+             {
+                 id: 173, name: "Poronkäristys", originalName: "Poronkäristys", country: "Finlande", flag: "🇫🇮", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût de renne lapon. Fines tranches de renne sautées puis mijotées dans de la bière ou du bouillon, servi avec purée et airelles.",
+                 prepTime: 60,
+                 ingredients: ["Renne (viande surgelée tranchée fin)", "oignons", "bière (ou bouillon)", "beurre", "airelles (pour servir)"],
+            },
+             {
+                 id: 174, name: "Bacalao al Pil Pil", originalName: "Bacalao al Pil Pil", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                 description: "Morue salée mijotée très doucement dans de l'huile d'olive avec de l'ail et du piment, jusqu'à former une émulsion onctueuse.",
+                 prepTime: 90, // N'inclut pas le dessalage
+                 ingredients: ["Morue salée (dessalée)", "huile d'olive (abondante)", "ail", "piments guindillas"],
+            },
+            {
+                 id: 175, name: "Alcatra", originalName: "Alcatra", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Cocotte",
+                 description: "Plat des Açores. Gros morceaux de bœuf braisés très lentement dans un pot en terre cuite avec vin, lard et épices.",
+                 prepTime: 300,
+                 ingredients: ["Bœuf (rumsteck, gîte)", "vin rouge (ou blanc)", "lard", "oignons", "ail", "piment", "cannelle"],
+            },
+            {
+                 id: 176, name: "Köttbullar (Mijotés)", originalName: "Köttbullar", country: "Suède", flag: "🇸🇪", continent: "Europe", type: "Cocotte",
+                 description: "Boulettes de viande suédoises, souvent mijotées dans une sauce brune crémeuse (gräddsås).",
+                 prepTime: 75,
+                 ingredients: ["Bœuf haché", "porc haché", "oignons", "chapelure", "crème épaisse", "bouillon de bœuf", "sauce soja"],
+            },
+             {
+                 id: 177, name: "Tourtière (Garniture)", originalName: "Tourtière", country: "Canada", flag: "🇨🇦", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Garniture de la tourte québécoise. Viande hachée (porc, veau, bœuf) mijotée avec oignons et épices (cannelle, clou de girofle).",
+                 prepTime: 90,
+                 ingredients: ["Porc haché", "veau haché (ou bœuf)", "oignons", "pommes de terre (parfois)", "cannelle", "clou de girofle", "sarriette"],
+            },
+            {
+                 id: 178, name: "Lechón Asado (Mijoté)", originalName: "Lechón Asado", country: "Cuba", flag: "🇨🇺", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Bien que 'asado' signifie rôti, le porc mariné au mojo (orange amère, ail, cumin) peut être braisé lentement en cocotte.",
+                 prepTime: 240, // Inclut marinade
+                 ingredients: ["Épaule de porc", "jus d'orange amère", "ail", "cumin", "origan", "oignons"],
+            },
+             {
+                 id: 179, name: "Misir Wat", originalName: "ምስር ወጥ", country: "Éthiopie", flag: "🇪🇹", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût végétarien éthiopien de lentilles corail mijotées dans une sauce épicée au Berbéré.",
+                 prepTime: 60,
+                 ingredients: ["Lentilles corail", "oignons", "Berbéré", "Niter Kibbeh (ou huile)", "ail", "gingembre", "pâte de tomate"],
+            },
+             {
+                 id: 180, name: "Githeri", originalName: "Githeri", country: "Kenya", flag: "🇰🇪", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût simple et nourrissant de maïs et haricots mijotés ensemble, parfois avec des légumes ou de la viande.",
+                 prepTime: 120,
+                 ingredients: ["Maïs (frais ou surgelé)", "haricots (rouges ou noirs)", "oignons", "tomates", "pommes de terre (optionnel)", "curry (optionnel)"],
+            },
+             {
+                 id: 181, name: "Niu Rou Mian (Soupe-Ragoût)", originalName: "牛肉麵", country: "Taïwan", flag: "🇹🇼", continent: "Asie", type: "Cocotte",
+                 description: "Soupe de nouilles au bœuf taïwanaise. Jarret de bœuf braisé longuement dans un bouillon riche et épicé.",
+                 prepTime: 210,
+                 ingredients: ["Jarret de bœuf", "nouilles", "sauce soja", "pâte de fèves pimentée (doubanjiang)", "tomates", "gingembre", "anis étoilé"],
+            },
+             {
+                 id: 182, name: "Amok Trey", originalName: "អាម៉ុកត្រី", country: "Cambodge", flag: "🇰🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry de poisson cambodgien cuit à la vapeur (traditionnellement) ou mijoté doucement, dans une base de lait de coco et de pâte Kroeung.",
+                 prepTime: 60,
+                 ingredients: ["Poisson blanc (ferme)", "lait de coco", "Kroeung", "feuilles de bananier (ou cocotte)", "œuf", "sauce poisson"],
+            },
+            {
+                 id: 183, name: "Dimlama", originalName: "Димлама", country: "Ouzbékistan", flag: "🇺🇿", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût ouzbek en couches (viande, oignons, carottes, pommes de terre, chou) cuit à l'étouffée avec très peu de liquide.",
+                 prepTime: 150,
+                 ingredients: ["Agneau (ou bœuf)", "oignons", "carottes", "pommes de terre", "chou", "tomates", "cumin", "coriandre"],
+            },
+            {
+                 id: 184, name: "Maqluba (Version simplifiée)", originalName: "مقلوبة", country: "Palestine", flag: "🇵🇸", continent: "Asie", type: "Cocotte",
+                 description: "'Renversé'. Plat de riz cuit en cocotte sur des couches de légumes frits (aubergine, chou-fleur) et de viande (poulet/agneau).",
+                 prepTime: 120,
+                 ingredients: ["Riz (long grain)", "poulet (ou agneau)", "aubergines", "chou-fleur", "oignons", "épices (baharat, curcuma)"],
+            },
+             {
+                 id: 185, name: "Ful Medames", originalName: "فول مدمس", country: "Égypte", flag: "🇪🇬", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût de fèves (ful) cuit très lentement, écrasé et assaisonné d'huile, citron et cumin. Plat national égyptien.",
+                 prepTime: 480, // Inclut trempage et cuisson très lente
+                 ingredients: ["Fèves (séchées)", "ail", "jus de citron", "huile d'olive", "cumin", "persil"],
+            },
+             {
+                 id: 186, name: "Chikar Cholay", originalName: "Chikar Cholay", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Cocotte",
+                 description: "Curry de pois chiches très populaire de Lahore, mijoté dans une sauce épaisse et épicée, souvent servi au petit-déjeuner.",
+                 prepTime: 90,
+                 ingredients: ["Pois chiches", "oignons", "tomates", "gingembre", "ail", "yaourt", "garam masala", "piment"],
+            },
+             {
+                 id: 187, name: "Tibs (Mijoté)", originalName: "ጥብስ", country: "Éthiopie", flag: "🇪🇹", continent: "Afrique", type: "Cocotte",
+                 description: "Bien que souvent sauté, le Tibs (cubes de viande) peut être mijoté dans une sauce tomate épicée au Berbéré.",
+                 prepTime: 60,
+                 ingredients: ["Bœuf (ou agneau)", "oignons", "Berbéré", "Niter Kibbeh", "tomates", "ail", "piment vert"],
+            },
+             {
+                 id: 188, name: "Haleem", originalName: "Haleem", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût très épais et riche, mélange de blé concassé, d'orge, de lentilles et de viande (bœuf/agneau) cuit très lentement.",
+                 prepTime: 480, // Cuisson très longue
+                 ingredients: ["Blé concassé", "orge", "lentilles (chana dal)", "bœuf (ou agneau)", "oignons", "gingembre", "ail", "garam masala"],
+            },
+             {
+                 id: 189, name: "Khoresh Sib", originalName: "خورش سیب", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût persan sucré-salé d'agneau (ou bœuf) mijoté avec des pommes (sib) ou des coings, souvent acidulé.",
+                 prepTime: 120,
+                 ingredients: ["Agneau (ou bœuf)", "pommes (ou coings)", "oignons", "curcuma", "pâte de tomate", "jus de citron vert"],
+            },
+              {
+                 id: 190, name: "Fiskesuppe (Version Ragoût)", originalName: "Fiskesuppe", country: "Norvège", flag: "🇳🇴", continent: "Europe", type: "Cocotte",
+                 description: "Soupe de poisson norvégienne crémeuse qui peut être assez épaisse pour ressembler à un ragoût, avec légumes et poisson blanc.",
+                 prepTime: 45,
+                 ingredients: ["Poisson blanc (saumon, cabillaud)", "crevettes", "carottes", "poireaux", "crème fraîche", "bouillon de poisson", "aneth"],
+            },
+			// --- NOUVELLES RECETTES (151+) ---
+            // Turquie (Objectif: 6+)
+            {
+                 id: 151, name: "Tas Kebabı", originalName: "Tas Kebabı", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût d'agneau (ou bœuf) cuit lentement 'dans un bol' (tas) avec oignons, tomates et poivrons, souvent scellé.",
+                 prepTime: 150,
+                 ingredients: ["Agneau (en cubes)", "oignons", "tomates", "poivrons verts", "pâte de tomate", "thym", "paprika"],
+            },
+            {
+                 id: 152, name: "Orman Kebabı", originalName: "Orman Kebabı", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "'Kebab de la forêt'. Ragoût d'agneau mijoté avec des petits pois, des carottes, des pommes de terre et de l'aneth.",
+                 prepTime: 120,
+                 ingredients: ["Agneau", "petits pois", "carottes", "pommes de terre", "oignons", "aneth", "pâte de tomate"],
+            },
+             {
+                 id: 153, name: "Kuru Fasulye", originalName: "Kuru Fasulye", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Plat national turc. Ragoût de haricots blancs mijoté dans une sauce tomate, souvent avec de l'agneau ou du bœuf séché (pastırma).",
+                 prepTime: 150, // Inclut trempage
+                 ingredients: ["Haricots blancs (secs)", "agneau (optionnel)", "oignons", "pâte de tomate", "pâte de poivron (biber salçası)", "paprika"],
+            },
+             {
+                 id: 154, name: "İncik Haşlama", originalName: "İncik Haşlama", country: "Turquie", flag: "🇹🇷", continent: "Asie", type: "Cocotte",
+                 description: "Jarret d'agneau poché lentement avec des légumes-racines (carottes, pommes de terre) dans un bouillon simple.",
+                 prepTime: 180,
+                 ingredients: ["Jarrets d'agneau", "carottes", "pommes de terre", "oignons", "céleri", "laurier", "poivre en grains"],
+            },
+            // Chine (Objectif: 6+)
+            {
+                 id: 155, name: "Poulet Braisé aux Champignons", originalName: "香菇炖鸡", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Morceaux de poulet mijotés lentement avec des champignons shiitake séchés, du gingembre et de la sauce soja.",
+                 prepTime: 90,
+                 ingredients: ["Poulet (cuisses)", "champignons shiitake (séchés)", "gingembre", "sauce soja", "vin de Shaoxing", "anis étoilé"],
+            },
+             {
+                 id: 156, name: "Jarret de Porc Braisé", originalName: "红烧蹄膀", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Jarret de porc entier braisé longuement dans une sauce soja sucrée jusqu'à ce qu'il soit fondant et laqué.",
+                 prepTime: 240,
+                 ingredients: ["Jarret de porc (avec peau)", "sauce soja (claire et foncée)", "sucre candi", "vin de Shaoxing", "gingembre", "anis étoilé", "cannelle"],
+            },
+             {
+                 id: 157, name: "Bœuf Braisé aux Radis", originalName: "萝卜炖牛腩", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Poitrine de bœuf mijotée avec de gros morceaux de radis blanc (daikon) dans un bouillon parfumé aux épices.",
+                 prepTime: 150,
+                 ingredients: ["Poitrine de bœuf", "radis blanc (daikon)", "gingembre", "sauce soja", "anis étoilé", "poivre du Sichuan"],
+            },
+             {
+                 id: 158, name: "Mapo Tofu (Version Mijotée)", originalName: "麻婆豆腐", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Bien que souvent sauté, le Mapo Tofu peut être mijoté. Tofu soyeux et porc haché dans une sauce rouge épicée (doubanjiang) et engourdissante (poivre du Sichuan).",
+                 prepTime: 45,
+                 ingredients: ["Tofu soyeux", "porc haché", "doubanjiang (pâte de fèves pimentée)", "poivre du Sichuan", "ail", "gingembre", "bouillon"],
+            },
+            // Grèce (Objectif: 6+)
+            {
+                 id: 159, name: "Giouvetsi / Youvetsi", originalName: "Γιουβέτσι", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Viande (souvent bœuf ou agneau) mijotée dans une sauce tomate, puis cuite au four avec des pâtes orzo (kritharaki).",
+                 prepTime: 150,
+                 ingredients: ["Bœuf (jarret)", "pâtes orzo (kritharaki)", "tomates concassées", "oignons", "vin rouge", "cannelle", "laurier"],
+            },
+            {
+                 id: 160, name: "Kleftiko d'Agneau", originalName: "Αρνί Κλέφτικο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Agneau 'voleur'. Morceaux d'agneau marinés (citron, ail, origan) et cuits lentement en papillote (ou cocotte fermée) avec légumes et fromage.",
+                 prepTime: 240, // Inclut marinade
+                 ingredients: ["Agneau (épaule)", "pommes de terre", "poivrons", "feta", "citron", "ail", "origan"],
+            },
+            {
+                 id: 161, name: "Sofrito de Corfou", originalName: "Σοφρίτο", country: "Grèce", flag: "🇬🇷", continent: "Europe", type: "Cocotte",
+                 description: "Spécialité de Corfou. Fines tranches de veau mijotées dans une sauce blanche riche en ail, persil et vinaigre.",
+                 prepTime: 90,
+                 ingredients: ["Veau (fines escalopes)", "ail (abondant)", "persil", "vin blanc", "vinaigre", "farine"],
+            },
+            // Corée (Objectif: 6+)
+             {
+                 id: 162, name: "Sundubu Jjigae", originalName: "순두부찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût épicé de tofu extra-soyeux (sundubu), souvent avec fruits de mer ou porc, et un œuf cru ajouté à la fin.",
+                 prepTime: 40,
+                 ingredients: ["Tofu extra-soyeux (Sundubu)", "Kimchi", "porc (ou fruits de mer)", "gochugaru", "ail", "sauce soja", "œuf"],
+            },
+             {
+                 id: 163, name: "Dakbokkeumtang", originalName: "닭볶음탕", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût de poulet épicé et légèrement sucré, mijoté avec pommes de terre et carottes dans une sauce gochujang.",
+                 prepTime: 75,
+                 ingredients: ["Poulet (morceaux)", "pommes de terre", "carottes", "oignons", "gochujang", "gochugaru", "sauce soja", "ail"],
+            },
+             {
+                 id: 164, name: "Doenjang Jjigae", originalName: "된장찌개", country: "Corée", flag: "🇰🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût coréen fondamental à base de pâte de soja fermentée (doenjang), tofu, légumes et parfois fruits de mer ou bœuf.",
+                 prepTime: 35,
+                 ingredients: ["Doenjang (pâte de soja)", "tofu", "courgette", "oignons", "champignons", "bouillon d'anchois", "bœuf (optionnel)"],
+            },
+            // Thaïlande (Objectif: 6+)
+            {
+                 id: 165, name: "Gaeng Kari Gai (Curry Jaune)", originalName: "แกงกะหรี่ไก่", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry jaune doux et riche de poulet mijoté dans du lait de coco avec pommes de terre et oignons.",
+                 prepTime: 60,
+                 ingredients: ["Poulet", "lait de coco", "pâte de curry jaune", "pommes de terre", "oignons", "sauce poisson"],
+            },
+            {
+                 id: 166, name: "Gaeng Panang Neua (Curry Panang)", originalName: "แกงพะแนงเนื้อ", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry Panang de bœuf. Plus épais et plus doux que le curry rouge, avec des notes d'arachide et de combava.",
+                 prepTime: 75,
+                 ingredients: ["Bœuf (fines tranches)", "lait de coco", "pâte de curry Panang", "feuilles de combava", "sauce poisson", "cacahuètes (parfois)"],
+            },
+            {
+                 id: 167, name: "Tom Kha Gai (Version Ragoût)", originalName: "ต้มข่าไก่", country: "Thaïlande", flag: "🇹🇭", continent: "Asie", type: "Cocotte",
+                 description: "Bien qu'une soupe, elle peut être assez consistante. Poulet mijoté dans du lait de coco parfumé au galanga (kha), citronnelle et feuilles de combava.",
+                 prepTime: 40,
+                 ingredients: ["Poulet", "lait de coco", "galanga", "citronnelle", "feuilles de combava", "champignons", "jus de citron vert", "sauce poisson"],
+            },
+            // Pologne (Objectif: 3+)
+            {
+                 id: 168, name: "Zrazy Zawijane", originalName: "Zrazy Zawijane", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Paupiettes de bœuf polonaises, farcies (lard, cornichons, oignons), roulées et braisées dans une sauce riche.",
+                 prepTime: 120,
+                 ingredients: ["Bœuf (fines escalopes)", "lard fumé", "cornichons à la polonaise", "oignons", "moutarde", "bouillon", "farine"],
+            },
+            {
+                 id: 169, name: "Gulasz Polski", originalName: "Gulasz Polski", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Goulash polonais, souvent à base de porc, plus épais que le hongrois, mijoté avec champignons et parfois de la crème.",
+                 prepTime: 150,
+                 ingredients: ["Porc (épaule)", "oignons", "champignons", "paprika", "pâte de tomate", "crème aigre (optionnel)", "marjolaine"],
+            },
+            // Autres pays (Objectif: 2-3)
+            {
+                 id: 170, name: "Dublin Coddle", originalName: "Dublin Coddle", country: "Irlande", flag: "🇮🇪", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût simple de Dublin. Saucisses de porc et bacon mijotés lentement avec des pommes de terre et des oignons.",
+                 prepTime: 120,
+                 ingredients: ["Saucisses de porc", "bacon (rashers)", "pommes de terre", "oignons", "bouillon", "persil"],
+            },
+            {
+                 id: 171, name: "Kapustnyak (avec viande)", originalName: "Капусняк", country: "Ukraine", flag: "🇺🇦", continent: "Europe", type: "Cocotte",
+                 description: "Soupe-ragoût de choucroute épaisse, traditionnellement avec du porc (côtes) et du millet.",
+                 prepTime: 150,
+                 ingredients: ["Choucroute", "côtes de porc", "millet", "pommes de terre", "carottes", "oignons", "lard (salo)"],
+            },
+            {
+                 id: 172, name: "Ghiveci cu Carne", originalName: "Ghiveci cu Carne", country: "Roumanie", flag: "🇷🇴", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût roumain de légumes d'été (type ratatouille) avec des morceaux de viande (porc ou poulet).",
+                 prepTime: 120,
+                 ingredients: ["Porc (ou poulet)", "aubergines", "courgettes", "poivrons", "tomates", "oignons", "haricots verts", "aneth"],
+            },
+             {
+                 id: 173, name: "Poronkäristys", originalName: "Poronkäristys", country: "Finlande", flag: "🇫🇮", continent: "Europe", type: "Cocotte",
+                 description: "Ragoût de renne lapon. Fines tranches de renne sautées puis mijotées dans de la bière ou du bouillon, servi avec purée et airelles.",
+                 prepTime: 60,
+                 ingredients: ["Renne (viande surgelée tranchée fin)", "oignons", "bière (ou bouillon)", "beurre", "airelles (pour servir)"],
+            },
+             {
+                 id: 174, name: "Bacalao al Pil Pil", originalName: "Bacalao al Pil Pil", country: "Espagne", flag: "🇪🇸", continent: "Europe", type: "Cocotte",
+                 description: "Morue salée mijotée très doucement dans de l'huile d'olive avec de l'ail et du piment, jusqu'à former une émulsion onctueuse.",
+                 prepTime: 90, // N'inclut pas le dessalage
+                 ingredients: ["Morue salée (dessalée)", "huile d'olive (abondante)", "ail", "piments guindillas"],
+            },
+            {
+                 id: 175, name: "Alcatra", originalName: "Alcatra", country: "Portugal", flag: "🇵🇹", continent: "Europe", type: "Cocotte",
+                 description: "Plat des Açores. Gros morceaux de bœuf braisés très lentement dans un pot en terre cuite avec vin, lard et épices.",
+                 prepTime: 300,
+                 ingredients: ["Bœuf (rumsteck, gîte)", "vin rouge (ou blanc)", "lard", "oignons", "ail", "piment", "cannelle"],
+            },
+            {
+                 id: 176, name: "Köttbullar (Mijotés)", originalName: "Köttbullar", country: "Suède", flag: "🇸🇪", continent: "Europe", type: "Cocotte",
+                 description: "Boulettes de viande suédoises, souvent mijotées dans une sauce brune crémeuse (gräddsås).",
+                 prepTime: 75,
+                 ingredients: ["Bœuf haché", "porc haché", "oignons", "chapelure", "crème épaisse", "bouillon de bœuf", "sauce soja"],
+            },
+             {
+                 id: 177, name: "Tourtière (Garniture)", originalName: "Tourtière", country: "Canada", flag: "🇨🇦", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Garniture de la tourte québécoise. Viande hachée (porc, veau, bœuf) mijotée avec oignons et épices (cannelle, clou de girofle).",
+                 prepTime: 90,
+                 ingredients: ["Porc haché", "veau haché (ou bœuf)", "oignons", "pommes de terre (parfois)", "cannelle", "clou de girofle", "sarriette"],
+            },
+            {
+                 id: 178, name: "Lechón Asado (Mijoté)", originalName: "Lechón Asado", country: "Cuba", flag: "🇨🇺", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Bien que 'asado' signifie rôti, le porc mariné au mojo (orange amère, ail, cumin) peut être braisé lentement en cocotte.",
+                 prepTime: 240, // Inclut marinade
+                 ingredients: ["Épaule de porc", "jus d'orange amère", "ail", "cumin", "origan", "oignons"],
+            },
+             {
+                 id: 179, name: "Misir Wat", originalName: "ምስር ወጥ", country: "Éthiopie", flag: "🇪🇹", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût végétarien éthiopien de lentilles corail mijotées dans une sauce épicée au Berbéré.",
+                 prepTime: 60,
+                 ingredients: ["Lentilles corail", "oignons", "Berbéré", "Niter Kibbeh (ou huile)", "ail", "gingembre", "pâte de tomate"],
+            },
+             {
+                 id: 180, name: "Githeri", originalName: "Githeri", country: "Kenya", flag: "🇰🇪", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût simple et nourrissant de maïs et haricots mijotés ensemble, parfois avec des légumes ou de la viande.",
+                 prepTime: 120,
+                 ingredients: ["Maïs (frais ou surgelé)", "haricots (rouges ou noirs)", "oignons", "tomates", "pommes de terre (optionnel)", "curry (optionnel)"],
+            },
+             {
+                 id: 181, name: "Niu Rou Mian (Soupe-Ragoût)", originalName: "牛肉麵", country: "Taïwan", flag: "🇹🇼", continent: "Asie", type: "Cocotte",
+                 description: "Soupe de nouilles au bœuf taïwanaise. Jarret de bœuf braisé longuement dans un bouillon riche et épicé.",
+                 prepTime: 210,
+                 ingredients: ["Jarret de bœuf", "nouilles", "sauce soja", "pâte de fèves pimentée (doubanjiang)", "tomates", "gingembre", "anis étoilé"],
+            },
+             {
+                 id: 182, name: "Amok Trey", originalName: "អាម៉ុកត្រី", country: "Cambodge", flag: "🇰🇭", continent: "Asie", type: "Cocotte",
+                 description: "Curry de poisson cambodgien cuit à la vapeur (traditionnellement) ou mijoté doucement, dans une base de lait de coco et de pâte Kroeung.",
+                 prepTime: 60,
+                 ingredients: ["Poisson blanc (ferme)", "lait de coco", "Kroeung", "feuilles de bananier (ou cocotte)", "œuf", "sauce poisson"],
+            },
+            {
+                 id: 183, name: "Dimlama", originalName: "Димлама", country: "Ouzbékistan", flag: "🇺🇿", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût ouzbek en couches (viande, oignons, carottes, pommes de terre, chou) cuit à l'étouffée avec très peu de liquide.",
+                 prepTime: 150,
+                 ingredients: ["Agneau (ou bœuf)", "oignons", "carottes", "pommes de terre", "chou", "tomates", "cumin", "coriandre"],
+            },
+            {
+                 id: 184, name: "Maqluba (Version simplifiée)", originalName: "مقلوبة", country: "Palestine", flag: "🇵🇸", continent: "Asie", type: "Cocotte",
+                 description: "'Renversé'. Plat de riz cuit en cocotte sur des couches de légumes frits (aubergine, chou-fleur) et de viande (poulet/agneau).",
+                 prepTime: 120,
+                 ingredients: ["Riz (long grain)", "poulet (ou agneau)", "aubergines", "chou-fleur", "oignons", "épices (baharat, curcuma)"],
+            },
+             {
+                 id: 185, name: "Ful Medames", originalName: "فول مدمس", country: "Égypte", flag: "🇪🇬", continent: "Afrique", type: "Cocotte",
+                 description: "Ragoût de fèves (ful) cuit très lentement, écrasé et assaisonné d'huile, citron et cumin. Plat national égyptien.",
+                 prepTime: 480, // Inclut trempage et cuisson très lente
+                 ingredients: ["Fèves (séchées)", "ail", "jus de citron", "huile d'olive", "cumin", "persil"],
+            },
+             {
+                 id: 186, name: "Chikar Cholay", originalName: "Chikar Cholay", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Cocotte",
+                 description: "Curry de pois chiches très populaire de Lahore, mijoté dans une sauce épaisse et épicée, souvent servi au petit-déjeuner.",
+                 prepTime: 90,
+                 ingredients: ["Pois chiches", "oignons", "tomates", "gingembre", "ail", "yaourt", "garam masala", "piment"],
+            },
+             {
+                 id: 187, name: "Tibs (Mijoté)", originalName: "ጥብስ", country: "Éthiopie", flag: "🇪🇹", continent: "Afrique", type: "Cocotte",
+                 description: "Bien que souvent sauté, le Tibs (cubes de viande) peut être mijoté dans une sauce tomate épicée au Berbéré.",
+                 prepTime: 60,
+                 ingredients: ["Bœuf (ou agneau)", "oignons", "Berbéré", "Niter Kibbeh", "tomates", "ail", "piment vert"],
+            },
+             {
+                 id: 188, name: "Haleem", originalName: "Haleem", country: "Pakistan", flag: "🇵🇰", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût très épais et riche, mélange de blé concassé, d'orge, de lentilles et de viande (bœuf/agneau) cuit très lentement.",
+                 prepTime: 480, // Cuisson très longue
+                 ingredients: ["Blé concassé", "orge", "lentilles (chana dal)", "bœuf (ou agneau)", "oignons", "gingembre", "ail", "garam masala"],
+            },
+             {
+                 id: 189, name: "Khoresh Sib", originalName: "خورش سیب", country: "Iran", flag: "🇮🇷", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût persan sucré-salé d'agneau (ou bœuf) mijoté avec des pommes (sib) ou des coings, souvent acidulé.",
+                 prepTime: 120,
+                 ingredients: ["Agneau (ou bœuf)", "pommes (ou coings)", "oignons", "curcuma", "pâte de tomate", "jus de citron vert"],
+            },
+              {
+                 id: 190, name: "Fiskesuppe (Version Ragoût)", originalName: "Fiskesuppe", country: "Norvège", flag: "🇳🇴", continent: "Europe", type: "Cocotte",
+                 description: "Soupe de poisson norvégienne crémeuse qui peut être assez épaisse pour ressembler à un ragoût, avec légumes et poisson blanc.",
+                 prepTime: 45,
+                 ingredients: ["Poisson blanc (saumon, cabillaud)", "crevettes", "carottes", "poireaux", "crème fraîche", "bouillon de poisson", "aneth"],
+            },
+            // AJOUTS DEMANDÉS (191+)
+            // Chine (6 de plus)
+            {
+                id: 191, name: "Poulet aux Trois Tasses", originalName: "三杯鸡", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte", // Origine aussi revendiquée par Taïwan
+                description: "Morceaux de poulet braisés dans une sauce riche avec des parts égales de vin de riz, sauce soja et huile de sésame, avec basilic thaï.",
+                prepTime: 60,
+                ingredients: ["Poulet (ailes, cuisses)", "vin de riz (Shaoxing)", "sauce soja", "huile de sésame", "ail", "gingembre", "basilic thaï"],
+            },
+            {
+                id: 192, name: "Agneau Braisé Piquant", originalName: "红焖羊肉", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                description: "Agneau mijoté dans une sauce rouge épicée avec des piments séchés, du doubanjiang et des épices.",
+                prepTime: 150,
+                ingredients: ["Agneau (épaule, collier)", "piments séchés", "doubanjiang", "sauce soja", "gingembre", "ail", "anis étoilé"],
+            },
+            {
+                id: 193, name: "Canard Braisé à la Bière", originalName: "啤酒鸭", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                description: "Morceaux de canard mijotés dans de la bière avec des épices (anis étoilé, cannelle) jusqu'à tendreté.",
+                prepTime: 120,
+                ingredients: ["Canard (en morceaux)", "bière (lager)", "sauce soja", "gingembre", "anis étoilé", "cannelle", "piments"],
+            },
+            {
+                 id: 194, name: "Aubergines Braisées façon Poisson", originalName: "鱼香茄子", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Aubergines mijotées dans une sauce sucrée, acide et piquante 'saveur poisson' (sans poisson), avec ail, gingembre et piment.",
+                 prepTime: 45,
+                 ingredients: ["Aubergines", "porc haché (optionnel)", "ail", "gingembre", "piment", "vinaigre noir", "sauce soja", "sucre"],
+            },
+            {
+                 id: 195, name: "Tofu Braisé Maison", originalName: "家常豆腐", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Morceaux de tofu frit mijotés dans une sauce brune savoureuse avec champignons, légumes et parfois un peu de viande.",
+                 prepTime: 50,
+                 ingredients: ["Tofu ferme", "champignons (shiitake)", "poivron", "carotte", "sauce soja", "sauce d'huître (ou végé)", "ail"],
+            },
+            {
+                 id: 196, name: "Côtes de Porc Wuxi", originalName: "无锡排骨", country: "Chine", flag: "🇨🇳", continent: "Asie", type: "Cocotte",
+                 description: "Côtes de porc braisées longuement dans une sauce rouge sucrée-salée caractéristique de Wuxi, jusqu'à être très tendres.",
+                 prepTime: 180,
+                 ingredients: ["Côtes de porc", "sauce soja", "vin de Shaoxing", "sucre candi (rouge)", "gingembre", "anis étoilé", "cannelle"],
+            },
+            // Japon (4 de plus)
+            {
+                 id: 197, name: "Chikuzeni", originalName: "筑前煮", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                 description: "Ragoût de poulet et légumes racines (carotte, racine de lotus, taro) mijotés dans un bouillon dashi sucré-salé.",
+                 prepTime: 60,
+                 ingredients: ["Poulet (cuisse)", "carottes", "racine de lotus (renkon)", "konjac", "champignons shiitake", "dashi", "sauce soja", "mirin"],
+            },
+            {
+                 id: 198, name: "Buta no Kakuni (Variation)", originalName: "豚の角煮", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte", // Similaire au Kakuni 92 mais peut varier
+                 description: "Poitrine de porc mijotée lentement jusqu'à être extrêmement tendre dans une sauce soja sucrée avec gingembre et parfois moutarde.",
+                 prepTime: 210,
+                 ingredients: ["Poitrine de porc", "sauce soja", "saké", "mirin", "sucre", "gingembre", "oignon vert"],
+            },
+            {
+                 id: 199, name: "Nizakana (Poisson Mijoté)", originalName: "煮魚", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                 description: "Poisson (ex: maquereau, sardine) mijoté dans une sauce soja sucrée avec gingembre et parfois miso ou mirin.",
+                 prepTime: 30,
+                 ingredients: ["Poisson (maquereau, sardine)", "sauce soja", "saké", "mirin", "sucre", "gingembre"],
+            },
+            {
+                 id: 200, name: "Kenchinjiru (Version Ragoût)", originalName: "けんちん汁", country: "Japon", flag: "🇯🇵", continent: "Asie", type: "Cocotte",
+                 description: "Soupe végétarienne épaisse de légumes racines et tofu, mijotée dans un bouillon dashi à la sauce soja.",
+                 prepTime: 50,
+                 ingredients: ["Radis Daikon", "carottes", "gobo (racine de bardane)", "tofu (frit ou ferme)", "konjac", "dashi", "sauce soja"],
+            },
+            // Mexique (3 de plus)
+            {
+                 id: 201, name: "Mole Verde", originalName: "Mole Verde", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Ragoût de porc (ou poulet) dans une sauce verte vibrante à base de tomatillos, pépins de courge (pepitas) et herbes vertes.",
+                 prepTime: 90,
+                 ingredients: ["Porc (épaule)", "tomatillos", "pepitas (graines de courge)", "piments serranos", "coriandre", "laitue romaine", "épazote"],
+            },
+            {
+                 id: 202, name: "Puerco en Salsa Roja", originalName: "Puerco en Salsa Roja", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Morceaux de porc tendres mijotés dans une sauce rouge riche à base de piments séchés (guajillo, ancho).",
+                 prepTime: 150,
+                 ingredients: ["Porc (épaule)", "piments guajillo", "piments ancho", "tomates", "ail", "oignons", "cumin", "origan"],
+            },
+            {
+                 id: 203, name: "Caldo de Res", originalName: "Caldo de Res", country: "Mexique", flag: "🇲🇽", continent: "Amérique du Nord", type: "Cocotte",
+                 description: "Soupe-ragoût de bœuf consistante avec de gros morceaux de légumes (maïs, carottes, pommes de terre, courgettes).",
+                 prepTime: 180,
+                 ingredients: ["Bœuf (jarret, os à moelle)", "maïs en épi", "carottes", "pommes de terre", "courgettes", "chayotte", "chou", "coriandre"],
+            },
+            // Pologne (3 de plus)
+            {
+                 id: 204, name: "Gołąbki", originalName: "Gołąbki", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "'Petits pigeons'. Feuilles de chou farcies de viande hachée (porc/bœuf) et de riz (ou sarrasin), mijotées dans une sauce tomate.",
+                 prepTime: 120,
+                 ingredients: ["Feuilles de chou", "porc haché", "bœuf haché", "riz", "oignons", "sauce tomate", "marjolaine"],
+            },
+             {
+                 id: 205, name: "Krupnik (Version Ragoût)", originalName: "Krupnik", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Soupe d'orge perlé polonaise, souvent assez épaisse pour être un ragoût, avec légumes et parfois viande (côtes fumées).",
+                 prepTime: 90,
+                 ingredients: ["Orge perlé", "pommes de terre", "carottes", "céleri-rave", "côtes de porc fumées (optionnel)", "aneth", "marjolaine"],
+            },
+             {
+                 id: 206, name: "Flaki Wołowe", originalName: "Flaki Wołowe", country: "Pologne", flag: "🇵🇱", continent: "Europe", type: "Cocotte",
+                 description: "Soupe de tripes de bœuf très épaisse et savoureuse, mijotée avec légumes racines et marjolaine.",
+                 prepTime: 240, // Nettoyage et cuisson longue des tripes
+                 ingredients: ["Tripes de bœuf (nettoyées)", "carottes", "céleri-rave", "persil-racine", "oignons", "marjolaine", "gingembre", "noix de muscade"],
+            },
+
+
+        ];
+
+
+        // --- DÉFINITIONS DES TAGS D'INGRÉDIENTS ---
+        const tagDefinitions = {
+            viande: ["bœuf", "agneau", "porc", "poulet", "veau", "canard", "lapin", "chèvre", "mouton", "saucisse", "lardons", "gibier", "os à moelle", "queue de bœuf", "tripes", "coq", "poule", "jambon", "spam", "cheval", "kefta", "pancetta", "confit", "lard", "renne"],
+            poisson_fruit_de_mer: ["poisson", "crevettes", "moules", "palourdes", "crabe", "calamars", "fruits de mer", "haddock fumé", "lotte", "thon", "seiche", "gambas", "écrevisses", "anchois", "saumon", "poissons de roche", "morue"],
+            legumes: ["carotte", "oignon", "poireau", "tomate", "aubergine", "chou", "pomme de terre", "poivron", "céleri", "navet", "haricot", "lentille", "pois chiche", "ail", "courge", "betterave", "champignon", "olive", "maïs", "rutabaga", "panais", "cornichon", "okra", "gombo", "radis", "manioc", "plantain", "igname", "kimchi", "choucroute", "épinard", "fève", "petit pois"],
+            epices: ["paprika", "cumin", "safran", "cannelle", "piment", "clou de girofle", "ras el hanout", "curry", "curcuma", "gingembre", "anis étoilé", "poivre", "baies de genièvre", "quatre-épices", "moutarde", "berbéré", "gochujang", "pâte de chili", "cardamome", "galanga", "pâte de roucou", "achiote", "doubanjiang"],
+            herbes: ["thym", "laurier", "coriandre", "persil", "romarin", "basilic", "aneth", "menthe", "origan", "sauge", "citronnelle", "feuilles de curry", "feuilles de combava", "pandan", "fenouil", "marjolaine", "sarriette"],
+            vegetarien: [] // Tag spécial
+        };
+
+        // --- ÉLÉMENTS DU DOM ---
+        const continentFilter = document.getElementById('continent-filter');
+        const countryFilter = document.getElementById('country-filter');
+        const timeFilter = document.getElementById('time-filter');
+        const timeValue = document.getElementById('time-value');
+        const tagFilters = document.querySelectorAll('.tag-filter');
+        const recipeList = document.getElementById('recipe-list');
+        const recipeCount = document.getElementById('recipe-count');
+        const resetButton = document.getElementById('reset-button');
+        
+        let populatedContinents = [];
+        let populatedCountries = [];
+
+        // --- FONCTIONS AUXILIAIRES ---
+
+        /**
+         * Génère des tags pour une recette en fonction de ses ingrédients.
+         */
+        function generateTags(ingredients) {
+            const tags = new Set();
+            const ingredientsLower = ingredients.join(' ').toLowerCase();
+            let hasViande = false;
+            let hasPoisson = false;
+
+            for (const [tag, keywords] of Object.entries(tagDefinitions)) {
+                if (tag === 'vegetarien') continue; // Traité à la fin
+                
+                if (keywords.some(keyword => ingredientsLower.includes(keyword))) {
+                    tags.add(tag);
+                    if (tag === 'viande') hasViande = true;
+                    if (tag === 'poisson_fruit_de_mer') hasPoisson = true;
+                }
+            }
+            
+            // Logique Végétarien : si pas de viande ET pas de poisson, c'est végétarien
+            // Ex: Ratatouille, Fasolada, Shakshuka, Chana Masala, Rajma Masala, Misir Wat, Ful Medames
+             if (["Ratatouille", "Fasolada", "Shakshuka", "Chana Masala", "Rajma Masala", "Misir Wat", "Ful Medames"].includes(ingredients[0])) { // Simplification rapide basée sur le nom pour l'exemple
+                 if (!hasViande && !hasPoisson) { // Double check au cas où
+                     tags.add('vegetarien');
+                 }
+            } else if (!hasViande && !hasPoisson) {
+                 // Si aucun tag viande/poisson n'est trouvé par mot clé, vérifier si ce n'est pas un des plats végétariens connus
+                 const recipeName = ingredients[0]; // Assuming first ingredient roughly identifies the recipe name in this simplified check
+                 if (!["Oeufs", "Fèves (séchées)", "Haricots blancs (cannellini)", "Aubergines", "Pois chiches", "Haricots rouges (Rajma)", "Lentilles corail"].includes(recipeName)) {
+                     // If it's not a known veggie dish starter and has no meat/fish keywords, might still have hidden meat, don't tag veggie.
+                 } else {
+                     tags.add('vegetarien'); // Likely veggie
+                 }
+             }
+            
+            return Array.from(tags);
+        }
+
+        /**
+         * Formate les minutes en "Xh Ym"
+         */
+        function formatTime(minutes) {
+            const h = Math.floor(minutes / 60);
+            const m = minutes % 60;
+            let timeString = "";
+            if (h > 0) timeString += `${h}h `;
+            if (m > 0) timeString += `${m.toString().padStart(2, '0')}m`;
+            return timeString || "0m";
+        }
+
+        /**
+         * Crée la carte HTML pour une recette.
+         */
+        function createRecipeCard(recipe) {
+            const card = document.createElement('div');
+            card.className = 'recipe-card';
+            
+            const tagsHTML = recipe.tags.map(tag => {
+                let tagName = tag.replace('_', ' ');
+                if (tagName === 'poisson fruit de mer') tagName = 'poisson'; // Raccourci
+                return `<span class="tag tag-${tag}">${tagName.toUpperCase()}</span>`;
+            }).join('');
+
+            // Limite l'affichage des ingrédients pour la carte
+            const displayedIngredients = recipe.ingredients.slice(0, 5).join(', ') + (recipe.ingredients.length > 5 ? '...' : '');
+
+            card.innerHTML = `
+                <div class="recipe-card-header">
+                    <div>
+                        <h3>${recipe.name}</h3>
+                        ${recipe.name !== recipe.originalName ? `<div class="recipe-original-name">${recipe.originalName}</div>` : ''}
+                    </div>
+                    <div class="recipe-origin">${recipe.flag} ${recipe.country}<br>(${recipe.continent})</div>
+                </div>
+                <div class="recipe-info">
+                    <div class="recipe-time">~ ${formatTime(recipe.prepTime)}</div>
+                    <div class="recipe-tags">${tagsHTML}</div>
+                </div>
+                <div class="recipe-description">${recipe.description}</div>
+                <div class="recipe-ingredients"><strong>Ingrédients:</strong> ${displayedIngredients}</div>
+            `;
+            return card;
+        }
+
+        // --- LOGIQUE PRINCIPALE ---
+
+        /**
+         * Peuple les filtres (Continents) au démarrage.
+         */
+        function populateFilters() {
+            const continents = new Set();
+            const countries = new Set();
+            
+            allRecipes.forEach(recipe => {
+                recipe.tags = generateTags(recipe.ingredients); // Ajoute les tags à la recette
+                continents.add(recipe.continent);
+                countries.add(recipe.country);
+            });
+            
+            populatedContinents = Array.from(continents).sort();
+            populatedCountries = Array.from(countries).sort();
+            
+            // Ajoute les options pour les continents
+            continentFilter.innerHTML = '<option value="Tous">-- TOUS --</option>'; // Réinitialise
+            populatedContinents.forEach(continent => {
+                const option = document.createElement('option');
+                option.value = continent;
+                option.textContent = continent;
+                continentFilter.appendChild(option);
+            });
+            
+            // Initialise le filtre pays avec tous les pays
+            updateCountryFilter(true);
+        }
+
+        /**
+         * Met à jour le filtre des pays en fonction du continent sélectionné.
+         */
+        function updateCountryFilter(initial = false) {
+            const selectedContinent = continentFilter.value;
+            const currentCountryValue = countryFilter.value; // Sauvegarde la sélection actuelle
+            
+            // Vide le sélecteur de pays
+            countryFilter.innerHTML = '<option value="Tous">-- TOUS --</option>';
+            
+            let countriesToShow;
+            
+            if (selectedContinent === 'Tous') {
+                // Montre tous les pays si "Tous" continents est sélectionné
+                countriesToShow = populatedCountries;
+            } else {
+                // Sinon, filtre les pays par continent
+                const countries = new Set();
+                allRecipes.forEach(recipe => {
+                    if (recipe.continent === selectedContinent) {
+                        countries.add(recipe.country);
+                    }
+                });
+                countriesToShow = Array.from(countries).sort();
+            }
+
+            // Ajoute les options pour les pays filtrés
+            countriesToShow.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countryFilter.appendChild(option);
+            });
+
+            // Essaye de restaurer la sélection précédente si elle est toujours valide
+            if (countriesToShow.includes(currentCountryValue)) {
+                 countryFilter.value = currentCountryValue;
+            } else if (!initial) {
+                 countryFilter.value = 'Tous'; // Sinon, revient à "Tous"
+            }
+        }
+
+        /**
+         * Affiche les recettes filtrées.
+         */
+        function renderRecipes() {
+            // Récupère les filtres actuels
+            const filters = {
+                continent: continentFilter.value,
+                country: countryFilter.value,
+                maxTime: parseInt(timeFilter.value, 10),
+                tags: Array.from(tagFilters)
+                            .filter(input => input.checked)
+                            .map(input => input.value)
+            };
+            
+            // Applique les filtres
+            const filteredRecipes = allRecipes.filter(recipe => {
+                // Filtre Continent
+                if (filters.continent !== 'Tous' && recipe.continent !== filters.continent) {
+                    return false;
+                }
+                // Filtre Pays
+                if (filters.country !== 'Tous' && recipe.country !== filters.country) {
+                    return false;
+                }
+                // Filtre Temps
+                if (recipe.prepTime > filters.maxTime) {
+                    return false;
+                }
+                // Filtre Tags (la recette doit avoir TOUS les tags sélectionnés)
+                if (filters.tags.length > 0 && !filters.tags.every(tag => recipe.tags.includes(tag))) {
+                    return false;
+                }
+                // (Le filtre "Cocotte" est implicite car c'est la seule donnée pour le moment)
+                return true;
+            });
+            
+            // Vide la liste
+            recipeList.innerHTML = '';
+            
+            // Met à jour le compteur
+            recipeCount.textContent = `${filteredRecipes.length} RECETTES TROUVÉES`;
+            
+            // Affiche les recettes
+            if (filteredRecipes.length === 0) {
+                recipeList.innerHTML = '<div class="recipe-card"><h3>Aucune recette trouvée!</h3><p>Essayez d\'élargir vos filtres.</p></div>';
+            } else {
+                // Trie par pays puis par nom pour un affichage cohérent
+                filteredRecipes.sort((a, b) => {
+                    if (a.country < b.country) return -1;
+                    if (a.country > b.country) return 1;
+                    if (a.name < b.name) return -1;
+                    if (a.name > b.name) return 1;
+                    return 0;
+                });
+                
+                filteredRecipes.forEach(recipe => {
+                    recipeList.appendChild(createRecipeCard(recipe));
+                });
+            }
+        }
+        
+        /**
+         * Réinitialise tous les filtres à leur état par défaut.
+         */
+        function resetFilters() {
+            continentFilter.value = 'Tous';
+            updateCountryFilter(); // Met à jour les pays (montre tout)
+            countryFilter.value = 'Tous';
+            timeFilter.value = 720;
+            timeValue.textContent = 'Jusqu\'à 12h 00m';
+            tagFilters.forEach(input => input.checked = false);
+            
+            renderRecipes();
+        }
+
+        // --- INITIALISATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            populateFilters(); // Peuple les filtres AVANT de rendre les recettes
+            renderRecipes();   // Affiche les recettes initiales (toutes)
+
+            // Ajoute les écouteurs d'événements
+            continentFilter.addEventListener('change', () => {
+                updateCountryFilter();
+                renderRecipes();
+            });
+            countryFilter.addEventListener('change', renderRecipes);
+            timeFilter.addEventListener('input', () => {
+                timeValue.textContent = `Jusqu'à ${formatTime(parseInt(timeFilter.value, 10))}`;
+            });
+            // Pour de meilleures performances, n'affiche qu'à la fin du glissement
+            timeFilter.addEventListener('change', renderRecipes); 
+            
+            tagFilters.forEach(input => {
+                input.addEventListener('change', renderRecipes);
+            });
+            
+            resetButton.addEventListener('click', resetFilters);
+        });
+
+    </script>
+</body>
+</html>
+
