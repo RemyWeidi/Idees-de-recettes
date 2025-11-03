@@ -30815,7 +30815,7 @@
         "originalName": "Empanadas de Jamón y Queso",
         "country": "Argentine",
         "flag": "🇦🇷",
-        "continent": "Amérique du Nord",
+        "continent": "Amérique du Sud",
         "type": "Four / Rôtir",
         "description": "Chaussons cuits au four, farcis de jambon cuit et de fromage (Mozzarella ou Tybo).",
         "prepTime": 60,
@@ -33057,6 +33057,3928 @@
             "graines de coriandre",
             "ail",
             "farine de maïs"
+        ]
+    },
+    {
+        "id": 1724,
+        "name": "Palak Paneer",
+        "originalName": "Palak Paneer",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût végétarien crémeux d'épinards (Palak) et de fromage (Paneer), mijoté avec gingembre, ail et épices.",
+        "prepTime": 45,
+        "ingredients": [
+            "Épinards",
+            "Paneer",
+            "Oignons",
+            "Tomates",
+            "Crème",
+            "Gingembre",
+            "Ail",
+            "Garam masala",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1725,
+        "name": "Aloo Matar",
+        "originalName": "Aloo Matar",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry végétarien simple du Pendjab, à base de pommes de terre (Aloo) et de petits pois (Matar) dans une sauce tomate épicée.",
+        "prepTime": 40,
+        "ingredients": [
+            "Pommes de terre",
+            "Petits pois",
+            "Tomates",
+            "Oignons",
+            "Gingembre",
+            "Ail",
+            "Cumin",
+            "Coriandre (poudre)",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1726,
+        "name": "Malai Kofta",
+        "originalName": "Malai Kofta",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Boulettes (Kofta) frites de pomme de terre et paneer, mijotées dans une sauce curry très riche, crémeuse (Malai) et sucrée.",
+        "prepTime": 75,
+        "ingredients": [
+            "Pommes de terre",
+            "Paneer",
+            "Crème (Malai)",
+            "Oignons",
+            "Tomates",
+            "Noix de cajou",
+            "Raisins secs",
+            "Cardamome"
+        ]
+    },
+    {
+        "id": 1727,
+        "name": "Navratan Korma",
+        "originalName": "Navratan Korma",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry 'neuf joyaux'. Mélange de légumes, fruits secs et noix mijotés dans une sauce korma (crème, yaourt) très douce.",
+        "prepTime": 60,
+        "ingredients": [
+            "Carottes",
+            "Haricots verts",
+            "Petits pois",
+            "Pommes de terre",
+            "Chou-fleur",
+            "Crème",
+            "Noix de cajou",
+            "Ananas",
+            "Raisins secs"
+        ]
+    },
+    {
+        "id": 1728,
+        "name": "Matar Paneer",
+        "originalName": "Matar Paneer",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry végétarien populaire combinant petits pois (Matar) et fromage (Paneer) dans une sauce tomate onctueuse.",
+        "prepTime": 45,
+        "ingredients": [
+            "Paneer",
+            "Petits pois",
+            "Tomates",
+            "Oignons",
+            "Crème",
+            "Gingembre",
+            "Ail",
+            "Garam masala"
+        ]
+    },
+    {
+        "id": 1729,
+        "name": "Shahi Paneer",
+        "originalName": "Shahi Paneer",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry 'Royal' (Shahi). Paneer mijoté dans une sauce très riche à base de crème, noix de cajou, oignons et safran.",
+        "prepTime": 50,
+        "ingredients": [
+            "Paneer",
+            "Crème",
+            "Noix de cajou",
+            "Yaourt",
+            "Oignons",
+            "Tomates",
+            "Safran",
+            "Cardamome"
+        ]
+    },
+    {
+        "id": 1730,
+        "name": "Baghare Baingan",
+        "originalName": "Baghare Baingan",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry d'aubergines (Hyderabadi) mijoté dans une sauce épaisse à base de cacahuètes, sésame et tamarin.",
+        "prepTime": 60,
+        "ingredients": [
+            "Aubergines (petites)",
+            "Cacahuètes",
+            "Graines de sésame",
+            "Noix de coco (séchée)",
+            "Tamarin",
+            "Curry (feuilles)",
+            "Graines de moutarde"
+        ]
+    },
+    {
+        "id": 1731,
+        "name": "Dum Aloo",
+        "originalName": "Dum Aloo",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry de pommes de terre (Aloo) du Cachemire. Pommes de terre (petites) frites puis mijotées dans une sauce épicée au yaourt et fenouil.",
+        "prepTime": 75,
+        "ingredients": [
+            "Pommes de terre (petites)",
+            "Yaourt",
+            "Piment du Cachemire",
+            "Fenouil (poudre)",
+            "Gingembre (sec)",
+            "Cardamome",
+            "Asafoetida"
+        ]
+    },
+    {
+        "id": 1732,
+        "name": "Kadai Paneer",
+        "originalName": "Kadai Paneer",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Paneer et poivrons mijotés dans une sauce tomate épicée, utilisant un mélange d'épices 'Kadai' (coriandre, piment sec).",
+        "prepTime": 50,
+        "ingredients": [
+            "Paneer",
+            "Poivrons (verts)",
+            "Tomates",
+            "Oignons",
+            "Coriandre (graines)",
+            "Piments (secs, rouges)",
+            "Gingembre"
+        ]
+    },
+    {
+        "id": 1733,
+        "name": "Kadhai Chicken",
+        "originalName": "Kadhai Chicken",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Poulet cuit dans un 'Kadhai' (wok) avec des poivrons et des oignons dans une sauce tomate épicée (similaire au Kadai Paneer).",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "Poivrons",
+            "Oignons",
+            "Tomates",
+            "Gingembre",
+            "Ail",
+            "Coriandre (graines)",
+            "Piments (secs)"
+        ]
+    },
+    {
+        "id": 1734,
+        "name": "Paneer Tikka Masala (Sauté)",
+        "originalName": "Paneer Tikka Masala",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Cubes de Paneer (grillés) sautés dans une sauce Masala (tomate, oignon, crème) onctueuse et épicée.",
+        "prepTime": 45,
+        "ingredients": [
+            "Paneer",
+            "Poivrons",
+            "Oignons",
+            "Tomates (purée)",
+            "Crème",
+            "Yaourt",
+            "Garam masala",
+            "Gingembre",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1735,
+        "name": "Baingan Bharta",
+        "originalName": "Baingan Bharta",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Purée d'aubergine (rôtie) sautée avec oignons, tomates, gingembre, ail et épices.",
+        "prepTime": 60,
+        "ingredients": [
+            "Aubergine (grosse)",
+            "Oignons",
+            "Tomates",
+            "Gingembre",
+            "Ail",
+            "Piment vert",
+            "Coriandre",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1736,
+        "name": "Jeera Aloo",
+        "originalName": "Jeera Aloo",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Accompagnement simple. Pommes de terre (Aloo) bouillies puis sautées avec une grande quantité de graines de cumin (Jeera).",
+        "prepTime": 25,
+        "ingredients": [
+            "Pommes de terre (cuites)",
+            "Cumin (graines)",
+            "Curcuma",
+            "Piment (poudre)",
+            "Coriandre (fraîche)",
+            "Amchur"
+        ]
+    },
+    {
+        "id": 1737,
+        "name": "Chicken Chettinad",
+        "originalName": "Chicken Chettinad",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Curry sauté très épicé du Sud de l'Inde (Tamil Nadu), réputé pour son utilisation de poivre noir et d'épices grillées.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "Poivre noir",
+            "Fenouil (graines)",
+            "Piments (secs)",
+            "Noix de coco (râpée)",
+            "Oignons",
+            "Gingembre",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1738,
+        "name": "Methi Chicken",
+        "originalName": "Methi Chicken",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Poulet sauté dans une sauce aux oignons et tomates, avec une saveur amère distinctive de feuilles de fenugrec (Methi).",
+        "prepTime": 50,
+        "ingredients": [
+            "Poulet",
+            "Fenugrec (feuilles, Methi)",
+            "Oignons",
+            "Tomates",
+            "Yaourt",
+            "Gingembre",
+            "Ail",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1739,
+        "name": "Paneer Butter Masala",
+        "originalName": "Paneer Butter Masala",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Paneer sauté dans une sauce 'Makhani' (beurre, tomate, noix de cajou), douce, crémeuse et légèrement sucrée.",
+        "prepTime": 45,
+        "ingredients": [
+            "Paneer",
+            "Tomates",
+            "Noix de cajou",
+            "Beurre",
+            "Crème",
+            "Garam masala",
+            "Miel",
+            "Fenugrec (feuilles)"
+        ]
+    },
+    {
+        "id": 1740,
+        "name": "Œufs Brouillés Masala",
+        "originalName": "Egg Bhurji",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Version indienne des œufs brouillés, sautés avec oignons, tomates, piments et curcuma.",
+        "prepTime": 15,
+        "ingredients": [
+            "Œufs",
+            "Oignons",
+            "Tomates",
+            "Piment vert",
+            "Curcuma",
+            "Garam masala",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1741,
+        "name": "Chilli Paneer (Sec)",
+        "originalName": "Chilli Paneer (Dry)",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Plat indo-chinois. Cubes de paneer frits et sautés avec poivrons, oignons et une sauce soja pimentée.",
+        "prepTime": 35,
+        "ingredients": [
+            "Paneer",
+            "Fécule de maïs",
+            "Poivrons",
+            "Oignons",
+            "Sauce soja",
+            "Vinaigre",
+            "Sauce chili",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1742,
+        "name": "Chilli Chicken (Sec)",
+        "originalName": "Chilli Chicken (Dry)",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Plat indo-chinois. Poulet frit sauté avec poivrons, oignons et sauce soja pimentée.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poulet",
+            "Fécule de maïs",
+            "Poivrons",
+            "Oignons",
+            "Sauce soja",
+            "Vinaigre",
+            "Sauce chili",
+            "Ail",
+            "Gingembre"
+        ]
+    },
+    {
+        "id": 1743,
+        "name": "Aloo Shimla Mirch",
+        "originalName": "Aloo Shimla Mirch",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Sauté sec de pommes de terre (Aloo) et de poivrons verts (Shimla Mirch) avec des épices (cumin, curcuma).",
+        "prepTime": 30,
+        "ingredients": [
+            "Pommes de terre",
+            "Poivrons verts",
+            "Oignons",
+            "Tomates",
+            "Cumin (graines)",
+            "Curcuma",
+            "Coriandre (poudre)"
+        ]
+    },
+    {
+        "id": 1744,
+        "name": "Tandoori Aloo",
+        "originalName": "Tandoori Aloo",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Pommes de terre (petites) marinées au yaourt (Masala Tandoori) et grillées au Tandoor ou barbecue.",
+        "prepTime": 50,
+        "ingredients": [
+            "Pommes de terre (petites)",
+            "Yaourt",
+            "Tandoori Masala",
+            "Pâte de gingembre-ail",
+            "Besan (farine de pois chiches)",
+            "Citron"
+        ]
+    },
+    {
+        "id": 1745,
+        "name": "Tandoori Gobi",
+        "originalName": "Tandoori Gobi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Fleurettes de chou-fleur marinées au yaourt Tandoori et grillées.",
+        "prepTime": 45,
+        "ingredients": [
+            "Chou-fleur",
+            "Yaourt",
+            "Tandoori Masala",
+            "Pâte de gingembre-ail",
+            "Besan",
+            "Citron",
+            "Ajwain"
+        ]
+    },
+    {
+        "id": 1746,
+        "name": "Boti Kebab",
+        "originalName": "Boti Kebab",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Cubes d'agneau (Boti) marinés au yaourt, épices et papaye (pour attendrir), grillés sur brochettes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Agneau (cubes)",
+            "Yaourt",
+            "Papaye (verte, pâte)",
+            "Gingembre",
+            "Ail",
+            "Garam masala",
+            "Piment"
+        ]
+    },
+    {
+        "id": 1747,
+        "name": "Reshmi Kebab",
+        "originalName": "Reshmi Kebab",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Kebab de poulet 'soyeux' (Reshmi), mariné dans de la crème, des noix de cajou et des épices douces (similaire au Malai Tikka).",
+        "prepTime": 50,
+        "ingredients": [
+            "Poulet (haché ou cubes)",
+            "Crème (Malai)",
+            "Noix de cajou (pâte)",
+            "Fromage (type cream cheese)",
+            "Cardamome",
+            "Poivre blanc"
+        ]
+    },
+    {
+        "id": 1748,
+        "name": "Tandoori Pomfret",
+        "originalName": "Tandoori Pomfret",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Poisson Pomfret entier mariné au Tandoori Masala et yaourt, grillé au Tandoor.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poisson (Pomfret)",
+            "Yaourt",
+            "Tandoori Masala",
+            "Pâte de gingembre-ail",
+            "Citron",
+            "Ajwain"
+        ]
+    },
+    {
+        "id": 1749,
+        "name": "Kalmi Kebab",
+        "originalName": "Kalmi Kebab",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Pilons de poulet (Kalmi) marinés dans une marinade blanche riche (cajou, crème, fromage) et grillés.",
+        "prepTime": 60,
+        "ingredients": [
+            "Pilons de poulet",
+            "Crème",
+            "Yaourt",
+            "Noix de cajou (pâte)",
+            "Gingembre",
+            "Ail",
+            "Cardamome"
+        ]
+    },
+    {
+        "id": 1750,
+        "name": "Hara Bhara Kebab",
+        "originalName": "Hara Bhara Kebab",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Kebab végétarien 'vert' (Hara). Galette d'épinards, petits pois et pommes de terre, grillée (ou poêlée).",
+        "prepTime": 45,
+        "ingredients": [
+            "Épinards",
+            "Petits pois",
+            "Pommes de terre",
+            "Paneer (optionnel)",
+            "Gingembre",
+            "Piment vert",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1751,
+        "name": "Dal Shorba",
+        "originalName": "Dal Shorba",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe indienne légère à base de lentilles (Moong Dal) mixées, curcuma et gingembre, garnie de coriandre.",
+        "prepTime": 35,
+        "ingredients": [
+            "Lentilles (Moong Dal)",
+            "Curcuma",
+            "Gingembre",
+            "Ail",
+            "Cumin (graines)",
+            "Citron",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1752,
+        "name": "Tomato Shorba",
+        "originalName": "Tamatar Shorba",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Velouté de tomates indien, légèrement épicé (gingembre, poivre noir) et souvent garni de croûtons épicés.",
+        "prepTime": 40,
+        "ingredients": [
+            "Tomates",
+            "Gingembre",
+            "Ail",
+            "Poivre noir",
+            "Laurier",
+            "Sucre",
+            "Crème (optionnel)"
+        ]
+    },
+    {
+        "id": 1753,
+        "name": "Murgh Shorba",
+        "originalName": "Murgh Shorba",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de poulet indienne claire, parfumée au poivre noir, cardamome et safran.",
+        "prepTime": 50,
+        "ingredients": [
+            "Poulet (bouillon)",
+            "Oignons",
+            "Gingembre",
+            "Ail",
+            "Poivre noir",
+            "Cardamome",
+            "Safran",
+            "Amandes (effilées)"
+        ]
+    },
+    {
+        "id": 1754,
+        "name": "Palak Shorba",
+        "originalName": "Palak Shorba",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe veloutée d'épinards (Palak), parfumée à l'ail et au cumin.",
+        "prepTime": 30,
+        "ingredients": [
+            "Épinards",
+            "Oignons",
+            "Ail",
+            "Gingembre",
+            "Cumin",
+            "Crème (garniture)",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1755,
+        "name": "Soupe Maïs (Indo-Chinoise)",
+        "originalName": "Sweet Corn Soup",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe indo-chinoise populaire. Velouté de maïs (crème et grains) avec légumes finement hachés (carottes).",
+        "prepTime": 25,
+        "ingredients": [
+            "Maïs (en crème)",
+            "Maïs (en grains)",
+            "Carottes",
+            "Haricots verts",
+            "Vinaigre",
+            "Sauce soja",
+            "Poivre blanc"
+        ]
+    },
+    {
+        "id": 1756,
+        "name": "Soupe Aigre-Piquante (Indienne)",
+        "originalName": "Hot and Sour Soup",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Version indo-chinoise de la soupe aigre-piquante, souvent végétarienne (champignons, carottes, chou) et très épicée.",
+        "prepTime": 30,
+        "ingredients": [
+            "Champignons",
+            "Carottes",
+            "Chou",
+            "Tofu",
+            "Sauce soja",
+            "Vinaigre",
+            "Huile de piment",
+            "Poivre blanc"
+        ]
+    },
+    {
+        "id": 1757,
+        "name": "Poisson en Feuille de Bananier",
+        "originalName": "Patrani Machhi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Plat Parsi. Poisson (Pomfret) enrobé d'un chutney vert (coriandre, menthe, coco) et cuit à la vapeur dans une feuille de bananier.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poisson (Pomfret)",
+            "Feuilles de bananier",
+            "Coriandre",
+            "Menthe",
+            "Noix de coco (râpée)",
+            "Piment vert",
+            "Cumin"
+        ]
+    },
+    {
+        "id": 1758,
+        "name": "Beignets Coriandre (Vapeur)",
+        "originalName": "Kothimbir Vadi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Snack du Maharashtra. Gâteau de farine de pois chiches (Besan) et coriandre, cuit vapeur puis (souvent) frit.",
+        "prepTime": 50,
+        "ingredients": [
+            "Farine de pois chiches (Besan)",
+            "Coriandre (fraîche, abondante)",
+            "Piment vert",
+            "Gingembre",
+            "Ail",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1759,
+        "name": "Gâteau Riz et Coco (Vapeur)",
+        "originalName": "Ela Ada",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Dessert du Kerala. Pâte de farine de riz farcie de noix de coco et Jaggery, cuite vapeur en feuille de bananier.",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine de riz",
+            "Noix de coco (râpée)",
+            "Jaggery (sucre de palme)",
+            "Cardamome",
+            "Feuilles de bananier"
+        ]
+    },
+    {
+        "id": 1760,
+        "name": "Naan (Pain Tandoori)",
+        "originalName": "Naan",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Pain plat levé (yaourt, levure) cuit au Tandoor (four d'argile) ou au four, souvent badigeonné de beurre (ghee).",
+        "prepTime": 90,
+        "ingredients": [
+            "Farine",
+            "Yaourt",
+            "Levure",
+            "Lait",
+            "Ghee (beurre clarifié)",
+            "Nigelle (graines)"
+        ]
+    },
+    {
+        "id": 1761,
+        "name": "Roti (Tandoori)",
+        "originalName": "Tandoori Roti",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Pain plat non levé (farine complète, Atta) cuit au Tandoor (four d'argile).",
+        "prepTime": 40,
+        "ingredients": [
+            "Farine de blé complet (Atta)",
+            "Eau",
+            "Sel",
+            "Ghee (optionnel)"
+        ]
+    },
+    {
+        "id": 1762,
+        "name": "Kulcha (Amritsari)",
+        "originalName": "Amritsari Kulcha",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Pain plat levé, farci de pommes de terre épicées et d'oignons, cuit au Tandoor.",
+        "prepTime": 120,
+        "ingredients": [
+            "Farine (Maida)",
+            "Levure",
+            "Yaourt",
+            "Pommes de terre",
+            "Oignons",
+            "Coriandre",
+            "Piment vert"
+        ]
+    },
+    {
+        "id": 1763,
+        "name": "Paneer Tikka (Tandoor)",
+        "originalName": "Paneer Tikka",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Version authentique (ID 489) cuite au Tandoor. Paneer, poivrons et oignons marinés au yaourt et épices.",
+        "prepTime": 50,
+        "ingredients": [
+            "Paneer",
+            "Yaourt",
+            "Pâte de gingembre-ail",
+            "Tandoori Masala",
+            "Poivrons",
+            "Oignons",
+            "Besan"
+        ]
+    },
+    {
+        "id": 1764,
+        "name": "Papdi (Chaat)",
+        "originalName": "Papdi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Petits crackers ronds (disques de pâte) frits et croustillants, utilisés comme base pour le Chaat (salades).",
+        "prepTime": 40,
+        "ingredients": [
+            "Farine (Maida)",
+            "Semoule (Rava)",
+            "Ajwain",
+            "Ghee",
+            "Huile (friture)",
+            "Sel"
+        ]
+    },
+    {
+        "id": 1765,
+        "name": "Beignets de Pain",
+        "originalName": "Bread Pakora",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Sandwich (pain, pommes de terre épicées) trempé dans une pâte (Besan) et frit.",
+        "prepTime": 40,
+        "ingredients": [
+            "Pain de mie",
+            "Pommes de terre",
+            "Farine de pois chiches (Besan)",
+            "Piment vert",
+            "Garam masala",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1766,
+        "name": "Gobi Manchurian (Sauce)",
+        "originalName": "Gobi Manchurian (Gravy)",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Version 'sauce' du plat indo-chinois (ID 269). Chou-fleur frit nappé d'une sauce aigre-douce épaisse.",
+        "prepTime": 45,
+        "ingredients": [
+            "Chou-fleur",
+            "Fécule de maïs",
+            "Farine",
+            "Sauce soja",
+            "Vinaigre",
+            "Ketchup",
+            "Ail",
+            "Gingembre"
+        ]
+    },
+    {
+        "id": 1767,
+        "name": "Chilli Chicken (Sauce)",
+        "originalName": "Chilli Chicken (Gravy)",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Version 'sauce' du plat indo-chinois (ID 1742). Poulet frit nappé d'une sauce soja pimentée.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poulet",
+            "Fécule de maïs",
+            "Poivrons",
+            "Oignons",
+            "Sauce soja",
+            "Vinaigre",
+            "Sauce chili",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1768,
+        "name": "Chole Bhature",
+        "originalName": "Chole Bhature",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Plat complet. Curry de pois chiches (Chole) servi avec du pain frit levé (Bhature, ID 1191).",
+        "prepTime": 120,
+        "ingredients": [
+            "Pois chiches",
+            "Bhature (pain frit)",
+            "Oignons",
+            "Tomates",
+            "Gingembre",
+            "Ail",
+            "Chole Masala"
+        ]
+    },
+    {
+        "id": 1769,
+        "name": "Dahi Vada",
+        "originalName": "Dahi Vada",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Beignets de lentilles (Vada, frits) trempés dans l'eau, puis servis froids dans du yaourt (Dahi) battu et des chutneys.",
+        "prepTime": 60,
+        "ingredients": [
+            "Lentilles (Urad Dal)",
+            "Yaourt",
+            "Chutney (Tamarin)",
+            "Chutney (Menthe)",
+            "Cumin (poudre)",
+            "Piment (poudre)"
+        ]
+    },
+    {
+        "id": 1770,
+        "name": "Rava Dosa",
+        "originalName": "Rava Dosa",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Crêpe sud-indienne (Dosa) croustillante (texture 'dentelle') à base de semoule (Rava), frite à la poêle (shallow fry).",
+        "prepTime": 30,
+        "ingredients": [
+            "Semoule (Rava)",
+            "Farine de riz",
+            "Farine (Maida)",
+            "Piment vert",
+            "Gingembre",
+            "Poivre noir",
+            "Cumin"
+        ]
+    },
+    {
+        "id": 1771,
+        "name": "Mysore Bonda",
+        "originalName": "Mysore Bonda",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Beignet (Bonda) du Sud, pâte (farine, yaourt) moelleuse avec gingembre et coco, frite en boule.",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine (Maida)",
+            "Yaourt",
+            "Farine de riz",
+            "Gingembre",
+            "Piment vert",
+            "Noix de coco (râpée)",
+            "Feuilles de curry"
+        ]
+    },
+    {
+        "id": 1772,
+        "name": "Balushahi",
+        "originalName": "Balushahi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Pâtisserie indienne (style doughnut) friable, frite et trempée dans un sirop de sucre.",
+        "prepTime": 60,
+        "ingredients": [
+            "Farine (Maida)",
+            "Ghee",
+            "Yaourt",
+            "Levure chimique",
+            "Sucre (sirop)",
+            "Cardamome"
+        ]
+    },
+    {
+        "id": 1773,
+        "name": "Raita (Concombre)",
+        "originalName": "Cucumber Raita",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Accompagnement rafraîchissant. Yaourt (Dahi) battu avec du concombre râpé, du cumin grillé et de la coriandre.",
+        "prepTime": 10,
+        "ingredients": [
+            "Yaourt",
+            "Concombre",
+            "Cumin (poudre, grillé)",
+            "Coriandre",
+            "Sel",
+            "Piment (poudre, optionnel)"
+        ]
+    },
+    {
+        "id": 1774,
+        "name": "Raita (Boondi)",
+        "originalName": "Boondi Raita",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Yaourt battu mélangé avec du 'Boondi' (petites billes de farine de pois chiches frites) et des épices.",
+        "prepTime": 10,
+        "ingredients": [
+            "Yaourt",
+            "Boondi (frit)",
+            "Cumin (poudre, grillé)",
+            "Piment (poudre)",
+            "Sel"
+        ]
+    },
+    {
+        "id": 1775,
+        "name": "Dahi Puri",
+        "originalName": "Dahi Puri",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Snack (Chaat). Coquilles (Puri) frites, farcies de pommes de terre, yaourt (Dahi) sucré et chutneys.",
+        "prepTime": 30,
+        "ingredients": [
+            "Puri (coquilles)",
+            "Pommes de terre (cuites)",
+            "Pois chiches",
+            "Yaourt (sucré)",
+            "Chutney (Tamarin)",
+            "Chutney (Menthe)",
+            "Sev (vermicelles frits)"
+        ]
+    },
+    {
+        "id": 1776,
+        "name": "Sev Puri",
+        "originalName": "Sev Puri",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Snack (Chaat). Crackers (Papdi) garnis de pommes de terre, oignons, chutneys et recouverts de 'Sev' (vermicelles frits).",
+        "prepTime": 25,
+        "ingredients": [
+            "Papdi (crackers)",
+            "Pommes de terre (cuites)",
+            "Oignons",
+            "Chutney (Tamarin)",
+            "Chutney (Menthe)",
+            "Sev (vermicelles frits)",
+            "Mangue (crue)"
+        ]
+    },
+    {
+        "id": 1777,
+        "name": "Bhelpuri",
+        "originalName": "Bhelpuri",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Snack (Chaat) de Mumbai. Riz soufflé (Bhel) mélangé avec oignons, tomates, chutneys et Sev.",
+        "prepTime": 20,
+        "ingredients": [
+            "Riz soufflé (Bhel)",
+            "Oignons",
+            "Tomates",
+            "Pommes de terre",
+            "Chutney (Tamarin)",
+            "Chutney (Menthe)",
+            "Sev",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1778,
+        "name": "Papdi Chaat",
+        "originalName": "Papdi Chaat",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Snack (Chaat). Crackers (Papdi) garnis de pois chiches, pommes de terre, yaourt et chutneys.",
+        "prepTime": 25,
+        "ingredients": [
+            "Papdi (crackers)",
+            "Pois chiches",
+            "Pommes de terre",
+            "Yaourt",
+            "Chutney (Tamarin)",
+            "Chutney (Menthe)",
+            "Sev"
+        ]
+    },
+    {
+        "id": 1779,
+        "name": "Lassi (Mangue)",
+        "originalName": "Mango Lassi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boisson au yaourt mixée avec de la pulpe de mangue, du sucre et (parfois) de la cardamome.",
+        "prepTime": 10,
+        "ingredients": [
+            "Yaourt",
+            "Mangue (pulpe)",
+            "Lait",
+            "Sucre",
+            "Cardamome"
+        ]
+    },
+    {
+        "id": 1780,
+        "name": "Lassi (Sucré)",
+        "originalName": "Sweet Lassi",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boisson au yaourt (Pendjab) battu avec du sucre et de l'eau de rose, servie mousseuse.",
+        "prepTime": 10,
+        "ingredients": [
+            "Yaourt",
+            "Sucre",
+            "Eau de rose",
+            "Cardamome",
+            "Pistaches (garniture)"
+        ]
+    },
+    {
+        "id": 1781,
+        "name": "Kachumber (Salade)",
+        "originalName": "Kachumber Salad",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade indienne hachée. Dés fins de concombre, tomate et oignon, assaisonnés de citron et coriandre.",
+        "prepTime": 15,
+        "ingredients": [
+            "Concombre",
+            "Tomates",
+            "Oignon rouge",
+            "Jus de citron",
+            "Coriandre",
+            "Piment vert"
+        ]
+    },
+    {
+        "id": 1782,
+        "name": "Chaas (Babeurre)",
+        "originalName": "Chaas",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boisson digestive. Yaourt dilué (babeurre) épicé au gingembre, cumin grillé, sel noir et coriandre.",
+        "prepTime": 10,
+        "ingredients": [
+            "Yaourt",
+            "Eau",
+            "Gingembre",
+            "Cumin (poudre, grillé)",
+            "Sel noir (Kala Namak)",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1783,
+        "name": "Panipuri",
+        "originalName": "Panipuri / Golgappa",
+        "country": "Inde",
+        "flag": "🇮🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Snack (Chaat). Coquilles (Puri) frites et creuses, farcies de pommes de terre/pois chiches, et remplies d'eau épicée (Pani).",
+        "prepTime": 45,
+        "ingredients": [
+            "Puri (coquilles)",
+            "Pommes de terre",
+            "Pois chiches",
+            "Eau (Pani)",
+            "Menthe",
+            "Coriandre",
+            "Tamarin",
+            "Piment"
+        ]
+    },
+    {
+        "id": 1784,
+        "name": "Khoresh Ghormeh Sabzi",
+        "originalName": "خورشت قورمه‌ سبزی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût national iranien. Agneau et haricots rouges mijotés dans une base d'herbes sautées (Sabzi) et de citrons noirs.",
+        "prepTime": 240,
+        "ingredients": [
+            "Agneau (ou bœuf)",
+            "Herbes (Persil, Coriandre, Ciboule)",
+            "Fenugrec (feuilles séchées)",
+            "Haricots rouges",
+            "Citrons noirs (Limoo Amani)",
+            "Oignons"
+        ]
+    },
+    {
+        "id": 1785,
+        "name": "Abgoosht (Dizi)",
+        "originalName": "آبگوشت (Dizi)",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût d'agneau et pois chiches cuit lentement. Le bouillon est bu, le reste est pilé (Goosht Kubideh).",
+        "prepTime": 240,
+        "ingredients": [
+            "Agneau (jarret, os)",
+            "Pois chiches",
+            "Haricots blancs",
+            "Pommes de terre",
+            "Tomates",
+            "Citrons noirs (Limoo Amani)"
+        ]
+    },
+    {
+        "id": 1786,
+        "name": "Khoresh Bamieh",
+        "originalName": "خورشت بامیه",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût d'agneau (ou bœuf) et de gombo (Bamieh) mijoté dans une sauce tomate acidulée (jus de citron ou tamarin).",
+        "prepTime": 120,
+        "ingredients": [
+            "Agneau (ou bœuf)",
+            "Gombo (Okra)",
+            "Tomates (concentré)",
+            "Oignons",
+            "Ail",
+            "Jus de citron vert (ou Tamarin)"
+        ]
+    },
+    {
+        "id": 1787,
+        "name": "Khoresh Rivas",
+        "originalName": "خورشت ریواس",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût de printemps. Agneau (ou bœuf) mijoté avec de la rhubarbe (Rivas), de la menthe et du persil.",
+        "prepTime": 120,
+        "ingredients": [
+            "Agneau (ou bœuf)",
+            "Rhubarbe",
+            "Menthe",
+            "Persil",
+            "Oignons",
+            "Céleri"
+        ]
+    },
+    {
+        "id": 1788,
+        "name": "Baghali Ghatogh",
+        "originalName": "باقالی قاتق",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût végétarien du Nord (Gilan) à base de fèves (Baghali), d'aneth et d'œufs pochés dans le ragoût.",
+        "prepTime": 60,
+        "ingredients": [
+            "Fèves (fraîches ou séchées)",
+            "Aneth (abondant)",
+            "Ail",
+            "Œufs",
+            "Curcuma",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1789,
+        "name": "Kalleh Pacheh",
+        "originalName": "کله پاچه",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Soupe/ragoût d'abats (tête et pieds de mouton) mijoté très longuement, servi au petit-déjeuner.",
+        "prepTime": 480,
+        "ingredients": [
+            "Tête de mouton",
+            "Pieds de mouton",
+            "Oignons",
+            "Ail",
+            "Curcuma",
+            "Cannelle"
+        ]
+    },
+    {
+        "id": 1790,
+        "name": "Mirza Ghasemi",
+        "originalName": "میرزا قاسمی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Entrée/ragoût du Nord. Aubergines fumées, tomates et beaucoup d'ail, avec des œufs brouillés dedans.",
+        "prepTime": 60,
+        "ingredients": [
+            "Aubergines (fumées)",
+            "Ail (abondant)",
+            "Tomates",
+            "Œufs",
+            "Curcuma",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1791,
+        "name": "Adasi (Soupe Lentilles)",
+        "originalName": "عدسی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Soupe de lentilles (brunes) épaisse, mijotée avec oignons et parfois pommes de terre, servie au petit-déjeuner.",
+        "prepTime": 60,
+        "ingredients": [
+            "Lentilles (brunes)",
+            "Oignons",
+            "Pommes de terre (optionnel)",
+            "Curcuma",
+            "Pâte de tomate",
+            "Cumin"
+        ]
+    },
+    {
+        "id": 1792,
+        "name": "Khoresht-e Aloo",
+        "originalName": "خورشت آلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût de poulet (ou bœuf) mijoté avec des pruneaux (Aloo) dans une sauce tomate safranée.",
+        "prepTime": 120,
+        "ingredients": [
+            "Poulet",
+            "Pruneaux (secs)",
+            "Oignons",
+            "Pâte de tomate",
+            "Safran",
+            "Sucre (optionnel)"
+        ]
+    },
+    {
+        "id": 1793,
+        "name": "Khoresht-e Mast",
+        "originalName": "خورشت ماست",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Dessert/accompagnement unique d'Ispahan. 'Ragoût' de yaourt, agneau (jarret, pilé), safran et sucre, servi froid.",
+        "prepTime": 180,
+        "ingredients": [
+            "Jarret d'agneau",
+            "Yaourt (égoutté)",
+            "Safran",
+            "Sucre",
+            "Eau de rose",
+            "Zereshk (épine-vinette)"
+        ]
+    },
+    {
+        "id": 1794,
+        "name": "Kookoo Sabzi",
+        "originalName": "کوکو سبزی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Frittata d'herbes persane. Omelette épaisse (sautée à la poêle) dense en herbes fraîches (persil, coriandre, aneth).",
+        "prepTime": 40,
+        "ingredients": [
+            "Œufs",
+            "Persil",
+            "Coriandre",
+            "Aneth",
+            "Ciboulette",
+            "Noix",
+            "Zereshk (épine-vinette)",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1795,
+        "name": "Kookoo Sibzamini",
+        "originalName": "کوکو سیب‌ زمینی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Galette/Frittata de pommes de terre (râpées ou purée) et œufs, sautée à la poêle (shallow fry).",
+        "prepTime": 45,
+        "ingredients": [
+            "Pommes de terre",
+            "Œufs",
+            "Oignons",
+            "Curcuma",
+            "Safran (optionnel)",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1796,
+        "name": "Nargesi",
+        "originalName": "نرگسی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Plat d'épinards 'Narcisse'. Épinards sautés à l'oignon, sur lesquels des œufs sont cassés (style Chakchouka).",
+        "prepTime": 25,
+        "ingredients": [
+            "Épinards",
+            "Oignons",
+            "Œufs",
+            "Ail",
+            "Curcuma",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1797,
+        "name": "Sosis Bandari",
+        "originalName": "سوسیس بندری",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Street-food du Sud ('Port'). Saucisses (type hot-dog) sautées avec oignons et une sauce tomate très pimentée.",
+        "prepTime": 30,
+        "ingredients": [
+            "Saucisses (hot-dog)",
+            "Oignons",
+            "Pâte de tomate",
+            "Piment (poudre, fort)",
+            "Curcuma",
+            "Pommes de terre (frites, optionnel)"
+        ]
+    },
+    {
+        "id": 1798,
+        "name": "Kebab Torsh (Acide)",
+        "originalName": "کباب ترش",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Kebab du Nord (Gilan). Brochettes de bœuf (ou agneau) marinées dans une pâte de noix, mélasse de grenade et herbes.",
+        "prepTime": 40,
+        "ingredients": [
+            "Bœuf (filet)",
+            "Noix (moulues)",
+            "Mélasse de grenade",
+            "Ail",
+            "Persil",
+            "Menthe",
+            "Angélique (poudre)"
+        ]
+    },
+    {
+        "id": 1799,
+        "name": "Kebab Chenjeh",
+        "originalName": "کباب چنجه",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Brochettes de gigot d'agneau (gros cubes) marinées à l'oignon et citron, grillées (similaire au Shish Kebab turc).",
+        "prepTime": 40,
+        "ingredients": [
+            "Agneau (gigot, cubes)",
+            "Oignon",
+            "Jus de citron",
+            "Huile d'olive",
+            "Poivre noir"
+        ]
+    },
+    {
+        "id": 1800,
+        "name": "Shishlik (Iranien)",
+        "originalName": "شیشلیک",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Brochettes de côtelettes d'agneau (carré) marinées au safran et oignon, grillées.",
+        "prepTime": 40,
+        "ingredients": [
+            "Agneau (côtelettes)",
+            "Oignon",
+            "Safran",
+            "Jus de citron",
+            "Yaourt"
+        ]
+    },
+    {
+        "id": 1801,
+        "name": "Mahi Kebab (Poisson)",
+        "originalName": "ماهی کباب",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Poisson blanc (Esturgeon, Lotte) grillé, mariné au safran, citron et huile d'olive.",
+        "prepTime": 35,
+        "ingredients": [
+            "Poisson blanc (ferme)",
+            "Safran",
+            "Jus de citron",
+            "Huile d'olive",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1802,
+        "name": "Ash-e Doogh",
+        "originalName": "آش دوغ",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de yaourt (Doogh) d'Ardabil, épaisse, avec pois chiches, herbes (coriandre, aneth) et boulettes de viande.",
+        "prepTime": 90,
+        "ingredients": [
+            "Yaourt (ou Doogh)",
+            "Pois chiches",
+            "Riz",
+            "Bœuf haché (boulettes)",
+            "Herbes (Coriandre, Aneth, Persil)",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1803,
+        "name": "Ash-e Anar (Grenade)",
+        "originalName": "آش انار",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de grenade aigre-douce, avec riz, pois cassés, herbes et boulettes de viande.",
+        "prepTime": 90,
+        "ingredients": [
+            "Jus de grenade",
+            "Mélasse de grenade",
+            "Riz",
+            "Pois cassés jaunes",
+            "Herbes (Menthe, Persil)",
+            "Bœuf haché (boulettes)"
+        ]
+    },
+    {
+        "id": 1804,
+        "name": "Ash-e Jo (Orge)",
+        "originalName": "آش جو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe d'orge (Jo) épaisse avec légumineuses (lentilles, haricots) et herbes, garnie de Kashk.",
+        "prepTime": 120,
+        "ingredients": [
+            "Orge (perlé)",
+            "Lentilles",
+            "Haricots (rouges)",
+            "Pois chiches",
+            "Herbes (Persil, Coriandre, Aneth)",
+            "Kashk (petit-lait)",
+            "Oignons frits"
+        ]
+    },
+    {
+        "id": 1805,
+        "name": "Soupe Morgh (Poulet)",
+        "originalName": "سوپ مرغ",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de poulet iranienne (type Chicken Noodle), avec vermicelles (ou orzo), carottes et persil.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "Vermicelles (ou Orzo)",
+            "Carottes",
+            "Oignons",
+            "Persil",
+            "Pâte de tomate",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1806,
+        "name": "Tahchin (Gâteau de Riz)",
+        "originalName": "ته چین",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Gâteau de riz iranien cuit au four. Riz au safran mélangé au yaourt et œufs, formant une croûte (Tahdig), souvent farci de poulet.",
+        "prepTime": 120,
+        "ingredients": [
+            "Riz (Basmati)",
+            "Yaourt",
+            "Safran (abondant)",
+            "Œufs (jaunes)",
+            "Poulet (cuit)",
+            "Zereshk (épine-vinette)",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1807,
+        "name": "Kookoo Bademjan (Aubergine)",
+        "originalName": "کوکو بادمجان",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Frittata (Kookoo) d'aubergines (frites ou rôties) et d'œufs, cuite au four (ou poêlée).",
+        "prepTime": 60,
+        "ingredients": [
+            "Aubergines",
+            "Œufs",
+            "Oignons",
+            "Curcuma",
+            "Noix (optionnel)",
+            "Farine"
+        ]
+    },
+    {
+        "id": 1808,
+        "name": "Tahdig (Riz Frit)",
+        "originalName": "ته دیگ",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "La croûte de riz croustillante au fond de la casserole (frite dans l'huile/beurre), souvent au safran ou avec des pommes de terre.",
+        "prepTime": 45,
+        "ingredients": [
+            "Riz (Basmati, pré-cuit)",
+            "Huile (ou Beurre)",
+            "Safran",
+            "Pommes de terre (tranches, optionnel)",
+            "Pain Lavash (optionnel)"
+        ]
+    },
+    {
+        "id": 1809,
+        "name": "Kotlet (Croquette Viande)",
+        "originalName": "کتلت",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Galette de viande hachée (bœuf) et pommes de terre (cuites ou crues), panée (chapelure) et frite (shallow fry).",
+        "prepTime": 45,
+        "ingredients": [
+            "Bœuf haché",
+            "Pommes de terre",
+            "Oignons",
+            "Œufs",
+            "Chapelure",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1810,
+        "name": "Bal-e Kababi (Ailes frites)",
+        "originalName": "بال کبابی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Ailes de poulet marinées au safran et oignon (style Kebab) mais frites (friture peu profonde) au lieu d'être grillées.",
+        "prepTime": 35,
+        "ingredients": [
+            "Ailes de poulet",
+            "Safran",
+            "Oignon",
+            "Jus de citron",
+            "Huile (friture)"
+        ]
+    },
+    {
+        "id": 1811,
+        "name": "Mast-o-Khiar",
+        "originalName": "ماست و خیار",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Accompagnement (Tzatziki iranien). Yaourt, concombre haché, menthe séchée et noix (ou raisins secs).",
+        "prepTime": 15,
+        "ingredients": [
+            "Yaourt",
+            "Concombre",
+            "Menthe séchée",
+            "Noix",
+            "Raisins secs",
+            "Eau de rose (optionnel)"
+        ]
+    },
+    {
+        "id": 1812,
+        "name": "Mast-o-Musir",
+        "originalName": "ماست و موسیر",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Trempette de yaourt (Mast) et d'échalotes persanes (Musir) séchées et réhydratées.",
+        "prepTime": 15,
+        "ingredients": [
+            "Yaourt (égoutté)",
+            "Échalotes persanes (Musir, séchées)",
+            "Sel",
+            "Poivre"
+        ]
+    },
+    {
+        "id": 1813,
+        "name": "Torshi (Pickles)",
+        "originalName": "ترشی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Assortiment de légumes (chou-fleur, carottes, ail) marinés (pickles) dans du vinaigre et des épices (Torshi).",
+        "prepTime": 30,
+        "ingredients": [
+            "Vinaigre",
+            "Chou-fleur",
+            "Carottes",
+            "Céleri",
+            "Ail",
+            "Piment",
+            "Herbes (Estragon, Menthe)"
+        ]
+    },
+    {
+        "id": 1814,
+        "name": "Botvinya",
+        "originalName": "Ботвинья",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Soupe froide d'été (ancienne). Bouillon de Kvas avec feuilles de betteraves, oseille, oignons verts et poisson (Esturgeon).",
+        "prepTime": 45,
+        "ingredients": [
+            "Kvas",
+            "Feuilles de betterave",
+            "Oseille",
+            "Oignons verts",
+            "Poisson (Esturgeon, cuit)",
+            "Raifort",
+            "Glace"
+        ]
+    },
+    {
+        "id": 1815,
+        "name": "Svekolnik (Borscht Froid)",
+        "originalName": "Свекольник",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Soupe froide de betteraves, similaire au Chłodnik polonais, à base de kéfir ou de bouillon de betterave aigre.",
+        "prepTime": 30,
+        "ingredients": [
+            "Betteraves (cuites)",
+            "Kéfir (ou bouillon de betterave)",
+            "Concombre",
+            "Œufs durs",
+            "Aneth",
+            "Crème aigre"
+        ]
+    },
+    {
+        "id": 1816,
+        "name": "Zharkoye (Pot-au-feu Russe)",
+        "originalName": "Жаркое",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de bœuf (ou porc) et pommes de terre, cuit lentement en pots (Gorshok) avec crème aigre.",
+        "prepTime": 120,
+        "ingredients": [
+            "Bœuf (ou porc)",
+            "Pommes de terre",
+            "Oignons",
+            "Carottes",
+            "Crème aigre (Smetana)",
+            "Laurier",
+            "Aneth"
+        ]
+    },
+    {
+        "id": 1817,
+        "name": "Pelmeni",
+        "originalName": "Пельмени",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Raviolis russes (sibériens) farcis de viande (bœuf, porc), bouillis (mijotés) et servis avec crème aigre ou beurre.",
+        "prepTime": 75,
+        "ingredients": [
+            "Farine",
+            "Œufs",
+            "Bœuf haché",
+            "Porc haché",
+            "Oignons",
+            "Crème aigre (pour servir)",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1818,
+        "name": "Côtelettes Pozharsky",
+        "originalName": "Пожарские котлеты",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Côtelettes (boulettes) de poulet haché (ou veau) enrichies de beurre, panées de croûtons et sautées.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poulet (haché)",
+            "Pain (blanc)",
+            "Lait",
+            "Beurre",
+            "Croûtons (ou chapelure)",
+            "Huile (sauter)"
+        ]
+    },
+    {
+        "id": 1819,
+        "name": "Blini (Sarrasin)",
+        "originalName": "Блины",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Crêpes russes levées (pâte à la levure), souvent à la farine de sarrasin, sautées à la poêle et servies avec caviar ou saumon.",
+        "prepTime": 120,
+        "ingredients": [
+            "Farine de sarrasin",
+            "Farine",
+            "Levure",
+            "Lait",
+            "Œufs",
+            "Beurre",
+            "Caviar (pour servir)"
+        ]
+    },
+    {
+        "id": 1820,
+        "name": "Syrniki",
+        "originalName": "Сырники",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Galettes de fromage (Tvorog, type cottage) épaisses, sautées à la poêle et servies au petit-déjeuner avec confiture ou Smetana.",
+        "prepTime": 30,
+        "ingredients": [
+            "Fromage (Tvorog)",
+            "Farine",
+            "Œufs",
+            "Sucre",
+            "Vanille",
+            "Huile (sauter)",
+            "Crème aigre (Smetana)"
+        ]
+    },
+    {
+        "id": 1821,
+        "name": "Vatrushka",
+        "originalName": "Ватрушка",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Brioche russe cuite au four, en forme d'anneau, farcie de fromage (Tvorog) sucré au centre.",
+        "prepTime": 120,
+        "ingredients": [
+            "Farine",
+            "Levure",
+            "Lait",
+            "Beurre",
+            "Fromage (Tvorog)",
+            "Sucre",
+            "Œufs",
+            "Raisins secs"
+        ]
+    },
+    {
+        "id": 1822,
+        "name": "Vinegret",
+        "originalName": "Винегрет",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Salade russe de légumes cuits (betteraves, pommes de terre, carottes) froids, avec choucroute et cornichons.",
+        "prepTime": 45,
+        "ingredients": [
+            "Betteraves (cuites)",
+            "Pommes de terre (cuites)",
+            "Carottes (cuites)",
+            "Choucroute",
+            "Cornichons (malossol)",
+            "Oignons",
+            "Huile"
+        ]
+    },
+    {
+        "id": 1823,
+        "name": "Kholodets",
+        "originalName": "Холодец",
+        "country": "Russie",
+        "flag": "🇷🇺",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Aspic de viande russe. Viande (pieds de porc, bœuf) longuement mijotée, dont le bouillon gélifie naturellement, servi froid.",
+        "prepTime": 480,
+        "ingredients": [
+            "Pieds de porc",
+            "Jarret de bœuf",
+            "Carottes",
+            "Oignons",
+            "Ail",
+            "Laurier",
+            "Raifort (pour servir)"
+        ]
+    },
+{
+        "id": 1824,
+        "name": "Pão de Queijo",
+        "originalName": "Pão de Queijo",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Four / Rôtir",
+        "description": "Petits pains (choux) au fromage brésiliens, à base de fécule de manioc (tapioca) et de fromage (Minas ou Parmesan).",
+        "prepTime": 45,
+        "ingredients": [
+            "Fécule de manioc (Polvilho Azedo)",
+            "Lait",
+            "Huile",
+            "Œufs",
+            "Fromage (Minas ou Parmesan)",
+            "Sel"
+        ]
+    },
+    {
+        "id": 1825,
+        "name": "Poulet Frit (Passarinho)",
+        "originalName": "Frango à Passarinho",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Frire",
+        "description": "Petits morceaux de poulet (avec os) frits (grande friture) et servis avec beaucoup d'ail frit et de persil.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poulet (petits morceaux)",
+            "Ail (abondant)",
+            "Jus de citron vert",
+            "Persil",
+            "Huile (friture)",
+            "Farine (optionnel)"
+        ]
+    },
+    {
+        "id": 1826,
+        "name": "Gratin de Manioc (Escondidinho)",
+        "originalName": "Escondidinho",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Four / Rôtir",
+        "description": "Gratin 'caché'. Viande séchée (Carne Seca) mijotée, recouverte d'une purée de manioc (Aipim) et de fromage.",
+        "prepTime": 90,
+        "ingredients": [
+            "Manioc (Aipim)",
+            "Bœuf séché (Carne Seca)",
+            "Oignons",
+            "Ail",
+            "Fromage (Queijo Coalho)",
+            "Lait de coco",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1827,
+        "name": "Beignets de Morue (Brésil)",
+        "originalName": "Bolinho de Bacalhau",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Frire",
+        "description": "Version brésilienne des beignets de morue (ID 1122), mélange de morue, pommes de terre, œufs et persil, frit.",
+        "prepTime": 60,
+        "ingredients": [
+            "Morue salée",
+            "Pommes de terre",
+            "Œufs",
+            "Oignons",
+            "Persil",
+            "Huile (friture)"
+        ]
+    },
+    {
+        "id": 1828,
+        "name": "Salade de Poulet (Salpicão)",
+        "originalName": "Salpicão",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Froid / Cru",
+        "description": "Salade de poulet (froid) mélangée à de la mayonnaise, carottes, raisins secs, maïs et garnie de frites allumettes.",
+        "prepTime": 30,
+        "ingredients": [
+            "Poulet (cuit, effiloché)",
+            "Mayonnaise",
+            "Carottes (râpées)",
+            "Maïs",
+            "Raisins secs",
+            "Pommes",
+            "Frites allumettes (Batata Palha)"
+        ]
+    },
+    {
+        "id": 1829,
+        "name": "Riz et Haricots (Baião de Dois)",
+        "originalName": "Baião de Dois",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Mijoté",
+        "description": "Plat du Nord-Est. Riz et haricots (cornille) cuits ensemble (mijotés) avec fromage (Queijo Coalho) et viande séchée.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz",
+            "Haricots (cornille)",
+            "Bœuf séché (Carne Seca)",
+            "Fromage (Queijo Coalho)",
+            "Oignons",
+            "Ail",
+            "Lait de coco",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1830,
+        "name": "Poulet (Xinxim de Galinha)",
+        "originalName": "Xinxim de Galinha",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Mijoté",
+        "description": "Ragoût de poulet (Bahia) au lait de coco, huile de palme (Dendê), crevettes séchées et cacahuètes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "Lait de coco",
+            "Huile de palme (Dendê)",
+            "Crevettes séchées",
+            "Cacahuètes",
+            "Noix de cajou",
+            "Gingembre",
+            "Ail"
+        ]
+    },
+    {
+        "id": 1831,
+        "name": "Bœuf (Barreado)",
+        "originalName": "Barreado",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Mijoté",
+        "description": "Ragoût de bœuf (Paraná) cuit à l'étouffée (marmite scellée) très lentement jusqu'à ce qu'il s'effiloche, servi avec de la farine de manioc.",
+        "prepTime": 480,
+        "ingredients": [
+            "Bœuf (palette, poitrine)",
+            "Oignons",
+            "Ail",
+            "Bacon",
+            "Cumin",
+            "Laurier",
+            "Farine de manioc (Farinha)"
+        ]
+    },
+    {
+        "id": 1832,
+        "name": "Sandwich (Misto Quente)",
+        "originalName": "Misto Quente",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Grill",
+        "description": "Le 'Croque-Monsieur' brésilien. Pain de mie, jambon et fromage, pressé et grillé au beurre.",
+        "prepTime": 10,
+        "ingredients": [
+            "Pain de mie (Pão de forma)",
+            "Jambon (presunto)",
+            "Fromage (Queijo Mussarela)",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1833,
+        "name": "Flan Coco (Quindim)",
+        "originalName": "Quindim",
+        "country": "Brésil",
+        "flag": "🇧🇷",
+        "continent": "Amérique du Sud",
+        "type": "Vapeur",
+        "description": "Petit flan (cuit au bain-marie) à base de jaunes d'œufs, sucre et noix de coco râpée, très brillant.",
+        "prepTime": 60,
+        "ingredients": [
+            "Jaunes d'œufs (abondant)",
+            "Noix de coco (râpée)",
+            "Sucre",
+            "Lait de coco",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1834,
+        "name": "Salade de Papaye (Tam Mak Hoong)",
+        "originalName": "Tam Mak Hoong",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Version laotienne de la salade de papaye (ID 1357), plus rustique, souvent avec une sauce de poisson fermenté (Padek).",
+        "prepTime": 25,
+        "ingredients": [
+            "Papaye (verte)",
+            "Piments (oiseau)",
+            "Ail",
+            "Sauce poisson fermenté (Padek)",
+            "Jus de citron vert",
+            "Aubergines (petites)",
+            "Tomates"
+        ]
+    },
+    {
+        "id": 1835,
+        "name": "Poisson Vapeur (Mok Pa)",
+        "originalName": "Mok Pa",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Poisson (poisson-chat) cuit à la vapeur en papillote (feuille de bananier) avec herbes (aneth, citronnelle) et piment.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson (poisson-chat)",
+            "Feuilles de bananier",
+            "Aneth",
+            "Citronnelle",
+            "Ail",
+            "Échalotes",
+            "Piment",
+            "Sauce poisson"
+        ]
+    },
+    {
+        "id": 1836,
+        "name": "Soupe de Nouilles (Khao Poon)",
+        "originalName": "Khao Poon",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de nouilles (vermicelles de riz) au curry de poisson ou poulet, lait de coco, servie avec légumes crus.",
+        "prepTime": 75,
+        "ingredients": [
+            "Vermicelles de riz (bún)",
+            "Poulet (ou poisson)",
+            "Lait de coco",
+            "Pâte de curry rouge",
+            "Citronnelle",
+            "Galanga",
+            "Chou (râpé)"
+        ]
+    },
+    {
+        "id": 1837,
+        "name": "Bœuf Séché (Sien Savanh)",
+        "originalName": "Sien Savanh",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Bœuf (jerky) 'paradis'. Bœuf mariné (soja, sucre, sésame) et séché, puis grillé ou frit.",
+        "prepTime": 480,
+        "ingredients": [
+            "Bœuf (flanchet)",
+            "Sauce soja",
+            "Sauce poisson",
+            "Sucre",
+            "Gingembre",
+            "Ail",
+            "Graines de sésame"
+        ]
+    },
+    {
+        "id": 1838,
+        "name": "Dip Aubergine (Jeow Mak Keua)",
+        "originalName": "Jeow Mak Keua",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Trempette d'aubergines (grillées) et de piments, pilés avec ail, échalotes et sauce poisson.",
+        "prepTime": 35,
+        "ingredients": [
+            "Aubergines (grillées)",
+            "Piments (grillés)",
+            "Ail (grillé)",
+            "Échalotes (grillées)",
+            "Sauce poisson",
+            "Jus de citron vert",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1839,
+        "name": "Khao Soi (Laotien)",
+        "originalName": "Khao Soi",
+        "country": "Laos",
+        "flag": "🇱🇦",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Version laotienne (Luang Prabang) : nouilles plates de riz dans un bouillon clair, garnies d'un 'ragoût' de porc haché et tomate.",
+        "prepTime": 60,
+        "ingredients": [
+            "Nouilles de riz (plates)",
+            "Porc haché",
+            "Tomates",
+            "Pâte de soja fermentée",
+            "Ail",
+            "Piments",
+            "Bouillon de porc"
+        ]
+    },
+    {
+        "id": 1840,
+        "name": "Porc Grillé (Bai Sach Chrouk)",
+        "originalName": "Bai Sach Chrouk",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Petit-déjeuner cambodgien. Fines tranches de porc marinées (lait de coco, ail) et grillées au charbon, servies sur du riz.",
+        "prepTime": 45,
+        "ingredients": [
+            "Porc (échine, fines tranches)",
+            "Lait de coco",
+            "Ail",
+            "Sauce soja",
+            "Sucre de palme",
+            "Riz (cuit)",
+            "Pickles (concombre)"
+        ]
+    },
+    {
+        "id": 1841,
+        "name": "Nom Banh Chok",
+        "originalName": "Nom Banh Chok",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Nouilles khmères. Vermicelles de riz (frais) servis froids, nappés d'un curry de poisson (Kroeung) vert.",
+        "prepTime": 75,
+        "ingredients": [
+            "Vermicelles de riz (Nom Banh Chok)",
+            "Poisson (tête de serpent)",
+            "Kroeung (vert)",
+            "Citronnelle",
+            "Galanga",
+            "Curcuma",
+            "Lait de coco"
+        ]
+    },
+    {
+        "id": 1842,
+        "name": "Salade de Bœuf Cru (Lap Khmer)",
+        "originalName": "Lap Khmer",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade de bœuf 'cru' (Larb) khmère, bœuf émincé 'cuit' au jus de citron vert, piment, herbes et riz grillé.",
+        "prepTime": 30,
+        "ingredients": [
+            "Bœuf (filet, cru)",
+            "Jus de citron vert",
+            "Prahok (pâte de poisson)",
+            "Galanga",
+            "Citronnelle",
+            "Piment",
+            "Riz gluant (grillé, poudre)"
+        ]
+    },
+    {
+        "id": 1843,
+        "name": "Poulet Sauté au Gingembre",
+        "originalName": "Cha Knyei",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Sauté de poulet (ou poisson) avec une grande quantité de gingembre frais (Knyei), ail et sauce soja.",
+        "prepTime": 25,
+        "ingredients": [
+            "Poulet (émincé)",
+            "Gingembre (abondant)",
+            "Ail",
+            "Sauce soja",
+            "Sauce d'huître",
+            "Poivre de Kampot"
+        ]
+    },
+    {
+        "id": 1844,
+        "name": "Soupe aux Sept Légumes (Samlor Korko)",
+        "originalName": "Samlor Korko",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe/ragoût khmer 'mélangé' (Korko). Poisson (ou porc), Kroeung, riz grillé et divers légumes (citrouille, papaye verte).",
+        "prepTime": 90,
+        "ingredients": [
+            "Poisson (ou Porc)",
+            "Kroeung",
+            "Riz gluant (grillé, poudre)",
+            "Prahok (pâte de poisson)",
+            "Citrouille",
+            "Papaye (verte)",
+            "Aubergines"
+        ]
+    },
+    {
+        "id": 1845,
+        "name": "Nouilles (Banh Sung)",
+        "originalName": "Bánh Sung",
+        "country": "Cambodge",
+        "flag": "🇰🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade de vermicelles de riz (froids) avec porc grillé, nems (frits), herbes et sauce coco-arachide.",
+        "prepTime": 45,
+        "ingredients": [
+            "Vermicelles de riz (bún)",
+            "Porc (grillé)",
+            "Nems (frits)",
+            "Lait de coco",
+            "Cacahuètes",
+            "Légumes (crus)",
+            "Sauce poisson"
+        ]
+    },
+    {
+        "id": 1846,
+        "name": "Gua Bao (Sandwich)",
+        "originalName": "割包 (Gua Bao)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Sandwich taïwanais. Pain vapeur (ID 822) garni de poitrine de porc braisée (Mijoté 88), cacahuètes et coriandre.",
+        "prepTime": 120,
+        "ingredients": [
+            "Pain vapeur (Gua Bao)",
+            "Poitrine de porc",
+            "Sauce soja",
+            "Cinq-épices",
+            "Cacahuètes (poudre)",
+            "Coriandre",
+            "Légumes moutarde (Suan Cai)"
+        ]
+    },
+    {
+        "id": 1847,
+        "name": "Crêpe Oignon Vert (Cong You Bing)",
+        "originalName": "蔥油餅 (Cong You Bing)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Crêpe 'feuilletée' (pâte enroulée) aux oignons verts, frite à la poêle (shallow fry). (Similaire ID 1150).",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine",
+            "Oignons verts",
+            "Huile",
+            "Sel",
+            "Poivre blanc",
+            "Œuf (souvent ajouté)"
+        ]
+    },
+    {
+        "id": 1848,
+        "name": "Poulet Trois Tasses (Sanbeiji)",
+        "originalName": "三杯雞 (Sanbeiji)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Version taïwanaise (ID 191 est Chine) du poulet braisé (huile sésame, vin de riz, soja) avec beaucoup de basilic thaï.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet (cuisses)",
+            "Huile de sésame",
+            "Vin de riz (Michiu)",
+            "Sauce soja",
+            "Ail",
+            "Gingembre",
+            "Basilic thaï (abondant)"
+        ]
+    },
+    {
+        "id": 1849,
+        "name": "Soupe Vermicelles Huîtres",
+        "originalName": "蚵仔麵線 (O-A-Misua)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de vermicelles (Misua) épaisse (fécule), garnie d'huîtres fraîches et/ou d'intestins de porc.",
+        "prepTime": 45,
+        "ingredients": [
+            "Vermicelles (Misua)",
+            "Huîtres (petites)",
+            "Intestins de porc (optionnel)",
+            "Bouillon (Dashi ou porc)",
+            "Fécule de maïs",
+            "Ail",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1850,
+        "name": "Tempura Taïwanais (Tian Bu La)",
+        "originalName": "甜不辣 (Tian Bu La)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Assortiment de gâteaux de poisson (style 'Tempura' japonais) frits et servis avec une sauce sucrée-pimentée.",
+        "prepTime": 30,
+        "ingredients": [
+            "Gâteaux de poisson (assortis)",
+            "Huile (friture)",
+            "Sauce (piment, sucrée)",
+            "Concombre"
+        ]
+    },
+    {
+        "id": 1851,
+        "name": "Crêpe aux Œufs (Dan Bing)",
+        "originalName": "蛋餅 (Dan Bing)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Petit-déjeuner taïwanais. Crêpe fine (pâte ou galette) sautée avec un œuf et des oignons verts, souvent roulée.",
+        "prepTime": 15,
+        "ingredients": [
+            "Pâte (Dan Bing)",
+            "Œufs",
+            "Oignons verts",
+            "Bacon (ou Thon, Fromage)",
+            "Sauce soja (épaisse)"
+        ]
+    },
+    {
+        "id": 1852,
+        "name": "Salade Pousses de Bambou",
+        "originalName": "涼拌竹筍 (Liangban Zhusun)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Pousses de bambou (fraîches) bouillies, servies froides avec une mayonnaise sucrée taïwanaise.",
+        "prepTime": 30,
+        "ingredients": [
+            "Pousses de bambou (fraîches)",
+            "Mayonnaise (taïwanaise, sucrée)",
+            "Sel"
+        ]
+    },
+    {
+        "id": 1853,
+        "name": "Sauté de Palourdes au Basilic",
+        "originalName": "塔香炒蛤蜊",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Palourdes sautées vivement avec de l'ail, du piment et une grande quantité de basilic (style 9-Layer Pagoda).",
+        "prepTime": 20,
+        "ingredients": [
+            "Palourdes",
+            "Basilic (thaï ou 9-layer)",
+            "Ail",
+            "Gingembre",
+            "Piment",
+            "Vin de riz (Michiu)",
+            "Sauce soja"
+        ]
+    },
+    {
+        "id": 1854,
+        "name": "Omelette Radis Salé (Cai Pu Neng)",
+        "originalName": "菜脯蛋 (Cai Pu Neng)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Omelette taïwanaise (sautée/frite) épaisse, mélangée avec du radis séché (Chai Poh) haché.",
+        "prepTime": 15,
+        "ingredients": [
+            "Œufs",
+            "Radis séché (Chai Poh)",
+            "Oignons verts",
+            "Poivre blanc",
+            "Huile"
+        ]
+    },
+    {
+        "id": 1855,
+        "name": "Thé aux Perles (Bubble Tea)",
+        "originalName": "珍珠奶茶 (Zhenzhu Naicha)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boisson emblématique. Thé noir au lait (froid) servi avec des perles de tapioca (Boba) moelleuses et sucrées.",
+        "prepTime": 45,
+        "ingredients": [
+            "Thé noir",
+            "Lait",
+            "Perles de tapioca (Boba)",
+            "Sucre brun (sirop)",
+            "Glace"
+        ]
+    },
+    {
+        "id": 1856,
+        "name": "Rouleau de Riz (Fan Tuan)",
+        "originalName": "飯糰 (Fan Tuan)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Petit-déjeuner. Riz gluant (froid ou chaud) enroulé autour d'un Youtiao (beignet frit), de porc effiloché (Rousong) et de radis.",
+        "prepTime": 25,
+        "ingredients": [
+            "Riz gluant (cuit)",
+            "Youtiao (beignet frit)",
+            "Porc effiloché (Rousong)",
+            "Radis séché (Chai Poh)",
+            "Œuf (optionnel)"
+        ]
+    },
+    {
+        "id": 1857,
+        "name": "Gâteau à l'Ananas",
+        "originalName": "鳳梨酥 (Feng Li Su)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Petite pâtisserie (carrée) cuite au four, avec une croûte sablée au beurre et une farce dense à l'ananas.",
+        "prepTime": 90,
+        "ingredients": [
+            "Ananas",
+            "Farine",
+            "Beurre",
+            "Sucre",
+            "Œufs",
+            "Lait en poudre"
+        ]
+    },
+    {
+        "id": 1858,
+        "name": "Gâteau de Sang de Porc (Frit)",
+        "originalName": "豬血糕 (Zhu Xie Gao)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Gâteau de riz gluant et de sang de porc (cuit vapeur), frit puis enrobé de cacahuètes et coriandre.",
+        "prepTime": 40,
+        "ingredients": [
+            "Riz gluant",
+            "Sang de porc",
+            "Cacahuètes (poudre)",
+            "Coriandre",
+            "Sauce (soja, piment)"
+        ]
+    },
+    {
+        "id": 1859,
+        "name": "Sauté de Luffa (Si Gua)",
+        "originalName": "炒絲瓜 (Chao Si Gua)",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Sauté de pâtisson (luffa) avec gingembre, ail et parfois des palourdes ou des crevettes séchées.",
+        "prepTime": 20,
+        "ingredients": [
+            "Pâtisson (Luffa)",
+            "Gingembre",
+            "Ail",
+            "Crevettes séchées (optionnel)",
+            "Baies de goji"
+        ]
+    },
+    {
+        "id": 1860,
+        "name": "Tofu Fermenté (Vapeur)",
+        "originalName": "清蒸臭豆腐",
+        "country": "Taïwan",
+        "flag": "🇹🇼",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Version 'saine' du Tofu Puant. Tofu fermenté cuit à la vapeur (plutôt que frit) avec une sauce soja et des champignons.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tofu (fermenté)",
+            "Champignons shiitake",
+            "Piment",
+            "Basilic",
+            "Sauce soja"
+        ]
+    },
+    {
+        "id": 1861,
+        "name": "Momo (Vapeur)",
+        "originalName": "Momo",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Raviolis népalais cuits à la vapeur, farcis de viande (poulet, buffle) ou de légumes, servis avec une sauce tomate (achar).",
+        "prepTime": 60,
+        "ingredients": [
+            "Farine",
+            "Poulet haché (ou buffle, légumes)",
+            "Oignons",
+            "Gingembre",
+            "Ail",
+            "Cumin",
+            "Coriandre",
+            "Sauce Achar (tomate)"
+        ]
+    },
+    {
+        "id": 1862,
+        "name": "Dal (Népalais)",
+        "originalName": "Dal Bhat",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "La soupe de lentilles (Dal) qui accompagne le Dal Bhat. Lentilles (noires ou jaunes) mijotées avec ail, gingembre et curcuma.",
+        "prepTime": 45,
+        "ingredients": [
+            "Lentilles (noires ou jaunes)",
+            "Gingembre",
+            "Ail",
+            "Curcuma",
+            "Cumin (graines)",
+            "Ghee"
+        ]
+    },
+    {
+        "id": 1863,
+        "name": "Aloo Tama",
+        "originalName": "Aloo Tama",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe aigre népalaise à base de pommes de terre (Aloo) et de pousses de bambou fermentées (Tama).",
+        "prepTime": 45,
+        "ingredients": [
+            "Pommes de terre",
+            "Pousses de bambou (fermentées, Tama)",
+            "Haricots (cornille)",
+            "Gingembre",
+            "Ail",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1864,
+        "name": "Yomari",
+        "originalName": "Yomari",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Dessert (Newar). Ravioli de farine de riz (en forme de figue) cuit vapeur, farci de mélasse (Chaku) ou de Khoya.",
+        "prepTime": 60,
+        "ingredients": [
+            "Farine de riz",
+            "Mélasse (Chaku)",
+            "Graines de sésame",
+            "Noix de coco",
+            "Khoya (optionnel)"
+        ]
+    },
+    {
+        "id": 1865,
+        "name": "Sel Roti",
+        "originalName": "Sel Roti",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Beignet (pain) de riz sucré en forme d'anneau, frit en grande friture, typique des festivals.",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine de riz",
+            "Sucre",
+            "Ghee",
+            "Banane (optionnel)",
+            "Cardamome",
+            "Huile (friture)"
+        ]
+    },
+    {
+        "id": 1866,
+        "name": "Chatamari",
+        "originalName": "Chatamari",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "'Pizza' népalaise (Newar). Crêpe de farine de riz sautée (poêlée) et garnie de viande hachée, œuf et légumes.",
+        "prepTime": 35,
+        "ingredients": [
+            "Farine de riz",
+            "Œufs",
+            "Viande hachée",
+            "Oignons",
+            "Tomates",
+            "Coriandre",
+            "Piment"
+        ]
+    },
+    {
+        "id": 1867,
+        "name": "Gundruk (Soupe)",
+        "originalName": "Gundruk",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe à base de Gundruk (légumes feuilles fermentés et séchés), haricots de soja et tomates.",
+        "prepTime": 40,
+        "ingredients": [
+            "Gundruk (feuilles fermentées)",
+            "Soja (graines)",
+            "Tomates",
+            "Oignons",
+            "Ail",
+            "Gingembre",
+            "Curcuma"
+        ]
+    },
+    {
+        "id": 1868,
+        "name": "Bara (Beignet Lentille)",
+        "originalName": "Bara",
+        "country": "Népal",
+        "flag": "🇳🇵",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Beignet (galette) de lentilles noires (Urad Dal) frit (shallow fry), servi en snack.",
+        "prepTime": 45,
+        "ingredients": [
+            "Lentilles (Urad Dal)",
+            "Gingembre",
+            "Ail",
+            "Cumin",
+            "Huile de moutarde (friture)"
+        ]
+    },
+    {
+        "id": 1869,
+        "name": "Batata Harra",
+        "originalName": "Batata Harra",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Pommes de terre 'épicées'. Cubes de pommes de terre (frits ou rôtis) sautés avec ail, piment rouge et coriandre.",
+        "prepTime": 35,
+        "ingredients": [
+            "Pommes de terre",
+            "Ail",
+            "Coriandre (fraîche)",
+            "Piment (poudre ou flocons)",
+            "Jus de citron",
+            "Huile d'olive"
+        ]
+    },
+    {
+        "id": 1870,
+        "name": "Samkeh Harra",
+        "originalName": "Samkeh Harra",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Poisson 'piquant' rôti au four, nappé d'une sauce épicée au tahini, ail, piment et noix.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poisson blanc (filet ou entier)",
+            "Tahini",
+            "Ail",
+            "Piment (pâte)",
+            "Noix",
+            "Coriandre",
+            "Jus de citron"
+        ]
+    },
+    {
+        "id": 1871,
+        "name": "Sayadieh",
+        "originalName": "Sayadieh",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz aux pêcheurs. Riz cuit dans un bouillon de poisson et oignons caramélisés, servi avec poisson frit/grillé.",
+        "prepTime": 75,
+        "ingredients": [
+            "Poisson blanc (Bar, Mérou)",
+            "Riz",
+            "Oignons (caramélisés)",
+            "Bouillon de poisson",
+            "Cumin",
+            "Cannelle",
+            "Pignons de pin (frits)"
+        ]
+    },
+    {
+        "id": 1872,
+        "name": "Kousa Mashi",
+        "originalName": "Kousa Mashi",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Courgettes (petites) farcies de viande hachée (agneau) et de riz, mijotées dans une sauce tomate.",
+        "prepTime": 90,
+        "ingredients": [
+            "Courgettes (petites)",
+            "Agneau haché",
+            "Riz",
+            "Tomates (sauce)",
+            "Menthe séchée",
+            "Sept épices",
+            "Cannelle"
+        ]
+    },
+    {
+        "id": 1873,
+        "name": "Fatteh (Aubergine)",
+        "originalName": "Fattet Batenjen",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Plat en couches. Pain pita frit, aubergines frites, sauce yaourt-tahini chaude et pignons de pin.",
+        "prepTime": 40,
+        "ingredients": [
+            "Aubergines (frites)",
+            "Pain pita (frit)",
+            "Yaourt",
+            "Tahini",
+            "Ail",
+            "Pois chiches (cuits)",
+            "Pignons de pin",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1874,
+        "name": "Fondue Moitié-Moitié",
+        "originalName": "Fondue Moitié-Moitié",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Fondue au fromage classique, mélange de fromages (50% Gruyère, 50% Vacherin Fribourgeois), vin blanc et ail.",
+        "prepTime": 30,
+        "ingredients": [
+            "Fromage (Gruyère)",
+            "Fromage (Vacherin Fribourgeois)",
+            "Vin blanc (sec)",
+            "Ail",
+            "Kirsch",
+            "Fécule de maïs",
+            "Pain"
+        ]
+    },
+    {
+        "id": 1875,
+        "name": "Raclette",
+        "originalName": "Raclette",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Grill",
+        "description": "Fromage (Raclette) fondu (grillé) et raclé sur des pommes de terre, servi avec cornichons et petits oignons.",
+        "prepTime": 45,
+        "ingredients": [
+            "Fromage (Raclette)",
+            "Pommes de terre (cuites)",
+            "Cornichons",
+            "Oignons grelots (au vinaigre)",
+            "Poivre",
+            "Paprika"
+        ]
+    },
+    {
+        "id": 1876,
+        "name": "Rösti",
+        "originalName": "Rösti",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Galette de pommes de terre (râpées, crues ou précuites) sautée (frite peu profonde) au beurre ou saindoux.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pommes de terre",
+            "Beurre (ou saindoux)",
+            "Sel",
+            "Bacon (optionnel)",
+            "Oignons (optionnel)"
+        ]
+    },
+    {
+        "id": 1877,
+        "name": "Macaronis du Chalet",
+        "originalName": "Älplermagronen",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Gratin de pâtes (macaroni) et pommes de terre, mijoté à la crème et au fromage (Gruyère), servi avec oignons frits.",
+        "prepTime": 50,
+        "ingredients": [
+            "Pâtes (Macaroni)",
+            "Pommes de terre",
+            "Fromage (Gruyère)",
+            "Crème",
+            "Lait",
+            "Oignons frits",
+            "Compote de pommes (servir)"
+        ]
+    },
+    {
+        "id": 1878,
+        "name": "Malakoff",
+        "originalName": "Malakoff",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Beignet de fromage (Gruyère) frit, spécialité du canton de Vaud.",
+        "prepTime": 30,
+        "ingredients": [
+            "Fromage (Gruyère)",
+            "Farine",
+            "Œufs",
+            "Vin blanc (Fendant)",
+            "Kirsch",
+            "Huile (friture)"
+        ]
+    },
+    {
+        "id": 1879,
+        "name": "Läckerli de Bâle",
+        "originalName": "Basler Läckerli",
+        "country": "Suisse",
+        "flag": "🇨🇭",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Biscuit (pain d'épices) dur de Bâle, à base de miel, amandes, fruits confits et Kirsch, cuit au four et glacé.",
+        "prepTime": 75,
+        "ingredients": [
+            "Farine",
+            "Miel",
+            "Sucre",
+            "Amandes",
+            "Noisettes",
+            "Fruits confits (Orange, Citron)",
+            "Kirsch",
+            "Cannelle"
+        ]
+    },
+    {
+        "id": 1880,
+        "name": "Riz aux Fruits de Mer",
+        "originalName": "Arroz de Marisco",
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Riz 'malandrinho' (humide, type ragoût) cuit dans un bouillon de fruits de mer (crevettes, palourdes, moules) et coriandre.",
+        "prepTime": 50,
+        "ingredients": [
+            "Riz (Carolino)",
+            "Crevettes",
+            "Palourdes",
+            "Moules",
+            "Bouillon de fruits de mer",
+            "Tomates",
+            "Coriandre",
+            "Vin blanc"
+        ]
+    },
+    {
+        "id": 1881,
+        "name": "Cataplana de Fruits de Mer",
+        "originalName": "Cataplana de Marisco",
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "continent": "Europe",
+        "type": "Vapeur",
+        "description": "Ragoût de fruits de mer cuit à l'étouffée (vapeur) dans une 'Cataplana' (poêle en cuivre), avec vin blanc, tomates et poivrons.",
+        "prepTime": 60,
+        "ingredients": [
+            "Palourdes",
+            "Crevettes",
+            "Lotte",
+            "Chouriço",
+            "Poivrons",
+            "Oignons",
+            "Tomates",
+            "Vin blanc",
+            "Coriandre"
+        ]
+    },
+    {
+        "id": 1882,
+        "name": "Porc aux Palourdes",
+        "originalName": "Carne de Porco à Alentejana",
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Plat 'Terre et Mer'. Porc (cubes) mariné et mijoté, servi avec des palourdes cuites à part et des pommes de terre frites.",
+        "prepTime": 75,
+        "ingredients": [
+            "Porc (longe)",
+            "Palourdes",
+            "Vin blanc",
+            "Pâte de piment (Massa de Pimentão)",
+            "Ail",
+            "Coriandre",
+            "Pommes de terre (frites)"
+        ]
+    },
+    {
+        "id": 1883,
+        "name": "Francesinha",
+        "originalName": "Francesinha",
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Sandwich (Porto) de steak, saucisse et jambon, recouvert de fromage fondu et d'un œuf, nappé d'une sauce bière-tomate.",
+        "prepTime": 60,
+        "ingredients": [
+            "Pain de mie",
+            "Steak (bœuf)",
+            "Saucisse (Linguiça)",
+            "Jambon",
+            "Fromage (tranches)",
+            "Œuf",
+            "Sauce (Bière, Tomate, Piment)"
+        ]
+    },
+    {
+        "id": 1884,
+        "name": "Poulpe (À Lagareiro)",
+        "originalName": "Polvo à Lagareiro",
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Poulpe (cuit) rôti au four avec beaucoup d'huile d'olive, ail et pommes de terre 'écrasées' (batatas a murro).",
+        "prepTime": 120,
+        "ingredients": [
+            "Poulpe",
+            "Pommes de terre (petites)",
+            "Ail (abondant)",
+            "Huile d'olive (abondante)",
+            "Oignons",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1885,
+        "name": "Pierogi (Russes)",
+        "originalName": "Pierogi Ruskie",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Raviolis polonais (bouillis) farcis de pommes de terre et de fromage blanc (Twaróg), servis avec oignons frits.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pâte (Farine, Œuf)",
+            "Pommes de terre",
+            "Fromage (Twaróg)",
+            "Oignons",
+            "Poivre noir",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1886,
+        "name": "Pierogi (Viande)",
+        "originalName": "Pierogi z Mięsem",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Raviolis polonais (bouillis) farcis de viande cuite (bœuf, porc) hachée et d'oignons.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pâte (Farine, Œuf)",
+            "Bœuf (cuit, haché)",
+            "Porc (cuit, haché)",
+            "Oignons",
+            "Marjolaine",
+            "Bacon (garniture)"
+        ]
+    },
+    {
+        "id": 1887,
+        "name": "Bouillon (Rosół)",
+        "originalName": "Rosół",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Soupe",
+        "description": "Bouillon de poulet et bœuf polonais, cuit lentement et servi très clair avec de fines nouilles (makaron) et des légumes.",
+        "prepTime": 180,
+        "ingredients": [
+            "Poulet",
+            "Bœuf (os)",
+            "Carottes",
+            "Céleri-rave",
+            "Poireaux",
+            "Oignon (brûlé)",
+            "Nouilles (fines)",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1888,
+        "name": "Escalope (Kotlet Schabowy)",
+        "originalName": "Kotlet Schabowy",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Escalope de porc (longe) polonaise, panée (chapelure) et frite (shallow fry), servie avec pommes de terre et chou.",
+        "prepTime": 30,
+        "ingredients": [
+            "Porc (longe, escalope)",
+            "Farine",
+            "Œufs",
+            "Chapelure",
+            "Saindoux (friture)",
+            "Pommes de terre",
+            "Chou (surówka)"
+        ]
+    },
+    {
+        "id": 1889,
+        "name": "Borscht (Barszcz Czerwony)",
+        "originalName": "Barszcz Czerwony",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Soupe",
+        "description": "Borscht rouge polonais clair, à base de bouillon de betteraves fermentées (Zakwas), servi avec des raviolis (Uszka) à Noël.",
+        "prepTime": 120,
+        "ingredients": [
+            "Betteraves",
+            "Bouillon (légumes)",
+            "Vinaigre (ou Zakwas)",
+            "Ail",
+            "Marjolaine",
+            "Raviolis (Uszka, farcis champignons)"
+        ]
+    },
+    {
+        "id": 1890,
+        "name": "Galettes Pomme de Terre (Placki)",
+        "originalName": "Placki Ziemniaczane",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Galettes de pommes de terre (râpées crues) frites (shallow fry), servies avec crème aigre ou Goulash.",
+        "prepTime": 35,
+        "ingredients": [
+            "Pommes de terre",
+            "Oignons",
+            "Œuf",
+            "Farine",
+            "Huile (friture)",
+            "Crème aigre (śmietana)"
+        ]
+    },
+    {
+        "id": 1891,
+        "name": "Crêpes (Naleśniki)",
+        "originalName": "Naleśniki",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Crêpes polonaises (sautées à la poêle), souvent servies fourrées de fromage blanc (Twaróg) sucré et raisins secs.",
+        "prepTime": 40,
+        "ingredients": [
+            "Farine",
+            "Œufs",
+            "Lait",
+            "Eau gazeuse",
+            "Fromage (Twaróg)",
+            "Sucre",
+            "Vanille",
+            "Raisins secs"
+        ]
+    },
+    {
+        "id": 1892,
+        "name": "Pâtes au Chou (Łazanki)",
+        "originalName": "Łazanki z kapustą",
+        "country": "Pologne",
+        "flag": "🇵🇱",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Pâtes carrées (Łazanki) sautées avec du chou (ou choucroute), des champignons et du bacon.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pâtes (Łazanki)",
+            "Chou (ou choucroute)",
+            "Bacon",
+            "Oignons",
+            "Champignons",
+            "Marjolaine"
+        ]
+    },
+    {
+        "id": 1893,
+        "name": "Boulettes Viande (Kjøttkaker)",
+        "originalName": "Kjøttkaker i Brunsaus",
+        "country": "Norvège",
+        "flag": "🇳🇴",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Boulettes de viande norvégiennes (bœuf, gingembre) mijotées dans une sauce brune (Brunsaus) épaisse.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf haché",
+            "Gingembre (poudre)",
+            "Noix de muscade",
+            "Farine",
+            "Lait",
+            "Bouillon de bœuf (Sauce Brune)"
+        ]
+    },
+    {
+        "id": 1894,
+        "name": "Quenelles (Raspeball/Komle)",
+        "originalName": "Raspeball",
+        "country": "Norvège",
+        "flag": "🇳🇴",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Grosses quenelles de pommes de terre (râpées crues) et d'orge, mijotées (bouillies) et servies avec agneau salé.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pommes de terre (crues)",
+            "Farine d'orge",
+            "Farine",
+            "Agneau salé (pour servir)",
+            "Rutabaga (purée)"
+        ]
+    },
+    {
+        "id": 1895,
+        "name": "Bouillie Crème Aigre (Rømmegrøt)",
+        "originalName": "Rømmegrøt",
+        "country": "Norvège",
+        "flag": "🇳🇴",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Bouillie (porridge) norvégienne traditionnelle à base de crème aigre (Rømmegrøt), farine et lait, servie avec beurre et cannelle.",
+        "prepTime": 40,
+        "ingredients": [
+            "Crème aigre (Rømmegrøt)",
+            "Lait (entier)",
+            "Farine",
+            "Beurre (fondu)",
+            "Sucre",
+            "Cannelle"
+        ]
+    },
+    {
+        "id": 1896,
+        "name": "Poisson (Lutefisk)",
+        "originalName": "Lutefisk",
+        "country": "Norvège",
+        "flag": "🇳🇴",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Poisson blanc (morue) séché et traité à la soude (Lut), puis cuit au four (ou poché). Texture gélatineuse.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poisson (Lutefisk)",
+            "Bacon (frit)",
+            "Purée de pois",
+            "Pommes de terre",
+            "Sauce moutarde"
+        ]
+    },
+    {
+        "id": 1897,
+        "name": "Moules-Frites",
+        "originalName": "Moules-Frites",
+        "country": "Belgique",
+        "flag": "🇧🇪",
+        "continent": "Europe",
+        "type": "Vapeur",
+        "description": "Plat national belge. Moules cuites à la vapeur (vin blanc, céleri, oignons) servies avec des frites (double cuisson).",
+        "prepTime": 45,
+        "ingredients": [
+            "Moules (de Zélande)",
+            "Céleri (branche)",
+            "Oignons",
+            "Vin blanc",
+            "Beurre",
+            "Persil",
+            "Frites (ID 1099)"
+        ]
+    },
+    {
+        "id": 1898,
+        "name": "Purée (Stoemp)",
+        "originalName": "Stoemp",
+        "country": "Belgique",
+        "flag": "🇧🇪",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Purée de pommes de terre belge, écrasée (mijotée) avec d'autres légumes (carottes, poireaux, épinards) et du beurre.",
+        "prepTime": 40,
+        "ingredients": [
+            "Pommes de terre",
+            "Carottes",
+            "Poireaux",
+            "Épinards",
+            "Lait",
+            "Beurre",
+            "Noix de muscade"
+        ]
+    },
+    {
+        "id": 1899,
+        "name": "Lapin à la Kriek",
+        "originalName": "Lapin à la Kriek",
+        "country": "Belgique",
+        "flag": "🇧🇪",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de lapin mijoté dans de la bière Kriek (cerise), souvent servi avec des cerises.",
+        "prepTime": 150,
+        "ingredients": [
+            "Lapin",
+            "Bière (Kriek)",
+            "Oignons",
+            "Cerises",
+            "Thym",
+            "Laurier",
+            "Beurre"
+        ]
+    },
+    {
+        "id": 1900,
+        "name": "Boulets Liégeois",
+        "originalName": "Boulets à la Liégeoise",
+        "country": "Belgique",
+        "flag": "🇧🇪",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Grosses boulettes de viande (porc/bœuf) mijotées dans une sauce aigre-douce 'Lapin' (Sirop de Liège, oignons, vinaigre).",
+        "prepTime": 90,
+        "ingredients": [
+            "Porc haché",
+            "Bœuf haché",
+            "Oignons",
+            "Sirop de Liège",
+            "Vinaigre",
+            "Thym",
+            "Laurier",
+            "Raisins secs"
+        ]
+    },
+    {
+        "id": 1901,
+        "name": "Bœuf Bouilli (Tafelspitz)",
+        "originalName": "Tafelspitz",
+        "country": "Autriche",
+        "flag": "🇦🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Plat national autrichien. Bœuf (pointe de culotte) mijoté (bouilli) lentement dans un bouillon de légumes, servi avec sauce raifort.",
+        "prepTime": 180,
+        "ingredients": [
+            "Bœuf (Tafelspitz)",
+            "Os à moelle",
+            "Carottes",
+            "Céleri-rave",
+            "Poireaux",
+            "Oignons",
+            "Raifort",
+            "Crème aigre"
+        ]
+    },
+    {
+        "id": 1902,
+        "name": "Crêpe (Kaiserschmarrn)",
+        "originalName": "Kaiserschmarrn",
+        "country": "Autriche",
+        "flag": "🇦🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Crêpe épaisse (pâte sucrée, blancs en neige) sautée à la poêle, déchirée en morceaux, caramélisée au beurre et raisins secs.",
+        "prepTime": 30,
+        "ingredients": [
+            "Farine",
+            "Œufs (séparés)",
+            "Lait",
+            "Sucre",
+            "Raisins secs",
+            "Rhum",
+            "Beurre",
+            "Sucre glace"
+        ]
+    },
+    {
+        "id": 1903,
+        "name": "Gâteau Sacher",
+        "originalName": "Sachertorte",
+        "country": "Autriche",
+        "flag": "🇦🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Gâteau au chocolat viennois dense, fourré d'une fine couche de confiture d'abricot et recouvert d'un glaçage au chocolat.",
+        "prepTime": 120,
+        "ingredients": [
+            "Chocolat noir",
+            "Beurre",
+            "Sucre",
+            "Œufs",
+            "Farine",
+            "Confiture d'abricot"
+        ]
+    },
+    {
+        "id": 1904,
+        "name": "Strudel aux Pommes",
+        "originalName": "Apfelstrudel",
+        "country": "Autriche",
+        "flag": "🇦🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Pâte très fine (Strudel) étirée, farcie de pommes, raisins secs, cannelle et chapelure, roulée et cuite au four.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pâte (Strudel ou Phyllo)",
+            "Pommes",
+            "Raisins secs",
+            "Chapelure",
+            "Beurre",
+            "Sucre",
+            "Cannelle",
+            "Rhum"
+        ]
+    },
+    {
+        "id": 1905,
+        "name": "Paella Valenciana",
+        "originalName": "Paella Valenciana",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "La paella originale. Riz cuit (mijoté à sec) avec poulet, lapin, haricots verts (Ferraura) et haricots de Lima (Garrofó).",
+        "prepTime": 90,
+        "ingredients": [
+            "Riz (Bomba)",
+            "Poulet",
+            "Lapin",
+            "Haricots verts (Ferraura)",
+            "Haricots de Lima (Garrofó)",
+            "Tomates (râpées)",
+            "Safran",
+            "Paprika",
+            "Romarin"
+        ]
+    },
+    {
+        "id": 1906,
+        "name": "Paella aux Fruits de Mer",
+        "originalName": "Paella de Marisco",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Paella populaire à base de riz cuit dans un bouillon de poisson, garnie de crevettes, calamars, moules et palourdes.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz (Bomba)",
+            "Bouillon de poisson",
+            "Crevettes (Gambas)",
+            "Calamars",
+            "Moules",
+            "Palourdes",
+            "Safran",
+            "Tomates"
+        ]
+    },
+    {
+        "id": 1907,
+        "name": "Riz Noir (Arroz Negro)",
+        "originalName": "Arroz Negro",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Riz (style paella) cuit avec des calamars et coloré en noir avec leur encre, servi avec de l'aïoli.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz (Bomba)",
+            "Calamars (et leur encre)",
+            "Bouillon de poisson",
+            "Oignons",
+            "Ail",
+            "Tomates",
+            "Aïoli (pour servir)"
+        ]
+    },
+    {
+        "id": 1908,
+        "name": "Fideuà",
+        "originalName": "Fideuà",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Version de la paella de fruits de mer utilisant de petits vermicelles (Fideos) à la place du riz.",
+        "prepTime": 60,
+        "ingredients": [
+            "Vermicelles (Fideos)",
+            "Lotte",
+            "Crevettes",
+            "Moules",
+            "Bouillon de poisson",
+            "Safran",
+            "Aïoli"
+        ]
+    },
+    {
+        "id": 1909,
+        "name": "Poulpe à la Galicienne",
+        "originalName": "Pulpo a la Gallega",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Poulpe (cuit) servi tiède sur des pommes de terre, arrosé d'huile d'olive et saupoudré de paprika et de gros sel.",
+        "prepTime": 75,
+        "ingredients": [
+            "Poulpe",
+            "Pommes de terre",
+            "Huile d'olive",
+            "Paprika (doux et piquant)",
+            "Gros sel"
+        ]
+    },
+    {
+        "id": 1910,
+        "name": "Omelette (Tortilla Española)",
+        "originalName": "Tortilla de Patatas",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Omelette espagnole épaisse, à base d'œufs, de pommes de terre (cuites lentement dans l'huile) et d'oignons.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pommes de terre",
+            "Œufs",
+            "Oignons",
+            "Huile d'olive",
+            "Sel"
+        ]
+    },
+    {
+        "id": 1911,
+        "name": "Patates à la Riojana",
+        "originalName": "Patatas a la Riojana",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de pommes de terre mijoté avec du chorizo et du paprika (Pimentón de la Vera).",
+        "prepTime": 50,
+        "ingredients": [
+            "Pommes de terre",
+            "Chorizo",
+            "Oignons",
+            "Ail",
+            "Paprika (Pimentón)",
+            "Piments (secs)",
+            "Laurier"
+        ]
+    },
+    {
+        "id": 1912,
+        "name": "Boulettes (Albóndigas)",
+        "originalName": "Albóndigas en Salsa",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Boulettes de viande (bœuf/porc) mijotées dans une sauce tomate ou une sauce aux amandes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf haché",
+            "Porc haché",
+            "Pain (mie)",
+            "Lait",
+            "Œufs",
+            "Sauce tomate",
+            "Ail",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1913,
+        "name": "Ratatouille (Pisto Manchego)",
+        "originalName": "Pisto Manchego",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Version espagnole de la ratatouille (La Mancha), à base de courgettes, poivrons et tomates, souvent servie avec un œuf frit.",
+        "prepTime": 60,
+        "ingredients": [
+            "Courgettes",
+            "Poivrons (verts, rouges)",
+            "Oignons",
+            "Tomates (concassées)",
+            "Ail",
+            "Huile d'olive",
+            "Œuf (frit, pour servir)"
+        ]
+    },
+    {
+        "id": 1914,
+        "name": "Pot-au-feu (Cocido Madrileño)",
+        "originalName": "Cocido Madrileño",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Pot-au-feu de Madrid, servi en trois temps : la soupe (vermicelles), les pois chiches et légumes, puis les viandes (bœuf, chorizo).",
+        "prepTime": 240,
+        "ingredients": [
+            "Pois chiches",
+            "Bœuf (jarret)",
+            "Poule",
+            "Chorizo",
+            "Morcilla (boudin)",
+            "Chou",
+            "Carottes",
+            "Pommes de terre"
+        ]
+    },
+    {
+        "id": 1915,
+        "name": "Pain Tomate (Pan con Tomate)",
+        "originalName": "Pan con Tomate",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Pain (toasté) frotté à l'ail, puis frotté avec une tomate mûre et arrosé d'huile d'olive.",
+        "prepTime": 10,
+        "ingredients": [
+            "Pain (rustique)",
+            "Tomates (mûres)",
+            "Ail",
+            "Huile d'olive",
+            "Sel",
+            "Jambon (Serrano, optionnel)"
+        ]
+    },
+    {
+        "id": 1916,
+        "name": "Brochette (Gilda)",
+        "originalName": "Gilda",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Pincho (tapa) basque sur un pic : une olive, un anchois et un piment (Guindilla) au vinaigre.",
+        "prepTime": 5,
+        "ingredients": [
+            "Olives (vertes, dénoyautées)",
+            "Anchois (à l'huile)",
+            "Piments (Guindillas, au vinaigre)"
+        ]
+    },
+    {
+        "id": 1917,
+        "name": "Épinards aux Pois Chiches",
+        "originalName": "Espinacas con Garbanzos",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Tapa de Séville. Épinards et pois chiches mijotés à l'ail, cumin et paprika, souvent épaissi au pain frit.",
+        "prepTime": 30,
+        "ingredients": [
+            "Épinards",
+            "Pois chiches (cuits)",
+            "Ail",
+            "Pain (frit)",
+            "Cumin",
+            "Paprika",
+            "Vinaigre de Xérès"
+        ]
+    },
+    {
+        "id": 1918,
+        "name": "Lentilles au Chorizo",
+        "originalName": "Lentejas con Chorizo",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de lentilles (pardina) mijoté avec du chorizo, du lard (pancetta), des carottes et des oignons.",
+        "prepTime": 60,
+        "ingredients": [
+            "Lentilles (pardina)",
+            "Chorizo",
+            "Pancetta (lard)",
+            "Carottes",
+            "Oignons",
+            "Ail",
+            "Paprika"
+        ]
+    },
+    {
+        "id": 1919,
+        "name": "Poulet à l'Ail",
+        "originalName": "Pollo al Ajillo",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Morceaux de poulet (avec os) sautés (frits) dans une grande quantité d'huile d'olive et d'ail émincé.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poulet (morceaux)",
+            "Ail (abondant)",
+            "Huile d'olive",
+            "Vin blanc",
+            "Piment (Cayenne)",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1920,
+        "name": "Chipirons à l'Encre",
+        "originalName": "Chipirones en su Tinta",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Petits calamars (Chipirones) mijotés dans leur propre encre avec oignons, ail et vin blanc.",
+        "prepTime": 60,
+        "ingredients": [
+            "Calamars (Chipirones)",
+            "Encre de calamar",
+            "Oignons",
+            "Ail",
+            "Tomates",
+            "Vin blanc",
+            "Persil"
+        ]
+    },
+    {
+        "id": 1921,
+        "name": "Tripes à la Madrilène",
+        "originalName": "Callos a la Madrileña",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de tripes de bœuf mijoté avec chorizo, boudin noir (morcilla) et paprika.",
+        "prepTime": 180,
+        "ingredients": [
+            "Tripes de bœuf",
+            "Chorizo",
+            "Morcilla (boudin)",
+            "Jambon (Serrano)",
+            "Paprika",
+            "Piment",
+            "Laurier"
+        ]
+    },
+    {
+        "id": 1922,
+        "name": "Lait Frit",
+        "originalName": "Leche Frita",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Dessert espagnol. 'Lait' (crème pâtissière ferme à la farine) coupé en carrés, pané et frit, servi avec sucre et cannelle.",
+        "prepTime": 60,
+        "ingredients": [
+            "Lait",
+            "Fécule de maïs (ou farine)",
+            "Sucre",
+            "Zeste de citron",
+            "Cannelle",
+            "Œufs",
+            "Chapelure"
+        ]
+    },
+    {
+        "id": 1923,
+        "name": "Crème Catalane",
+        "originalName": "Crema Catalana",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Crème (type brûlée) à base de jaunes d'œufs et lait, parfumée à la cannelle et au citron, brûlée au sucre sur le dessus.",
+        "prepTime": 45,
+        "ingredients": [
+            "Lait",
+            "Jaunes d'œufs",
+            "Sucre",
+            "Fécule de maïs",
+            "Cannelle (bâton)",
+            "Zeste de citron"
         ]
     }
 ]
