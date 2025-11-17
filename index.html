@@ -615,75 +615,9 @@
     </div> 
 
 <script>
-let allRecipes = [];
-					 
-                // --- DÉFINITIONS DES TAGS D'INGRÉDIENTS (Corrigée avec Exclusions) ---
-        const tagDefinitions = {
-            
-            // Catégorie simple (Pas d'exclusions nécessaires)
-            viande: ["viande", "viandes","bœuf", "beef", "agneau", "porc", "poulet", "veau", "canard", "lapin", "chèvre", "mouton", "saucisse", "lardons", "gibier", "os à moelle", "queue de bœuf", "tripes", "coq", "poule", "jambon", "spam", "cheval", "kefta", "pancetta", "confit", "lard", "renne", "bacon", "kangourou", "döner", "chorizo", "merguez", "dumba", "wurst", "gammon", "corned beef", "andouille", "boudin", "morcilla", "chouriço", "farinheira", "carne seca", "foie", "tête de porc", "joue", "oreille", "gosht", "char siu", "boerewors", "sang", "saindoux", "suif", "rognons", "graisse", "graisse de bœuf", "graisse d'oie", "Bouillon de bœuf", "Bouillon de poulet", "Bouillon de porc"],
-            
-           // Catégorie simple (Pas d'exclusions nécessaires)
-            poisson: ["poisson", "poissons", "haddock fumé", "lotte", "thon", "anchois", "saumon", "poissons de roche", "morue", "maquereau", "anguille", "sériole", "barramundi", "congre", "mahimahi", "thiof", "flocons de bonite", "katsuobushi", "ikan bilis", "cabillaud", "sole", "bar", "vivaneau", "truite", "sardine", "hareng", "tilapia"],
-            
-			// Catégorie simple (Pas d'exclusions nécessaires)
-            fruit_de_mer: ["crevette", "crevettes", "moule", "moules", "palourde", "palourdes", "crabe", "calamar", "calamars", "fruits de mer", "seiche", "gambas", "écrevisse", "écrevisses", "homard", "huître", "huîtres", "poulpe", "coque", "coques", "pâte de crevette", "bagoong", "terasi", "mắm ruốc", "yet", "surimi", "oursin", "œufs de poisson", "tobiko", "œufs de saumon", "ikura", "belacan", "langoustine", "pétoncle", "coquille saint-jacques", "lambi"],
-
-            // Catégorie simple (Doit inclure les dérivés)
-            oeuf: ["œuf", "oeuf", "œufs", "oeufs", "jaune d'œuf", "blancs d'œufs", "œuf dur", "œufs durs", "omelette", "œufs de caille"],
-
-            // Exclut les légumineuses sèches (pois chiches, haricots secs)
-            legumes: {
-                includes: ["carotte", "oignon", "poireau", "tomate", "aubergine", "chou", "pomme de terre", "poivron", "céleri", "navet", "ail", "courge", "betterave", "olive", "maïs", "rutabaga", "panais", "cornichon", "okra", "gombo", "radis", "manioc", "plantain", "igname", "kimchi", "choucroute", "épinard", "kumara", "potiron", "artichaut", "concombre", "roquette", "cresson", "liseron d'eau", "orties", "oseille", "daikon", "konjac", "racine de lotus", "renkon", "gobo", "racine de bardane", "tomatillo", "chayotte", "mu er", "germes de soja", "feuilles de taro", "taro", "papaye verte", "jicama", "fleur de bananier", "algues", "wakame", "nori", "kombu", "cavolo nero", "nopales", "cardons", "poire coréenne", "jujubes", "haricots verts", "haricots longs", "petits pois"],
-                excludes: ["pois chiches", "pois cassés", "haricots (lingots)", "haricots (Tarbais)", "haricots (Fabas)", "haricots (borlotti)", "haricots (cannellini)", "haricots (secs)", "farine de pois chiches", "champignon", "champignons", "shiitake", "pleurotes", "cèpes", "girolles", "morilles", "truffe", "champignons de Paris", "champignons noirs", "oreilles de Judas", "kikurage", "enoki"]
-            },
-
-            // Exclut l'huile et les graines (qui sont des épices/herbes)
-            epices: {
-                includes: ["paprika", "cumin", "safran", "cannelle", "clou de girofle", "ras el hanout", "curry", "curcuma", "gingembre", "anis étoilé", "poivre", "baies de genièvre", "quatre-épices", "moutarde", "cardamome", "galanga", "pâte de roucou", "achiote", "sumac", "fenugrec", "fenouil", "tamarin", "cinq-épices", "amchur", "grains de paradis", "asafoetida", "hing", "ajwain", "mastic", "noix de muscade", "anis", "coriandre (graines)"],
-                excludes: ["huile de sésame"] // "sésame" est dans legumineuse
-            },
-
-            // Exclut la graine (qui est une épice)
-            herbes: {
-                includes: ["thym", "laurier", "coriandre", "persil", "romarin", "basilic", "aneth", "menthe", "origan", "sauge", "citronnelle", "feuilles de curry", "feuilles de combava", "pandan", "marjolaine", "sarriette", "ciboulette", "estragon", "livèche", "épazote", "kra pao", "ciboule", "guascas", "uziza", "utazi", "rau ram", "kroeung"],
-                excludes: ["coriandre (graines)"]
-            },
-    
-            // Exclut les produits dérivés (vinaigre, farine, nouilles)
-            riz: {
-                includes: ["riz", "galettes de riz", "poudre de riz grillé"],
-                excludes: ["vinaigre de riz", "farine de riz", "nouilles de riz", "vermicelles de riz", "vin de riz"]
-            },
-
-            // Exclut les farines d'autres catégories
-            cereales: {
-                includes: ["quinoa", "semoule", "couscous", "millet", "orge", "blé", "avoine", "polenta", "sarrasin", "pain", "chapelure", "seigle", "farine", "farine de maïs", "cornmeal"],
-                excludes: ["farine de riz", "farine de pois chiches"]
-            },
-
-            // Exclut les nouilles à base de riz ou de légumineuses
-            pates: {
-                includes: ["pâtes", "nouilles", "vermicelles", "orzo", "ramen", "udon", "spätzle", "spaghetti", "lasagnes", "cannelloni", "gnocchi", "macaroni", "wonton", "soba", "knedlíky"],
-                excludes: ["nouilles de riz", "vermicelles de riz", "vermicelles de soja", "nouilles de patate douce"]
-            },
-
-            // Exclut les légumes (haricots verts), les huiles et les sauces
-            legumineuse: {
-                includes: ["haricot", "lentille", "pois chiche", "fève", "pois cassés", "pois", "haricots mungo", "tofu", "graines de courge", "pepitas", "cacahuètes", "arachide", "soja", "farine de pois chiches", "besan", "tempeh", "tahini", "sésame", "pignons de pin", "pâte d'arachide"],
-                excludes: ["haricots verts", "haricots longs", "petits pois", "sauce soja", "lait de soja", "huile de sésame", "huile d'arachide"]
-            },
-			
-			champignons: ["champignon", "champignons", "shiitake", "pleurotes", "cèpes", "girolles", "morilles", "truffe", "champignons de Paris", "champignons noirs", "oreilles de Judas", "kikurage", "enoki"],
-
-            // Catégorie simple (Mots-clés très spécifiques)
-            epice_piquant: ["piment", "piments", "pimentée", "piquant", "harissa", "gochugaru", "gochujang", "doubanjiang", "berbéré", "épices cajun", "cajun", "sambal", "sriracha", "piment de Cayenne", "cayenne", "chili", "poudre de chili", "pâte de chili", "huile de piment", "scotch bonnet", "habanero", "serrano", "jalapeño", "jalapeños", "ancho", "guajillo", "pasilla", "poblano", "guindilla", "guindillas", "aji amarillo", "aji panca", "aji limo", "siling labuyo", "siling haba", "piment oiseau", "pul biber", "piment d'Alep", "piment du Cachemire", "Kashmiri", "paprika (fort)", "poivre du Sichuan", "pâte de curry rouge", "pâte de curry vert", "pâte de curry jaune", "pâte de Laksa", "Nam Prik Pao", "sauce pimentée", "Rotel", "sahawiq", "Tom Yum", "Colombo", "Mitmita"],
-            
-            // Catégorie spéciale (logique)
-            vegetarien: [] 
-        };
-
-        // --- ÉLÉMENTS DU DOM ---
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- ÉLÉMENTS DU DOM (Inchangés) ---
         const continentFilter = document.getElementById('continent-filter');
         const countryFilter = document.getElementById('country-filter');
         const timeFilter = document.getElementById('time-filter');
@@ -692,77 +626,21 @@ let allRecipes = [];
         const recipeList = document.getElementById('recipe-list');
         const recipeCount = document.getElementById('recipe-count');
         const resetButton = document.getElementById('reset-button');
-        const themeToggle = document.getElementById('theme-toggle'); // Ajout du bouton Thème
-        
+        const themeToggle = document.getElementById('theme-toggle');
+        const typeButtonsContainer = document.querySelector('.type-buttons');
+
+        // --- ÉTAT GLOBAL (Simplifié) ---
         let populatedContinents = [];
         let populatedCountries = [];
-		let selectedRecipeTypes = ["Mijoté", "Sauté", "Grill", "Soupe", "Vapeur", "Four / Rôtir", "Frire", "Froid / Cru"];
+        let allTypes = [];
+        let selectedRecipeTypes = [];
+        let allRecipesRaw = []; // Pour les filtres de pays/continent
+        
+        // 1. Démarrer l'assistant
+        const filterWorker = new Worker('filter.worker.js'); // Nom du nouveau fichier
 
-        // --- FONCTIONS AUXILIAIRES ---
+        // --- FONCTIONS AUXILIAIRES (Juste le DOM) ---
 
-        /**
-         * Génère des tags pour une recette en fonction de ses ingrédients.
-         */
-        function generateTags(recipe) {
-            const tags = new Set();
-            const ingredientsLower = recipe.ingredients.join(' ').toLowerCase(); 
-            const recipeId = recipe.id;
-            
-            let hasViande = false;
-            let hasPoisson = false;
-            let isKnownVeggie = false; // Flag pour les recettes végétariennes connues
-
-            // IDs Végétariens connus (basé sur la base de données fournie)
-            const allKnownVeggieIDs = new Set([
-                76, 80, 85, 102, 111, 131, 132, 179, 180, 185, 186, 200, 212, 216, 227, 229, 245, 
-                246, 254, 264, 266, 279, 283, 284, 293, 294, 296, 308, 310, 311, 312, 313, 
-                316, 317, 318, 321, 322, 323, 334, 336, 338, 339, 340, 351, 358, 366, 
-                371, 384, 388, 398, 406, 465, 506, 511, 515, 518
-                // ... (et beaucoup d'autres IDs de la liste originale)
-            ]);
-
-            if (allKnownVeggieIDs.has(recipeId)) {
-                isKnownVeggie = true;
-            }
-
-            // Boucle sur les définitions de tags
-            for (const [tag, config] of Object.entries(tagDefinitions)) {
-                if (tag === 'vegetarien') continue;
-
-                // Détermine les listes d'inclusion et d'exclusion
-                const includesKeywords = Array.isArray(config) ? config : config.includes;
-                const excludesKeywords = Array.isArray(config) ? [] : (config.excludes || []);
-
-                // 1. Vérifie si un mot-clé d'inclusion est présent
-                if (includesKeywords.some(keyword => ingredientsLower.includes(keyword))) {
-                    
-                    // 2. Vérifie si un mot-clé d'exclusion est également présent
-                    const isExcluded = excludesKeywords.some(excludeKeyword => ingredientsLower.includes(excludeKeyword));
-                    
-                    // 3. N'ajoute le tag que s'il n'est PAS exclu
-                    if (!isExcluded) {
-                        tags.add(tag);
-                        if (tag === 'viande') hasViande = true;
-                        if (tag === 'poisson' || tag === 'fruit_de_mer') hasPoisson = true;
-                    }
-                }
-            }
-            
-            // Logique Végétarien (inchangée)
-            if (hasViande || hasPoisson) {
-                tags.delete('vegetarien');
-            } else {
-                if (isKnownVeggie || (!hasViande && !hasPoisson)) {
-                    tags.add('vegetarien');
-                }
-            }
-            
-            return Array.from(tags);
-        }
-
-        /**
-         * Formate les minutes en "Xh Ym"
-         */
         function formatTime(minutes) {
             const h = Math.floor(minutes / 60);
             const m = minutes % 60;
@@ -772,16 +650,14 @@ let allRecipes = [];
             return timeString || "0m";
         }
 
-        /**
-         * Crée la carte HTML pour une recette.
-         */
+        // createRecipeCard reste identique, mais il reçoit des recettes DÉJÀ tagguées
         function createRecipeCard(recipe) {
             const card = document.createElement('div');
             card.className = 'recipe-card';
             
-            const tagsHTML = recipe.tags.map(tag => {
+            // Les tags viennent maintenant directement du worker
+            const tagsHTML = (recipe.tags || []).map(tag => {
                 let tagName = tag.replace(/_/g, ' ');
-                if (tagName === 'poisson fruit de mer') tagName = 'poisson'; // Raccourci
                 return `<span class="tag tag-${tag}">${tagName.toUpperCase()}</span>`;
             }).join('');
 
@@ -804,28 +680,26 @@ let allRecipes = [];
             `;
             return card;
         }
-		
-// --- LOGIQUE PRINCIPALE ---
 
-        /**
-         * Peuple les filtres (Continents) au démarrage.
-         */
-        function populateFilters() {
+        // --- LOGIQUE DE L'INTERFACE ---
+
+        // Ne peuple que les listes déroulantes (rapide)
+        function populateFilters(recipes) {
             const continents = new Set();
             const countries = new Set();
-            
-            allRecipes.forEach(recipe => {
-                recipe.tags = generateTags(recipe); 
-                
+            const types = new Set();
+
+            recipes.forEach(recipe => {
                 continents.add(recipe.continent);
                 countries.add(recipe.country);
+                types.add(recipe.type);
             });
             
-            populatedContinents = Array.from(continents).sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
-            populatedCountries = Array.from(countries).sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
-            
-            // Ajoute les options pour les continents
-            continentFilter.innerHTML = '<option value="Tous">-- TOUS --</option>'; // Réinitialise
+            populatedContinents = Array.from(continents).sort((a, b) => a.localeCompare(b, 'fr'));
+            populatedCountries = Array.from(countries).sort((a, b) => a.localeCompare(b, 'fr'));
+            allTypes = Array.from(types).sort();
+
+            continentFilter.innerHTML = '<option value="Tous">-- TOUS --</option>';
             populatedContinents.forEach(continent => {
                 const option = document.createElement('option');
                 option.value = continent;
@@ -833,37 +707,45 @@ let allRecipes = [];
                 continentFilter.appendChild(option);
             });
             
-            // Initialise le filtre pays avec tous les pays
             updateCountryFilter(true);
+            
+            selectedRecipeTypes = [...allTypes];
+            document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
+                const type = btn.dataset.type;
+                if (allTypes.includes(type)) {
+                    btn.classList.add('active');
+                    btn.disabled = false;
+                } else {
+                    btn.classList.add('locked');
+                    btn.disabled = true;
+                    btn.classList.remove('active');
+                }
+            });
         }
 
-        /**
-         * Met à jour le filtre des pays en fonction du continent sélectionné.
-         */
+        // Inchangé, mais utilise 'allRecipesRaw'
         function updateCountryFilter(initial = false) {
             const selectedContinent = continentFilter.value;
             const currentCountryValue = countryFilter.value; 
             
             countryFilter.innerHTML = '<option value="Tous">-- TOUS --</option>';
-            
             let countriesToShow;
             
             if (selectedContinent === 'Tous') {
                 countriesToShow = populatedCountries;
             } else {
                 const countries = new Set();
-                allRecipes.forEach(recipe => {
+                allRecipesRaw.forEach(recipe => { // Utilise les données brutes
                     if (recipe.continent === selectedContinent) {
                         countries.add(recipe.country);
                     }
                 });
-                countriesToShow = Array.from(countries).sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+                countriesToShow = Array.from(countries).sort((a, b) => a.localeCompare(b, 'fr'));
             }
 
             countriesToShow.forEach(country => {
                 const option = document.createElement('option');
                 option.value = country;
-                option.textContent = country;
                 countryFilter.appendChild(option);
             });
 
@@ -874,11 +756,8 @@ let allRecipes = [];
             }
         }
 
-        /**
-         * Affiche les recettes filtrées.
-         */
-        function renderRecipes() {
-            // Récupère les filtres actuels
+        // 2. Cette fonction n'envoie que les filtres à l'assistant
+        function requestRender() {
             const filters = {
                 continent: continentFilter.value,
                 country: countryFilter.value,
@@ -888,62 +767,38 @@ let allRecipes = [];
                             .map(input => input.value)
             };
             
-            // Applique les filtres
-            const filteredRecipes = allRecipes.filter(recipe => {
-                // 1. Filtre Type de Plat (obligatoire)
-                if (selectedRecipeTypes.length === 0 || !selectedRecipeTypes.includes(recipe.type)) {
-                    return false;
+            // Dit à l'assistant : "Filtre-moi ça !"
+            filterWorker.postMessage({
+                type: 'FILTER',
+                payload: {
+                    filters: filters,
+                    selectedRecipeTypes: selectedRecipeTypes
                 }
-                // 2. Filtre Continent
-                if (filters.continent !== 'Tous' && recipe.continent !== filters.continent) {
-                    return false;
-                }
-                // 3. Filtre Pays
-                if (filters.country !== 'Tous' && recipe.country !== filters.country) {
-                    return false;
-                }
-                // 4. Filtre Temps
-                if (recipe.prepTime > filters.maxTime) {
-                    return false;
-                }
-                // 5. Filtre Tags (la recette doit avoir TOUS les tags sélectionnés)
-                if (filters.tags.length > 0 && !filters.tags.every(tag => recipe.tags.includes(tag))) {
-                    return false;
-                }
-                
-                return true;
             });
-            
-            // Vide la liste
+        }
+
+        // 3. Cette fonction reçoit les résultats de l'assistant et les affiche
+        function updateDOM(filteredRecipes) {
             recipeList.innerHTML = '';
-            
-            // Met à jour le compteur
             recipeCount.textContent = `${filteredRecipes.length} RECETTES TROUVÉES`;
             
-            // Affiche les recettes
-            if (filteredRecipes.length === 0) {
-                recipeList.innerHTML = '<div class="recipe-card"><h3>Aucune recette trouvée!</h3><p>Essayez d\'élargir vos filtres.</p></div>';
-            } else {
-                // Trie par pays (linguistiquement correct) puis par nom.
-                filteredRecipes.sort((a, b) => {
-                    const countryComparison = a.country.localeCompare(b.country, 'fr', { sensitivity: 'base' });
-                    
-                    if (countryComparison !== 0) {
-                        return countryComparison;
-                    }
+            const fragment = document.createDocumentFragment(); // Optimisation N°1
 
-                    return a.name.localeCompare(b.name, 'fr', { sensitivity: 'case' });
-                });
-                
+            if (filteredRecipes.length === 0) {
+                const noResult = document.createElement('div');
+                noResult.className = 'recipe-card';
+                noResult.innerHTML = '<h3>Aucune recette trouvée!</h3><p>Essayez d\'élargir vos filtres.</p>';
+                fragment.appendChild(noResult);
+            } else {
+                // Le tri est déjà fait par le worker !
                 filteredRecipes.forEach(recipe => {
-                    recipeList.appendChild(createRecipeCard(recipe));
+                    fragment.appendChild(createRecipeCard(recipe));
                 });
             }
+            
+            recipeList.appendChild(fragment); // Mise à jour unique du DOM
         }
-        
-        /**
-         * Réinitialise tous les filtres à leur état par défaut.
-         */
+
         function resetFilters() {
             continentFilter.value = 'Tous';
             updateCountryFilter(); 
@@ -952,120 +807,89 @@ let allRecipes = [];
             timeValue.textContent = 'Jusqu\'à 12h 00m';
             tagFilters.forEach(input => input.checked = false);
             
-			// Réinitialise le tableau des types
-            selectedRecipeTypes = ["Mijoté", "Sauté", "Grill", "Soupe", "Vapeur", "Four / Rôtir", "Frire", "Froid / Cru"];
-    
-            // Met à jour les classes des boutons pour tout ACTIVER
+            selectedRecipeTypes = [...allTypes];
             document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
-                 if (selectedRecipeTypes.includes(btn.dataset.type)) {
+                 if (allTypes.includes(btn.dataset.type)) {
                      btn.classList.add('active');
-                 } else {
-                     // S'assure que les boutons "locked" restent locked (au cas où la recette test n'existe pas)
-                     if (!btn.disabled) {
-                        btn.classList.remove('active');
-                     }
                  }
              });
 			
-            renderRecipes();
+            requestRender(); // Demande à l'assistant de réinitialiser
         }
 
-        // --- INITIALISATION et ÉVÉNEMENTS ---
-        document.addEventListener('DOMContentLoaded', () => {
-    
-            // 1. DÉMARRAGE DU CHARGEMENT ASYNCHRONE
-            fetch('recettes.json') // Assurez-vous que le nom du fichier est correct
-                .then(response => {
-                    // Vérifie que le fichier a été trouvé et chargé correctement
-                    if (!response.ok) {
-                        throw new Error(`Erreur HTTP! Statut: ${response.status}. Le fichier 'recettes.json' n'a pas été trouvé ou chargé.`);
-                    }
-                    return response.json(); // Convertit le texte JSON en objet JavaScript
-                })
-                .then(data => {
-                    // 2. STOCKAGE DES DONNÉES
-                    allRecipes = data; // <--- Les données sont enfin disponibles ici
-
-                    // 3. DÉMARRAGE DE L'APPLICATION (Ancien code d'initialisation)
-                    
-                    // Pré-traitement et marquage des recettes
-                    populateFilters(); 
-
-                    // Verrouillage des types non représentés
-                    document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
-                        const type = btn.dataset.type;
-                        const hasRecipes = allRecipes.some(recipe => recipe.type === type);
-                        if (!hasRecipes) {
-                            btn.classList.add('locked');
-                            btn.disabled = true;
-                            const index = selectedRecipeTypes.indexOf(type);
-                            if (index > -1) {
-                                 selectedRecipeTypes.splice(index, 1);
-                             }
-                        }
-                        
-                        if (selectedRecipeTypes.includes(btn.dataset.type) && !btn.disabled) {
-                            btn.classList.add('active');
-                        }
-                    });
-                    
-                    // Rendu initial
-                    renderRecipes(); 
-                    
-                    // --- GESTION DES BOUTONS DE TYPE ---
-                    const typeButtonsContainer = document.querySelector('.type-buttons');
-                    typeButtonsContainer.addEventListener('click', (event) => {
-                        const clickedButton = event.target.closest('.pixel-button');
-
-                        if (clickedButton && clickedButton.dataset.type && !clickedButton.disabled) {
-                            const type = clickedButton.dataset.type;
-                            const index = selectedRecipeTypes.indexOf(type);
+        // --- DÉMARRAGE ---
         
-                            if (index > -1) {
-                                selectedRecipeTypes.splice(index, 1);
-                                clickedButton.classList.remove('active');
-                            } else {
-                                selectedRecipeTypes.push(type);
-                                clickedButton.classList.add('active');
-                            }
-                            renderRecipes();
-                        }
-                    });
+        // 4. Écoute les réponses de l'assistant
+        filterWorker.onmessage = function(e) {
+            // L'assistant a renvoyé les données filtrées
+            updateDOM(e.data);
+        };
 
-                    // Ajout des écouteurs d'événements pour les filtres standards
-                    continentFilter.addEventListener('change', () => {
-                        updateCountryFilter();
-                        renderRecipes();
-                    });
-                    countryFilter.addEventListener('change', renderRecipes);
-                    timeFilter.addEventListener('input', () => {
-                        timeValue.textContent = `Jusqu'à ${formatTime(parseInt(timeFilter.value, 10))}`;
-                    });
-                    timeFilter.addEventListener('change', renderRecipes); 
-                    
-                    tagFilters.forEach(input => {
-                        input.addEventListener('change', renderRecipes);
-                    });
-                    
-                    resetButton.addEventListener('click', resetFilters);
-
-                    // --- GESTIONNAIRE DU THÈME ---
-                    themeToggle.addEventListener('click', () => {
-                        document.body.classList.toggle('light-mode');
-                        const isLight = document.body.classList.contains('light-mode');
-                        themeToggle.textContent = isLight ? 'Passer au Mode Nuit' : 'Passer au Mode Jour';
-                    });
+        // 5. Charger les données initiales (le .json)
+        fetch('recipes.json') // Charge le fichier JSON externe
+            .then(response => response.json())
+            .then(data => {
+                allRecipesRaw = data; // Garde les données brutes pour les menus
                 
-                })
-                .catch(error => {
-                    // 4. GÉRER L'ERREUR (si le JSON n'est pas chargé)
-                    console.error("Erreur de chargement du fichier recettes.json:", error);
-                    document.getElementById('recipe-count').textContent = "ERREUR: Recettes non chargées. Vérifiez recettes.json.";
+                // Transfère les 1723 recettes à l'assistant (Worker)
+                // C'est lui qui va générer les tags une bonne fois pour toutes
+                filterWorker.postMessage({
+                    type: 'LOAD_DATA',
+                    payload: data
                 });
-					
+
+                // L'interface se prépare (c'est rapide)
+                populateFilters(data);
+                
+                // Demande le premier affichage
+                requestRender();
+            })
+            .catch(error => {
+                console.error("Erreur de chargement des recettes:", error);
+                recipeCount.textContent = "Erreur de chargement des recettes.";
+            });
+
+        // --- ÉCOUTEURS D'ÉVÉNEMENTS (Ils appellent requestRender) ---
+        
+        typeButtonsContainer.addEventListener('click', (event) => {
+            const clickedButton = event.target;
+            if (clickedButton.tagName === 'BUTTON' && !clickedButton.disabled) {
+                const type = clickedButton.dataset.type;
+                const index = selectedRecipeTypes.indexOf(type);
+                if (index > -1) {
+                    selectedRecipeTypes.splice(index, 1);
+                    clickedButton.classList.remove('active');
+                } else {
+                    selectedRecipeTypes.push(type);
+                    clickedButton.classList.add('active');
+                }
+                requestRender(); // Demande à l'assistant
+            }
         });
-    </script>
+
+        continentFilter.addEventListener('change', () => {
+            updateCountryFilter();
+            requestRender();
+        });
+        countryFilter.addEventListener('change', requestRender);
+        timeFilter.addEventListener('input', () => {
+            timeValue.textContent = `Jusqu'à ${formatTime(parseInt(timeFilter.value, 10))}`;
+        });
+        timeFilter.addEventListener('change', requestRender); 
+        tagFilters.forEach(input => input.addEventListener('change', renderRecipes));
+        resetButton.addEventListener('click', resetFilters);
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            themeToggle.textContent = isLight ? 'Passer au Mode Nuit' : 'Passer au Mode Jour';
+        });
+        
+        // La fonction renderRecipes est maintenant requestRender
+        function renderRecipes() {
+            requestRender();
+        }
+						
+    });
+</script>
 </body>
 </html>
-
-
