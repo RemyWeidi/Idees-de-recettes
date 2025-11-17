@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Recipe Quest</title>
-    <!-- Chargement de la police moderne "Inter" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -213,16 +212,6 @@
             color: #FFFFFF; /* Texte blanc pour les DEUX modes */
         }
         
-        /* Mode Jour (Rouge subtil) */
-        body.light-mode .pixel-button.active {
-            /* Style maintenant géré par .pixel-button.active ci-dessus */
-        }
-        
-        /* Mode Nuit (Rouge Vif) */
-        body:not(.light-mode) .pixel-button.active {
-            /* Style maintenant géré par .pixel-button.active ci-dessus */
-        }
-
         .pixel-button.locked {
             background-color: var(--bg-tertiary);
             color: var(--text-secondary);
@@ -230,6 +219,24 @@
             cursor: not-allowed;
             border-color: var(--bg-tertiary);
         }
+
+        /* --- NOUVEAU STYLE (ÉTAPE 2) --- */
+        .discreet-button {
+            background: none;
+            border: none;
+            color: var(--text-secondary); /* Grisé */
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        .discreet-button:hover {
+            color: var(--text-primary);
+            background-color: var(--bg-tertiary);
+        }
+        /* --- FIN NOUVEAU STYLE --- */
 
         /* Slider de temps */
         input[type="range"] {
@@ -488,7 +495,10 @@
                 </div>
                 
                 <div class="filter-group">
-                    <h2>Type de Plat</h2>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
+                        <h2 style="margin-bottom: 0;">Type de Plat</h2>
+                        <button id="toggle-types-button" class="discreet-button">Tout Désél.</button>
+                    </div>
                     <div class="type-buttons">
 					    <button class="pixel-button active" data-type="Mijoté">Mijoté</button>
 					    <button class="pixel-button active" data-type="Sauté">Sauté</button>
@@ -500,7 +510,6 @@
                         <button class="pixel-button active" data-type="Froid / Cru">Froid / Cru</button>
 				    </div>
                 </div>
-
                 <div class="filter-group">
                     <h2>Destination</h2>
                     <label for="continent-filter">Continent:</label>
@@ -598,7 +607,6 @@
                 </div>
                 
                  <div class="filter-group">
-                    <!-- Ce bouton utilise la même classe .pixel-button pour que le JS le trouve -->
                     <button class="pixel-button" id="reset-button" style="background-color: var(--bg-tertiary); color: var(--text-primary);">RESET FILTRES</button>
                  </div>
 
@@ -607,8 +615,7 @@
             <main class="window-box">
                 <h2 id="recipe-count">Chargement des recettes...</h2>
                 <div id="recipe-list">
-                    <!-- Les cartes de recettes seront insérées ici par le JS -->
-                </div>
+                    </div>
             </main>
 
         </div>
@@ -617,7 +624,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         
-        // --- ÉLÉMENTS DU DOM (Inchangés) ---
+        // --- ÉLÉMENTS DU DOM ---
         const continentFilter = document.getElementById('continent-filter');
         const countryFilter = document.getElementById('country-filter');
         const timeFilter = document.getElementById('time-filter');
@@ -628,6 +635,8 @@
         const resetButton = document.getElementById('reset-button');
         const themeToggle = document.getElementById('theme-toggle');
         const typeButtonsContainer = document.querySelector('.type-buttons');
+        // --- NOUVEL ÉLÉMENT (ÉTAPE 3) ---
+        const toggleTypesButton = document.getElementById('toggle-types-button');
 
         // --- ÉTAT GLOBAL (Simplifié) ---
         let populatedContinents = [];
@@ -650,12 +659,10 @@
             return timeString || "0m";
         }
 
-        // createRecipeCard reste identique, mais il reçoit des recettes DÉJÀ tagguées
         function createRecipeCard(recipe) {
             const card = document.createElement('div');
             card.className = 'recipe-card';
             
-            // Les tags viennent maintenant directement du worker
             const tagsHTML = (recipe.tags || []).map(tag => {
                 let tagName = tag.replace(/_/g, ' ');
                 return `<span class="tag tag-${tag}">${tagName.toUpperCase()}</span>`;
@@ -683,7 +690,6 @@
 
         // --- LOGIQUE DE L'INTERFACE ---
 
-        // Ne peuple que les listes déroulantes (rapide)
         function populateFilters(recipes) {
             const continents = new Set();
             const countries = new Set();
@@ -721,9 +727,12 @@
                     btn.classList.remove('active');
                 }
             });
+
+            // --- MISE À JOUR (ÉTAPE 4) ---
+            // S'assurer que le texte du bouton est correct au démarrage
+            updateToggleTypesButtonText();
         }
 
-        // Inchangé, mais utilise 'allRecipesRaw'
         function updateCountryFilter(initial = false) {
             const selectedContinent = continentFilter.value;
             const currentCountryValue = countryFilter.value; 
@@ -735,7 +744,7 @@
                 countriesToShow = populatedCountries;
             } else {
                 const countries = new Set();
-                allRecipesRaw.forEach(recipe => { // Utilise les données brutes
+                allRecipesRaw.forEach(recipe => { 
                     if (recipe.continent === selectedContinent) {
                         countries.add(recipe.country);
                     }
@@ -757,7 +766,6 @@
             }
         }
 
-        // 2. Cette fonction n'envoie que les filtres à l'assistant
         function requestRender() {
             const filters = {
                 continent: continentFilter.value,
@@ -768,7 +776,6 @@
                             .map(input => input.value)
             };
             
-            // Dit à l'assistant : "Filtre-moi ça !"
             filterWorker.postMessage({
                 type: 'FILTER',
                 payload: {
@@ -778,12 +785,11 @@
             });
         }
 
-        // 3. Cette fonction reçoit les résultats de l'assistant et les affiche
         function updateDOM(filteredRecipes) {
             recipeList.innerHTML = '';
             recipeCount.textContent = `${filteredRecipes.length} RECETTES TROUVÉES`;
             
-            const fragment = document.createDocumentFragment(); // Optimisation N°1
+            const fragment = document.createDocumentFragment(); 
 
             if (filteredRecipes.length === 0) {
                 const noResult = document.createElement('div');
@@ -791,13 +797,12 @@
                 noResult.innerHTML = '<h3>Aucune recette trouvée!</h3><p>Essayez d\'élargir vos filtres.</p>';
                 fragment.appendChild(noResult);
             } else {
-                // Le tri est déjà fait par le worker !
                 filteredRecipes.forEach(recipe => {
                     fragment.appendChild(createRecipeCard(recipe));
                 });
             }
             
-            recipeList.appendChild(fragment); // Mise à jour unique du DOM
+            recipeList.appendChild(fragment);
         }
 
         function resetFilters() {
@@ -814,48 +819,55 @@
                      btn.classList.add('active');
                  }
              });
+            
+            // --- MISE À JOUR (ÉTAPE 4) ---
+            updateToggleTypesButtonText(); // Mettre à jour le texte du bouton
 			
-            requestRender(); // Demande à l'assistant de réinitialiser
+            requestRender();
+        }
+
+        // --- NOUVELLE FONCTION (ÉTAPE 3) ---
+        // Fonction pour mettre à jour le texte du bouton "Tout/Rien"
+        function updateToggleTypesButtonText() {
+            if (selectedRecipeTypes.length === allTypes.length) {
+                toggleTypesButton.textContent = 'Tout Désél.';
+            } else {
+                toggleTypesButton.textContent = 'Tout Sél.';
+            }
         }
 
         // --- DÉMARRAGE ---
         
-        // 4. Écoute les réponses de l'assistant
         filterWorker.onmessage = function(e) {
-            // L'assistant a renvoyé les données filtrées
             updateDOM(e.data);
         };
 
-        // 5. Charger les données initiales (le .json)
-        // *** CORRECTION N°1 : Assurez-vous que le nom du fichier est 'recettes.json' (avec accent) ***
-        fetch('recettes.json') // Charge le fichier JSON externe
+        // --- CORRECTION BUG 1 (Chemin du Fichier) ---
+        // Doit être 'recettes.json' (avec accent) pour GitHub
+        fetch('recettes.json')
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`Erreur HTTP! Statut: ${response.status}`);
                 }
                 return response.json();
             })
             .then(data => {
-                allRecipesRaw = data; // Garde les données brutes pour les menus
+                allRecipesRaw = data; 
                 
-                // Transfère les recettes à l'assistant (Worker)
                 filterWorker.postMessage({
                     type: 'LOAD_DATA',
                     payload: data
                 });
 
-                // L'interface se prépare (c'est rapide)
                 populateFilters(data);
-                
-                // Demande le premier affichage
                 requestRender();
             })
             .catch(error => {
                 console.error("Erreur de chargement des recettes:", error);
-                recipeCount.textContent = "Erreur de chargement des recettes. Vérifiez le nom du fichier 'recettes.json'.";
+                recipeCount.textContent = "ERREUR: Recettes non chargées. Vérifiez le fichier 'recettes.json'.";
             });
 
-        // --- ÉCOUTEURS D'ÉVÉNEMENTS (Ils appellent requestRender) ---
+        // --- ÉCOUTEURS D'ÉVÉNEMENTS ---
         
         typeButtonsContainer.addEventListener('click', (event) => {
             const clickedButton = event.target;
@@ -870,8 +882,37 @@
                     clickedButton.classList.add('active');
                 }
                 requestRender(); // Demande à l'assistant
+                
+                // --- MISE À JOUR (ÉTAPE 4) ---
+                updateToggleTypesButtonText(); // Mettre à jour le texte du bouton
             }
         });
+
+        // --- NOUVEL ÉCOUTEUR (ÉTAPE 3) ---
+        toggleTypesButton.addEventListener('click', () => {
+            const allTypeButtons = document.querySelectorAll('.type-buttons .pixel-button');
+            
+            // Si tout est déjà sélectionné (ou la plupart), on désélectionne tout
+            if (selectedRecipeTypes.length > 0) {
+                selectedRecipeTypes = []; // Vider la liste
+                allTypeButtons.forEach(btn => {
+                    btn.classList.remove('active'); // Enlever 'active' de TOUS les boutons
+                });
+            } 
+            // Sinon (si 0 est sélectionné), on sélectionne tout
+            else {
+                selectedRecipeTypes = [...allTypes]; // Remplir la liste
+                allTypeButtons.forEach(btn => {
+                    if (allTypes.includes(btn.dataset.type)) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+            
+            updateToggleTypesButtonText(); // Mettre à jour le texte du bouton
+            requestRender(); // Mettre à jour la vue
+        });
+
 
         continentFilter.addEventListener('change', () => {
             updateCountryFilter();
@@ -884,9 +925,9 @@
         });
         timeFilter.addEventListener('change', requestRender); 
         
-        // *** CORRECTION N°2 : Utiliser 'requestRender' au lieu de 'renderRecipes' ***
-        // (Même si 'renderRecipes' était un alias, cela crée une confusion et peut causer des bugs)
-        tagFilters.forEach(input => input.addEventListener('change', requestRender)); 
+        // --- CORRECTION BUG 2 (Nom de la fonction) ---
+        // Doit appeler 'requestRender' et non 'renderRecipes' (qui n'existe plus en tant qu'alias)
+        tagFilters.forEach(input => input.addEventListener('change', requestRender));
         
         resetButton.addEventListener('click', resetFilters);
         
@@ -896,11 +937,9 @@
             themeToggle.textContent = isLight ? 'Passer au Mode Nuit' : 'Passer au Mode Jour';
         });
         
-        // (Nous n'avons plus besoin de l'alias 'renderRecipes' car nous appelons 'requestRender' directement)
+        // (L'alias 'renderRecipes' n'est plus nécessaire)
 						
     });
 </script>
 </body>
 </html>
-
-
