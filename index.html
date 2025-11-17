@@ -746,6 +746,7 @@
             countriesToShow.forEach(country => {
                 const option = document.createElement('option');
                 option.value = country;
+                option.textContent = country;
                 countryFilter.appendChild(option);
             });
 
@@ -826,13 +827,18 @@
         };
 
         // 5. Charger les données initiales (le .json)
+        // *** CORRECTION N°1 : Assurez-vous que le nom du fichier est 'recettes.json' (avec accent) ***
         fetch('recettes.json') // Charge le fichier JSON externe
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 allRecipesRaw = data; // Garde les données brutes pour les menus
                 
-                // Transfère les 1723 recettes à l'assistant (Worker)
-                // C'est lui qui va générer les tags une bonne fois pour toutes
+                // Transfère les recettes à l'assistant (Worker)
                 filterWorker.postMessage({
                     type: 'LOAD_DATA',
                     payload: data
@@ -846,7 +852,7 @@
             })
             .catch(error => {
                 console.error("Erreur de chargement des recettes:", error);
-                recipeCount.textContent = "Erreur de chargement des recettes.";
+                recipeCount.textContent = "Erreur de chargement des recettes. Vérifiez le nom du fichier 'recettes.json'.";
             });
 
         // --- ÉCOUTEURS D'ÉVÉNEMENTS (Ils appellent requestRender) ---
@@ -872,25 +878,29 @@
             requestRender();
         });
         countryFilter.addEventListener('change', requestRender);
+        
         timeFilter.addEventListener('input', () => {
             timeValue.textContent = `Jusqu'à ${formatTime(parseInt(timeFilter.value, 10))}`;
         });
         timeFilter.addEventListener('change', requestRender); 
-        tagFilters.forEach(input => input.addEventListener('change', renderRecipes));
+        
+        // *** CORRECTION N°2 : Utiliser 'requestRender' au lieu de 'renderRecipes' ***
+        // (Même si 'renderRecipes' était un alias, cela crée une confusion et peut causer des bugs)
+        tagFilters.forEach(input => input.addEventListener('change', requestRender)); 
+        
         resetButton.addEventListener('click', resetFilters);
+        
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
             const isLight = document.body.classList.contains('light-mode');
             themeToggle.textContent = isLight ? 'Passer au Mode Nuit' : 'Passer au Mode Jour';
         });
         
-        // La fonction renderRecipes est maintenant requestRender
-        function renderRecipes() {
-            requestRender();
-        }
+        // (Nous n'avons plus besoin de l'alias 'renderRecipes' car nous appelons 'requestRender' directement)
 						
     });
 </script>
 </body>
 </html>
+
 
