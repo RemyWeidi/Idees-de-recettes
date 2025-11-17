@@ -826,7 +826,7 @@
         };
 
         // 5. Charger les données initiales (le .json)
-        fetch('recipes.json') // Charge le fichier JSON externe
+        fetch('recettes.json') // Charge le fichier JSON externe
             .then(response => response.json())
             .then(data => {
                 allRecipesRaw = data; // Garde les données brutes pour les menus
@@ -893,3 +893,4 @@
 </script>
 </body>
 </html>
+
