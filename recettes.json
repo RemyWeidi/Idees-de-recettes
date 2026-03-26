@@ -36980,7 +36980,7 @@
             "Cannelle (bâton)",
             "Zeste de citron"
         ]
-    },[
+    },
     {
         "id": 1924,
         "name": "Poisson Poché au Piment (Shui Zhu Yu)",
@@ -37581,7 +37581,6 @@
         "prepTime": 20,
         "ingredients": ["Riz", "Saucisses cantonaises", "Œufs", "Cive", "Pois"]
     },
-	[
     {
         "id": 2024,
         "name": "Bœuf Poché au Piment (Shui Zhu Niu Rou)",
