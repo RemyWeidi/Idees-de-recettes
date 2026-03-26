@@ -968,9 +968,10 @@ const filtersUI = document.getElementById('filters-ui');
 
 mobileToggle.addEventListener('click', () => {
     filtersUI.classList.toggle('mobile-open');
+    // Texte modifié sans les émojis flèches
     mobileToggle.textContent = filtersUI.classList.contains('mobile-open') 
-        ? '🔼 Cacher les Filtres' 
-        : '🔽 Afficher les Filtres';
+        ? 'Cacher les Filtres' 
+        : 'Afficher les Filtres';
 });
 						
     });
