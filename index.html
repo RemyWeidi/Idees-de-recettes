@@ -477,6 +477,26 @@
             color: var(--text-secondary); /* Titre "Ingrédients" aussi en retrait */
             font-weight: 600; /* Garder un peu de poids */
         }
+		
+		@media (max-width: 900px) {
+            #mobile-filter-toggle {
+                display: block !important;
+                width: 100%;
+                cursor: pointer;
+                padding: 12px;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+            }
+
+            #filters-ui {
+                display: none; /* Caché par défaut sur mobile */
+            }
+
+            #filters-ui.mobile-open {
+                display: block; /* S'affiche quand on ajoute la classe via JS */
+            }
+        }
 
     </style>
 </head>
@@ -485,6 +505,10 @@
 
     <div class="container">
         <h1>World Recipe Quest</h1>
+        
+        <button id="mobile-filter-toggle" class="pixel-button" style="display: none; margin-bottom: 15px; background-color: var(--accent); color: white; border: none;">
+            🔍 Afficher / Cacher les Filtres
+        </button>
 
         <div class="main-layout">
             
@@ -500,16 +524,17 @@
                         <button id="toggle-types-button" class="discreet-button">Tout Désél.</button>
                     </div>
                     <div class="type-buttons">
-					    <button class="pixel-button active" data-type="Mijoté">Mijoté</button>
-					    <button class="pixel-button active" data-type="Sauté">Sauté</button>
-					    <button class="pixel-button active" data-type="Grill">Grill</button>
-					    <button class="pixel-button active" data-type="Soupe">Soupe</button>
-						<button class="pixel-button active" data-type="Vapeur">Vapeur</button>
+                        <button class="pixel-button active" data-type="Mijoté">Mijoté</button>
+                        <button class="pixel-button active" data-type="Sauté">Sauté</button>
+                        <button class="pixel-button active" data-type="Grill">Grill</button>
+                        <button class="pixel-button active" data-type="Soupe">Soupe</button>
+                        <button class="pixel-button active" data-type="Vapeur">Vapeur</button>
                         <button class="pixel-button active" data-type="Four / Rôtir">Four / Rôtir</button>
                         <button class="pixel-button active" data-type="Frire">Frire</button>
                         <button class="pixel-button active" data-type="Froid / Cru">Froid / Cru</button>
-				    </div>
+                    </div>
                 </div>
+
                 <div class="filter-group">
                     <h2>Destination</h2>
                     <label for="continent-filter">Continent:</label>
@@ -531,95 +556,83 @@
                 </div>
 
                 <div class="filter-group">
-                    <h2>Ingrédients</h2>
+                    <h2>Recherche Ingrédients</h2>
+                    <input type="text" id="ingredient-search" placeholder="Ex: ail, gingembre..." style="width: 100%; padding: 10px; border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--bg-tertiary);">
+                </div>
+
+                <div class="filter-group">
+                    <h2>Filtres Rapides</h2>
                     <div class="checkbox-group">
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="viande">
-                            <span class="custom-checkbox"></span>
-                            Viande
+                            <span class="custom-checkbox"></span> Viande
                         </label>
-						<label class="checkbox-label">
+                        <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="poisson">
-                            <span class="custom-checkbox"></span>
-                            Poisson
+                            <span class="custom-checkbox"></span> Poisson
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="fruit_de_mer">
-                            <span class="custom-checkbox"></span>
-                            Fruits de mer
+                            <span class="custom-checkbox"></span> Fruits mer
                         </label>
-						<label class="checkbox-label">
+                        <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="legumes">
-                            <span class="custom-checkbox"></span>
-                            Légumes
+                            <span class="custom-checkbox"></span> Légumes
                         </label>
-						<label class="checkbox-label">
+                        <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="riz">
-                            <span class="custom-checkbox"></span>
-                            Riz
+                            <span class="custom-checkbox"></span> Riz
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="pates">
-                            <span class="custom-checkbox"></span>
-                            Pâtes
+                            <span class="custom-checkbox"></span> Pâtes
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="legumineuse">
-                            <span class="custom-checkbox"></span>
-                            Légumineuse
+                            <span class="custom-checkbox"></span> Légumineuse
                         </label>
+                        
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="tag-filter" value="tofu">
+                            <span class="custom-checkbox"></span> Tofu
+                        </label>
+
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="cereales">
-                            <span class="custom-checkbox"></span>
-                            Céréales
+                            <span class="custom-checkbox"></span> Céréales
                         </label>
-						<label class="checkbox-label">
+                        <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="oeuf">
-                            <span class="custom-checkbox"></span>
-                            Oeuf
+                            <span class="custom-checkbox"></span> Oeuf
                         </label>
-						<label class="checkbox-label">
+                        <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="champignons">
-                            <span class="custom-checkbox"></span>
-                            Champignons
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" class="tag-filter" value="epices">
-                            <span class="custom-checkbox"></span>
-                            Épices
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" class="tag-filter" value="herbes">
-                            <span class="custom-checkbox"></span>
-                            Herbes
+                            <span class="custom-checkbox"></span> Champis
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="epice_piquant">
-                            <span class="custom-checkbox"></span>
-                            Piquant
+                            <span class="custom-checkbox"></span> Piquant
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" class="tag-filter" value="vegetarien">
-                            <span class="custom-checkbox"></span>
-                            Végétarien
+                            <span class="custom-checkbox"></span> Végétarien
                         </label>
                     </div>
                 </div>
                 
-                 <div class="filter-group">
+                <div class="filter-group">
                     <button class="pixel-button" id="reset-button" style="background-color: var(--bg-tertiary); color: var(--text-primary);">RESET FILTRES</button>
-                 </div>
+                </div>
 
             </aside>
             
             <main class="window-box">
                 <h2 id="recipe-count">Chargement des recettes...</h2>
-                <div id="recipe-list">
-                    </div>
+                <div id="recipe-list"></div>
             </main>
 
         </div>
-    </div> 
+    </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -767,23 +780,24 @@
         }
 
         function requestRender() {
-            const filters = {
-                continent: continentFilter.value,
-                country: countryFilter.value,
-                maxTime: parseInt(timeFilter.value, 10),
-                tags: Array.from(tagFilters)
-                            .filter(input => input.checked)
-                            .map(input => input.value)
-            };
-            
-            filterWorker.postMessage({
-                type: 'FILTER',
-                payload: {
-                    filters: filters,
-                    selectedRecipeTypes: selectedRecipeTypes
-                }
-            });
+    const filters = {
+        continent: continentFilter.value,
+        country: countryFilter.value,
+        maxTime: parseInt(timeFilter.value, 10),
+        ingredientQuery: document.getElementById('ingredient-search').value.trim(), // Nouveau
+        tags: Array.from(tagFilters)
+                .filter(input => input.checked)
+                .map(input => input.value)
+    };
+    
+    filterWorker.postMessage({
+        type: 'FILTER',
+        payload: {
+            filters: filters,
+            selectedRecipeTypes: selectedRecipeTypes
         }
+    });
+}
 
         function updateDOM(filteredRecipes) {
             recipeList.innerHTML = '';
@@ -938,6 +952,25 @@
         });
         
         // (L'alias 'renderRecipes' n'est plus nécessaire)
+		
+		// Écouteur pour la recherche par ingrédient (avec un petit délai pour la performance)
+const ingredientSearch = document.getElementById('ingredient-search');
+ingredientSearch.addEventListener('input', () => {
+    // On attend que l'utilisateur s'arrête de taper pendant 300ms
+    clearTimeout(window.searchTimeout);
+    window.searchTimeout = setTimeout(requestRender, 300);
+});
+
+// Gestion du menu mobile
+const mobileToggle = document.getElementById('mobile-filter-toggle');
+const filtersUI = document.getElementById('filters-ui');
+
+mobileToggle.addEventListener('click', () => {
+    filtersUI.classList.toggle('mobile-open');
+    mobileToggle.textContent = filtersUI.classList.contains('mobile-open') 
+        ? '🔼 Cacher les Filtres' 
+        : '🔽 Afficher les Filtres';
+});
 						
     });
 </script>
