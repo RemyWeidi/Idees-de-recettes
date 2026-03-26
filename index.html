@@ -820,25 +820,26 @@
         }
 
         function resetFilters() {
-            continentFilter.value = 'Tous';
-            updateCountryFilter(); 
-            countryFilter.value = 'Tous';
-            timeFilter.value = 720;
-            timeValue.textContent = 'Jusqu\'à 12h 00m';
-            tagFilters.forEach(input => input.checked = false);
-            
-            selectedRecipeTypes = [...allTypes];
-            document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
-                 if (allTypes.includes(btn.dataset.type)) {
-                     btn.classList.add('active');
-                 }
-             });
-            
-            // --- MISE À JOUR (ÉTAPE 4) ---
-            updateToggleTypesButtonText(); // Mettre à jour le texte du bouton
-			
-            requestRender();
-        }
+    continentFilter.value = 'Tous';
+    updateCountryFilter(); 
+    countryFilter.value = 'Tous';
+    timeFilter.value = 720;
+    timeValue.textContent = 'Jusqu\'à 12h 00m';
+    tagFilters.forEach(input => input.checked = false);
+    
+    // AJOUTEZ CETTE LIGNE pour vider la recherche
+    document.getElementById('ingredient-search').value = ''; 
+    
+    selectedRecipeTypes = [...allTypes];
+    document.querySelectorAll('.type-buttons .pixel-button').forEach(btn => {
+         if (allTypes.includes(btn.dataset.type)) {
+             btn.classList.add('active');
+         }
+     });
+    
+    updateToggleTypesButtonText();
+    requestRender();
+}
 
         // --- NOUVELLE FONCTION (ÉTAPE 3) ---
         // Fonction pour mettre à jour le texte du bouton "Tout/Rien"
