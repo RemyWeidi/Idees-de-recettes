@@ -12,6 +12,7 @@ const tagDefinitions = {
         includes: ["carotte", "oignon", "poireau", "tomate", "aubergine", "chou", "pomme de terre", "poivron", "céleri", "navet", "ail", "courge", "betterave", "olive", "maïs", "rutabaga", "panais", "cornichon", "okra", "gombo", "radis", "manioc", "plantain", "igname", "kimchi", "choucroute", "épinard", "kumara", "potiron", "artichaut", "concombre", "roquette", "cresson", "liseron d'eau", "orties", "oseille", "daikon", "konjac", "racine de lotus", "renkon", "gobo", "racine de bardane", "tomatillo", "chayotte", "mu er", "germes de soja", "feuilles de taro", "taro", "papaye verte", "jicama", "fleur de bananier", "algues", "wakame", "nori", "kombu", "cavolo nero", "nopales", "cardons", "poire coréenne", "jujubes", "haricots verts", "haricots longs", "petits pois"],
         excludes: ["pois chiches", "pois cassés", "haricots (lingots)", "haricots (Tarbais)", "haricots (Fabas)", "haricots (borlotti)", "haricots (cannellini)", "haricots (secs)", "farine de pois chiches", "champignon", "champignons", "shiitake", "pleurotes", "cèpes", "girolles", "morilles", "truffe", "champignons de Paris", "champignons noirs", "oreilles de Judas", "kikurage", "enoki"]
     },
+	tofu: ["tofu", "doufu", "tauhu", "to-fu", "beignets de soja"],
     epices: {
         includes: ["paprika", "cumin", "safran", "cannelle", "clou de girofle", "ras el hanout", "curry", "curcuma", "gingembre", "anis étoilé", "poivre", "baies de genièvre", "quatre-épices", "moutarde", "cardamome", "galanga", "pâte de roucou", "achiote", "sumac", "fenugrec", "fenouil", "tamarin", "cinq-épices", "amchur", "grains de paradis", "asafoetida", "hing", "ajwain", "mastic", "noix de muscade", "anis", "coriandre (graines)"],
         excludes: ["huile de sésame"]
@@ -145,33 +146,35 @@ self.onmessage = function(e) {
 
 // 4. La logique de filtrage (copiée de votre script)
 function filterData(filters, selectedRecipeTypes) {
-    
     const filteredRecipes = allRecipes.filter(recipe => {
         // 1. Filtre Type de Plat
-        if (selectedRecipeTypes.length === 0 || !selectedRecipeTypes.includes(recipe.type)) {
-            return false;
-        }
+        if (selectedRecipeTypes.length === 0 || !selectedRecipeTypes.includes(recipe.type)) return false;
+        
         // 2. Filtre Continent
-        if (filters.continent !== 'Tous' && recipe.continent !== filters.continent) {
-            return false;
-        }
+        if (filters.continent !== 'Tous' && recipe.continent !== filters.continent) return false;
+        
         // 3. Filtre Pays
-        if (filters.country !== 'Tous' && recipe.country !== filters.country) {
-            return false;
-        }
+        if (filters.country !== 'Tous' && recipe.country !== filters.country) return false;
+        
         // 4. Filtre Temps
-        if (recipe.prepTime > filters.maxTime) {
-            return false;
+        if (recipe.prepTime > filters.maxTime) return false;
+
+        // --- NOUVEAU : 5. Recherche par mot-clé dans les ingrédients ---
+        if (filters.ingredientQuery && filters.ingredientQuery.trim() !== '') {
+            const query = filters.ingredientQuery.toLowerCase();
+            const matchesQuery = recipe.ingredients.some(ing => 
+                ing.toLowerCase().includes(query)
+            );
+            if (!matchesQuery) return false;
         }
-        // 5. Filtre Tags (utilise les tags pré-calculés)
-        if (filters.tags.length > 0 && !filters.tags.every(tag => recipe.tags.includes(tag))) {
-            return false;
-        }
+
+        // 6. Filtre Tags (Tofu, Viande, etc.)
+        if (filters.tags.length > 0 && !filters.tags.every(tag => recipe.tags.includes(tag))) return false;
         
         return true;
     });
 
-    // 6. Tri (le faire ici réduit le travail du thread principal)
+    // 7. Tri
     filteredRecipes.sort((a, b) => {
         const countryComparison = a.country.localeCompare(b.country, 'fr', { sensitivity: 'base' });
         if (countryComparison !== 0) return countryComparison;
