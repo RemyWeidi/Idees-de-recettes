@@ -460,6 +460,17 @@
             color: #B91C1C; /* Rouge Jour Texte */
         }
 
+		/* Exception "Végétarien" en vert */
+body:not(.light-mode) .tag.tag-vegetarien {
+    background-color: #052e16;
+    color: #4ade80;
+}
+
+body.light-mode .tag.tag-vegetarien {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
         /* AMÉLIORATION : Distinction Description / Ingrédients (Inversé) */
         .recipe-description {
             margin-bottom: 12px;
