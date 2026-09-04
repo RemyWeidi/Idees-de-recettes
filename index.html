@@ -498,21 +498,321 @@
             }
         }
 
+
+        /* ===== MOBILE / TABLET UX REFRESH ===== */
+        html { -webkit-text-size-adjust: 100%; }
+        body { min-width: 0; }
+
+        .mobile-topbar,
+        .mobile-overlay,
+        .mobile-filter-close,
+        .mobile-filter-header { display: none; }
+
+        @media (max-width: 900px) {
+            body {
+                padding: 0;
+                font-size: 17px;
+                overflow-x: hidden;
+            }
+
+            .container {
+                max-width: none;
+                width: 100%;
+                min-height: 100vh;
+                padding: 0 14px 18px;
+            }
+
+            h1 {
+                font-size: clamp(24px, 6vw, 32px);
+                line-height: 1.1;
+                margin: 0;
+                text-align: left;
+                letter-spacing: -0.7px;
+            }
+
+            h2 {
+                font-size: 13px;
+                margin-bottom: 12px;
+            }
+
+            h3 {
+                font-size: 20px;
+                line-height: 1.25;
+            }
+
+            .mobile-topbar {
+                position: sticky;
+                top: 0;
+                z-index: 40;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                margin: 0 -14px 14px;
+                padding: max(12px, env(safe-area-inset-top)) 14px 12px;
+                background: color-mix(in srgb, var(--bg-primary) 92%, transparent);
+                border-bottom: 1px solid var(--card-border);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+            }
+
+            .mobile-topbar-title { min-width: 0; }
+            .mobile-topbar-title h1 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+            #mobile-filter-toggle {
+                display: inline-flex !important;
+                width: auto !important;
+                min-width: 48px;
+                height: 48px;
+                margin: 0 !important;
+                padding: 0 16px !important;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px !important;
+                font-size: 16px !important;
+                font-weight: 700;
+                flex-shrink: 0;
+                box-shadow: 0 6px 18px rgba(0,0,0,.18);
+            }
+
+            .desktop-title { display: none; }
+
+            .main-layout {
+                display: block;
+            }
+
+            main.window-box {
+                padding: 0;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+
+            #recipe-count {
+                position: sticky;
+                top: 74px;
+                z-index: 15;
+                margin: 0 0 10px;
+                padding: 10px 2px;
+                background: color-mix(in srgb, var(--bg-primary) 94%, transparent);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+
+            #recipe-list {
+                overflow: visible;
+                border: 0;
+                border-radius: 0;
+                padding: 0 0 18px;
+                background: transparent;
+            }
+
+            .recipe-card {
+                padding: 18px;
+                margin-bottom: 14px;
+                border-radius: 14px;
+                box-shadow: 0 4px 16px rgba(0,0,0,.08);
+            }
+
+            .recipe-card:hover { transform: none; }
+
+            .recipe-card-header {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 14px;
+                align-items: start;
+                margin-bottom: 14px;
+            }
+
+            .recipe-original-name {
+                font-size: 16px;
+                margin-top: 3px;
+                line-height: 1.35;
+            }
+
+            .recipe-origin {
+                max-width: 105px;
+                padding-left: 0;
+                font-size: 13px;
+                line-height: 1.35;
+            }
+
+            .recipe-info {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 0;
+            }
+
+            .recipe-time { font-size: 16px; }
+            .recipe-tags { gap: 7px; }
+            .tag { font-size: 11px; padding: 6px 9px; }
+
+            .recipe-description {
+                font-size: 16px;
+                line-height: 1.65;
+                margin-bottom: 14px;
+            }
+
+            .recipe-ingredients {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .mobile-overlay {
+                display: block;
+                position: fixed;
+                inset: 0;
+                z-index: 80;
+                background: rgba(0,0,0,.55);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .2s ease, visibility .2s ease;
+            }
+
+            .mobile-overlay.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            #filters-ui {
+                display: block;
+                position: fixed;
+                inset: 0 0 0 auto;
+                z-index: 90;
+                width: min(92vw, 430px);
+                height: 100dvh;
+                margin: 0;
+                padding: 0;
+                border-radius: 18px 0 0 18px;
+                overflow-y: auto;
+                transform: translateX(105%);
+                transition: transform .25s ease;
+                box-shadow: -14px 0 40px rgba(0,0,0,.35);
+                overscroll-behavior: contain;
+            }
+
+            #filters-ui.mobile-open { transform: translateX(0); }
+
+            .mobile-filter-header {
+                position: sticky;
+                top: 0;
+                z-index: 5;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                padding: max(14px, env(safe-area-inset-top)) 18px 14px;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--card-border);
+            }
+
+            .mobile-filter-header strong { font-size: 20px; }
+
+            .mobile-filter-close {
+                display: inline-flex;
+                width: 44px;
+                height: 44px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                border: 1px solid var(--bg-tertiary);
+                background: var(--bg-primary);
+                color: var(--text-primary);
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            #filters-ui > .filter-group {
+                margin: 0;
+                padding: 18px;
+                border-bottom: 1px solid var(--card-border);
+            }
+
+            #filters-ui > .filter-group:last-child {
+                padding-bottom: calc(20px + env(safe-area-inset-bottom));
+            }
+
+            select,
+            .pixel-button,
+            #ingredient-search {
+                min-height: 48px;
+                font-size: 16px !important;
+            }
+
+            .type-buttons {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .type-buttons .pixel-button {
+                padding: 12px 8px;
+                line-height: 1.2;
+            }
+
+            .checkbox-group {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 4px 10px;
+            }
+
+            .checkbox-label {
+                min-height: 44px;
+                white-space: normal;
+                font-size: 15px;
+                line-height: 1.25;
+            }
+
+            .checkbox-label .custom-checkbox {
+                width: 22px;
+                height: 22px;
+                margin-right: 9px;
+            }
+
+            input[type="range"] { height: 8px; }
+            input[type="range"]::-webkit-slider-thumb { width: 26px; height: 26px; }
+            #time-value { font-size: 16px; }
+
+            body.mobile-menu-open { overflow: hidden; }
+        }
+
+        @media (max-width: 540px) {
+            .container { padding-left: 10px; padding-right: 10px; }
+            .mobile-topbar { margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; }
+            .mobile-topbar-title h1 { font-size: 24px; }
+            #mobile-filter-toggle { padding: 0 13px !important; }
+            .recipe-card { padding: 16px; }
+            .recipe-card-header { grid-template-columns: 1fr; gap: 8px; }
+            .recipe-origin { max-width: none; text-align: left; }
+            .checkbox-group { grid-template-columns: 1fr 1fr; }
+            #filters-ui { width: 94vw; }
+        }
+
+        @media (min-width: 901px) and (max-width: 1180px) {
+            .container { max-width: 100%; }
+            .main-layout { grid-template-columns: 280px minmax(0, 1fr); gap: 18px; }
+            .window-box { padding: 20px; }
+        }
+
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h1>World Recipe Quest</h1>
-        
-        <button id="mobile-filter-toggle" class="pixel-button" style="display: none; margin-bottom: 15px; background-color: var(--accent); color: white; border: none;">
-            🔍 Afficher / Cacher les Filtres
-        </button>
+        <div class="mobile-topbar">
+            <div class="mobile-topbar-title"><h1>World Recipe Quest</h1></div>
+            <button id="mobile-filter-toggle" class="pixel-button" aria-controls="filters-ui" aria-expanded="false">Filtres</button>
+        </div>
+        <h1 class="desktop-title">World Recipe Quest</h1>
+        <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 
         <div class="main-layout">
             
             <aside class="window-box" id="filters-ui">
+                <div class="mobile-filter-header">
+                    <strong>Filtres</strong>
+                    <button id="mobile-filter-close" class="mobile-filter-close" aria-label="Fermer les filtres">×</button>
+                </div>
 
                 <div class="filter-group">
                     <button class="pixel-button" id="theme-toggle" style="width: 100%; background-color: var(--bg-tertiary); color: var(--text-primary);">Passer au Mode Jour</button>
@@ -964,14 +1264,28 @@ ingredientSearch.addEventListener('input', () => {
 
 // Gestion du menu mobile
 const mobileToggle = document.getElementById('mobile-filter-toggle');
+const mobileClose = document.getElementById('mobile-filter-close');
+const mobileOverlay = document.getElementById('mobile-overlay');
 const filtersUI = document.getElementById('filters-ui');
 
-mobileToggle.addEventListener('click', () => {
-    filtersUI.classList.toggle('mobile-open');
-    // Texte modifié sans les émojis flèches
-    mobileToggle.textContent = filtersUI.classList.contains('mobile-open') 
-        ? 'Cacher les Filtres' 
-        : 'Afficher les Filtres';
+function setMobileFilters(open) {
+    filtersUI.classList.toggle('mobile-open', open);
+    mobileOverlay.classList.toggle('open', open);
+    document.body.classList.toggle('mobile-menu-open', open);
+    mobileToggle.setAttribute('aria-expanded', String(open));
+    mobileOverlay.setAttribute('aria-hidden', String(!open));
+}
+
+mobileToggle.addEventListener('click', () => setMobileFilters(!filtersUI.classList.contains('mobile-open')));
+mobileClose.addEventListener('click', () => setMobileFilters(false));
+mobileOverlay.addEventListener('click', () => setMobileFilters(false));
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMobileFilters(false);
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) setMobileFilters(false);
 });
 						
     });
