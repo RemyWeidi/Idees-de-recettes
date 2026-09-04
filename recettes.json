@@ -39640,5 +39640,4724 @@
             "gingembre",
             "asafoetida (hing)"
         ]
+    },
+	{
+        "id": 2106,
+        "name": "Spaghetti alla Nerano",
+        "originalName": "Spaghetti alla Nerano",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Spaghetti liés à une crème de courgettes frites, provolone del Monaco et basilic, spécialité de la côte amalfitaine.",
+        "prepTime": 40,
+        "ingredients": [
+            "Spaghetti",
+            "courgettes",
+            "provolone del Monaco",
+            "basilic",
+            "huile d'olive",
+            "ail"
+        ]
+    },
+    {
+        "id": 2107,
+        "name": "Pasta alla Genovese",
+        "originalName": "Pasta alla Genovese",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Pâtes napolitaines nappées d'une sauce très longuement fondue d'oignons et de bœuf.",
+        "prepTime": 180,
+        "ingredients": [
+            "Pâtes (ziti ou candele)",
+            "bœuf",
+            "oignons",
+            "céleri",
+            "carotte",
+            "vin blanc",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2108,
+        "name": "Pasta e Patate",
+        "originalName": "Pasta e Patate",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Plat napolitain crémeux où pâtes et pommes de terre cuisent ensemble, souvent enrichis de provola.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pâtes courtes",
+            "pommes de terre",
+            "oignon",
+            "céleri",
+            "tomates",
+            "provola",
+            "parmesan",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2109,
+        "name": "Pasta alla Norma",
+        "originalName": "Pasta alla Norma",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Pâtes siciliennes aux aubergines frites, tomate, ricotta salata et basilic.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pâtes",
+            "aubergines",
+            "tomates",
+            "ricotta salata",
+            "basilic",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2110,
+        "name": "Pasta con le Sarde",
+        "originalName": "Pasta con le Sarde",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Pâtes siciliennes aux sardines, fenouil sauvage, raisins secs, pignons et safran.",
+        "prepTime": 50,
+        "ingredients": [
+            "Bucatini",
+            "sardines",
+            "fenouil sauvage",
+            "raisins secs",
+            "pignons de pin",
+            "safran",
+            "anchois",
+            "oignon"
+        ]
+    },
+    {
+        "id": 2111,
+        "name": "Busiate al Pesto Trapanese",
+        "originalName": "Busiate al Pesto Trapanese",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Pâtes siciliennes servies avec un pesto cru d'amandes, tomates, ail, basilic et pecorino.",
+        "prepTime": 30,
+        "ingredients": [
+            "Busiate",
+            "tomates",
+            "amandes",
+            "basilic",
+            "ail",
+            "pecorino",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2112,
+        "name": "Pizzoccheri della Valtellina",
+        "originalName": "Pizzoccheri della Valtellina",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Nouilles de sarrasin de Valteline avec pommes de terre, chou, fromage et beurre à la sauge.",
+        "prepTime": 50,
+        "ingredients": [
+            "Pizzoccheri (sarrasin)",
+            "pommes de terre",
+            "chou de Savoie",
+            "fromage Valtellina Casera",
+            "beurre",
+            "sauge",
+            "ail"
+        ]
+    },
+    {
+        "id": 2113,
+        "name": "Canederli",
+        "originalName": "Canederli",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Boulettes de pain du Trentin-Haut-Adige, traditionnellement au speck, servies dans un bouillon.",
+        "prepTime": 60,
+        "ingredients": [
+            "Pain rassis",
+            "speck",
+            "œufs",
+            "lait",
+            "oignon",
+            "persil",
+            "farine",
+            "bouillon de bœuf"
+        ]
+    },
+    {
+        "id": 2114,
+        "name": "Frico",
+        "originalName": "Frico",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Galette frioulane dorée de fromage Montasio et pommes de terre.",
+        "prepTime": 35,
+        "ingredients": [
+            "Fromage Montasio",
+            "pommes de terre",
+            "oignon",
+            "huile"
+        ]
+    },
+    {
+        "id": 2115,
+        "name": "Focaccia di Recco",
+        "originalName": "Focaccia di Recco col Formaggio",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Très fine focaccia ligure sans levure, farcie de fromage frais stracchino ou crescenza.",
+        "prepTime": 35,
+        "ingredients": [
+            "Farine",
+            "eau",
+            "huile d'olive",
+            "stracchino (ou crescenza)",
+            "sel"
+        ]
+    },
+    {
+        "id": 2116,
+        "name": "Torta Pasqualina",
+        "originalName": "Torta Pasqualina",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Tourte ligure de Pâques aux blettes ou épinards, ricotta et œufs entiers cuits dans la farce.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pâte fine",
+            "blettes",
+            "ricotta",
+            "œufs",
+            "parmesan",
+            "marjolaine",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2117,
+        "name": "Polenta Concia",
+        "originalName": "Polenta Concia",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Polenta alpine très riche, mêlée à du beurre et des fromages fondants.",
+        "prepTime": 50,
+        "ingredients": [
+            "Polenta",
+            "fontina",
+            "toma (fromage)",
+            "beurre",
+            "lait"
+        ]
+    },
+    {
+        "id": 2118,
+        "name": "Risotto al Barolo",
+        "originalName": "Risotto al Barolo",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Risotto piémontais coloré et parfumé au vin Barolo, fini au beurre et au parmesan.",
+        "prepTime": 40,
+        "ingredients": [
+            "Riz arborio ou carnaroli",
+            "vin Barolo",
+            "bouillon de légumes",
+            "oignon",
+            "beurre",
+            "parmesan"
+        ]
+    },
+    {
+        "id": 2119,
+        "name": "Risotto alla Zucca",
+        "originalName": "Risotto alla Zucca",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Risotto crémeux à la courge, beurre, parmesan et sauge.",
+        "prepTime": 40,
+        "ingredients": [
+            "Riz arborio ou carnaroli",
+            "courge",
+            "bouillon de légumes",
+            "oignon",
+            "beurre",
+            "parmesan",
+            "sauge"
+        ]
+    },
+    {
+        "id": 2120,
+        "name": "Sarde in Saor",
+        "originalName": "Sarde in Saor",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Sardines vénitiennes marinées dans des oignons aigres-doux avec raisins secs et pignons.",
+        "prepTime": 45,
+        "ingredients": [
+            "Sardines",
+            "oignons",
+            "vinaigre de vin blanc",
+            "raisins secs",
+            "pignons de pin",
+            "farine",
+            "huile"
+        ]
+    },
+    {
+        "id": 2121,
+        "name": "Fegato alla Veneziana",
+        "originalName": "Fegato alla Veneziana",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Foie de veau vénitien sauté avec une abondance d'oignons fondants.",
+        "prepTime": 35,
+        "ingredients": [
+            "Foie de veau",
+            "oignons",
+            "beurre",
+            "huile d'olive",
+            "vin blanc",
+            "persil"
+        ]
+    },
+    {
+        "id": 2122,
+        "name": "Coniglio all'Ischitana",
+        "originalName": "Coniglio all'Ischitana",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Lapin d'Ischia mijoté avec tomates, vin blanc, ail et herbes.",
+        "prepTime": 90,
+        "ingredients": [
+            "Lapin",
+            "tomates cerises",
+            "vin blanc",
+            "ail",
+            "piment",
+            "persil",
+            "basilic",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2123,
+        "name": "Bombette Pugliesi",
+        "originalName": "Bombette Pugliesi",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Grill",
+        "description": "Petites roulades de porc des Pouilles farcies de fromage, puis grillées.",
+        "prepTime": 40,
+        "ingredients": [
+            "Porc (échine en fines tranches)",
+            "caciocavallo",
+            "persil",
+            "ail",
+            "poivre"
+        ]
+    },
+    {
+        "id": 2124,
+        "name": "Tiella Barese",
+        "originalName": "Tiella Barese",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Gratin des Pouilles en couches de riz, pommes de terre et moules, avec tomate et pecorino.",
+        "prepTime": 80,
+        "ingredients": [
+            "Riz",
+            "pommes de terre",
+            "moules",
+            "tomates",
+            "oignon",
+            "pecorino",
+            "persil",
+            "ail"
+        ]
+    },
+    {
+        "id": 2125,
+        "name": "Caponata Siciliana",
+        "originalName": "Caponata Siciliana",
+        "country": "Italie",
+        "flag": "🇮🇹",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Aubergines siciliennes aigres-douces avec céleri, tomate, olives et câpres.",
+        "prepTime": 50,
+        "ingredients": [
+            "Aubergines",
+            "céleri",
+            "tomates",
+            "olives vertes",
+            "câpres",
+            "oignon",
+            "vinaigre",
+            "sucre"
+        ]
+    },
+    {
+        "id": 2126,
+        "name": "Birria de Res",
+        "originalName": "Birria de Res",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Version au bœuf de la birria, mijotée dans une sauce de piments secs et épices.",
+        "prepTime": 180,
+        "ingredients": [
+            "Bœuf",
+            "piments guajillo",
+            "piments ancho",
+            "tomates",
+            "oignon",
+            "ail",
+            "cumin",
+            "clou de girofle"
+        ]
+    },
+    {
+        "id": 2127,
+        "name": "Pozole Verde",
+        "originalName": "Pozole Verde",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Soupe",
+        "description": "Pozole vert au maïs nixtamalisé, poulet et sauce de tomatillos, piments et herbes.",
+        "prepTime": 120,
+        "ingredients": [
+            "Maïs pozolero (hominy)",
+            "poulet",
+            "tomatillos",
+            "piment poblano",
+            "piment serrano",
+            "coriandre",
+            "oignon",
+            "ail"
+        ]
+    },
+    {
+        "id": 2128,
+        "name": "Pozole Blanco",
+        "originalName": "Pozole Blanco",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Soupe",
+        "description": "Version blanche et épurée du pozole, centrée sur le maïs hominy et le porc.",
+        "prepTime": 150,
+        "ingredients": [
+            "Maïs pozolero (hominy)",
+            "porc",
+            "oignon",
+            "ail",
+            "laurier",
+            "radis",
+            "chou",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2129,
+        "name": "Mole Negro Oaxaqueño",
+        "originalName": "Mole Negro Oaxaqueño",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Mole oaxaquénien sombre et complexe aux piments séchés, graines, épices, chocolat et fruits secs.",
+        "prepTime": 180,
+        "ingredients": [
+            "Piments chilhuacle ou ancho",
+            "piments mulato",
+            "sésame",
+            "amandes",
+            "raisins secs",
+            "tomates",
+            "épices",
+            "chocolat mexicain",
+            "poulet"
+        ]
+    },
+    {
+        "id": 2130,
+        "name": "Mole Poblano",
+        "originalName": "Mole Poblano",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Sauce emblématique de Puebla aux piments, épices, graines et chocolat, servie avec volaille.",
+        "prepTime": 150,
+        "ingredients": [
+            "Poulet",
+            "piments ancho",
+            "piments mulato",
+            "piments pasilla",
+            "sésame",
+            "amandes",
+            "tomates",
+            "tortilla",
+            "chocolat mexicain"
+        ]
+    },
+    {
+        "id": 2131,
+        "name": "Mole Amarillo",
+        "originalName": "Mole Amarillo",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Mole jaune d'Oaxaca aux piments, tomate et masa, souvent servi avec poulet et légumes.",
+        "prepTime": 90,
+        "ingredients": [
+            "Poulet",
+            "piment guajillo",
+            "tomates",
+            "masa harina",
+            "ail",
+            "oignon",
+            "cumin",
+            "haricots verts",
+            "chayotte"
+        ]
+    },
+    {
+        "id": 2132,
+        "name": "Chiles en Nogada",
+        "originalName": "Chiles en Nogada",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Froid / Cru",
+        "description": "Piments poblano farcis d'un picadillo sucré-salé, nappés de sauce aux noix et garnis de grenade.",
+        "prepTime": 90,
+        "ingredients": [
+            "Piments poblano",
+            "porc haché",
+            "pomme",
+            "poire",
+            "pêche",
+            "noix de Castille",
+            "crème",
+            "fromage frais",
+            "grenade",
+            "persil"
+        ]
+    },
+    {
+        "id": 2133,
+        "name": "Chilorio",
+        "originalName": "Chilorio",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Porc effiloché de Sinaloa assaisonné d'une sauce au piment ancho, vinaigre et épices.",
+        "prepTime": 150,
+        "ingredients": [
+            "Porc (épaule)",
+            "piment ancho",
+            "vinaigre",
+            "ail",
+            "cumin",
+            "origan",
+            "saindoux"
+        ]
+    },
+    {
+        "id": 2134,
+        "name": "Asado de Boda",
+        "originalName": "Asado de Boda",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Ragoût festif de Zacatecas, au porc et sauce rouge épicée légèrement sucrée.",
+        "prepTime": 150,
+        "ingredients": [
+            "Porc",
+            "piments ancho",
+            "piments guajillo",
+            "tomates",
+            "oignon",
+            "ail",
+            "cannelle",
+            "clou de girofle",
+            "chocolat"
+        ]
+    },
+    {
+        "id": 2135,
+        "name": "Carne en su Jugo",
+        "originalName": "Carne en su Jugo",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Soupe",
+        "description": "Soupe-ragoût de Jalisco au bœuf finement coupé, bacon, haricots et bouillon vert.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf",
+            "bacon",
+            "haricots pinto",
+            "tomatillos",
+            "oignons verts",
+            "coriandre",
+            "ail"
+        ]
+    },
+    {
+        "id": 2136,
+        "name": "Discada Norteña",
+        "originalName": "Discada Norteña",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Mélange nord-mexicain de plusieurs viandes et charcuteries sautées sur disque de métal.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf",
+            "porc",
+            "bacon",
+            "chorizo",
+            "saucisse",
+            "oignon",
+            "poivron",
+            "tomates"
+        ]
+    },
+    {
+        "id": 2137,
+        "name": "Cabrito al Pastor",
+        "originalName": "Cabrito al Pastor",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Chevreau du nord du Mexique rôti ou grillé lentement, simplement salé.",
+        "prepTime": 180,
+        "ingredients": [
+            "Chevreau",
+            "sel",
+            "poivre",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2138,
+        "name": "Pescado a la Veracruzana",
+        "originalName": "Pescado a la Veracruzana",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Poisson en sauce tomate de Veracruz avec olives, câpres, piments et herbes.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson blanc",
+            "tomates",
+            "olives vertes",
+            "câpres",
+            "piment jalapeño",
+            "oignon",
+            "ail",
+            "origan"
+        ]
+    },
+    {
+        "id": 2139,
+        "name": "Camarones a la Diabla",
+        "originalName": "Camarones a la Diabla",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Crevettes saisies dans une sauce rouge très pimentée à base de piments secs et tomate.",
+        "prepTime": 35,
+        "ingredients": [
+            "Crevettes",
+            "piments guajillo",
+            "piment árbol",
+            "tomates",
+            "ail",
+            "oignon",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2140,
+        "name": "Aguachile Verde",
+        "originalName": "Aguachile Verde",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Froid / Cru",
+        "description": "Crevettes crues marinées au citron vert avec piment serrano, coriandre, concombre et oignon.",
+        "prepTime": 25,
+        "ingredients": [
+            "Crevettes crues",
+            "jus de citron vert",
+            "piment serrano",
+            "coriandre",
+            "concombre",
+            "oignon rouge"
+        ]
+    },
+    {
+        "id": 2141,
+        "name": "Cóctel de Camarón",
+        "originalName": "Cóctel de Camarón",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Froid / Cru",
+        "description": "Cocktail mexicain de crevettes dans une sauce tomate-citron vert avec avocat et coriandre.",
+        "prepTime": 25,
+        "ingredients": [
+            "Crevettes",
+            "jus de tomate",
+            "ketchup",
+            "citron vert",
+            "avocat",
+            "oignon",
+            "coriandre",
+            "piment jalapeño"
+        ]
+    },
+    {
+        "id": 2142,
+        "name": "Tacos Gobernador",
+        "originalName": "Tacos Gobernador",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Tacos de Sinaloa aux crevettes, fromage fondu, piments poblano et oignon.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tortillas de maïs",
+            "crevettes",
+            "fromage Oaxaca",
+            "piment poblano",
+            "oignon",
+            "tomates",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2143,
+        "name": "Tacos de Canasta",
+        "originalName": "Tacos de Canasta",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Vapeur",
+        "description": "Petits tacos garnis puis empilés et étuvés dans un panier, souvent aux pommes de terre, haricots ou chicharrón.",
+        "prepTime": 60,
+        "ingredients": [
+            "Tortillas de maïs",
+            "pommes de terre",
+            "haricots refritos",
+            "chicharrón",
+            "oignon",
+            "piment guajillo"
+        ]
+    },
+    {
+        "id": 2144,
+        "name": "Tacos de Barbacoa",
+        "originalName": "Tacos de Barbacoa",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Tacos garnis de viande de mouton ou de bœuf cuite longuement façon barbacoa.",
+        "prepTime": 180,
+        "ingredients": [
+            "Tortillas de maïs",
+            "agneau ou bœuf",
+            "piments guajillo",
+            "ail",
+            "cumin",
+            "oignon",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2145,
+        "name": "Tacos de Birria",
+        "originalName": "Tacos de Birria",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Tacos de birria dorés à la poêle, souvent trempés dans le consommé de cuisson.",
+        "prepTime": 45,
+        "ingredients": [
+            "Tortillas de maïs",
+            "birria de bœuf",
+            "fromage Oaxaca (optionnel)",
+            "oignon",
+            "coriandre",
+            "consommé de birria"
+        ]
+    },
+    {
+        "id": 2146,
+        "name": "Tacos Árabes",
+        "originalName": "Tacos Árabes",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Tacos de Puebla d'inspiration levantine, au porc mariné rôti à la broche et servi dans un pain fin.",
+        "prepTime": 60,
+        "ingredients": [
+            "Porc",
+            "pain arabe ou tortilla de farine",
+            "oignon",
+            "ail",
+            "cumin",
+            "origan",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2147,
+        "name": "Gringas",
+        "originalName": "Gringas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Tortillas de farine garnies de viande al pastor et fromage fondu, grillées comme une quesadilla.",
+        "prepTime": 25,
+        "ingredients": [
+            "Tortillas de farine",
+            "porc al pastor",
+            "fromage Oaxaca",
+            "ananas",
+            "oignon",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2148,
+        "name": "Sincronizadas",
+        "originalName": "Sincronizadas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Deux tortillas de farine grillées avec jambon et fromage fondu.",
+        "prepTime": 20,
+        "ingredients": [
+            "Tortillas de farine",
+            "jambon",
+            "fromage Oaxaca ou manchego",
+            "salsa"
+        ]
+    },
+    {
+        "id": 2149,
+        "name": "Gorditas de Maíz",
+        "originalName": "Gorditas de Maíz",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Galettes épaisses de masa ouvertes et farcies après cuisson.",
+        "prepTime": 35,
+        "ingredients": [
+            "Masa harina",
+            "eau",
+            "sel",
+            "haricots refritos",
+            "fromage frais",
+            "salsa"
+        ]
+    },
+    {
+        "id": 2150,
+        "name": "Sopes",
+        "originalName": "Sopes",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Petites bases épaisses de masa aux bords pincés, garnies de haricots, laitue, crème et fromage.",
+        "prepTime": 35,
+        "ingredients": [
+            "Masa harina",
+            "haricots refritos",
+            "laitue",
+            "crème",
+            "fromage fresco",
+            "salsa"
+        ]
+    },
+    {
+        "id": 2151,
+        "name": "Huaraches",
+        "originalName": "Huaraches",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Longue galette de masa, souvent garnie de haricots, salsa, fromage et viande.",
+        "prepTime": 40,
+        "ingredients": [
+            "Masa harina",
+            "haricots refritos",
+            "salsa",
+            "fromage fresco",
+            "oignon",
+            "coriandre",
+            "bœuf grillé"
+        ]
+    },
+    {
+        "id": 2152,
+        "name": "Molletes",
+        "originalName": "Molletes",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Four / Rôtir",
+        "description": "Demi-pains bolillo gratinés avec haricots refritos et fromage, servis avec pico de gallo.",
+        "prepTime": 20,
+        "ingredients": [
+            "Pain bolillo",
+            "haricots refritos",
+            "fromage Oaxaca",
+            "pico de gallo"
+        ]
+    },
+    {
+        "id": 2153,
+        "name": "Tlacoyos",
+        "originalName": "Tlacoyos",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Galettes ovales de masa farcies de fèves, haricots ou fromage, cuites sur comal.",
+        "prepTime": 40,
+        "ingredients": [
+            "Masa de maïs bleu",
+            "fèves ou haricots",
+            "fromage fresco",
+            "nopales",
+            "salsa"
+        ]
+    },
+    {
+        "id": 2154,
+        "name": "Tetelas",
+        "originalName": "Tetelas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Triangles de masa oaxaquénienne farcis de haricots et fromage puis cuits sur comal.",
+        "prepTime": 35,
+        "ingredients": [
+            "Masa de maïs",
+            "haricots noirs",
+            "fromage fresco",
+            "salsa"
+        ]
+    },
+    {
+        "id": 2155,
+        "name": "Memelas",
+        "originalName": "Memelas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Grill",
+        "description": "Galettes épaisses d'Oaxaca garnies de haricots, salsa et fromage, grillées sur comal.",
+        "prepTime": 30,
+        "ingredients": [
+            "Masa de maïs",
+            "haricots refritos",
+            "fromage fresco",
+            "salsa",
+            "huile"
+        ]
+    },
+    {
+        "id": 2156,
+        "name": "Panuchos",
+        "originalName": "Panuchos",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Frire",
+        "description": "Tortillas yucatèques farcies de haricots puis frites et garnies de poulet, oignon mariné et avocat.",
+        "prepTime": 45,
+        "ingredients": [
+            "Tortillas de maïs",
+            "haricots noirs",
+            "poulet effiloché",
+            "oignon rouge mariné",
+            "avocat",
+            "tomates"
+        ]
+    },
+    {
+        "id": 2157,
+        "name": "Salbutes",
+        "originalName": "Salbutes",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Frire",
+        "description": "Tortillas de masa gonflées à la friture puis garnies de poulet, laitue et oignons marinés.",
+        "prepTime": 35,
+        "ingredients": [
+            "Masa de maïs",
+            "poulet effiloché",
+            "laitue",
+            "tomates",
+            "oignon rouge mariné",
+            "avocat"
+        ]
+    },
+    {
+        "id": 2158,
+        "name": "Papadzules",
+        "originalName": "Papadzules",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Tortillas yucatèques roulées autour d'œufs durs et nappées d'une sauce aux graines de courge.",
+        "prepTime": 40,
+        "ingredients": [
+            "Tortillas de maïs",
+            "œufs durs",
+            "graines de courge",
+            "tomates",
+            "piment habanero",
+            "épazote"
+        ]
+    },
+    {
+        "id": 2159,
+        "name": "Enfrijoladas",
+        "originalName": "Enfrijoladas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Tortillas trempées dans une sauce de haricots noirs puis garnies de fromage, crème et oignon.",
+        "prepTime": 35,
+        "ingredients": [
+            "Tortillas de maïs",
+            "haricots noirs",
+            "fromage fresco",
+            "crème",
+            "oignon",
+            "épazote"
+        ]
+    },
+    {
+        "id": 2160,
+        "name": "Entomatadas",
+        "originalName": "Entomatadas",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Mijoté",
+        "description": "Tortillas nappées de sauce tomate et garnies de fromage ou de poulet.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tortillas de maïs",
+            "tomates",
+            "oignon",
+            "ail",
+            "fromage fresco",
+            "crème"
+        ]
+    },
+    {
+        "id": 2161,
+        "name": "Rajas con Crema",
+        "originalName": "Rajas con Crema",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Lanières de piment poblano sautées avec oignon, maïs, crème et fromage.",
+        "prepTime": 30,
+        "ingredients": [
+            "Piments poblano",
+            "oignon",
+            "maïs",
+            "crème",
+            "fromage",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2162,
+        "name": "Calabacitas a la Mexicana",
+        "originalName": "Calabacitas a la Mexicana",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Courgettes sautées avec tomate, oignon, maïs et piment vert.",
+        "prepTime": 25,
+        "ingredients": [
+            "Courgettes",
+            "tomates",
+            "oignon",
+            "maïs",
+            "piment jalapeño",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2163,
+        "name": "Nopales con Huevo",
+        "originalName": "Nopales con Huevo",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Cactus nopales sautés avec œufs, oignon, tomate et piment.",
+        "prepTime": 20,
+        "ingredients": [
+            "Nopales",
+            "œufs",
+            "oignon",
+            "tomates",
+            "piment serrano",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2164,
+        "name": "Chilaquiles Rojos",
+        "originalName": "Chilaquiles Rojos",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Tortillas frites ramollies dans une salsa rouge, garnies de crème, fromage et oignon.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tortillas de maïs",
+            "tomates",
+            "piment guajillo",
+            "oignon",
+            "crème",
+            "fromage fresco",
+            "œufs (optionnel)"
+        ]
+    },
+    {
+        "id": 2165,
+        "name": "Chilaquiles Verdes",
+        "originalName": "Chilaquiles Verdes",
+        "country": "Mexique",
+        "flag": "🇲🇽",
+        "continent": "Amérique du Nord",
+        "type": "Sauté",
+        "description": "Chilaquiles nappés d'une salsa verte de tomatillos et piments, avec crème et fromage.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tortillas de maïs",
+            "tomatillos",
+            "piment serrano",
+            "oignon",
+            "coriandre",
+            "crème",
+            "fromage fresco"
+        ]
+    },
+    {
+        "id": 2166,
+        "name": "Arroz a Banda",
+        "originalName": "Arroz a Banda",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Riz valencien cuit dans un bouillon de poisson concentré, traditionnellement servi séparément du poisson.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz bomba",
+            "bouillon de poisson",
+            "seiche",
+            "tomates",
+            "ail",
+            "safran",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2167,
+        "name": "Suquet de Peix",
+        "originalName": "Suquet de Peix",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût de pêcheurs catalan à base de poisson, pommes de terre, tomate et picada.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poisson blanc",
+            "pommes de terre",
+            "tomates",
+            "ail",
+            "amandes",
+            "persil",
+            "safran",
+            "bouillon de poisson"
+        ]
+    },
+    {
+        "id": 2168,
+        "name": "Escudella i Carn d'Olla",
+        "originalName": "Escudella i Carn d'Olla",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Soupe",
+        "description": "Grand pot-au-feu catalan associant bouillon, légumes, pois chiches et plusieurs viandes.",
+        "prepTime": 180,
+        "ingredients": [
+            "Bœuf",
+            "porc",
+            "poulet",
+            "saucisse botifarra",
+            "pois chiches",
+            "chou",
+            "carottes",
+            "pommes de terre",
+            "pâtes galets"
+        ]
+    },
+    {
+        "id": 2169,
+        "name": "Trinxat de la Cerdanya",
+        "originalName": "Trinxat de la Cerdanya",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Galette rustique catalane de chou et pommes de terre écrasés, traditionnellement dorée avec du lard.",
+        "prepTime": 45,
+        "ingredients": [
+            "Chou",
+            "pommes de terre",
+            "lard",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2170,
+        "name": "Migas Extremeñas",
+        "originalName": "Migas Extremeñas",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Miettes de pain sautées avec ail, paprika et charcuteries, spécialité d'Estrémadure.",
+        "prepTime": 40,
+        "ingredients": [
+            "Pain rassis",
+            "chorizo",
+            "lard",
+            "ail",
+            "paprika",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2171,
+        "name": "Patatas a la Importancia",
+        "originalName": "Patatas a la Importancia",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Pommes de terre panées à l'œuf puis mijotées dans un bouillon safrané.",
+        "prepTime": 50,
+        "ingredients": [
+            "Pommes de terre",
+            "œufs",
+            "farine",
+            "bouillon de légumes",
+            "safran",
+            "ail",
+            "persil"
+        ]
+    },
+    {
+        "id": 2172,
+        "name": "Bacalao a la Vizcaína",
+        "originalName": "Bacalao a la Vizcaína",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Morue basque nappée d'une sauce rouge aux piments choriceros et oignons.",
+        "prepTime": 60,
+        "ingredients": [
+            "Morue dessalée",
+            "piments choriceros",
+            "oignons",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2173,
+        "name": "Merluza en Salsa Verde",
+        "originalName": "Merluza en Salsa Verde",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Merlu basque poché dans une sauce verte au persil, ail et vin blanc.",
+        "prepTime": 35,
+        "ingredients": [
+            "Merlu",
+            "persil",
+            "ail",
+            "vin blanc",
+            "bouillon de poisson",
+            "huile d'olive",
+            "palourdes (optionnel)"
+        ]
+    },
+    {
+        "id": 2174,
+        "name": "Tarta de Santiago",
+        "originalName": "Tarta de Santiago",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Gâteau galicien dense aux amandes, œufs, sucre et zeste de citron.",
+        "prepTime": 55,
+        "ingredients": [
+            "Amandes moulues",
+            "œufs",
+            "sucre",
+            "zeste de citron",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2175,
+        "name": "Callos a la Gallega",
+        "originalName": "Callos a la Gallega",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Tripes à la galicienne mijotées avec pois chiches, chorizo et paprika.",
+        "prepTime": 180,
+        "ingredients": [
+            "Tripes de bœuf",
+            "pois chiches",
+            "chorizo",
+            "oignon",
+            "ail",
+            "paprika",
+            "cumin"
+        ]
+    },
+    {
+        "id": 2176,
+        "name": "Calamares a la Romana",
+        "originalName": "Calamares a la Romana",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Anneaux de calamars enrobés d'une pâte légère puis frits.",
+        "prepTime": 30,
+        "ingredients": [
+            "Calamars",
+            "farine",
+            "œufs",
+            "eau gazeuse",
+            "huile",
+            "citron"
+        ]
+    },
+    {
+        "id": 2177,
+        "name": "Sepia a la Plancha",
+        "originalName": "Sepia a la Plancha",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Grill",
+        "description": "Seiche grillée très vivement avec ail, persil et citron.",
+        "prepTime": 20,
+        "ingredients": [
+            "Seiche",
+            "ail",
+            "persil",
+            "huile d'olive",
+            "citron"
+        ]
+    },
+    {
+        "id": 2178,
+        "name": "Conejo al Ajillo",
+        "originalName": "Conejo al Ajillo",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Lapin espagnol doré avec beaucoup d'ail, vin blanc et herbes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Lapin",
+            "ail",
+            "vin blanc",
+            "thym",
+            "laurier",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2179,
+        "name": "Pollo al Chilindrón",
+        "originalName": "Pollo al Chilindrón",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Poulet aragonais mijoté avec poivrons rouges, tomates, oignons et jambon.",
+        "prepTime": 70,
+        "ingredients": [
+            "Poulet",
+            "poivrons rouges",
+            "tomates",
+            "oignons",
+            "jambon serrano",
+            "ail",
+            "vin blanc"
+        ]
+    },
+    {
+        "id": 2180,
+        "name": "Cordero al Chilindrón",
+        "originalName": "Cordero al Chilindrón",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Agneau mijoté à la manière aragonaise dans une sauce tomate-poivron.",
+        "prepTime": 100,
+        "ingredients": [
+            "Agneau",
+            "poivrons rouges",
+            "tomates",
+            "oignons",
+            "ail",
+            "vin blanc",
+            "paprika"
+        ]
+    },
+    {
+        "id": 2181,
+        "name": "Arroz con Costra",
+        "originalName": "Arroz con Costra",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Riz d'Alicante aux viandes et saucisses, terminé au four sous une croûte d'œufs battus.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz",
+            "poulet",
+            "lapin",
+            "saucisse",
+            "boudin",
+            "œufs",
+            "tomates",
+            "safran"
+        ]
+    },
+    {
+        "id": 2182,
+        "name": "Zarangollo",
+        "originalName": "Zarangollo",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Sauté",
+        "description": "Œufs brouillés murciens aux courgettes et oignons longuement fondus.",
+        "prepTime": 35,
+        "ingredients": [
+            "Courgettes",
+            "oignons",
+            "œufs",
+            "huile d'olive",
+            "sel"
+        ]
+    },
+    {
+        "id": 2183,
+        "name": "Ajoarriero",
+        "originalName": "Ajoarriero",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Préparation de morue émiettée avec tomate, poivron, ail et huile d'olive.",
+        "prepTime": 45,
+        "ingredients": [
+            "Morue dessalée",
+            "tomates",
+            "poivrons rouges",
+            "ail",
+            "oignon",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2184,
+        "name": "Tumbet Mallorquín",
+        "originalName": "Tumbet Mallorquín",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Gratin majorquin de pommes de terre, aubergines et poivrons nappés de tomate.",
+        "prepTime": 60,
+        "ingredients": [
+            "Pommes de terre",
+            "aubergines",
+            "poivrons rouges",
+            "tomates",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2185,
+        "name": "Leche Merengada",
+        "originalName": "Leche Merengada",
+        "country": "Espagne",
+        "flag": "🇪🇸",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Boisson-dessert espagnole glacée au lait, cannelle, citron et meringue.",
+        "prepTime": 30,
+        "ingredients": [
+            "Lait",
+            "sucre",
+            "cannelle",
+            "zeste de citron",
+            "blancs d'œufs"
+        ]
+    },
+    {
+        "id": 2186,
+        "name": "Gaeng Hung Lay",
+        "originalName": "แกงฮังเล (Gaeng Hung Lay)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry du nord thaïlandais au porc, gingembre, tamarin et épices sèches, sans lait de coco.",
+        "prepTime": 120,
+        "ingredients": [
+            "Porc",
+            "gingembre",
+            "tamarin",
+            "pâte de curry Hung Lay",
+            "ail",
+            "échalotes",
+            "sucre de palme"
+        ]
+    },
+    {
+        "id": 2187,
+        "name": "Gaeng Som",
+        "originalName": "แกงส้ม (Gaeng Som)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Curry-soupe aigre et pimenté au tamarin, souvent avec poisson et légumes.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson",
+            "tamarin",
+            "pâte de curry Gaeng Som",
+            "papaye verte",
+            "haricots longs",
+            "sauce poisson"
+        ]
+    },
+    {
+        "id": 2188,
+        "name": "Gaeng Tai Pla",
+        "originalName": "แกงไตปลา (Gaeng Tai Pla)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry très puissant du sud, parfumé aux entrailles de poisson fermentées, légumes et piments.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poisson grillé",
+            "tai pla (poisson fermenté)",
+            "aubergines",
+            "haricots longs",
+            "pousses de bambou",
+            "piments",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2189,
+        "name": "Kua Kling",
+        "originalName": "คั่วกลิ้ง (Kua Kling)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Curry sec du sud de la Thaïlande, généralement au porc haché et très pimenté.",
+        "prepTime": 35,
+        "ingredients": [
+            "Porc haché",
+            "pâte de curry Kua Kling",
+            "citronnelle",
+            "feuilles de combava",
+            "piments",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2190,
+        "name": "Nam Tok Moo",
+        "originalName": "น้ำตกหมู (Nam Tok Moo)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade isan de porc grillé, riz grillé moulu, citron vert, herbes et piment.",
+        "prepTime": 30,
+        "ingredients": [
+            "Porc grillé",
+            "poudre de riz grillé",
+            "jus de citron vert",
+            "sauce poisson",
+            "piment",
+            "menthe",
+            "coriandre",
+            "échalotes"
+        ]
+    },
+    {
+        "id": 2191,
+        "name": "Larb Pla",
+        "originalName": "ลาบปลา (Larb Pla)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Larb de poisson émietté aux herbes, citron vert, piment et poudre de riz grillé.",
+        "prepTime": 30,
+        "ingredients": [
+            "Poisson",
+            "poudre de riz grillé",
+            "jus de citron vert",
+            "sauce poisson",
+            "piment",
+            "menthe",
+            "coriandre",
+            "échalotes"
+        ]
+    },
+    {
+        "id": 2192,
+        "name": "Yam Pla Duk Foo",
+        "originalName": "ยำปลาดุกฟู (Yam Pla Duk Foo)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Poisson-chat émietté et frit jusqu'à croustillant, servi avec salade de mangue verte acidulée.",
+        "prepTime": 40,
+        "ingredients": [
+            "Poisson-chat",
+            "mangue verte",
+            "échalotes",
+            "piment",
+            "jus de citron vert",
+            "sauce poisson",
+            "cacahuètes"
+        ]
+    },
+    {
+        "id": 2193,
+        "name": "Pla Rad Prik",
+        "originalName": "ปลาราดพริก (Pla Rad Prik)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Poisson entier frit nappé d'une sauce aigre-douce pimentée à l'ail.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson entier",
+            "piments",
+            "ail",
+            "tamarin",
+            "sucre de palme",
+            "sauce poisson"
+        ]
+    },
+    {
+        "id": 2194,
+        "name": "Khao Mok Gai",
+        "originalName": "ข้าวหมกไก่ (Khao Mok Gai)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz thaï musulman au poulet et épices, proche d'un biryani, servi avec sauce verte.",
+        "prepTime": 70,
+        "ingredients": [
+            "Poulet",
+            "riz jasmin",
+            "curcuma",
+            "cumin",
+            "coriandre (graines)",
+            "cardamome",
+            "cannelle",
+            "yaourt",
+            "échalotes"
+        ]
+    },
+    {
+        "id": 2195,
+        "name": "Khao Yam",
+        "originalName": "ข้าวยำ (Khao Yam)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade de riz du sud mêlant herbes, légumes, noix de coco grillée et sauce de poisson fermentée.",
+        "prepTime": 30,
+        "ingredients": [
+            "Riz",
+            "noix de coco grillée",
+            "citronnelle",
+            "feuilles de combava",
+            "haricots longs",
+            "concombre",
+            "pomelo",
+            "budu (sauce de poisson)"
+        ]
+    },
+    {
+        "id": 2196,
+        "name": "Khanom Jeen Nam Ya",
+        "originalName": "ขนมจีนน้ำยา (Khanom Jeen Nam Ya)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Nouilles de riz fermentées servies avec un curry de poisson au lait de coco.",
+        "prepTime": 60,
+        "ingredients": [
+            "Nouilles de riz khanom jeen",
+            "poisson",
+            "lait de coco",
+            "pâte de curry rouge",
+            "citronnelle",
+            "galanga",
+            "feuilles de combava"
+        ]
+    },
+    {
+        "id": 2197,
+        "name": "Pad Cha Talay",
+        "originalName": "ผัดฉ่าทะเล (Pad Cha Talay)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Fruits de mer sautés très aromatiques avec piments, poivre vert, basilic et rhizomes.",
+        "prepTime": 30,
+        "ingredients": [
+            "Crevettes",
+            "calamars",
+            "moules",
+            "piment",
+            "poivre vert",
+            "kra chai",
+            "basilic thaï",
+            "ail"
+        ]
+    },
+    {
+        "id": 2198,
+        "name": "Pad Pak Bung Fai Daeng",
+        "originalName": "ผัดผักบุ้งไฟแดง",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Liseron d'eau sauté à feu très vif avec ail, piment et pâte de soja fermentée.",
+        "prepTime": 15,
+        "ingredients": [
+            "Liseron d'eau",
+            "ail",
+            "piment",
+            "pâte de soja fermentée",
+            "sauce soja",
+            "huile"
+        ]
+    },
+    {
+        "id": 2199,
+        "name": "Kai Jeow Moo Sap",
+        "originalName": "ไข่เจียวหมูสับ",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Omelette thaïlandaise soufflée et croustillante au porc haché.",
+        "prepTime": 15,
+        "ingredients": [
+            "Œufs",
+            "porc haché",
+            "sauce poisson",
+            "oignons verts",
+            "huile"
+        ]
+    },
+    {
+        "id": 2200,
+        "name": "Moo Hong",
+        "originalName": "หมูฮ้อง (Moo Hong)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Porc du sud thaïlandais braisé longuement au poivre, ail, sauce soja et sucre de palme.",
+        "prepTime": 120,
+        "ingredients": [
+            "Poitrine de porc",
+            "ail",
+            "poivre noir",
+            "sauce soja",
+            "sucre de palme",
+            "coriandre (racines)"
+        ]
+    },
+    {
+        "id": 2201,
+        "name": "Miang Kham",
+        "originalName": "เมี่ยงคำ (Miang Kham)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Bouchées de feuilles garnies de noix de coco, cacahuètes, gingembre, citron vert et condiments.",
+        "prepTime": 25,
+        "ingredients": [
+            "Feuilles de cha plu",
+            "noix de coco grillée",
+            "cacahuètes",
+            "gingembre",
+            "citron vert",
+            "échalotes",
+            "piment",
+            "crevettes séchées"
+        ]
+    },
+    {
+        "id": 2202,
+        "name": "Nam Prik Ong",
+        "originalName": "น้ำพริกอ่อง (Nam Prik Ong)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Relish du nord à base de porc haché, tomate et piments, servi avec légumes.",
+        "prepTime": 35,
+        "ingredients": [
+            "Porc haché",
+            "tomates",
+            "piments secs",
+            "ail",
+            "échalotes",
+            "pâte de crevette",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2203,
+        "name": "Nam Prik Noom",
+        "originalName": "น้ำพริกหนุ่ม (Nam Prik Noom)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Relish du nord de piments verts grillés, ail et échalotes, servi avec légumes.",
+        "prepTime": 25,
+        "ingredients": [
+            "Piments verts",
+            "ail",
+            "échalotes",
+            "coriandre",
+            "sauce poisson",
+            "jus de citron vert"
+        ]
+    },
+    {
+        "id": 2204,
+        "name": "Khanom Buang",
+        "originalName": "ขนมเบื้อง (Khanom Buang)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Petites crêpes thaïlandaises croustillantes garnies de crème de coco et fils d'œufs sucrés ou salés.",
+        "prepTime": 40,
+        "ingredients": [
+            "Farine de riz",
+            "farine de haricot mungo",
+            "sucre",
+            "lait de coco",
+            "œufs",
+            "noix de coco"
+        ]
+    },
+    {
+        "id": 2205,
+        "name": "Tub Tim Grob",
+        "originalName": "ทับทิมกรอบ (Tub Tim Grob)",
+        "country": "Thaïlande",
+        "flag": "🇹🇭",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Dessert de châtaignes d'eau enrobées de tapioca, servi dans du lait de coco glacé.",
+        "prepTime": 35,
+        "ingredients": [
+            "Châtaignes d'eau",
+            "fécule de tapioca",
+            "lait de coco",
+            "sucre",
+            "glace"
+        ]
+    },
+    {
+        "id": 2206,
+        "name": "Soto Betawi",
+        "originalName": "Soto Betawi",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe riche de Jakarta au bœuf et lait de coco ou lait, parfumée aux épices.",
+        "prepTime": 90,
+        "ingredients": [
+            "Bœuf",
+            "lait de coco",
+            "lait",
+            "pommes de terre",
+            "tomates",
+            "citronnelle",
+            "galanga",
+            "cannelle",
+            "clou de girofle"
+        ]
+    },
+    {
+        "id": 2207,
+        "name": "Soto Banjar",
+        "originalName": "Soto Banjar",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de poulet de Kalimantan du Sud, claire et très parfumée aux épices chaudes.",
+        "prepTime": 75,
+        "ingredients": [
+            "Poulet",
+            "vermicelles de riz",
+            "pommes de terre",
+            "œufs durs",
+            "cannelle",
+            "cardamome",
+            "clou de girofle",
+            "oignons frits"
+        ]
+    },
+    {
+        "id": 2208,
+        "name": "Soto Medan",
+        "originalName": "Soto Medan",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe crémeuse de Sumatra au poulet ou bœuf, lait de coco et épices.",
+        "prepTime": 75,
+        "ingredients": [
+            "Poulet",
+            "lait de coco",
+            "pommes de terre",
+            "citronnelle",
+            "galanga",
+            "curcuma",
+            "coriandre",
+            "oignons frits"
+        ]
+    },
+    {
+        "id": 2209,
+        "name": "Tongseng Kambing",
+        "originalName": "Tongseng Kambing",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût javanais de chèvre avec chou, tomate, kecap manis et lait de coco.",
+        "prepTime": 75,
+        "ingredients": [
+            "Chèvre",
+            "chou",
+            "tomates",
+            "lait de coco",
+            "kecap manis",
+            "échalotes",
+            "ail",
+            "coriandre (graines)",
+            "piment"
+        ]
+    },
+    {
+        "id": 2210,
+        "name": "Ayam Betutu",
+        "originalName": "Ayam Betutu",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Poulet balinais enduit d'une pâte d'épices très aromatique puis longuement rôti ou cuit à l'étouffée.",
+        "prepTime": 150,
+        "ingredients": [
+            "Poulet entier",
+            "échalotes",
+            "ail",
+            "curcuma",
+            "gingembre",
+            "galanga",
+            "citronnelle",
+            "piment",
+            "feuilles de combava"
+        ]
+    },
+    {
+        "id": 2211,
+        "name": "Ayam Taliwang",
+        "originalName": "Ayam Taliwang",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Poulet de Lombok grillé avec une pâte très pimentée aux échalotes, ail et tomate.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "piments rouges",
+            "échalotes",
+            "ail",
+            "tomates",
+            "pâte de crevette",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2212,
+        "name": "Ayam Woku",
+        "originalName": "Ayam Woku",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Poulet de Manado mijoté avec curcuma, citronnelle, feuilles aromatiques, basilic et piments.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "curcuma",
+            "citronnelle",
+            "feuilles de combava",
+            "basilic citronné",
+            "piments",
+            "tomates",
+            "échalotes",
+            "ail"
+        ]
+    },
+    {
+        "id": 2213,
+        "name": "Ikan Rica-Rica",
+        "originalName": "Ikan Rica-Rica",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Poisson grillé ou poêlé nappé d'une pâte rica très pimentée de Manado.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson entier",
+            "piments rouges",
+            "échalotes",
+            "ail",
+            "tomates",
+            "gingembre",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2214,
+        "name": "Ikan Bakar Jimbaran",
+        "originalName": "Ikan Bakar Jimbaran",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Poisson balinais grillé et laqué d'une sauce épicée sucrée-salée.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson entier",
+            "kecap manis",
+            "échalotes",
+            "ail",
+            "piment",
+            "tamarin",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2215,
+        "name": "Pempek",
+        "originalName": "Pempek",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Gâteaux de poisson de Palembang à base de poisson et tapioca, servis avec sauce cuko aigre-douce.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poisson",
+            "fécule de tapioca",
+            "ail",
+            "sucre de palme",
+            "vinaigre",
+            "piment",
+            "œufs"
+        ]
+    },
+    {
+        "id": 2216,
+        "name": "Batagor",
+        "originalName": "Batagor",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Raviolis de poisson et tofu frits de Bandung, servis avec sauce cacahuète.",
+        "prepTime": 50,
+        "ingredients": [
+            "Poisson",
+            "tofu",
+            "pâte wonton",
+            "fécule de tapioca",
+            "cacahuètes",
+            "piment",
+            "kecap manis"
+        ]
+    },
+    {
+        "id": 2217,
+        "name": "Ketoprak",
+        "originalName": "Ketoprak",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Plat de Jakarta au tofu, vermicelles, pousses de soja et sauce cacahuète.",
+        "prepTime": 30,
+        "ingredients": [
+            "Tofu",
+            "vermicelles de riz",
+            "pousses de soja",
+            "concombre",
+            "cacahuètes",
+            "ail",
+            "kecap manis",
+            "krupuk"
+        ]
+    },
+    {
+        "id": 2218,
+        "name": "Rujak Cingur",
+        "originalName": "Rujak Cingur",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade de Surabaya mêlant museau de bœuf, fruits, légumes, tofu et sauce petis.",
+        "prepTime": 45,
+        "ingredients": [
+            "Museau de bœuf",
+            "concombre",
+            "mangue verte",
+            "ananas",
+            "tofu",
+            "tempeh",
+            "pousses de soja",
+            "petis udang",
+            "cacahuètes"
+        ]
+    },
+    {
+        "id": 2219,
+        "name": "Nasi Uduk",
+        "originalName": "Nasi Uduk",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz de Jakarta cuit au lait de coco, citronnelle et pandan, servi avec divers accompagnements.",
+        "prepTime": 45,
+        "ingredients": [
+            "Riz",
+            "lait de coco",
+            "citronnelle",
+            "pandan",
+            "feuilles de laurier indonésien",
+            "échalotes frites"
+        ]
+    },
+    {
+        "id": 2220,
+        "name": "Nasi Liwet Solo",
+        "originalName": "Nasi Liwet Solo",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz parfumé de Solo au lait de coco, servi traditionnellement avec poulet, œuf et courge chayotte.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz",
+            "lait de coco",
+            "poulet",
+            "œufs",
+            "chayotte",
+            "citronnelle",
+            "feuilles de laurier indonésien"
+        ]
+    },
+    {
+        "id": 2221,
+        "name": "Gudeg",
+        "originalName": "Gudeg",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Jeune jacquier mijoté longuement au lait de coco et sucre de palme, spécialité de Yogyakarta.",
+        "prepTime": 180,
+        "ingredients": [
+            "Jeune jacquier",
+            "lait de coco",
+            "sucre de palme",
+            "galanga",
+            "feuilles de laurier indonésien",
+            "œufs durs (optionnel)"
+        ]
+    },
+    {
+        "id": 2222,
+        "name": "Sayur Lodeh",
+        "originalName": "Sayur Lodeh",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Curry végétal javanais doux au lait de coco, légumes et aromates.",
+        "prepTime": 50,
+        "ingredients": [
+            "Lait de coco",
+            "aubergines",
+            "chayotte",
+            "haricots longs",
+            "tofu",
+            "tempeh",
+            "galanga",
+            "feuilles de laurier"
+        ]
+    },
+    {
+        "id": 2223,
+        "name": "Opor Ayam",
+        "originalName": "Opor Ayam",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Poulet javanais mijoté dans une sauce douce au lait de coco, coriandre et épices.",
+        "prepTime": 70,
+        "ingredients": [
+            "Poulet",
+            "lait de coco",
+            "coriandre (graines)",
+            "cumin",
+            "galanga",
+            "citronnelle",
+            "échalotes",
+            "ail"
+        ]
+    },
+    {
+        "id": 2224,
+        "name": "Semur Daging",
+        "originalName": "Semur Daging",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût indonésien de bœuf sombre et doux au kecap manis, muscade et clous de girofle.",
+        "prepTime": 120,
+        "ingredients": [
+            "Bœuf",
+            "kecap manis",
+            "oignons",
+            "ail",
+            "noix de muscade",
+            "clou de girofle",
+            "tomates"
+        ]
+    },
+    {
+        "id": 2225,
+        "name": "Bebek Betutu",
+        "originalName": "Bebek Betutu",
+        "country": "Indonésie",
+        "flag": "🇮🇩",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Canard balinais farci et enduit de base genep, puis cuit très lentement enveloppé.",
+        "prepTime": 210,
+        "ingredients": [
+            "Canard",
+            "échalotes",
+            "ail",
+            "curcuma",
+            "gingembre",
+            "galanga",
+            "citronnelle",
+            "piment",
+            "feuilles de bananier"
+        ]
+    },
+    {
+        "id": 2226,
+        "name": "Spetsofai",
+        "originalName": "Σπετσοφάι",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Ragoût du Pélion aux saucisses, poivrons et tomates.",
+        "prepTime": 50,
+        "ingredients": [
+            "Saucisse grecque",
+            "poivrons",
+            "tomates",
+            "oignon",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2227,
+        "name": "Bekri Meze",
+        "originalName": "Μπεκρή Μεζέ",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Petits morceaux de porc mijotés au vin avec poivrons et épices, servis en meze.",
+        "prepTime": 60,
+        "ingredients": [
+            "Porc",
+            "vin rouge",
+            "poivrons",
+            "tomates",
+            "oignon",
+            "ail",
+            "paprika"
+        ]
+    },
+    {
+        "id": 2228,
+        "name": "Garides Saganaki",
+        "originalName": "Γαρίδες σαγανάκι",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Crevettes cuites en sauce tomate avec feta et ouzo.",
+        "prepTime": 35,
+        "ingredients": [
+            "Crevettes",
+            "tomates",
+            "feta",
+            "oignon",
+            "ail",
+            "ouzo",
+            "persil"
+        ]
+    },
+    {
+        "id": 2229,
+        "name": "Psari Plaki",
+        "originalName": "Ψάρι πλακί",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Poisson grec rôti sur un lit de tomates, oignons, ail et herbes.",
+        "prepTime": 50,
+        "ingredients": [
+            "Poisson blanc",
+            "tomates",
+            "oignons",
+            "ail",
+            "persil",
+            "huile d'olive",
+            "citron"
+        ]
+    },
+    {
+        "id": 2230,
+        "name": "Mydia Saganaki",
+        "originalName": "Μύδια σαγανάκι",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Moules en sauce tomate, feta et vin blanc, servies brûlantes.",
+        "prepTime": 30,
+        "ingredients": [
+            "Moules",
+            "tomates",
+            "feta",
+            "vin blanc",
+            "oignon",
+            "ail",
+            "persil"
+        ]
+    },
+    {
+        "id": 2231,
+        "name": "Revithada",
+        "originalName": "Ρεβιθάδα",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Pois chiches des Cyclades cuits très lentement avec oignon, citron et huile d'olive.",
+        "prepTime": 120,
+        "ingredients": [
+            "Pois chiches",
+            "oignons",
+            "huile d'olive",
+            "citron",
+            "laurier"
+        ]
+    },
+    {
+        "id": 2232,
+        "name": "Gigantes Plaki",
+        "originalName": "Γίγαντες πλακί",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Gros haricots blancs cuits au four dans une sauce tomate aux herbes.",
+        "prepTime": 90,
+        "ingredients": [
+            "Haricots géants",
+            "tomates",
+            "oignon",
+            "carotte",
+            "céleri",
+            "persil",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2233,
+        "name": "Spanakorizo",
+        "originalName": "Σπανακόρυζο",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Riz grec aux épinards, aneth, citron et huile d'olive.",
+        "prepTime": 40,
+        "ingredients": [
+            "Riz",
+            "épinards",
+            "oignons verts",
+            "aneth",
+            "citron",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2234,
+        "name": "Prasorizo",
+        "originalName": "Πρασόρυζο",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Riz mijoté aux poireaux, tomate, citron et herbes.",
+        "prepTime": 40,
+        "ingredients": [
+            "Riz",
+            "poireaux",
+            "tomates",
+            "aneth",
+            "citron",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2235,
+        "name": "Dakos",
+        "originalName": "Ντάκος",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Biscotte crétoise humidifiée, garnie de tomate, mizithra ou feta, olives et origan.",
+        "prepTime": 15,
+        "ingredients": [
+            "Paximadi (biscotte d'orge)",
+            "tomates",
+            "mizithra ou feta",
+            "olives",
+            "origan",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2236,
+        "name": "Kolokithokeftedes",
+        "originalName": "Κολοκυθοκεφτέδες",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Beignets grecs de courgette, feta et herbes.",
+        "prepTime": 35,
+        "ingredients": [
+            "Courgettes",
+            "feta",
+            "œufs",
+            "farine",
+            "aneth",
+            "menthe",
+            "oignons verts"
+        ]
+    },
+    {
+        "id": 2237,
+        "name": "Galaktoboureko",
+        "originalName": "Γαλακτομπούρεκο",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Pâtisserie de pâte filo garnie de crème de semoule, imbibée de sirop citronné.",
+        "prepTime": 75,
+        "ingredients": [
+            "Pâte filo",
+            "lait",
+            "semoule",
+            "œufs",
+            "sucre",
+            "beurre",
+            "citron",
+            "vanille"
+        ]
+    },
+    {
+        "id": 2238,
+        "name": "Youvarlakia",
+        "originalName": "Γιουβαρλάκια",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Soupe",
+        "description": "Boulettes grecques de viande et riz mijotées puis liées à l'avgolemono.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf haché",
+            "riz",
+            "œuf",
+            "citron",
+            "oignon",
+            "aneth",
+            "bouillon"
+        ]
+    },
+    {
+        "id": 2239,
+        "name": "Trahanas Soupa",
+        "originalName": "Τραχανόσουπα",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Soupe",
+        "description": "Soupe grecque rustique à base de trahanas fermenté, souvent enrichie de feta.",
+        "prepTime": 35,
+        "ingredients": [
+            "Trahanas",
+            "bouillon de légumes",
+            "feta",
+            "beurre",
+            "tomates (optionnel)"
+        ]
+    },
+    {
+        "id": 2240,
+        "name": "Lahanodolmades",
+        "originalName": "Λαχανοντολμάδες",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Feuilles de chou farcies de viande et riz, souvent servies avec sauce avgolemono.",
+        "prepTime": 90,
+        "ingredients": [
+            "Chou",
+            "bœuf haché",
+            "riz",
+            "oignon",
+            "aneth",
+            "œuf",
+            "citron"
+        ]
+    },
+    {
+        "id": 2241,
+        "name": "Fava Santorinis",
+        "originalName": "Φάβα Σαντορίνης",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Purée de pois cassés jaunes de Santorin, servie avec oignon, câpres et huile d'olive.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pois cassés jaunes",
+            "oignon",
+            "huile d'olive",
+            "citron",
+            "câpres"
+        ]
+    },
+    {
+        "id": 2242,
+        "name": "Skordalia",
+        "originalName": "Σκορδαλιά",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Froid / Cru",
+        "description": "Purée grecque à l'ail, pommes de terre ou pain, huile d'olive et vinaigre.",
+        "prepTime": 30,
+        "ingredients": [
+            "Pommes de terre",
+            "ail",
+            "huile d'olive",
+            "vinaigre",
+            "noix (optionnel)"
+        ]
+    },
+    {
+        "id": 2243,
+        "name": "Horta Vrasta",
+        "originalName": "Χόρτα βραστά",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Mijoté",
+        "description": "Herbes et feuilles sauvages bouillies, servies simplement avec huile d'olive et citron.",
+        "prepTime": 25,
+        "ingredients": [
+            "Feuilles sauvages ou blettes",
+            "huile d'olive",
+            "citron",
+            "sel"
+        ]
+    },
+    {
+        "id": 2244,
+        "name": "Bougatsa",
+        "originalName": "Μπουγάτσα",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Four / Rôtir",
+        "description": "Pâtisserie feuilletée du nord de la Grèce, souvent garnie de crème à la semoule.",
+        "prepTime": 60,
+        "ingredients": [
+            "Pâte filo",
+            "lait",
+            "semoule",
+            "sucre",
+            "œufs",
+            "beurre",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2245,
+        "name": "Loukoumades",
+        "originalName": "Λουκουμάδες",
+        "country": "Grèce",
+        "flag": "🇬🇷",
+        "continent": "Europe",
+        "type": "Frire",
+        "description": "Petits beignets grecs levés, arrosés de miel et saupoudrés de cannelle.",
+        "prepTime": 90,
+        "ingredients": [
+            "Farine",
+            "levure",
+            "eau",
+            "miel",
+            "cannelle",
+            "huile"
+        ]
+    },
+    {
+        "id": 2246,
+        "name": "Shish Barak",
+        "originalName": "شيش برك",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Petites ravioles libanaises farcies de viande, cuites dans une sauce au yaourt et coriandre.",
+        "prepTime": 90,
+        "ingredients": [
+            "Pâte à ravioles",
+            "bœuf ou agneau haché",
+            "yaourt",
+            "ail",
+            "coriandre",
+            "pignons"
+        ]
+    },
+    {
+        "id": 2247,
+        "name": "Daoud Basha",
+        "originalName": "داوود باشا",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Boulettes de viande libanaises aux pignons, mijotées dans une sauce tomate.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf ou agneau haché",
+            "pignons de pin",
+            "oignons",
+            "tomates",
+            "cannelle",
+            "sept-épices"
+        ]
+    },
+    {
+        "id": 2248,
+        "name": "Kafta bi Tahini",
+        "originalName": "كفتة بالطحينة",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Kafta cuite au four avec pommes de terre et sauce crémeuse au tahini et citron.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf ou agneau haché",
+            "persil",
+            "oignon",
+            "pommes de terre",
+            "tahini",
+            "citron",
+            "ail"
+        ]
+    },
+    {
+        "id": 2249,
+        "name": "Moghrabieh",
+        "originalName": "مغربية",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Gros couscous perlé libanais mijoté avec poulet, pois chiches et oignons, parfumé au carvi.",
+        "prepTime": 90,
+        "ingredients": [
+            "Moghrabieh (perles de semoule)",
+            "poulet",
+            "pois chiches",
+            "oignons",
+            "carvi",
+            "cannelle",
+            "bouillon"
+        ]
+    },
+    {
+        "id": 2250,
+        "name": "Freekeh bi Djej",
+        "originalName": "فريكة بالدجاج",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Blé vert fumé mijoté au bouillon et servi avec poulet, amandes et épices.",
+        "prepTime": 75,
+        "ingredients": [
+            "Freekeh",
+            "poulet",
+            "bouillon de volaille",
+            "oignon",
+            "amandes",
+            "cannelle",
+            "sept-épices"
+        ]
+    },
+    {
+        "id": 2251,
+        "name": "Riz a Djej",
+        "originalName": "رز ع دجاج",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz libanais épicé au poulet et viande hachée, garni de noix.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz",
+            "poulet",
+            "bœuf haché",
+            "amandes",
+            "pignons",
+            "cannelle",
+            "sept-épices"
+        ]
+    },
+    {
+        "id": 2252,
+        "name": "Mujadara Hamra",
+        "originalName": "مجدرة حمرا",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Lentilles et boulgour du sud du Liban, colorés par des oignons fortement caramélisés.",
+        "prepTime": 50,
+        "ingredients": [
+            "Lentilles brunes",
+            "boulgour",
+            "oignons",
+            "huile d'olive",
+            "cumin"
+        ]
+    },
+    {
+        "id": 2253,
+        "name": "Mujadara Safra",
+        "originalName": "مجدرة صفرا",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Purée jaune libanaise de lentilles rouges ou jaunes et riz, douce et réconfortante.",
+        "prepTime": 45,
+        "ingredients": [
+            "Lentilles jaunes",
+            "riz",
+            "oignons",
+            "huile d'olive",
+            "cumin"
+        ]
+    },
+    {
+        "id": 2254,
+        "name": "Loubieh bi Zeit",
+        "originalName": "لوبية بالزيت",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Haricots verts mijotés à l'huile d'olive avec tomates, oignons et ail.",
+        "prepTime": 45,
+        "ingredients": [
+            "Haricots verts",
+            "tomates",
+            "oignons",
+            "ail",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2255,
+        "name": "Bamia bi Zeit",
+        "originalName": "بامية بالزيت",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Gombo végétarien mijoté à la tomate, ail, coriandre et huile d'olive.",
+        "prepTime": 45,
+        "ingredients": [
+            "Gombo",
+            "tomates",
+            "ail",
+            "coriandre",
+            "oignon",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2256,
+        "name": "Makhlouta",
+        "originalName": "مخلوطة",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe paysanne libanaise épaisse mêlant plusieurs légumineuses et céréales.",
+        "prepTime": 90,
+        "ingredients": [
+            "Lentilles",
+            "pois chiches",
+            "haricots blancs",
+            "boulgour",
+            "oignons",
+            "cumin"
+        ]
+    },
+    {
+        "id": 2257,
+        "name": "Fatteh Hummus",
+        "originalName": "فتة حمص",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Pois chiches chauds sur pain grillé, nappés de yaourt au tahini et garnis de pignons.",
+        "prepTime": 35,
+        "ingredients": [
+            "Pois chiches",
+            "pain pita",
+            "yaourt",
+            "tahini",
+            "ail",
+            "citron",
+            "pignons de pin"
+        ]
+    },
+    {
+        "id": 2258,
+        "name": "Kousa bi Laban",
+        "originalName": "كوسا باللبن",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Courgettes farcies de viande et riz, mijotées dans une sauce au yaourt.",
+        "prepTime": 90,
+        "ingredients": [
+            "Courgettes",
+            "bœuf haché",
+            "riz",
+            "yaourt",
+            "ail",
+            "menthe séchée"
+        ]
+    },
+    {
+        "id": 2259,
+        "name": "Warak Enab bi Zeit",
+        "originalName": "ورق عنب بالزيت",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Feuilles de vigne végétariennes farcies de riz, tomate, persil et menthe.",
+        "prepTime": 90,
+        "ingredients": [
+            "Feuilles de vigne",
+            "riz",
+            "tomates",
+            "persil",
+            "menthe",
+            "oignon",
+            "citron",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2260,
+        "name": "Mloukhieh Libanaise",
+        "originalName": "ملوخية",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Corète mijotée à la libanaise avec poulet, coriandre et ail, servie avec riz.",
+        "prepTime": 120,
+        "ingredients": [
+            "Feuilles de molokhia",
+            "poulet",
+            "coriandre",
+            "ail",
+            "oignon",
+            "citron",
+            "riz"
+        ]
+    },
+    {
+        "id": 2261,
+        "name": "Fasolia bi Zeit",
+        "originalName": "فاصوليا بالزيت",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Haricots blancs mijotés à la tomate et à l'huile d'olive, sans viande.",
+        "prepTime": 60,
+        "ingredients": [
+            "Haricots blancs",
+            "tomates",
+            "oignon",
+            "ail",
+            "huile d'olive",
+            "coriandre"
+        ]
+    },
+    {
+        "id": 2262,
+        "name": "Shanklish",
+        "originalName": "شنكليش",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Fromage fermenté émietté servi avec tomate, oignon et huile d'olive.",
+        "prepTime": 15,
+        "ingredients": [
+            "Shanklish",
+            "tomates",
+            "oignon",
+            "persil",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2263,
+        "name": "Labneh",
+        "originalName": "لبنة",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Yaourt égoutté épais servi avec huile d'olive, zaatar ou légumes.",
+        "prepTime": 15,
+        "ingredients": [
+            "Yaourt",
+            "sel",
+            "huile d'olive",
+            "zaatar"
+        ]
+    },
+    {
+        "id": 2264,
+        "name": "Muhammara Libanaise",
+        "originalName": "محمرة",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Purée de poivrons rouges et noix, relevée de mélasse de grenade et piment.",
+        "prepTime": 25,
+        "ingredients": [
+            "Poivrons rouges grillés",
+            "noix",
+            "chapelure",
+            "mélasse de grenade",
+            "piment",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2265,
+        "name": "Maamoul",
+        "originalName": "معمول",
+        "country": "Liban",
+        "flag": "🇱🇧",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Petits gâteaux sablés de semoule farcis de dattes, pistaches ou noix.",
+        "prepTime": 90,
+        "ingredients": [
+            "Semoule",
+            "farine",
+            "beurre ou ghee",
+            "eau de fleur d'oranger",
+            "dattes",
+            "pistaches ou noix",
+            "sucre"
+        ]
+    },
+    {
+        "id": 2266,
+        "name": "Zereshk Polo ba Morgh",
+        "originalName": "زرشک پلو با مرغ",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan au safran et épine-vinette servi avec poulet braisé.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "poulet",
+            "épine-vinette (zereshk)",
+            "safran",
+            "oignon",
+            "beurre",
+            "sucre"
+        ]
+    },
+    {
+        "id": 2267,
+        "name": "Baghali Polo ba Mahicheh",
+        "originalName": "باقالی پلو با ماهیچه",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan à l'aneth et fèves, servi avec jarret d'agneau longuement braisé.",
+        "prepTime": 150,
+        "ingredients": [
+            "Riz basmati",
+            "jarret d'agneau",
+            "fèves",
+            "aneth",
+            "safran",
+            "oignon",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2268,
+        "name": "Adas Polo",
+        "originalName": "عدس پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan aux lentilles, raisins secs et oignons caramélisés, parfois enrichi de viande.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz basmati",
+            "lentilles",
+            "raisins secs",
+            "oignons",
+            "cannelle",
+            "safran",
+            "dattes (optionnel)"
+        ]
+    },
+    {
+        "id": 2269,
+        "name": "Loobia Polo",
+        "originalName": "لوبیا پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan en couches avec haricots verts, viande, tomate et épices.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "bœuf haché",
+            "haricots verts",
+            "tomates",
+            "oignon",
+            "curcuma",
+            "cannelle",
+            "safran"
+        ]
+    },
+    {
+        "id": 2270,
+        "name": "Sabzi Polo ba Mahi",
+        "originalName": "سبزی پلو با ماهی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz aux herbes fraîches servi traditionnellement avec poisson, notamment pour Nowruz.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz basmati",
+            "poisson",
+            "aneth",
+            "persil",
+            "coriandre",
+            "ciboulette",
+            "ail",
+            "safran"
+        ]
+    },
+    {
+        "id": 2271,
+        "name": "Kalam Polo Shirazi",
+        "originalName": "کلم پلو شیرازی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz de Shiraz au chou-rave, herbes et petites boulettes de viande.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "chou-rave",
+            "bœuf haché",
+            "estragon",
+            "basilic",
+            "aneth",
+            "oignon",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2272,
+        "name": "Shirin Polo",
+        "originalName": "شیرین پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan festif sucré-salé aux zestes d'orange confits, carottes, noix et safran.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "zeste d'orange",
+            "carottes",
+            "amandes",
+            "pistaches",
+            "raisins secs",
+            "sucre",
+            "safran"
+        ]
+    },
+    {
+        "id": 2273,
+        "name": "Albaloo Polo",
+        "originalName": "آلبالو پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan aux griottes, safran et sucre, souvent servi avec boulettes de viande.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "griottes",
+            "sucre",
+            "safran",
+            "bœuf haché",
+            "oignon"
+        ]
+    },
+    {
+        "id": 2274,
+        "name": "Khoresht Aloo Esfenaj",
+        "originalName": "خورش آلو اسفناج",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût persan d'épinards et pruneaux avec viande, doux et acidulé.",
+        "prepTime": 100,
+        "ingredients": [
+            "Agneau ou bœuf",
+            "épinards",
+            "pruneaux",
+            "oignon",
+            "curcuma",
+            "jus de citron"
+        ]
+    },
+    {
+        "id": 2275,
+        "name": "Khoresht Beh",
+        "originalName": "خورش به",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Ragoût persan de coing et viande, parfumé à la cannelle et au safran.",
+        "prepTime": 100,
+        "ingredients": [
+            "Agneau ou bœuf",
+            "coings",
+            "oignon",
+            "safran",
+            "cannelle",
+            "jus de citron",
+            "sucre"
+        ]
+    },
+    {
+        "id": 2276,
+        "name": "Dizi Sangi",
+        "originalName": "دیزی سنگی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Abgoosht cuit lentement dans un récipient en pierre, avec agneau, pois chiches et pommes de terre.",
+        "prepTime": 180,
+        "ingredients": [
+            "Agneau",
+            "pois chiches",
+            "haricots blancs",
+            "pommes de terre",
+            "tomates",
+            "oignon",
+            "citron noir",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2277,
+        "name": "Kashk-e Bademjan",
+        "originalName": "کشک بادمجان",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Purée chaude d'aubergines à l'oignon, menthe et kashk, garnie de noix.",
+        "prepTime": 50,
+        "ingredients": [
+            "Aubergines",
+            "kashk",
+            "oignons",
+            "ail",
+            "menthe séchée",
+            "noix",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2278,
+        "name": "Fesenjan Végétarien",
+        "originalName": "فسنجان گیاهی",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Version végétarienne du fesenjan aux noix et mélasse de grenade, avec courge ou champignons.",
+        "prepTime": 75,
+        "ingredients": [
+            "Noix",
+            "mélasse de grenade",
+            "courge",
+            "champignons",
+            "oignon",
+            "curcuma"
+        ]
+    },
+    {
+        "id": 2279,
+        "name": "Reshteh Polo",
+        "originalName": "رشته پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan cuit avec des nouilles reshteh, oignons, raisins secs et dattes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz basmati",
+            "nouilles reshteh",
+            "oignons",
+            "raisins secs",
+            "dattes",
+            "safran",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2280,
+        "name": "Estamboli Polo",
+        "originalName": "استانبولی پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz iranien quotidien à la tomate et pommes de terre, parfois appelé dami-e gojeh.",
+        "prepTime": 45,
+        "ingredients": [
+            "Riz basmati",
+            "tomates",
+            "pommes de terre",
+            "oignon",
+            "curcuma",
+            "huile"
+        ]
+    },
+    {
+        "id": 2281,
+        "name": "Morasa Polo",
+        "originalName": "مرصع پلو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz persan « aux bijoux » garni d'écorces d'orange, épine-vinette, raisins et fruits secs.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz basmati",
+            "épine-vinette",
+            "écorce d'orange",
+            "raisins secs",
+            "amandes",
+            "pistaches",
+            "safran",
+            "sucre"
+        ]
+    },
+    {
+        "id": 2282,
+        "name": "Kabab Tabei",
+        "originalName": "کباب تابه‌ای",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Kebab iranien de viande hachée aplatie et cuite à la poêle avec tomates.",
+        "prepTime": 35,
+        "ingredients": [
+            "Bœuf ou agneau haché",
+            "oignon",
+            "tomates",
+            "curcuma",
+            "sumac"
+        ]
+    },
+    {
+        "id": 2283,
+        "name": "Dolmeh Barg",
+        "originalName": "دلمه برگ مو",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Feuilles de vigne iraniennes farcies de riz, lentilles, herbes et parfois viande.",
+        "prepTime": 90,
+        "ingredients": [
+            "Feuilles de vigne",
+            "riz",
+            "lentilles",
+            "bœuf haché",
+            "persil",
+            "aneth",
+            "estragon",
+            "oignon"
+        ]
+    },
+    {
+        "id": 2284,
+        "name": "Sholeh Zard",
+        "originalName": "شله زرد",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Pudding de riz iranien au safran, eau de rose, sucre et amandes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz",
+            "safran",
+            "eau de rose",
+            "sucre",
+            "amandes",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2285,
+        "name": "Halva Irani",
+        "originalName": "حلوا",
+        "country": "Iran",
+        "flag": "🇮🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Halva iranien à base de farine torréfiée, huile ou beurre, sucre, safran et eau de rose.",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine",
+            "huile ou beurre",
+            "sucre",
+            "safran",
+            "eau de rose",
+            "cardamome"
+        ]
+    },
+    {
+        "id": 2286,
+        "name": "Ali Nazik",
+        "originalName": "Ali Nazik Kebabı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Agneau ou bœuf grillé servi sur une purée fumée d'aubergine au yaourt et à l'ail.",
+        "prepTime": 50,
+        "ingredients": [
+            "Agneau ou bœuf",
+            "aubergines",
+            "yaourt",
+            "ail",
+            "beurre",
+            "paprika"
+        ]
+    },
+    {
+        "id": 2287,
+        "name": "Testi Kebabı",
+        "originalName": "Testi Kebabı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Viande et légumes de Cappadoce cuits dans une cruche en terre scellée puis cassée au service.",
+        "prepTime": 120,
+        "ingredients": [
+            "Agneau ou bœuf",
+            "tomates",
+            "poivrons",
+            "oignons",
+            "ail",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2288,
+        "name": "Çökertme Kebabı",
+        "originalName": "Çökertme Kebabı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Fines pommes de terre croustillantes garnies de bœuf sauté, yaourt à l'ail et sauce tomate.",
+        "prepTime": 45,
+        "ingredients": [
+            "Bœuf",
+            "pommes de terre",
+            "yaourt",
+            "ail",
+            "tomates",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2289,
+        "name": "Kağıt Kebabı",
+        "originalName": "Kağıt Kebabı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Viande et légumes cuits en papillote, spécialité familiale turque.",
+        "prepTime": 75,
+        "ingredients": [
+            "Agneau ou bœuf",
+            "pommes de terre",
+            "carottes",
+            "petits pois",
+            "tomates",
+            "oignons",
+            "poivrons"
+        ]
+    },
+    {
+        "id": 2290,
+        "name": "İçli Köfte",
+        "originalName": "İçli Köfte",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Coques de boulgour fin farcies de viande hachée, oignon et noix, puis frites.",
+        "prepTime": 90,
+        "ingredients": [
+            "Boulgour fin",
+            "bœuf ou agneau haché",
+            "oignons",
+            "noix",
+            "piment",
+            "cumin"
+        ]
+    },
+    {
+        "id": 2291,
+        "name": "Çiğ Köfte",
+        "originalName": "Çiğ Köfte",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boulgour pétri longuement avec pâte de piment, tomate, épices et herbes; version moderne sans viande.",
+        "prepTime": 60,
+        "ingredients": [
+            "Boulgour fin",
+            "pâte de piment",
+            "concentré de tomate",
+            "oignon",
+            "ail",
+            "cumin",
+            "mélasse de grenade",
+            "persil"
+        ]
+    },
+    {
+        "id": 2292,
+        "name": "Mercimek Köftesi",
+        "originalName": "Mercimek Köftesi",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Boulettes végétariennes de lentilles rouges et boulgour aux herbes et concentré de poivron.",
+        "prepTime": 50,
+        "ingredients": [
+            "Lentilles rouges",
+            "boulgour fin",
+            "oignon",
+            "concentré de poivron",
+            "cumin",
+            "persil",
+            "oignons verts"
+        ]
+    },
+    {
+        "id": 2293,
+        "name": "Mantı",
+        "originalName": "Mantı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Minuscules raviolis turcs farcis de viande, servis avec yaourt à l'ail et beurre pimenté.",
+        "prepTime": 90,
+        "ingredients": [
+            "Farine",
+            "œufs",
+            "bœuf ou agneau haché",
+            "oignon",
+            "yaourt",
+            "ail",
+            "beurre",
+            "pul biber"
+        ]
+    },
+    {
+        "id": 2294,
+        "name": "Kayseri Yağlaması",
+        "originalName": "Kayseri Yağlaması",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Empilement de fines galettes garnies d'une sauce de viande hachée et tomate, servi avec yaourt.",
+        "prepTime": 75,
+        "ingredients": [
+            "Farine",
+            "bœuf haché",
+            "tomates",
+            "oignon",
+            "poivrons",
+            "yaourt",
+            "ail"
+        ]
+    },
+    {
+        "id": 2295,
+        "name": "Gözleme",
+        "originalName": "Gözleme",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Fine galette turque pliée autour d'une farce, ici épinards et fromage, puis cuite sur plaque.",
+        "prepTime": 50,
+        "ingredients": [
+            "Farine",
+            "épinards",
+            "feta",
+            "oignon",
+            "huile"
+        ]
+    },
+    {
+        "id": 2296,
+        "name": "Menemen",
+        "originalName": "Menemen",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Œufs brouillés turcs aux tomates, poivrons verts et oignons.",
+        "prepTime": 25,
+        "ingredients": [
+            "Œufs",
+            "tomates",
+            "poivrons verts",
+            "oignon",
+            "huile d'olive",
+            "pul biber"
+        ]
+    },
+    {
+        "id": 2297,
+        "name": "Çılbır",
+        "originalName": "Çılbır",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Œufs pochés servis sur yaourt à l'ail avec beurre chaud au piment.",
+        "prepTime": 25,
+        "ingredients": [
+            "Œufs",
+            "yaourt",
+            "ail",
+            "beurre",
+            "pul biber",
+            "aneth"
+        ]
+    },
+    {
+        "id": 2298,
+        "name": "Zeytinyağlı Yaprak Sarma",
+        "originalName": "Zeytinyağlı Yaprak Sarma",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Feuilles de vigne farcies de riz, herbes, pignons et raisins, cuites à l'huile d'olive.",
+        "prepTime": 90,
+        "ingredients": [
+            "Feuilles de vigne",
+            "riz",
+            "oignon",
+            "pignons de pin",
+            "raisins secs",
+            "menthe",
+            "aneth",
+            "huile d'olive"
+        ]
+    },
+    {
+        "id": 2299,
+        "name": "Ezogelin Çorbası",
+        "originalName": "Ezogelin Çorbası",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe turque de lentilles rouges, boulgour, tomate, menthe et piment.",
+        "prepTime": 45,
+        "ingredients": [
+            "Lentilles rouges",
+            "boulgour",
+            "riz",
+            "tomates",
+            "oignon",
+            "menthe séchée",
+            "pul biber"
+        ]
+    },
+    {
+        "id": 2300,
+        "name": "Hamsi Tava",
+        "originalName": "Hamsi Tava",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Anchois de mer Noire farinés au maïs et frits en couronne dans la poêle.",
+        "prepTime": 30,
+        "ingredients": [
+            "Anchois frais",
+            "farine de maïs",
+            "huile",
+            "citron"
+        ]
+    },
+    {
+        "id": 2301,
+        "name": "Karadeniz Pidesi",
+        "originalName": "Karadeniz Pidesi",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Pide de la mer Noire en forme de bateau, souvent au fromage, viande ou œuf.",
+        "prepTime": 60,
+        "ingredients": [
+            "Farine",
+            "fromage kaşar",
+            "beurre",
+            "œuf",
+            "bœuf haché (optionnel)"
+        ]
+    },
+    {
+        "id": 2302,
+        "name": "Künefe",
+        "originalName": "Künefe",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Dessert chaud de kadayıf croustillant et fromage, imbibé de sirop.",
+        "prepTime": 50,
+        "ingredients": [
+            "Kadayıf",
+            "fromage non salé",
+            "beurre",
+            "sucre",
+            "eau",
+            "pistaches"
+        ]
+    },
+    {
+        "id": 2303,
+        "name": "Kuru Köfte",
+        "originalName": "Kuru Köfte",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Boulettes turques classiques de viande hachée, oignon et épices, poêlées sans sauce.",
+        "prepTime": 40,
+        "ingredients": [
+            "Bœuf haché",
+            "oignon",
+            "chapelure",
+            "œuf",
+            "cumin",
+            "persil"
+        ]
+    },
+    {
+        "id": 2304,
+        "name": "İnegöl Köfte",
+        "originalName": "İnegöl Köfte",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Köfte de Bursa au goût épuré, à base de bœuf et parfois agneau, grillée.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf haché",
+            "agneau haché",
+            "oignon",
+            "bicarbonate",
+            "sel"
+        ]
+    },
+    {
+        "id": 2305,
+        "name": "Tekirdağ Köftesi",
+        "originalName": "Tekirdağ Köftesi",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Köfte de Thrace parfumée au cumin, préparée avec viande longuement pétrie.",
+        "prepTime": 60,
+        "ingredients": [
+            "Bœuf haché",
+            "oignon",
+            "ail",
+            "cumin",
+            "chapelure"
+        ]
+    },
+    {
+        "id": 2306,
+        "name": "Patlıcan Kebabı",
+        "originalName": "Patlıcan Kebabı",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Brochette ou montage alternant aubergines et boulettes de viande, grillé ou rôti.",
+        "prepTime": 60,
+        "ingredients": [
+            "Aubergines",
+            "agneau ou bœuf haché",
+            "tomates",
+            "poivrons",
+            "oignon",
+            "piment"
+        ]
+    },
+    {
+        "id": 2307,
+        "name": "Beyran Çorbası",
+        "originalName": "Beyran Çorbası",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe très relevée de Gaziantep au mouton, riz, ail et piment.",
+        "prepTime": 180,
+        "ingredients": [
+            "Mouton",
+            "riz",
+            "ail",
+            "pul biber",
+            "beurre",
+            "bouillon"
+        ]
+    },
+    {
+        "id": 2308,
+        "name": "Yuvalama",
+        "originalName": "Yuvalama",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de Gaziantep au yaourt, pois chiches, agneau et minuscules boulettes de riz.",
+        "prepTime": 150,
+        "ingredients": [
+            "Agneau",
+            "pois chiches",
+            "riz",
+            "bœuf haché",
+            "yaourt",
+            "menthe",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2309,
+        "name": "Keşkek",
+        "originalName": "Keşkek",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Blé décortiqué longuement cuit avec viande jusqu'à une texture crémeuse et pilée.",
+        "prepTime": 180,
+        "ingredients": [
+            "Blé décortiqué",
+            "agneau ou poulet",
+            "beurre",
+            "oignon",
+            "paprika"
+        ]
+    },
+    {
+        "id": 2310,
+        "name": "Etli Ekmek",
+        "originalName": "Etli Ekmek",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Long pain plat de Konya garni d'une fine couche de viande hachée, tomate et poivron.",
+        "prepTime": 50,
+        "ingredients": [
+            "Farine",
+            "bœuf ou agneau haché",
+            "tomates",
+            "poivrons",
+            "oignon",
+            "persil"
+        ]
+    },
+    {
+        "id": 2311,
+        "name": "Su Böreği",
+        "originalName": "Su Böreği",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Four / Rôtir",
+        "description": "Börek turc en couches de pâte brièvement pochée, fromage et persil.",
+        "prepTime": 90,
+        "ingredients": [
+            "Farine",
+            "œufs",
+            "fromage beyaz peynir",
+            "persil",
+            "beurre"
+        ]
+    },
+    {
+        "id": 2312,
+        "name": "Sigara Böreği",
+        "originalName": "Sigara Böreği",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Petits rouleaux de pâte yufka farcis de fromage et persil, frits croustillants.",
+        "prepTime": 35,
+        "ingredients": [
+            "Pâte yufka",
+            "feta ou beyaz peynir",
+            "persil",
+            "huile"
+        ]
+    },
+    {
+        "id": 2313,
+        "name": "Mücver",
+        "originalName": "Mücver",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Beignets turcs de courgette aux herbes et feta.",
+        "prepTime": 35,
+        "ingredients": [
+            "Courgettes",
+            "œufs",
+            "farine",
+            "feta",
+            "aneth",
+            "persil",
+            "oignons verts"
+        ]
+    },
+    {
+        "id": 2314,
+        "name": "Piyaz",
+        "originalName": "Piyaz",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Salade turque de haricots blancs, oignon et persil; à Antalya, souvent enrichie de tahini.",
+        "prepTime": 20,
+        "ingredients": [
+            "Haricots blancs",
+            "oignon",
+            "persil",
+            "tomates",
+            "vinaigre",
+            "tahini",
+            "œuf dur"
+        ]
+    },
+    {
+        "id": 2315,
+        "name": "Tavuk Göğsü",
+        "originalName": "Tavuk Göğsü",
+        "country": "Turquie",
+        "flag": "🇹🇷",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Pudding lacté ottoman traditionnel épaissi avec de très fines fibres de blanc de poulet.",
+        "prepTime": 60,
+        "ingredients": [
+            "Blanc de poulet",
+            "lait",
+            "sucre",
+            "fécule de riz",
+            "cannelle"
+        ]
+    },
+    {
+        "id": 2316,
+        "name": "Bún Bò Nam Bộ",
+        "originalName": "Bún Bò Nam Bộ",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Bol de vermicelles de riz avec bœuf sauté, herbes, crudités, cacahuètes et sauce nuoc cham.",
+        "prepTime": 35,
+        "ingredients": [
+            "Vermicelles de riz",
+            "bœuf",
+            "salade",
+            "concombre",
+            "herbes",
+            "cacahuètes",
+            "nuoc-mâm",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2317,
+        "name": "Bún Riêu",
+        "originalName": "Bún Riêu Cua",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de vermicelles à la tomate avec crabes ou pâte de crabe, tofu et herbes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Vermicelles de riz",
+            "crabe",
+            "tomates",
+            "tofu",
+            "œufs",
+            "pâte de crevette",
+            "oignons verts",
+            "herbes"
+        ]
+    },
+    {
+        "id": 2318,
+        "name": "Bún Mắm",
+        "originalName": "Bún Mắm",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe du delta du Mékong au bouillon de poisson fermenté, nouilles, fruits de mer et porc.",
+        "prepTime": 75,
+        "ingredients": [
+            "Vermicelles de riz",
+            "poisson fermenté",
+            "porc",
+            "crevettes",
+            "calamars",
+            "aubergines",
+            "citronnelle",
+            "herbes"
+        ]
+    },
+    {
+        "id": 2319,
+        "name": "Bún Cá",
+        "originalName": "Bún Cá",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe vietnamienne de nouilles de riz et poisson, tomate, aneth et herbes.",
+        "prepTime": 50,
+        "ingredients": [
+            "Vermicelles de riz",
+            "poisson",
+            "tomates",
+            "aneth",
+            "oignons verts",
+            "gingembre",
+            "nuoc-mâm"
+        ]
+    },
+    {
+        "id": 2320,
+        "name": "Cao Lầu",
+        "originalName": "Cao Lầu",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Nouilles épaisses de Hội An avec porc rôti, herbes, pousses de soja et crackers croustillants.",
+        "prepTime": 60,
+        "ingredients": [
+            "Nouilles cao lầu",
+            "porc",
+            "herbes",
+            "pousses de soja",
+            "crackers de riz",
+            "sauce soja",
+            "ail"
+        ]
+    },
+    {
+        "id": 2321,
+        "name": "Bánh Khọt",
+        "originalName": "Bánh Khọt",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Frire",
+        "description": "Petites crêpes croustillantes du sud à la farine de riz, lait de coco et crevettes.",
+        "prepTime": 40,
+        "ingredients": [
+            "Farine de riz",
+            "lait de coco",
+            "curcuma",
+            "crevettes",
+            "oignons verts",
+            "herbes",
+            "nuoc-mâm"
+        ]
+    },
+    {
+        "id": 2322,
+        "name": "Bánh Bèo Huế",
+        "originalName": "Bánh Bèo Huế",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Vapeur",
+        "description": "Petites coupelles de pâte de riz vapeur garnies de crevettes séchées et huile de ciboule.",
+        "prepTime": 45,
+        "ingredients": [
+            "Farine de riz",
+            "fécule de tapioca",
+            "crevettes séchées",
+            "oignons verts",
+            "nuoc-mâm",
+            "huile"
+        ]
+    },
+    {
+        "id": 2323,
+        "name": "Bánh Canh Cua",
+        "originalName": "Bánh Canh Cua",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe épaisse de nouilles bánh canh au crabe et crevettes dans un bouillon légèrement lié.",
+        "prepTime": 60,
+        "ingredients": [
+            "Nouilles bánh canh",
+            "crabe",
+            "crevettes",
+            "bouillon de porc",
+            "oignons verts",
+            "coriandre",
+            "fécule"
+        ]
+    },
+    {
+        "id": 2324,
+        "name": "Cơm Tấm",
+        "originalName": "Cơm Tấm Sườn",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Riz brisé de Saigon servi avec côtelette de porc grillée, pickles et nuoc cham.",
+        "prepTime": 50,
+        "ingredients": [
+            "Riz brisé",
+            "côtelette de porc",
+            "citronnelle",
+            "ail",
+            "nuoc-mâm",
+            "sucre",
+            "carotte",
+            "daikon"
+        ]
+    },
+    {
+        "id": 2325,
+        "name": "Cơm Gà Hội An",
+        "originalName": "Cơm Gà Hội An",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Riz jaune parfumé servi avec poulet effiloché, herbes et salade d'oignons, spécialité de Hội An.",
+        "prepTime": 60,
+        "ingredients": [
+            "Poulet",
+            "riz",
+            "curcuma",
+            "oignon",
+            "herbes",
+            "papaye verte",
+            "nuoc-mâm",
+            "citron vert"
+        ]
+    },
+    {
+        "id": 2326,
+        "name": "Thịt Kho Trứng",
+        "originalName": "Thịt Kho Trứng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Porc braisé vietnamien au caramel et eau de coco avec œufs durs.",
+        "prepTime": 90,
+        "ingredients": [
+            "Poitrine de porc",
+            "œufs durs",
+            "eau de coco",
+            "nuoc-mâm",
+            "sucre",
+            "ail",
+            "échalotes"
+        ]
+    },
+    {
+        "id": 2327,
+        "name": "Chả Cá Lã Vọng",
+        "originalName": "Chả Cá Lã Vọng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Sauté",
+        "description": "Poisson de Hanoï mariné au curcuma et galanga, sauté avec beaucoup d'aneth et oignons verts.",
+        "prepTime": 45,
+        "ingredients": [
+            "Poisson blanc",
+            "curcuma",
+            "galanga",
+            "aneth",
+            "oignons verts",
+            "nuoc-mâm",
+            "vermicelles de riz",
+            "cacahuètes"
+        ]
+    },
+    {
+        "id": 2328,
+        "name": "Bánh Mì Thịt",
+        "originalName": "Bánh Mì Thịt",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Sandwich vietnamien au porc, pâté, pickles, concombre, coriandre et piment.",
+        "prepTime": 25,
+        "ingredients": [
+            "Baguette",
+            "porc rôti",
+            "pâté",
+            "carotte marinée",
+            "daikon mariné",
+            "concombre",
+            "coriandre",
+            "piment"
+        ]
+    },
+    {
+        "id": 2329,
+        "name": "Bò Kho Gừng",
+        "originalName": "Bò Kho Gừng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Bœuf braisé au gingembre, nuoc-mâm et caramel, servi avec riz.",
+        "prepTime": 75,
+        "ingredients": [
+            "Bœuf",
+            "gingembre",
+            "nuoc-mâm",
+            "sucre",
+            "ail",
+            "échalotes",
+            "poivre noir"
+        ]
+    },
+    {
+        "id": 2330,
+        "name": "Gà Kho Gừng",
+        "originalName": "Gà Kho Gừng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Mijoté",
+        "description": "Poulet braisé vietnamien au gingembre et sauce poisson dans une sauce caramélisée.",
+        "prepTime": 55,
+        "ingredients": [
+            "Poulet",
+            "gingembre",
+            "nuoc-mâm",
+            "sucre",
+            "ail",
+            "échalotes",
+            "piment"
+        ]
+    },
+    {
+        "id": 2331,
+        "name": "Thịt Nướng",
+        "originalName": "Thịt Nướng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Grill",
+        "description": "Porc vietnamien mariné à la citronnelle, ail et nuoc-mâm puis grillé.",
+        "prepTime": 45,
+        "ingredients": [
+            "Porc",
+            "citronnelle",
+            "ail",
+            "échalotes",
+            "nuoc-mâm",
+            "sucre",
+            "huile"
+        ]
+    },
+    {
+        "id": 2332,
+        "name": "Bún Thịt Nướng",
+        "originalName": "Bún Thịt Nướng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Froid / Cru",
+        "description": "Bol de vermicelles froids garni de porc grillé, herbes, légumes et nuoc cham.",
+        "prepTime": 40,
+        "ingredients": [
+            "Vermicelles de riz",
+            "porc grillé",
+            "salade",
+            "concombre",
+            "herbes",
+            "cacahuètes",
+            "nuoc-mâm"
+        ]
+    },
+    {
+        "id": 2333,
+        "name": "Cháo Gà",
+        "originalName": "Cháo Gà",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Bouillie de riz vietnamienne au poulet, gingembre et herbes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Riz",
+            "poulet",
+            "gingembre",
+            "oignons verts",
+            "coriandre",
+            "nuoc-mâm",
+            "poivre"
+        ]
+    },
+    {
+        "id": 2334,
+        "name": "Cháo Lòng",
+        "originalName": "Cháo Lòng",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Bouillie de riz vietnamienne servie avec abats et boudin de porc.",
+        "prepTime": 75,
+        "ingredients": [
+            "Riz",
+            "abats de porc",
+            "boudin de porc",
+            "gingembre",
+            "oignons verts",
+            "coriandre",
+            "nuoc-mâm"
+        ]
+    },
+    {
+        "id": 2335,
+        "name": "Bánh Đa Cua",
+        "originalName": "Bánh Đa Cua",
+        "country": "Vietnam",
+        "flag": "🇻🇳",
+        "continent": "Asie",
+        "type": "Soupe",
+        "description": "Soupe de Hải Phòng aux nouilles rouges de riz, crabe, feuilles vertes et boulettes.",
+        "prepTime": 60,
+        "ingredients": [
+            "Nouilles bánh đa rouges",
+            "crabe",
+            "porc haché",
+            "épinards d'eau",
+            "tomates",
+            "oignons verts",
+            "pâte de crevette"
+        ]
+    },
+    {
+        "id": 2336,
+        "name": "Tacu Tacu",
+        "originalName": "Tacu Tacu",
+        "country": "Pérou",
+        "flag": "🇵🇪",
+        "continent": "Amérique du Sud",
+        "type": "Sauté",
+        "description": "Galette péruvienne de riz et haricots mélangés puis dorés à la poêle.",
+        "prepTime": 35,
+        "ingredients": [
+            "Riz cuit",
+            "haricots canario",
+            "oignon rouge",
+            "ail",
+            "aji amarillo",
+            "huile"
+        ]
+    },
+    {
+        "id": 2337,
+        "name": "Carapulcra",
+        "originalName": "Carapulcra",
+        "country": "Pérou",
+        "flag": "🇵🇪",
+        "continent": "Amérique du Sud",
+        "type": "Mijoté",
+        "description": "Ragoût ancien de pommes de terre séchées, porc, cacahuètes et piments.",
+        "prepTime": 120,
+        "ingredients": [
+            "Pommes de terre séchées",
+            "porc",
+            "cacahuètes",
+            "aji panca",
+            "oignon",
+            "ail",
+            "bouillon"
+        ]
+    },
+    {
+        "id": 2338,
+        "name": "Arroz con Pato",
+        "originalName": "Arroz con Pato",
+        "country": "Pérou",
+        "flag": "🇵🇪",
+        "continent": "Amérique du Sud",
+        "type": "Mijoté",
+        "description": "Riz vert du nord du Pérou cuisiné avec canard, coriandre, bière et légumes.",
+        "prepTime": 90,
+        "ingredients": [
+            "Canard",
+            "riz",
+            "coriandre",
+            "bière",
+            "petits pois",
+            "carottes",
+            "aji amarillo"
+        ]
+    },
+    {
+        "id": 2339,
+        "name": "Causa Limeña de Atún",
+        "originalName": "Causa Limeña de Atún",
+        "country": "Pérou",
+        "flag": "🇵🇪",
+        "continent": "Amérique du Sud",
+        "type": "Froid / Cru",
+        "description": "Terrine froide de pommes de terre jaunes assaisonnées au citron et aji, farcie de thon.",
+        "prepTime": 45,
+        "ingredients": [
+            "Pommes de terre jaunes",
+            "thon",
+            "aji amarillo",
+            "citron vert",
+            "avocat",
+            "mayonnaise",
+            "œufs"
+        ]
+    },
+    {
+        "id": 2340,
+        "name": "Solterito Arequipeño",
+        "originalName": "Solterito Arequipeño",
+        "country": "Pérou",
+        "flag": "🇵🇪",
+        "continent": "Amérique du Sud",
+        "type": "Froid / Cru",
+        "description": "Salade d'Arequipa aux fèves, maïs, tomate, fromage frais et olives.",
+        "prepTime": 25,
+        "ingredients": [
+            "Fèves",
+            "maïs choclo",
+            "tomates",
+            "fromage frais",
+            "olives",
+            "oignon rouge",
+            "piment rocoto",
+            "vinaigre"
+        ]
+    },
+    {
+        "id": 2341,
+        "name": "Atakilt Wat",
+        "originalName": "አታክልት ወጥ",
+        "country": "Éthiopie",
+        "flag": "🇪🇹",
+        "continent": "Afrique",
+        "type": "Mijoté",
+        "description": "Ragoût éthiopien doux de chou, pommes de terre et carottes parfumé au curcuma.",
+        "prepTime": 45,
+        "ingredients": [
+            "Chou",
+            "pommes de terre",
+            "carottes",
+            "oignons",
+            "ail",
+            "gingembre",
+            "curcuma",
+            "huile"
+        ]
+    },
+    {
+        "id": 2342,
+        "name": "Kik Alicha",
+        "originalName": "ክክ አልጫ",
+        "country": "Éthiopie",
+        "flag": "🇪🇹",
+        "continent": "Afrique",
+        "type": "Mijoté",
+        "description": "Ragoût doux de pois cassés jaunes au curcuma, ail et gingembre.",
+        "prepTime": 50,
+        "ingredients": [
+            "Pois cassés jaunes",
+            "oignons",
+            "curcuma",
+            "ail",
+            "gingembre",
+            "huile"
+        ]
+    },
+    {
+        "id": 2343,
+        "name": "Tibs Firfir",
+        "originalName": "ጥብስ ፍርፍር",
+        "country": "Éthiopie",
+        "flag": "🇪🇹",
+        "continent": "Afrique",
+        "type": "Sauté",
+        "description": "Morceaux d'injera mélangés à du bœuf sauté épicé et aux jus de cuisson.",
+        "prepTime": 35,
+        "ingredients": [
+            "Bœuf",
+            "injera",
+            "oignons",
+            "piments verts",
+            "berbéré",
+            "beurre clarifié épicé"
+        ]
+    },
+    {
+        "id": 2344,
+        "name": "Gomen",
+        "originalName": "ጎመን",
+        "country": "Éthiopie",
+        "flag": "🇪🇹",
+        "continent": "Afrique",
+        "type": "Mijoté",
+        "description": "Feuilles vertes éthiopiennes mijotées avec oignon, ail et gingembre.",
+        "prepTime": 35,
+        "ingredients": [
+            "Chou kale ou chou vert",
+            "oignons",
+            "ail",
+            "gingembre",
+            "huile"
+        ]
+    },
+    {
+        "id": 2345,
+        "name": "Chechebsa",
+        "originalName": "ጨጨብሳ",
+        "country": "Éthiopie",
+        "flag": "🇪🇹",
+        "continent": "Afrique",
+        "type": "Sauté",
+        "description": "Galette émiettée mélangée au beurre épicé et berbéré, petit-déjeuner éthiopien.",
+        "prepTime": 30,
+        "ingredients": [
+            "Farine",
+            "eau",
+            "niter kibbeh",
+            "berbéré",
+            "sel"
+        ]
     }
 ]
