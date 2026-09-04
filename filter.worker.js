@@ -4,7 +4,7 @@ let allRecipes = [];
 
 // 1. Copiez vos définitions de tags ici
 const tagDefinitions = {
-    viande: ["viande", "viandes","bœuf", "beef", "agneau", "porc", "poulet", "veau", "canard", "lapin", "chèvre", "mouton", "saucisse", "lardons", "gibier", "os à moelle", "queue de bœuf", "tripes", "coq", "poule", "jambon", "spam", "cheval", "kefta", "pancetta", "confit", "lard", "renne", "bacon", "kangourou", "döner", "chorizo", "merguez", "dumba", "wurst", "gammon", "corned beef", "andouille", "boudin", "morcilla", "chouriço", "farinheira", "carne seca", "foie", "tête de porc", "joue", "oreille", "gosht", "char siu", "boerewors", "sang", "saindoux", "suif", "rognons", "graisse", "graisse de bœuf", "graisse d'oie", "bouillon de bœuf", "Bbouillon de poulet", "bouillon de porc", "speck", "chevreau", "chicharrón", "chicharron", "abats", "pâté", "jarret d'agneau"],
+    viande: ["viande", "viandes","bœuf", "beef", "agneau", "porc", "poulet", "veau", "canard", "lapin", "chèvre", "mouton", "saucisse", "lardons", "gibier", "os à moelle", "queue de bœuf", "tripes", "coq", "poule", "jambon", "spam", "cheval", "kefta", "pancetta", "confit", "lard", "renne", "bacon", "kangourou", "döner", "chorizo", "merguez", "dumba", "wurst", "gammon", "corned beef", "andouille", "boudin", "morcilla", "chouriço", "farinheira", "carne seca", "foie", "tête de porc", "joue", "oreille", "gosht", "char siu", "boerewors", "sang", "saindoux", "suif", "rognons", "graisse", "graisse de bœuf", "graisse d'oie", "bouillon de bœuf", "bouillon de poulet", "bouillon de porc", "speck", "chevreau", "chicharrón", "chicharron", "abats", "pâté", "jarret d'agneau"],
     poisson: ["poisson", "poissons", "haddock fumé", "lotte", "thon", "anchois", "saumon", "poissons de roche", "morue", "maquereau", "anguille", "sériole", "barramundi", "congre", "mahimahi", "thiof", "flocons de bonite", "katsuobushi", "ikan bilis", "cabillaud", "sole", "bar", "vivaneau", "truite", "sardine", "hareng", "tilapia", "merlu", "poisson-chat", "hilsa", "hamsi"],
     fruit_de_mer: ["crevette", "crevettes", "moule", "moules", "palourde", "palourdes", "crabe", "calamar", "calamars", "fruits de mer", "seiche", "gambas", "écrevisse", "écrevisses", "homard", "huître", "huîtres", "poulpe", "coque", "coques", "pâte de crevette", "bagoong", "terasi", "mắm ruốc", "yet", "surimi", "oursin", "œufs de poisson", "tobiko", "œufs de saumon", "ikura", "belacan", "langoustine", "pétoncle", "coquille saint-jacques", "lambi"],
     oeuf: ["œuf", "oeuf", "œufs", "oeufs", "jaune d'œuf", "blancs d'œufs", "œuf dur", "œufs durs", "omelette", "œufs de caille"],
@@ -41,6 +41,17 @@ const tagDefinitions = {
     epice_piquant: ["piment", "piments", "pimentée", "piquant", "harissa", "gochugaru", "gochujang", "doubanjiang", "berbéré", "épices cajun", "cajun", "sambal", "sriracha", "piment de Cayenne", "cayenne", "chili", "poudre de chili", "pâte de chili", "huile de piment", "scotch bonnet", "habanero", "serrano", "jalapeño", "jalapeños", "ancho", "guajillo", "pasilla", "poblano", "guindilla", "guindillas", "aji amarillo", "aji panca", "aji limo", "siling labuyo", "siling haba", "piment oiseau", "pul biber", "piment d'Alep", "piment du Cachemire", "Kashmiri", "paprika (fort)", "poivre du Sichuan", "pâte de curry rouge", "pâte de curry vert", "pâte de curry jaune", "pâte de Laksa", "Nam Prik Pao", "sauce pimentée", "Rotel", "sahawiq", "Tom Yum", "Colombo", "Mitmita"],
     vegetarien: []
 };
+
+function containsKeyword(text, keyword) {
+    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    const regex = new RegExp(
+        `(^|[^\\p{L}\\p{N}])${escaped}([^\\p{L}\\p{N}]|$)`,
+        'iu'
+    );
+
+    return regex.test(text);
+}
 
 // 2. Copiez votre fonction generateTags ici
 function generateTags(recipe) {
@@ -114,14 +125,23 @@ function generateTags(recipe) {
         const includesKeywords = Array.isArray(config) ? config : config.includes;
         const excludesKeywords = Array.isArray(config) ? [] : (config.excludes || []);
 
-        if (includesKeywords.some(keyword => ingredientsLower.includes(keyword))) {
-            const isExcluded = excludesKeywords.some(excludeKeyword => ingredientsLower.includes(excludeKeyword));
-            if (!isExcluded) {
-                tags.add(tag);
-                if (tag === 'viande') hasViande = true;
-                if (tag === 'poisson' || tag === 'fruit_de_mer') hasPoisson = true;
-            }
+        if (includesKeywords.some(keyword =>
+    containsKeyword(ingredientsLower, keyword.toLowerCase())
+)) {
+    const isExcluded = excludesKeywords.some(excludeKeyword =>
+        containsKeyword(ingredientsLower, excludeKeyword.toLowerCase())
+    );
+
+    if (!isExcluded) {
+        tags.add(tag);
+
+        if (tag === 'viande') hasViande = true;
+
+        if (tag === 'poisson' || tag === 'fruit_de_mer') {
+            hasPoisson = true;
         }
+    }
+}
     }
     
     if (!hasViande && !hasPoisson) {
