@@ -390,54 +390,54 @@
         }
         
         .recipe-original-name {
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 500;
-        }
-        
-        .recipe-origin {
-            font-size: 15px;
-            color: var(--text-secondary);
-            text-align: right;
-            flex-shrink: 0;
-            padding-left: 10px;
-        }
+    font-size: 17px;
+    color: var(--accent);
+    font-weight: 500;
+}
 
-        .recipe-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            border-top: 1px dashed var(--bg-tertiary);
-            border-bottom: 1px dashed var(--bg-tertiary);
-            padding: 10px 0;
-        }
-        
-        .recipe-time {
-            font-size: 15px;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-        
-        .recipe-tags {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-        
-        /* Tags monochromes et professionnels */
-        .tag {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            padding: 4px 10px;
-            border-radius: 99px; /* Pill shape */
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            background-color: var(--bg-tertiary); /* Gris clair */
-            color: var(--text-secondary); /* Gris moyen */
-        }
-        
+.recipe-origin {
+    font-size: 15px;
+    color: var(--text-secondary);
+    text-align: right;
+    flex-shrink: 0;
+    padding-left: 10px;
+    line-height: 1.4;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-top: 1px dashed var(--bg-tertiary);
+    border-bottom: 1px dashed var(--bg-tertiary);
+    padding: 10px 0;
+}
+
+.recipe-time {
+    font-size: 17px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.recipe-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Tags monochromes et professionnels */
+.tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
         /* Thème sombre : Tags plus foncés */
         body:not(.light-mode) .tag {
             background-color: #2a2a2a;
